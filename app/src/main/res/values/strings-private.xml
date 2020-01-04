@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FrenzApp-Redesign</string>
+
+    <string name="developer_name" translatable="false">Nsromapa Inc</string>
+    <string name="email" translatable="false">info@nsromapa.com</string>
+
+<!--        Admob api test keys-->
+    <string name="addUnitId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_appId">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!-- Admob api keys-->
+<!--    <string name="addUnitId">ca-app-pub-9810087258183606/3429562630</string>-->
+<!--    <string name="admob_appId">ca-app-pub-9810087258183606~2496928378</string>-->
+
+    <!--    maps api key-->
+    <string name="maps_api_key">AIzaSyC9K96W_r1RxI6LQ9VrDRxLPZ0ZycAgojw</string>
+</resources>

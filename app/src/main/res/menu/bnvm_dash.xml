@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:icon="@drawable/icons8_video_call_100"
+        android:id="@+id/nv_explorer"
+        android:title="@string/video" />
+
+    <item
+        android:icon="@drawable/icons8_news_feed_64"
+        android:id="@+id/nv_stacks"
+        android:title="@string/feeds" />
+
+    <item
+        android:id="@+id/nv_feeds"
+        tools:ignore="@string/feeds" />
+
+    <item
+        android:icon="@drawable/icons8_chat_80"
+        android:id="@+id/nv_production"
+        android:title="@string/chat" />
+
+    <item
+        android:icon="@drawable/icons8_connection_status_on_80"
+        android:id="@+id/nv_profile"
+        android:title="@string/stories" />
+</menu>

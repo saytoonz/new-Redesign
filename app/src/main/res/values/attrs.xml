@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="StoriesProgressView">
+        <attr name="progressCount" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularStatusView">
+        <attr name="portion_width" format="dimension" />
+        <attr name="portion_color" format="color" />
+        <attr name="portion_spacing" format="dimension" />
+        <attr name="portions_count" format="integer" />
+    </declare-styleable>
+
+    <!-- Ink page indicator. -->
+    <declare-styleable name="InkPageIndicator">
+        <attr name="dotDiameter" format="dimension" />
+        <attr name="dotGap" format="dimension" />
+        <attr name="animationDuration" format="integer" />
+        <attr name="pageIndicatorColor" format="color" />
+        <attr name="currentPageIndicatorColor" format="color" />
+    </declare-styleable>
+
+    <!-- Switch image button. -->
+    <declare-styleable name="SwitchImageButton">
+        <attr name="drawable_res_on" format="reference" />
+        <attr name="drawable_res_off" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawInsetsFrameLayout">
+        <attr name="insetBackground" format="color|reference" />
+    </declare-styleable>
+
+    <attr name="digitCellStyle"
+        format="reference"/>
+    <attr name="keypadBackgroundColor"
+        format="color"/>
+    <attr name="keypadTextColor"
+        format="color"/>
+
+</resources>

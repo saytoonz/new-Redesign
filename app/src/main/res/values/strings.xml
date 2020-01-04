@@ -1,0 +1,18 @@
+<resources>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="loading">Loading…</string>
+    <string name="view_profile">View Profile</string>
+    <string name="video">Video</string>
+    <string name="feeds">Feeds</string>
+    <string name="chat">Chat</string>
+    <string name="stories">Stories</string>
+    <string name="an_unrecognized_error_occurred">An Unrecognized Error Occurred</string>
+    <string name="error">Error</string>
+    <string name="server_connection_error">Server Connection Error…</string>
+    <string name="oops">OOPS…</string>
+    <string name="no_posts_yet">No posts yet</string>
+    <string name="add_some_friends_to_see_their_posts_here">Add some friends to see their posts here</string>
+    <string name="no_contact_yet">No contact yet</string>
+    <string name="No_Contact_List_Available">No Contact List Available"</string>
+</resources>
+

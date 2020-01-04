@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_holder"
+    android:background="#f7f7f7"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end"
+        android:src="@drawable/icons8_video_file_64"
+        android:visibility="visible" />
+
+        <com.devbrackets.android.exomedia.ui.widget.VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:videoScale="fitCenter"
+            app:useDefaultControls="false"/>
+
+
+
+    <FrameLayout
+        android:id="@+id/like_layout"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/vBigView"
+            android:layout_gravity="center"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_like_circle_background"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/soundOnView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/soundon"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/soundOffView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/soundoff"
+            android:visibility="invisible" />
+
+
+        <ImageView
+            android:id="@+id/playVideo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/play_big"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/pauseVideo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pause_big"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</FrameLayout>
