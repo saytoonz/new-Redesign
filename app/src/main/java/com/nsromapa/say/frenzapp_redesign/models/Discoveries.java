@@ -1,17 +1,36 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
-public class Discoveries {
+import java.io.Serializable;
+
+public class Discoveries implements Serializable {
+    private boolean isLoading = false;
     private String id;
     private String mediaUrl;
-    private boolean isLoading = false;
+    private String mimeType;
+    private String description;
+    private String timeAgo;
+    private String posterJson;
 
 
     public Discoveries() {
     }
 
-    public Discoveries(String id, String mediaUrl) {
+    public Discoveries(String id, String mediaUrl, String mimeType,
+                       String description, String timeAgo, String posterJson) {
         this.id = id;
         this.mediaUrl = mediaUrl;
+        this.mimeType = mimeType;
+        this.description = description;
+        this.posterJson = posterJson;
+        this.timeAgo = timeAgo;
+    }
+
+    public boolean isLoading() {
+        return isLoading;
+    }
+
+    public void setLoading(boolean loading) {
+        isLoading = loading;
     }
 
     public String getId() {
@@ -30,11 +49,35 @@ public class Discoveries {
         this.mediaUrl = mediaUrl;
     }
 
-    public boolean isLoading() {
-        return isLoading;
+    public String getMimeType() {
+        return mimeType;
     }
 
-    public void setLoading(boolean loading) {
-        isLoading = loading;
+    public void setMimeType(String mimeType) {
+        this.mimeType = mimeType;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPosterJson() {
+        return posterJson;
+    }
+
+    public void setPosterJson(String posterJson) {
+        this.posterJson = posterJson;
+    }
+
+    public String getTimeAgo() {
+        return timeAgo;
+    }
+
+    public void setTimeAgo(String timeAgo) {
+        this.timeAgo = timeAgo;
     }
 }

@@ -152,6 +152,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xhdpi\\ic_call_made_white_24dp.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-mdpi-v4\\ic_local_airport.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_action_delete.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_action_delete.png"
     },
@@ -788,6 +792,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\gradient_6.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xxhdpi-v4\\ic_expand_more.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\layout\\abc_action_mode_bar.xml"
     },
@@ -876,6 +884,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xxhdpi\\ic_location.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-ldpi-v4\\ic_local_airport.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -886,6 +898,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_local_airport.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-anydpi-v21\\ic_local_airport.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_heart.png.flat",
@@ -1228,6 +1244,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_discover.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\activity_discover.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -1352,6 +1372,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\item_viewpager_image.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xhdpi-v4\\ic_expand_more.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\font_raleway_regular.ttf.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\font\\raleway_regular.ttf"
     },
@@ -1402,6 +1426,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_time.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xhdpi\\ic_time.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xxhdpi-v4\\ic_local_airport.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
@@ -1968,6 +1996,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_call_green_34dp.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xxxhdpi-v4\\ic_expand_more.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_light.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
@@ -2042,6 +2074,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_video.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\layout_video.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xhdpi-v4\\ic_local_airport.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_dark.xml.flat",
@@ -2256,6 +2292,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-mdpi\\ic_call_made_white_24dp.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_expand_more.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-anydpi-v21\\ic_expand_more.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
@@ -2400,6 +2440,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\6b4eee9ae282c98d21e477e0fa610523\\jetified-exomedia-4.3.0\\res\\layout\\exomedia_default_exo_surface_video_view.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_expandable_cardview.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\layout\\expandable_cardview.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
@@ -2490,6 +2534,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_crop_rotate_black_24dp.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_crop_rotate_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-hdpi-v4\\ic_expand_more.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_textview_tab_style_green.xml.flat",
@@ -2710,6 +2758,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_search_default_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-xxxhdpi-v4\\ic_local_airport.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\color-v21_exomedia_default_controls_leanback_button_selector.xml.flat",
@@ -3060,6 +3112,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_video.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_local_airport.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-hdpi-v4\\ic_local_airport.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_call_made_white_24dp.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_call_made_white_24dp.png"
     },
@@ -3368,6 +3424,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_simple_cardview_header.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\layout\\simple_cardview_header.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_heart_outline_white.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xxhdpi\\ic_heart_outline_white.png"
     },
@@ -3482,6 +3542,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-mdpi-v4\\ic_expand_more.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_borderless_material.xml.flat",
@@ -3826,6 +3890,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_action_forward.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_action_forward.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_drawer_layout.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\73d9a38751e17d65ac6ff20a1e0a6336\\BottomDrawer-v1.0.0\\res\\layout\\bottom_drawer_layout.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
@@ -4254,6 +4322,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_github.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_github.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_ic_expand_more.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\8d6b0e5b82565b75c1da3adbfed8fefd\\ExapandableCardView--SNAPSHOT\\res\\drawable-ldpi-v4\\ic_expand_more.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",

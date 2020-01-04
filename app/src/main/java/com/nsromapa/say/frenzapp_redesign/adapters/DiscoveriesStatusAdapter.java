@@ -1,12 +1,12 @@
 package com.nsromapa.say.frenzapp_redesign.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
+import com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,7 +64,15 @@ public class DiscoveriesStatusAdapter extends RecyclerView.Adapter {
 
             Glide.with(context)
                     .load(list.getMediaUrl())
-                    .into(discoveriesHolder.country_photo);
+                    .into(discoveriesHolder.discovery_photo);
+
+            discoveriesHolder.discovery_photo.setOnClickListener(v -> {
+                Intent intent = new Intent(context, DiscoverActivity.class);
+                intent.putExtra("discovery", list);
+                context.startActivity(intent);
+            });
+
+
 
         }else if (holder instanceof LoadingHolder){
             LoadingHolder loadingHolder = (LoadingHolder) holder;
@@ -97,10 +106,10 @@ public class DiscoveriesStatusAdapter extends RecyclerView.Adapter {
     }
 
     private class DiscoveriesHolder extends RecyclerView.ViewHolder {
-        ImageView country_photo;
+        ImageView discovery_photo;
         DiscoveriesHolder(View itemView) {
             super(itemView);
-            country_photo = itemView.findViewById(R.id.country_photo);
+            discovery_photo = itemView.findViewById(R.id.discovery_photo);
         }
     }
 

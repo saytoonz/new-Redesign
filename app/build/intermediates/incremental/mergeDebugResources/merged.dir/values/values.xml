@@ -226,6 +226,9 @@
     <color name="black_bottom">#414141</color>
     <color name="black_de">#000000</color>
     <color name="black_top">#313131</color>
+    <color name="bottom_drawer_background">#FFFFFF</color>
+    <color name="bottom_drawer_handle_view_color">#E0E0E0</color>
+    <color name="bottom_drawer_outside_background">#80000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -748,6 +751,9 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="app_bar_height">280dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">10dp</dimen>
+    <dimen name="bottom_sheet_extra_padding">4dp</dimen>
+    <dimen name="bottom_sheet_handle_thickness">6dp</dimen>
     <dimen name="card_padding">40dp</dimen>
     <dimen name="card_view_margin">5dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
@@ -763,6 +769,10 @@
     <dimen name="content_text_size">14sp</dimen>
     <dimen name="create_scroll_view_padding">0dp</dimen>
     <dimen name="current_weather_icon_size">80dp</dimen>
+    <dimen name="default_expand_icon_size">40dp</dimen>
+    <dimen name="default_margin">10dp</dimen>
+    <dimen name="default_padding">10dp</dimen>
+    <dimen name="default_textsize">16sp</dimen>
     <dimen name="description_elevation">2dp</dimen>
     <dimen name="description_title_end_margin">56dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
@@ -927,6 +937,7 @@
     <dimen name="progress_bar_height">2dp</dimen>
     <dimen name="progress_view_size">36dp</dimen>
     <dimen name="share_view_height">260dp</dimen>
+    <dimen name="simple_cardview_height">65dp</dimen>
     <dimen name="small_margin">10dp</dimen>
     <dimen name="spinner_drop_width">150dp</dimen>
     <dimen name="standard_weather_icon_size">56dp</dimen>
@@ -1020,6 +1031,7 @@
     <item name="action_menu_presenter" type="id"/>
     <item name="ghost_view" type="id"/>
     <item name="glide_custom_view_target_tag" type="id"/>
+    <item name="handle_view" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
@@ -1063,8 +1075,10 @@
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="config_tooltipAnimTime">150</integer>
+    <integer name="degree">180</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
     <integer name="design_tab_indicator_anim_duration_ms">300</integer>
+    <integer name="duration">400</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="max_lines_desc">8</integer>
     <integer name="mtrl_btn_anim_delay_ms">100</integer>
@@ -1111,6 +1125,7 @@
     <string name="character_counter_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="chat">Chat</string>
+    <string name="click_marker">expand_or_collapse</string>
     <string name="developer_name" translatable="false">Nsromapa Inc</string>
     <string name="email" translatable="false">info@nsromapa.com</string>
     <string name="error">Error</string>
@@ -1118,7 +1133,17 @@
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="feeds">Feeds</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="image_container">Image Container</string>
     <string name="loading">Loading…</string>
+    <string name="long_text">Add some friends to see their posts here
+        Add some friends to see their posts here Add some friends to
+        see their posts here Add some friends to see their posts hereAdd some
+        friends to see their posts hereAdd some friends to see their posts hereAdd
+        some friends to see their posts hereAdd some friends to see their posts
+        hereAdd some friends to see their posts herev Add some friends to see
+        their posts here Add some friends to see their posts here Add some friends to see their posts here
+        Add some friends to see their posts here Add some friends to see their
+        posts here Add some friends to see their posts here v</string>
     <string name="maps_api_key">AIzaSyC9K96W_r1RxI6LQ9VrDRxLPZ0ZycAgojw</string>
     <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -2620,6 +2645,13 @@
         <item name="android:windowTranslucentStatus" ns1:targetApi="kitkat">true</item>
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="BottomDialogTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
     <style name="BottomNavigationBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorAccentt</item>
@@ -4396,6 +4428,16 @@
       
       <enum name="end" value="1"/>
     </attr><attr format="dimension" name="fabCradleMargin"/><attr format="dimension" name="fabCradleRoundedCornerRadius"/><attr format="dimension" name="fabCradleVerticalOffset"/><attr format="boolean" name="hideOnScroll"/></declare-styleable>
+    <declare-styleable name="BottomDrawer">
+        <attr format="boolean" name="should_draw_under_status_bar"/>
+        <attr format="boolean" name="should_draw_content_under_handle_view"/>
+        <attr format="dimension" name="bottom_sheet_corner_radius"/>
+        <attr format="dimension" name="bottom_sheet_extra_padding"/>
+        <attr format="reference" name="bottom_drawer_background"/>
+    </declare-styleable>
+    <declare-styleable name="BottomDrawerDialog">
+        <attr format="boolean" name="is_cancelable_on_touch_outside"/>
+    </declare-styleable>
     <declare-styleable name="BottomNavigationView"><attr name="menu"/><attr name="labelVisibilityMode">
       
       <enum name="auto" value="-1"/>
@@ -4675,6 +4717,12 @@
         <attr format="dimension" name="barLength"/>
         <!-- The thickness (stroke size) for the bar paint -->
         <attr format="dimension" name="thickness"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandableCardView">
+        <attr format="reference" name="header_view"/>
+        <attr format="reference" name="content_view"/>
+        <attr format="boolean" name="expanded"/>
+        <attr format="integer" name="animation_duration"/>
     </declare-styleable>
     <declare-styleable name="FloatingActionButton"><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr name="rippleColor"/><attr name="fabSize">
       
@@ -5140,6 +5188,11 @@
         <attr format="reference" name="submitBackground"/>
         <attr name="android:focusable"/>
     </declare-styleable>
+    <declare-styleable name="SimpleExpandableCardView">
+        <attr format="reference" name="icon"/>
+        <attr format="string" name="title"/>
+        <attr format="float" name="degreeIconAnimation"/>
+    </declare-styleable>
     <declare-styleable name="Snackbar"><attr format="reference" name="snackbarStyle"/><attr format="reference" name="snackbarButtonStyle"/></declare-styleable>
     <declare-styleable name="SnackbarLayout"><attr name="android:maxWidth"/><attr name="elevation"/><attr format="dimension" name="maxActionInlineWidth"/></declare-styleable>
     <declare-styleable name="Spinner">
@@ -5486,4 +5539,57 @@
     <attr name="dotsStrokeWidth"/>
     <attr name="dotsStrokeColor"/>
   </declare-styleable>
+    <declare-styleable name="ZoomEngine">
+        <attr format="boolean" name="hasClickableChildren"/>
+        <attr format="boolean" name="overScrollHorizontal"/>
+        <attr format="boolean" name="overScrollVertical"/>
+        <attr format="boolean" name="overPinchable"/>
+        <attr format="boolean" name="zoomEnabled"/>
+        <attr format="boolean" name="flingEnabled"/>
+        <attr format="boolean" name="scrollEnabled"/>
+        <attr format="boolean" name="oneFingerScrollEnabled"/>
+        <attr format="boolean" name="twoFingersScrollEnabled"/>
+        <attr format="boolean" name="threeFingersScrollEnabled"/>
+        <attr format="boolean" name="allowFlingInOverscroll"/>
+        <attr format="boolean" name="verticalPanEnabled"/>
+        <attr format="boolean" name="horizontalPanEnabled"/>
+        <attr format="float" name="minZoom"/>
+        <attr format="float" name="maxZoom"/>
+        <attr format="enum" name="minZoomType">
+            <enum name="zoom" value="0"/>
+            <enum name="realZoom" value="1"/>
+        </attr>
+        <attr format="enum" name="maxZoomType">
+            <enum name="zoom" value="0"/>
+            <enum name="realZoom" value="1"/>
+        </attr>
+        <attr format="enum" name="transformation">
+            <enum name="centerInside" value="0"/>
+            <enum name="centerCrop" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr name="transformationGravity">
+            <flag name="auto" value="0"/>
+            <flag name="top" value="0x30"/>
+            <flag name="bottom" value="0x50"/>
+            <flag name="left" value="0x03"/>
+            <flag name="right" value="0x05"/>
+            <flag name="center_vertical" value="0x10"/>
+            <flag name="center_horizontal" value="0x01"/>
+            <flag name="center" value="0x11"/>
+        </attr>
+        <attr name="alignment">
+            <flag name="top" value="0x01"/>
+            <flag name="bottom" value="0x02"/>
+            <flag name="center_vertical" value="0x03"/>
+            <flag name="none_vertical" value="0x04"/>
+            <flag name="left" value="0x10"/>
+            <flag name="right" value="0x20"/>
+            <flag name="center_horizontal" value="0x30"/>
+            <flag name="none_horizontal" value="0x40"/>
+            <flag name="center" value="0x33"/>
+            <flag name="none" value="0x44"/>
+        </attr>
+        <attr format="integer" name="animationDuration"/>
+    </declare-styleable>
 </resources>

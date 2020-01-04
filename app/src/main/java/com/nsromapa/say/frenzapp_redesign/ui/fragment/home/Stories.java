@@ -1,6 +1,5 @@
 package com.nsromapa.say.frenzapp_redesign.ui.fragment.home;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
@@ -73,9 +71,9 @@ public class Stories extends Fragment {
         discovery_recycler.setLayoutManager(gridLayoutManager);
         EndlessScrollListener endlessScrollListener = new EndlessScrollListener(gridLayoutManager) {
             @Override
-            public void onLoadMore(int page, int totalItemsCount) {
+            public void onLoadMore(int page, int totalItemsCount, int quantity) {
                 if (!discoveriesStatusAdapter.loading)
-                    getDiscoveriesListData();
+                    getDiscoveriesListData(String.valueOf(quantity));
             }
         };
         //to give loading item full single row
@@ -95,7 +93,7 @@ public class Stories extends Fragment {
 
         discovery_recycler.addOnScrollListener(endlessScrollListener);
         discovery_recycler.setAdapter(discoveriesStatusAdapter);
-        endlessScrollListener.onLoadMore(0, 0);
+        endlessScrollListener.onLoadMore(0, 0, 20);
         return view;
     }
 
@@ -272,49 +270,69 @@ public class Stories extends Fragment {
     }
 
 
-
-    private void getDiscoveriesListData() {
+    private void getDiscoveriesListData(String quantity) {
         //show loading in recyclerview
         discoveriesStatusAdapter.showLoading();
-
         List<Discoveries> discoveries = new ArrayList<>();
-        discoveries.add(new Discoveries("Alkane",
-                "https://4.bp.blogspot.com/-IvTudMG6xNs/XPlXQ7Vxl_I/AAAAAAAAVcc/rZQR" +
-                        "7Jcvbzoor3vO_lCtMHPZG7sO3VJOgCK4BGAYYCw/s1600/1D6A0131.JPG-01.jpeg.jpg"));
-        discoveries.add(new Discoveries("Ethane",
-                "http://4.bp.blogspot.com/-CmDFsVPzKSk/XadSsWodkxI/AAA" +
-                        "AAAAAWjw/BBL2XfSgz0MnNPwp2Utsj1Sd5EM7RlGGgCK4BGAYYCw/s1600/download.png"));
-        discoveries.add(new Discoveries("Alkyne",
-                "https://1.bp.blogspot.com/-7uvberoubSg/XKh7rdskK0I/AAAAAAAAU" +
-                        "aM/1B4CAK5oieUYApo1s9ZifReQRihVTXPvgCLcBGAs/s1600/Screenshot%2B20" +
-                        "19-04-06%2Bat%2B3.08.31%2BPM.pn"));
-        discoveries.add(new Discoveries("Benzene",
-                "https://pbs.twimg.com/profile_images/990460935046230016/k__sGK8z_400x400.jpg"));
-        discoveries.add(new Discoveries("Amide",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAyxdUJ8KLw1V8EHfAcSi6X94x13WHxQrgSIlve16-SFeVZYIGg&s"));
-        discoveries.add(new Discoveries("Amino Acid",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAyxdUJ8KLw1V8EHfAcSi6X94x13WHxQrgSIlve16-SFeVZYIGg&s"));
-        discoveries.add(new Discoveries("Phenol",
-                "https://pbs.twimg.com/profile_images/998555245826355200/PkFwgyGU.jpg"));
-        discoveries.add(new Discoveries("Carbonxylic",
-                "https://avatars3.githubusercontent.com/u/35128520?s=460&v=4"));
-        discoveries.add(new Discoveries("Nitril",
-                "https://cdn.pixabay.com/photo/2017/04/05/11/56/image-in-the-image-2204798_960_720.jpg"));
-        discoveries.add(new Discoveries("Ether",
-                "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg"));
-        discoveries.add(new Discoveries("Ester",
-                "https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"));
-        discoveries.add(new Discoveries("Alcohol",
-                "https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"));
 
-        new Handler().postDelayed(() -> {
-            //hide loading
-            discoveriesStatusAdapter.hideLoading();
-            //add products to recyclerView
-            discoveriesStatusAdapter.addProducts(discoveries);
-//                loadCount +=3;
-        }, 1000);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response -> {
+                    Log.e("Volley Result", "" + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonObject.getJSONArray("Discoveries");
+
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject discoveryPosts = jsonArray.getJSONObject(i);
+                            JSONObject poster_info = discoveryPosts.getJSONObject("1");
+
+                            discoveries.add(new Discoveries(
+                                    discoveryPosts.getString("id"),
+                                    discoveryPosts.getString("media_url"),
+                                    discoveryPosts.getString("type"),
+                                    discoveryPosts.getString("description"),
+                                    discoveryPosts.getString("0"),
+                                    poster_info.toString()
+                            ));
+                        }
+
+
+                        new Handler().postDelayed(() -> {
+                            //hide loading
+                            discoveriesStatusAdapter.hideLoading();
+                            //add products to recyclerView
+                            discoveriesStatusAdapter.addProducts(discoveries);
+                        }, 1000);
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                },
+                error -> {
+
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("discoveries", "true");
+                postMap.put("limit", quantity);
+                return postMap;
+            }
+        };
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(stringRequest);
+        else
+            Volley.newRequestQueue(Objects.requireNonNull(getActivity())).add(stringRequest);
+
     }
+
+
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

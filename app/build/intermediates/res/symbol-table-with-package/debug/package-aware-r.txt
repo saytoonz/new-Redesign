@@ -77,10 +77,13 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
+attr alignment
+attr allowFlingInOverscroll
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
 attr animationDuration
+attr animation_duration
 attr arrowHeadLength
 attr arrowShaftLength
 attr autoCompleteTextViewStyle
@@ -109,6 +112,9 @@ attr bottomAppBarStyle
 attr bottomNavigationStyle
 attr bottomSheetDialogTheme
 attr bottomSheetStyle
+attr bottom_drawer_background
+attr bottom_sheet_corner_radius
+attr bottom_sheet_extra_padding
 attr boxBackgroundColor
 attr boxBackgroundMode
 attr boxCollapsedPaddingTop
@@ -208,6 +214,7 @@ attr contentPaddingLeft
 attr contentPaddingRight
 attr contentPaddingTop
 attr contentScrim
+attr content_view
 attr controlBackground
 attr coordinatorLayoutStyle
 attr cornerRadius
@@ -219,6 +226,7 @@ attr currentPageIndicatorColor
 attr customNavigationLayout
 attr dampingRatio
 attr defaultQueryHint
+attr degreeIconAnimation
 attr dialogCornerRadius
 attr dialogPreferredPadding
 attr dialogTheme
@@ -281,6 +289,7 @@ attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
 attr firstBaselineToTopHeight
+attr flingEnabled
 attr floatingActionButtonStyle
 attr font
 attr fontFamily
@@ -296,7 +305,9 @@ attr fontWeight
 attr foregroundInsidePadding
 attr gapBetweenBars
 attr goIcon
+attr hasClickableChildren
 attr headerLayout
+attr header_view
 attr height
 attr helperText
 attr helperTextEnabled
@@ -309,6 +320,7 @@ attr hintEnabled
 attr hintTextAppearance
 attr homeAsUpIndicator
 attr homeLayout
+attr horizontalPanEnabled
 attr hoveredFocusedTranslationZ
 attr icon
 attr iconEndPadding
@@ -325,6 +337,7 @@ attr initialActivityCount
 attr insetBackground
 attr insetForeground
 attr isLightTheme
+attr is_cancelable_on_touch_outside
 attr itemBackground
 attr itemHorizontalPadding
 attr itemHorizontalTranslationEnabled
@@ -429,6 +442,8 @@ attr materialCardViewStyle
 attr maxActionInlineWidth
 attr maxButtonHeight
 attr maxImageSize
+attr maxZoom
+attr maxZoomType
 attr measureBasedOnAspectRatio
 attr measureWithLargestChild
 attr menu
@@ -444,12 +459,18 @@ attr mfb_rotation_duration
 attr mfb_size
 attr mfb_type
 attr minTextSize
+attr minZoom
+attr minZoomType
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
 attr navigationMode
 attr navigationViewStyle
 attr numericModifiers
+attr oneFingerScrollEnabled
+attr overPinchable
+attr overScrollHorizontal
+attr overScrollVertical
 attr overlapAnchor
 attr paddingBottomNoButtons
 attr paddingEnd
@@ -490,6 +511,7 @@ attr rippleColor
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
+attr scrollEnabled
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
@@ -497,6 +519,8 @@ attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
 attr selectedDotColor
+attr should_draw_content_under_handle_view
+attr should_draw_under_status_bar
 attr showAsAction
 attr showDividers
 attr showMotionSpec
@@ -592,6 +616,7 @@ attr textLocale
 attr textStartPadding
 attr theme
 attr thickness
+attr threeFingersScrollEnabled
 attr thumbTextPadding
 attr thumbTint
 attr thumbTintMode
@@ -620,10 +645,14 @@ attr tooltipText
 attr track
 attr trackTint
 attr trackTintMode
+attr transformation
+attr transformationGravity
 attr ttcIndex
+attr twoFingersScrollEnabled
 attr useCompatPadding
 attr useDefaultControls
 attr useTextureViewBacking
+attr verticalPanEnabled
 attr videoScale
 attr videoViewApiImpl
 attr videoViewApiImplLegacy
@@ -639,6 +668,7 @@ attr windowFixedWidthMinor
 attr windowMinWidthMajor
 attr windowMinWidthMinor
 attr windowNoTitle
+attr zoomEnabled
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
@@ -678,6 +708,9 @@ color black_10
 color black_bottom
 color black_de
 color black_top
+color bottom_drawer_background
+color bottom_drawer_handle_view_color
+color bottom_drawer_outside_background
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1224,6 +1257,9 @@ dimen activity_margin
 dimen activity_vertical_margin
 dimen app_bar_height
 dimen appbar_padding_top
+dimen bottom_sheet_corner_radius
+dimen bottom_sheet_extra_padding
+dimen bottom_sheet_handle_thickness
 dimen card_padding
 dimen card_view_margin
 dimen cardview_compat_inset_shadow
@@ -1239,6 +1275,10 @@ dimen compat_notification_large_icon_max_width
 dimen content_text_size
 dimen create_scroll_view_padding
 dimen current_weather_icon_size
+dimen default_expand_icon_size
+dimen default_margin
+dimen default_padding
+dimen default_textsize
 dimen description_elevation
 dimen description_title_end_margin
 dimen design_appbar_elevation
@@ -1403,6 +1443,7 @@ dimen padding_map
 dimen progress_bar_height
 dimen progress_view_size
 dimen share_view_height
+dimen simple_cardview_height
 dimen small_margin
 dimen spinner_drop_width
 dimen standard_weather_icon_size
@@ -1689,6 +1730,7 @@ drawable ic_email_outline_grey600_24dp
 drawable ic_email_white_24dp
 drawable ic_error_outline_white_24dp
 drawable ic_exit
+drawable ic_expand_more
 drawable ic_fast_scroll_arrow_down
 drawable ic_favorite_black_24dp
 drawable ic_favorite_border_black_24dp
@@ -1726,6 +1768,7 @@ drawable ic_launcher_foreground
 drawable ic_like_flat
 drawable ic_link_white_24dp
 drawable ic_live_help_black_24dp
+drawable ic_local_airport
 drawable ic_location
 drawable ic_location_on_black_24dp
 drawable ic_location_on_white_24dp
@@ -1992,9 +2035,14 @@ id black
 id blocking
 id bottom
 id bottom_navigation_view
+id bottom_sheet_coordinator
+id bottom_sheet_drawer
 id buttonPanel
 id cancel_action
+id card_content
+id card_header
 id card_image
+id card_root
 id card_view
 id center
 id centerCrop
@@ -2012,11 +2060,12 @@ id clip_vertical
 id close_imageView
 id collapseActionView
 id comment_button
+id comment_linearLayout
+id comment_textView
 id container
 id content
 id contentPanel
 id coordinator
-id country_photo
 id custom
 id customPanel
 id decor_content_parent
@@ -2034,6 +2083,10 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id discover_image
+id discover_text
+id discover_videoView
+id discovery_photo
 id discovery_recycler
 id dot
 id edit_query
@@ -2082,6 +2135,9 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id handle_view
+id header_expand_icon
+id header_textview
 id heart
 id holder_linear_layout
 id home
@@ -2104,7 +2160,10 @@ id largeLabel
 id left
 id like_button
 id like_count
+id like_frame_layout
 id like_layout
+id like_linearLayout
+id like_textView
 id line1
 id line3
 id linearLayout
@@ -2124,6 +2183,8 @@ id multiply
 id navigation_header_container
 id never
 id none
+id none_horizontal
+id none_vertical
 id normal
 id notification_background
 id notification_main_column
@@ -2165,6 +2226,7 @@ id progress_loader
 id radio
 id react_layout
 id read
+id realZoom
 id refreshLayout
 id reverse
 id right
@@ -2197,6 +2259,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id simple_header
 id skip
 id smallLabel
 id snackbar_action
@@ -2277,20 +2340,25 @@ id video_view
 id video_view_api_impl_stub
 id view_offset_helper
 id view_stat_view
+id views_linearLayout
+id views_textView
 id visible
 id white
 id withText
 id worm_dot
 id wrap
 id wrap_content
+id zoom
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
 integer bottom_sheet_slide_duration
 integer cancel_button_image_alpha
 integer config_tooltipAnimTime
+integer degree
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer duration
 integer hide_password_duration
 integer max_lines_desc
 integer mtrl_btn_anim_delay_ms
@@ -2338,8 +2406,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_discover
 layout activity_main
 layout activity_story_view
+layout bottom_drawer_layout
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2363,6 +2433,7 @@ layout exomedia_default_exo_texture_video_view
 layout exomedia_default_native_surface_video_view
 layout exomedia_default_native_texture_video_view
 layout exomedia_video_view_layout
+layout expandable_cardview
 layout fragment_chat
 layout fragment_feeds
 layout fragment_home
@@ -2398,6 +2469,7 @@ layout pausable_progress
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout simple_cardview_header
 layout spring_dot_layout
 layout support_simple_spinner_dropdown_item
 layout toast_layout
@@ -2452,6 +2524,7 @@ string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
 string chat
+string click_marker
 string developer_name
 string email
 string error
@@ -2459,7 +2532,9 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string feeds
 string hide_bottom_view_on_scroll_behavior
+string image_container
 string loading
+string long_text
 string maps_api_key
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
@@ -2687,6 +2762,7 @@ style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style BlueTheme
 style BlueThemeNoActionBar
+style BottomDialogTheme
 style BottomNavigationBarTheme
 style CardView
 style CardView_Dark
@@ -3030,6 +3106,8 @@ styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeM
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listChoiceIndicatorMultipleAnimated listChoiceIndicatorSingleAnimated listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingEnd listPreferredItemPaddingLeft listPreferredItemPaddingRight listPreferredItemPaddingStart panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
 styleable AutofitTextView minTextSize precision sizeToFit
 styleable BottomAppBar backgroundTint fabAlignmentMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll
+styleable BottomDrawer bottom_drawer_background bottom_sheet_corner_radius bottom_sheet_extra_padding should_draw_content_under_handle_view should_draw_under_status_bar
+styleable BottomDrawerDialog is_cancelable_on_touch_outside
 styleable BottomNavigationView elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout behavior_fitToContents behavior_hideable behavior_peekHeight behavior_skipCollapsed
 styleable ButtonBarLayout allowStacking
@@ -3051,6 +3129,7 @@ styleable DesignTheme bottomSheetDialogTheme bottomSheetStyle
 styleable DotsIndicator dotsColor dotsCornerRadius dotsSize dotsSpacing dotsWidthFactor progressMode selectedDotColor
 styleable DrawInsetsFrameLayout insetBackground
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable ExpandableCardView animation_duration content_view expanded header_view
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
@@ -3079,6 +3158,7 @@ styleable RecyclerView android_orientation android_clipToPadding android_descend
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable SimpleExpandableCardView degreeIconAnimation icon title
 styleable Snackbar snackbarButtonStyle snackbarStyle
 styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
@@ -3100,6 +3180,7 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable WormDotsIndicator dotsColor dotsCornerRadius dotsSize dotsSpacing dotsStrokeColor dotsStrokeWidth
+styleable ZoomEngine alignment allowFlingInOverscroll animationDuration flingEnabled hasClickableChildren horizontalPanEnabled maxZoom maxZoomType minZoom minZoomType oneFingerScrollEnabled overPinchable overScrollHorizontal overScrollVertical scrollEnabled threeFingersScrollEnabled transformation transformationGravity twoFingersScrollEnabled verticalPanEnabled zoomEnabled
 xml file_provider
 xml preference_settings
 xml searchable

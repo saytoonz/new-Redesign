@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.HeyAlex:ExapandableCardView:-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8d6b0e5b82565b75c1da3adbfed8fefd/ExapandableCardView--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8d6b0e5b82565b75c1da3adbfed8fefd/ExapandableCardView--SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.HeyAlex/ExapandableCardView/-SNAPSHOT/4c771b89c25d8efc14ca0bf6bb07da107fdcd7ef/ExapandableCardView--SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

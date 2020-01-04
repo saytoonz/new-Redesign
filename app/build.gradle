@@ -21,7 +21,7 @@ android {
         }
     }
 
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -39,7 +39,7 @@ dependencies {
     // Navigation Drawer
     implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
     // Circle Image View
-     implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
     // Bottom Navigation
     implementation 'com.github.ittianyu:BottomNavigationViewEx:2.0.4'
     //adding volley library
@@ -59,13 +59,18 @@ dependencies {
     implementation 'com.huangyz0918:androidwm-light:0.1.2'
     //Image Compressor
     implementation 'id.zelory:compressor:2.1.0'
-
+    //Video View From Exoplayer
     implementation 'com.devbrackets.android:exomedia:4.3.0'
-
+    //Video Cache library
     implementation 'com.danikula:videocache:2.7.1'
-
+    //Circle Image View
     implementation 'de.hdodenhof:circleimageview:3.0.1'
-    
+    //Zoomable Video and Image View
+    implementation 'com.otaliastudios:zoomlayout:1.7.0'
+    //Bottom Sheet Drawer
+    implementation 'com.github.HeyAlex:BottomDrawer:v1.0.0'
+    implementation 'com.github.HeyAlex:ExapandableCardView:-SNAPSHOT'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

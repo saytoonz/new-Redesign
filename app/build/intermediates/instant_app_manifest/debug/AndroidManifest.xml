@@ -23,6 +23,12 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity"
+            android:theme="@style/StoryViewThem" />
+        <activity
+            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity"
+            android:theme="@style/StoryViewThem" />
         <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,9 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity"
-            android:theme="@style/StoryViewThem" />
     </application>
 
 </manifest>
