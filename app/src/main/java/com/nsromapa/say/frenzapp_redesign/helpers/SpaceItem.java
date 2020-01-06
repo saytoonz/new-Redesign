@@ -6,9 +6,7 @@ import android.view.ViewGroup;
 
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
 
-/**
- * Created by yarolegovich on 25.03.2017.
- */
+
 
 public class SpaceItem extends DrawerItem<SpaceItem.ViewHolder> {
 

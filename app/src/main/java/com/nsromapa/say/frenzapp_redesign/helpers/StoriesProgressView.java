@@ -1,4 +1,4 @@
-package com.nsromapa.say.frenzapp_redesign.stories_lib;
+package com.nsromapa.say.frenzapp_redesign.helpers;
 
 import android.annotation.TargetApi;
 import android.content.Context;

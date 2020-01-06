@@ -27,22 +27,22 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int ic_favorite_black_24dp = 0x7f0800f4;
-        public static final int ic_favorite_border_black_24dp = 0x7f0800f5;
-        public static final int ic_favorite_border_white_24dp = 0x7f0800f6;
-        public static final int ic_favorite_white_24dp = 0x7f0800f8;
-        public static final int ic_star_black_24dp = 0x7f080166;
-        public static final int ic_star_border_black_24dp = 0x7f080167;
-        public static final int ic_star_border_white_24dp = 0x7f080168;
-        public static final int ic_star_white_24dp = 0x7f080169;
+        public static final int ic_favorite_black_24dp = 0x7f0800f5;
+        public static final int ic_favorite_border_black_24dp = 0x7f0800f6;
+        public static final int ic_favorite_border_white_24dp = 0x7f0800f7;
+        public static final int ic_favorite_white_24dp = 0x7f0800f9;
+        public static final int ic_star_black_24dp = 0x7f080167;
+        public static final int ic_star_border_black_24dp = 0x7f080168;
+        public static final int ic_star_border_white_24dp = 0x7f080169;
+        public static final int ic_star_white_24dp = 0x7f08016a;
     }
     public static final class id {
         private id() {}
 
         public static final int black = 0x7f0b0049;
-        public static final int heart = 0x7f0b00b4;
-        public static final int star = 0x7f0b0140;
-        public static final int white = 0x7f0b0181;
+        public static final int heart = 0x7f0b00b8;
+        public static final int star = 0x7f0b0148;
+        public static final int white = 0x7f0b018a;
     }
     public static final class string {
         private string() {}

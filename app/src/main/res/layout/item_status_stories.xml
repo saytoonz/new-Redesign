@@ -75,7 +75,7 @@
             android:padding="5dp"
             android:src="@mipmap/ic_launcher" />
 
-        <com.nsromapa.say.frenzapp_redesign.stories_lib.CircularStatusView
+        <com.nsromapa.say.frenzapp_redesign.helpers.CircularStatusView
             android:id="@+id/circular_status_view"
             android:layout_width="52dp"
             android:layout_height="52dp"

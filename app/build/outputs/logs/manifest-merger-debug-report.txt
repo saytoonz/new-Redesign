@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\1170414423c1de8c2f229ac69769ad73\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.ittianyu:BottomNavigationViewEx:2.0.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9b767aa441f300928e394669c1c9d854\jetified-BottomNavigationViewEx-2.0.4\AndroidManifest.xml:2:1-14:12
 MERGED from [com.github.HeyAlex:BottomDrawer:v1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\73d9a38751e17d65ac6ff20a1e0a6336\BottomDrawer-v1.0.0\AndroidManifest.xml:2:1-11:12
@@ -63,22 +63,22 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Saytoonz\.gra
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e4a3d379d1bcbe285b89607fcaeb9e70\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\87ae084eb3df2dbaca54f0e05c8f6900\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9892867a70e2b14adca667b63a808473\jetified-timber-4.7.1\AndroidManifest.xml:2:1-9:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
 	package
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:4:5-49
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-52:12
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-51:12
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:11-69
@@ -96,12 +96,8 @@ uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:8:5-81
 	android:name
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:8:22-78
-uses-permission#android.permission.GET_TASKS
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:9:5-68
-	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:9:22-65
 application
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:11:5-50:19
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:10:5-49:19
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\1170414423c1de8c2f229ac69769ad73\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:11:5-47
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\1170414423c1de8c2f229ac69769ad73\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:11:5-47
 MERGED from [com.github.ittianyu:BottomNavigationViewEx:2.0.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9b767aa441f300928e394669c1c9d854\jetified-BottomNavigationViewEx-2.0.4\AndroidManifest.xml:11:5-12:19
@@ -131,63 +127,63 @@ MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\Saytoonz\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\df2ac4fe6b88cbdd1c862077d2fdf1ec\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:9-41
 	tools:ignore
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:19:9-48
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:18:9-48
 	android:roundIcon
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:16:9-48
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:9-48
 	android:icon
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:18:9-40
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:17:9-40
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:9-28
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:11:9-28
 activity#com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:21:9-23:52
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:20:9-22:52
 	android:theme
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:22:13-49
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:22:13-60
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:21:13-60
 activity#com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:25:9-27:52
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:24:9-26:52
 	android:theme
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:27:13-49
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:13-49
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:13-59
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:25:13-59
 activity#com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:9-35:20
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:9-34:20
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:19-61
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:19-61
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:13-33:29
 action#android.intent.action.MAIN
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:17-69
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:27-74
 service#com.nsromapa.say.frenzapp_redesign.services.BootCompleteService
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:38:9-40:38
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:37:9-39:38
 	android:enabled
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:40:13-35
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:13-35
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:13-57
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:38:13-57
 receiver#com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:9-48:20
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:9-47:20
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:19-67
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:19-67
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:13-47:29
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:13-46:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:46:17-79
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:17-79
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:46:25-76
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:25-76
 uses-sdk
 INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml

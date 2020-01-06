@@ -56,7 +56,6 @@ public final class R {
   }
   public static final class attr {
     /**
-     * Custom divider drawable to use for elements in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -64,7 +63,6 @@ public final class R {
      */
     public static final int actionBarDivider=0x7f040000;
     /**
-     * Custom item state list drawable background for action bar items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -72,8 +70,6 @@ public final class R {
      */
     public static final int actionBarItemBackground=0x7f040001;
     /**
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -81,8 +77,6 @@ public final class R {
      */
     public static final int actionBarPopupTheme=0x7f040002;
     /**
-     * Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -99,10 +93,6 @@ public final class R {
      */
     public static final int actionBarSize=0x7f040003;
     /**
-     * Reference to a style for the split Action Bar. This style
-     * controls the split component that holds the menu/action
-     * buttons. actionBarStyle is still used for the primary
-     * bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -110,7 +100,6 @@ public final class R {
      */
     public static final int actionBarSplitStyle=0x7f040004;
     /**
-     * Reference to a style for the Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -125,7 +114,6 @@ public final class R {
      */
     public static final int actionBarTabBarStyle=0x7f040006;
     /**
-     * Default style for tabs within an action bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -140,9 +128,6 @@ public final class R {
      */
     public static final int actionBarTabTextStyle=0x7f040008;
     /**
-     * Reference to a theme that should be used to inflate the
-     * action bar. This will be inherited by any widget inflated
-     * into the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -150,13 +135,6 @@ public final class R {
      */
     public static final int actionBarTheme=0x7f040009;
     /**
-     * Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar. Most of the time
-     * this will be a reference to the current theme, but when
-     * the action bar has a significantly different contrast
-     * profile than the rest of the activity the difference
-     * can become important. If this is set to @null the current
-     * theme will be used.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -164,7 +142,6 @@ public final class R {
      */
     public static final int actionBarWidgetTheme=0x7f04000a;
     /**
-     * Default action button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -172,7 +149,6 @@ public final class R {
      */
     public static final int actionButtonStyle=0x7f04000b;
     /**
-     * Default ActionBar dropdown style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -180,9 +156,6 @@ public final class R {
      */
     public static final int actionDropDownStyle=0x7f04000c;
     /**
-     * An optional layout to be used as an action view.
-     * See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -190,8 +163,6 @@ public final class R {
      */
     public static final int actionLayout=0x7f04000d;
     /**
-     * TextAppearance style that will be applied to text that
-     * appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -199,7 +170,6 @@ public final class R {
      */
     public static final int actionMenuTextAppearance=0x7f04000e;
     /**
-     * Color for text that appears within action menu items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -210,7 +180,6 @@ public final class R {
      */
     public static final int actionMenuTextColor=0x7f04000f;
     /**
-     * Background drawable to use for action mode UI
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -225,7 +194,6 @@ public final class R {
      */
     public static final int actionModeCloseButtonStyle=0x7f040011;
     /**
-     * Drawable to use for the close action mode button
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -233,7 +201,6 @@ public final class R {
      */
     public static final int actionModeCloseDrawable=0x7f040012;
     /**
-     * Drawable to use for the Copy action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -241,7 +208,6 @@ public final class R {
      */
     public static final int actionModeCopyDrawable=0x7f040013;
     /**
-     * Drawable to use for the Cut action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -249,7 +215,6 @@ public final class R {
      */
     public static final int actionModeCutDrawable=0x7f040014;
     /**
-     * Drawable to use for the Find action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -257,7 +222,6 @@ public final class R {
      */
     public static final int actionModeFindDrawable=0x7f040015;
     /**
-     * Drawable to use for the Paste action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -265,7 +229,6 @@ public final class R {
      */
     public static final int actionModePasteDrawable=0x7f040016;
     /**
-     * PopupWindow style to use for action modes when showing as a window overlay.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -273,7 +236,6 @@ public final class R {
      */
     public static final int actionModePopupWindowStyle=0x7f040017;
     /**
-     * Drawable to use for the Select all action button in Contextual Action Bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -281,7 +243,6 @@ public final class R {
      */
     public static final int actionModeSelectAllDrawable=0x7f040018;
     /**
-     * Drawable to use for the Share action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -289,7 +250,6 @@ public final class R {
      */
     public static final int actionModeShareDrawable=0x7f040019;
     /**
-     * Background drawable to use for action mode UI in the lower split bar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -304,7 +264,6 @@ public final class R {
      */
     public static final int actionModeStyle=0x7f04001b;
     /**
-     * Drawable to use for the Web Search action button in WebView selection action modes
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -326,24 +285,16 @@ public final class R {
      */
     public static final int actionOverflowMenuStyle=0x7f04001e;
     /**
-     * The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.
-     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
-     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionProviderClass=0x7f04001f;
     /**
-     * The name of an optional View class to instantiate and use as an
-     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int actionViewClass=0x7f040020;
     /**
-     * Default ActivityChooserView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -370,7 +321,6 @@ public final class R {
      */
     public static final int alertDialogStyle=0x7f040024;
     /**
-     * Theme to use for alert dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -403,20 +353,15 @@ public final class R {
      */
     public static final int allowFlingInOverscroll=0x7f040027;
     /**
-     * Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int allowStacking=0x7f040028;
     /**
-     * Alpha multiplier applied to the base color.
      * <p>May be a floating point value, such as "<code>1.2</code>".
      */
     public static final int alpha=0x7f040029;
     /**
-     * The alphabetic modifier key. This is the modifier when using a keyboard
-     * with alphabetic keys. The values should be kept in sync with KeyEvent
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -441,7 +386,6 @@ public final class R {
      */
     public static final int animation_duration=0x7f04002c;
     /**
-     * The length of the arrow head when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -450,7 +394,6 @@ public final class R {
      */
     public static final int arrowHeadLength=0x7f04002d;
     /**
-     * The length of the shaft when formed to make an arrow
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -459,7 +402,6 @@ public final class R {
      */
     public static final int arrowShaftLength=0x7f04002e;
     /**
-     * Default AutoCompleteTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -467,7 +409,6 @@ public final class R {
      */
     public static final int autoCompleteTextViewStyle=0x7f04002f;
     /**
-     * The maximum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -476,7 +417,6 @@ public final class R {
      */
     public static final int autoSizeMaxTextSize=0x7f040030;
     /**
-     * The minimum text size constraint to be used when auto-sizing text.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -485,9 +425,6 @@ public final class R {
      */
     public static final int autoSizeMinTextSize=0x7f040031;
     /**
-     * Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
-     * <code>autoSizeStepGranularity</code> if set.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -495,9 +432,6 @@ public final class R {
      */
     public static final int autoSizePresetSizes=0x7f040032;
     /**
-     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>. The default is 1px. Overwrites
-     * <code>autoSizePresetSizes</code> if set.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -506,22 +440,18 @@ public final class R {
      */
     public static final int autoSizeStepGranularity=0x7f040033;
     /**
-     * Specify the type of auto-size. Note that this feature is not supported by EditText,
-     * works only for TextView.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
-     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
-     * container.</td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>uniform</td><td>1</td><td></td></tr>
      * </table>
      */
     public static final int autoSizeTextType=0x7f040034;
     /**
-     * Specifies a background drawable for the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -529,7 +459,6 @@ public final class R {
      */
     public static final int background=0x7f040035;
     /**
-     * Specifies a background drawable for the bottom component of a split action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -540,7 +469,6 @@ public final class R {
      */
     public static final int backgroundSplit=0x7f040036;
     /**
-     * Specifies a background drawable for a second stacked row of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -551,36 +479,28 @@ public final class R {
      */
     public static final int backgroundStacked=0x7f040037;
     /**
-     * Tint to apply to the background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int backgroundTint=0x7f040038;
     /**
-     * Blending mode used to apply the background tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int backgroundTintMode=0x7f040039;
     /**
-     * The length of the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -662,7 +582,6 @@ public final class R {
      */
     public static final int borderWidth=0x7f040043;
     /**
-     * Style for buttons without an explicit border, often used in groups.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -794,7 +713,6 @@ public final class R {
      */
     public static final int boxStrokeWidth=0x7f040054;
     /**
-     * Style for buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -802,7 +720,6 @@ public final class R {
      */
     public static final int buttonBarButtonStyle=0x7f040055;
     /**
-     * Style for the "negative" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -810,7 +727,6 @@ public final class R {
      */
     public static final int buttonBarNegativeButtonStyle=0x7f040056;
     /**
-     * Style for the "neutral" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -818,7 +734,6 @@ public final class R {
      */
     public static final int buttonBarNeutralButtonStyle=0x7f040057;
     /**
-     * Style for the "positive" buttons within button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -826,7 +741,6 @@ public final class R {
      */
     public static final int buttonBarPositiveButtonStyle=0x7f040058;
     /**
-     * Style for button bars
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -834,7 +748,6 @@ public final class R {
      */
     public static final int buttonBarStyle=0x7f040059;
     /**
-     * Compat attr to load backported drawable types
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -848,9 +761,9 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int buttonGravity=0x7f04005b;
@@ -870,7 +783,6 @@ public final class R {
      */
     public static final int buttonPanelSideLayout=0x7f04005d;
     /**
-     * Normal Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -878,7 +790,6 @@ public final class R {
      */
     public static final int buttonStyle=0x7f04005e;
     /**
-     * Small Button style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -886,43 +797,34 @@ public final class R {
      */
     public static final int buttonStyleSmall=0x7f04005f;
     /**
-     * Tint to apply to the button drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int buttonTint=0x7f040060;
     /**
-     * Blending mode used to apply the button tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int buttonTintMode=0x7f040061;
     /**
-     * Background color for CardView.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int cardBackgroundColor=0x7f040062;
     /**
-     * Corner radius for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -931,7 +833,6 @@ public final class R {
      */
     public static final int cardCornerRadius=0x7f040063;
     /**
-     * Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -940,7 +841,6 @@ public final class R {
      */
     public static final int cardElevation=0x7f040064;
     /**
-     * Maximum Elevation for CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -949,13 +849,11 @@ public final class R {
      */
     public static final int cardMaxElevation=0x7f040065;
     /**
-     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int cardPreventCornerOverlap=0x7f040066;
     /**
-     * Add padding in API v21+ as well to have the same measurements with previous versions.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -973,7 +871,6 @@ public final class R {
      */
     public static final int chainUseRtl=0x7f040069;
     /**
-     * Default Checkbox style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1005,7 +902,6 @@ public final class R {
      */
     public static final int checkedIconVisible=0x7f04006e;
     /**
-     * Default CheckedTextView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1166,7 +1062,6 @@ public final class R {
      */
     public static final int civ_circle_background_color=0x7f040085;
     /**
-     * Close button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1214,7 +1109,6 @@ public final class R {
      */
     public static final int closeIconVisible=0x7f04008c;
     /**
-     * Specifies a layout to use for the "close" item at the starting edge.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1222,13 +1116,11 @@ public final class R {
      */
     public static final int closeItemLayout=0x7f04008d;
     /**
-     * Text to set as the content description for the collapse button.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int collapseContentDescription=0x7f04008e;
     /**
-     * Icon drawable to use for the collapse button.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1263,58 +1155,48 @@ public final class R {
      */
     public static final int collapsedTitleTextAppearance=0x7f040091;
     /**
-     * The drawing color for the bars
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int color=0x7f040092;
     /**
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorAccent=0x7f040093;
     /**
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorBackgroundFloating=0x7f040094;
     /**
-     * The color applied to framework buttons in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorButtonNormal=0x7f040095;
     /**
-     * The color applied to framework controls in their activated (ex. checked) state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlActivated=0x7f040096;
     /**
-     * The color applied to framework control highlights (ex. ripples, list selectors).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlHighlight=0x7f040097;
     /**
-     * The color applied to framework controls in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorControlNormal=0x7f040098;
     /**
-     * Color used for error states and things that need to be drawn to
-     * the user's attention.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1325,16 +1207,12 @@ public final class R {
      */
     public static final int colorError=0x7f040099;
     /**
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorPrimary=0x7f04009a;
     /**
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
@@ -1347,14 +1225,12 @@ public final class R {
      */
     public static final int colorSecondary=0x7f04009c;
     /**
-     * The color applied to framework switch thumbs in their normal state.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int colorSwitchThumbNormal=0x7f04009d;
     /**
-     * Commit icon shown in the query suggestion row
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1381,14 +1257,11 @@ public final class R {
      */
     public static final int content=0x7f0400a1;
     /**
-     * The content description associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int contentDescription=0x7f0400a2;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1397,8 +1270,6 @@ public final class R {
      */
     public static final int contentInsetEnd=0x7f0400a3;
     /**
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1407,8 +1278,6 @@ public final class R {
      */
     public static final int contentInsetEndWithActions=0x7f0400a4;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1417,8 +1286,6 @@ public final class R {
      */
     public static final int contentInsetLeft=0x7f0400a5;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1427,8 +1294,6 @@ public final class R {
      */
     public static final int contentInsetRight=0x7f0400a6;
     /**
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1437,8 +1302,6 @@ public final class R {
      */
     public static final int contentInsetStart=0x7f0400a7;
     /**
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1447,7 +1310,6 @@ public final class R {
      */
     public static final int contentInsetStartWithNavigation=0x7f0400a8;
     /**
-     * Inner padding between the edges of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1456,7 +1318,6 @@ public final class R {
      */
     public static final int contentPadding=0x7f0400a9;
     /**
-     * Inner padding between the bottom edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1465,7 +1326,6 @@ public final class R {
      */
     public static final int contentPaddingBottom=0x7f0400aa;
     /**
-     * Inner padding between the left edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1474,7 +1334,6 @@ public final class R {
      */
     public static final int contentPaddingLeft=0x7f0400ab;
     /**
-     * Inner padding between the right edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1483,7 +1342,6 @@ public final class R {
      */
     public static final int contentPaddingRight=0x7f0400ac;
     /**
-     * Inner padding between the top edge of the Card and children of the CardView.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1505,7 +1363,6 @@ public final class R {
      */
     public static final int content_view=0x7f0400af;
     /**
-     * The background used by framework controls.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1557,7 +1414,6 @@ public final class R {
      */
     public static final int currentPageIndicatorColor=0x7f0400b7;
     /**
-     * Specifies a layout for custom navigation. Overrides navigationMode.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1569,8 +1425,6 @@ public final class R {
      */
     public static final int dampingRatio=0x7f0400b9;
     /**
-     * Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -1580,7 +1434,6 @@ public final class R {
      */
     public static final int degreeIconAnimation=0x7f0400bb;
     /**
-     * Preferred corner radius of dialogs.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1589,7 +1442,6 @@ public final class R {
      */
     public static final int dialogCornerRadius=0x7f0400bc;
     /**
-     * Preferred padding for dialog content.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1598,7 +1450,6 @@ public final class R {
      */
     public static final int dialogPreferredPadding=0x7f0400bd;
     /**
-     * Theme to use for dialogs spawned from this theme.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1613,7 +1464,6 @@ public final class R {
      */
     public static final int digitCellStyle=0x7f0400bf;
     /**
-     * Options affecting how the action bar is displayed.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -1631,7 +1481,6 @@ public final class R {
      */
     public static final int displayOptions=0x7f0400c0;
     /**
-     * Specifies the drawable used for item dividers.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1639,7 +1488,6 @@ public final class R {
      */
     public static final int divider=0x7f0400c1;
     /**
-     * A drawable that may be used as a horizontal divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1647,7 +1495,6 @@ public final class R {
      */
     public static final int dividerHorizontal=0x7f0400c2;
     /**
-     * Size of padding on either end of a divider.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1656,7 +1503,6 @@ public final class R {
      */
     public static final int dividerPadding=0x7f0400c3;
     /**
-     * A drawable that may be used as a vertical divider between visual elements.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1742,8 +1588,6 @@ public final class R {
      */
     public static final int drawableEndCompat=0x7f0400cf;
     /**
-     * Compound drawables allowing the use of vector drawable when running on older versions
-     * of the platform.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1758,7 +1602,6 @@ public final class R {
      */
     public static final int drawableRightCompat=0x7f0400d1;
     /**
-     * The total size of the drawable
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1774,31 +1617,24 @@ public final class R {
      */
     public static final int drawableStartCompat=0x7f0400d3;
     /**
-     * Tint to apply to the compound (left, top, etc.) drawables.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int drawableTint=0x7f0400d4;
     /**
-     * Blending mode used to apply the compound (left, top, etc.) drawables tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int drawableTintMode=0x7f0400d5;
@@ -1831,7 +1667,6 @@ public final class R {
      */
     public static final int drawerArrowStyle=0x7f0400d9;
     /**
-     * ListPopupWindow compatibility
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1839,7 +1674,6 @@ public final class R {
      */
     public static final int dropDownListViewStyle=0x7f0400da;
     /**
-     * The preferred item height for dropdown lists.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1848,7 +1682,6 @@ public final class R {
      */
     public static final int dropdownListPreferredItemHeight=0x7f0400db;
     /**
-     * EditText background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1856,7 +1689,6 @@ public final class R {
      */
     public static final int editTextBackground=0x7f0400dc;
     /**
-     * EditText text foreground color.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1867,7 +1699,6 @@ public final class R {
      */
     public static final int editTextColor=0x7f0400dd;
     /**
-     * Default EditText style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -1875,7 +1706,6 @@ public final class R {
      */
     public static final int editTextStyle=0x7f0400de;
     /**
-     * Elevation for the action bar itself
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -1918,11 +1748,6 @@ public final class R {
      */
     public static final int errorTextAppearance=0x7f0400e4;
     /**
-     * The drawable to show in the button for expanding the activities overflow popup.
-     * <strong>Note:</strong> Clients would like to set this drawable
-     * as a clue about the action the chosen activity will perform. For
-     * example, if share activity is to be chosen the drawable should
-     * give a clue that sharing is to be performed.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2092,8 +1917,6 @@ public final class R {
      */
     public static final int fastScrollVerticalTrackDrawable=0x7f0400f8;
     /**
-     * Distance from the top of the TextView to the first text baseline. If set, this
-     * overrides the value set for paddingTop.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2132,8 +1955,6 @@ public final class R {
      */
     public static final int floatingActionButtonStyle=0x7f0400fb;
     /**
-     * The reference to the font file to be used. This should be a file in the res/font folder
-     * and should therefore have an R reference value. E.g. @font/myfont
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2141,23 +1962,16 @@ public final class R {
      */
     public static final int font=0x7f0400fc;
     /**
-     * The attribute for the font family.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontFamily=0x7f0400fd;
     /**
-     * The authority of the Font Provider to be used for the request.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderAuthority=0x7f0400fe;
     /**
-     * The sets of hashes for the certificates the provider should be signed with. This is
-     * used to verify the identity of the provider, and is only required if the provider is not
-     * part of the system image. This value may point to one list or a list of lists, where each
-     * individual list represents one collection of signature hashes. Refer to your font provider's
-     * documentation for these values.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2165,34 +1979,18 @@ public final class R {
      */
     public static final int fontProviderCerts=0x7f0400ff;
     /**
-     * The strategy to be used when fetching font data from a font provider in XML layouts.
-     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
-     * choice of API between {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
-     * {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
-     * (async).
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
-     * First, check the local cache, then if the requeted font is not cached, trigger a
-     * request the font and continue with layout inflation. Once the font fetch succeeds, the
-     * target text view will be refreshed with the downloaded font data. The
-     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
-     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
-     * First, check the local cache, then if the requested font is not cached, request the
-     * font from the provider and wait until it is finished.  You can change the length of
-     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-     * default typeface will be used instead.</td></tr>
+     * <tr><td>async</td><td>1</td><td></td></tr>
+     * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      */
     public static final int fontProviderFetchStrategy=0x7f040100;
     /**
-     * The length of the timeout during fetching.
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -2200,29 +1998,21 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
-     * timeout and wait until a reply is received from the font provider.</td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      */
     public static final int fontProviderFetchTimeout=0x7f040101;
     /**
-     * The package for the Font Provider to be used for the request. This is used to verify
-     * the identity of the provider.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderPackage=0x7f040102;
     /**
-     * The query to be sent over to the provider. Refer to your font provider's documentation
-     * on the format of this string.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontProviderQuery=0x7f040103;
     /**
-     * The style of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any style information in the font's header tables. If
-     * unspecified, the value in the font's header tables will be used.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -2235,20 +2025,11 @@ public final class R {
      */
     public static final int fontStyle=0x7f040104;
     /**
-     * The variation settings to be applied to the font. The string should be in the following
-     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
-     * used, or the font used does not support variation settings, this attribute needs not be
-     * specified.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int fontVariationSettings=0x7f040105;
     /**
-     * The weight of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any weight information in the font's header tables. Must
-     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
-     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
-     * in the font's header tables will be used.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int fontWeight=0x7f040106;
@@ -2258,7 +2039,6 @@ public final class R {
      */
     public static final int foregroundInsidePadding=0x7f040107;
     /**
-     * The max gap between the bars when they are parallel to each other
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2267,7 +2047,6 @@ public final class R {
      */
     public static final int gapBetweenBars=0x7f040108;
     /**
-     * Go button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2326,7 +2105,6 @@ public final class R {
      */
     public static final int hideMotionSpec=0x7f040111;
     /**
-     * Set true to hide the action bar on a vertical nested scroll of content.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -2354,7 +2132,6 @@ public final class R {
      */
     public static final int hintTextAppearance=0x7f040116;
     /**
-     * Specifies a drawable to use for the 'home as up' indicator.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2362,7 +2139,6 @@ public final class R {
      */
     public static final int homeAsUpIndicator=0x7f040117;
     /**
-     * Specifies a layout to use for the "home" section of the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2434,43 +2210,33 @@ public final class R {
      */
     public static final int iconStartPadding=0x7f040120;
     /**
-     * Tint to apply to the icon.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int iconTint=0x7f040121;
     /**
-     * Blending mode used to apply the icon tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int iconTintMode=0x7f040122;
     /**
-     * The default state of the SearchView. If true, it will be iconified when not in
-     * use and expanded when clicked.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int iconifiedByDefault=0x7f040123;
     /**
-     * ImageButton background drawable.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2478,7 +2244,6 @@ public final class R {
      */
     public static final int imageButtonStyle=0x7f040124;
     /**
-     * Specifies a style resource to use for an indeterminate progress spinner.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2486,7 +2251,6 @@ public final class R {
      */
     public static final int indeterminateProgressStyle=0x7f040125;
     /**
-     * The maximal number of items initially shown in the activity list.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -2564,8 +2328,6 @@ public final class R {
      */
     public static final int itemIconTint=0x7f040130;
     /**
-     * Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2609,11 +2371,6 @@ public final class R {
      */
     public static final int itemTextColor=0x7f040136;
     /**
-     * A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.
-     * Child views can refer to these keylines for alignment using
-     * layout_keyline="index" where index is a 0-based index into
-     * this array.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2647,8 +2404,6 @@ public final class R {
      */
     public static final int labelVisibilityMode=0x7f04013a;
     /**
-     * Distance from the bottom of the TextView to the last text baseline. If set, this
-     * overrides the value set for paddingBottom.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -2657,7 +2412,6 @@ public final class R {
      */
     public static final int lastBaselineToBottomHeight=0x7f04013b;
     /**
-     * The layout to use for the search view.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2665,21 +2419,11 @@ public final class R {
      */
     public static final int layout=0x7f04013c;
     /**
-     * Class name of the Layout Manager to be used.
-     * <p/>
-     * The class must ext androidx.recyclerview.widget.RecyclerViewView$LayoutManager
-     * and have either a default constructor or constructor with the signature
-     * (android.content.Context, android.util.AttributeSet, int, int).
-     * <p/>
-     * If the name starts with a '.', application package is prefixed.
-     * Else, if the name contains a '.', the classname is assumed to be a full class name.
-     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int layoutManager=0x7f04013d;
     /**
-     * The id of an anchor view that this view should position relative to.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -2687,40 +2431,30 @@ public final class R {
      */
     public static final int layout_anchor=0x7f04013e;
     /**
-     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the horizontal gravity: a left gravity will clip the right
-     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
-     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
-     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_anchorGravity=0x7f04013f;
     /**
-     * The class name of a Behavior class defining special runtime behavior
-     * for this child view.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3152,21 +2886,20 @@ public final class R {
      */
     public static final int layout_constraintWidth_percent=0x7f04016b;
     /**
-     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
-     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
-     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * <tr><td>all</td><td>77</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_dodgeInsetEdges=0x7f04016c;
@@ -3235,28 +2968,23 @@ public final class R {
      */
     public static final int layout_goneMarginTop=0x7f040174;
     /**
-     * Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      */
     public static final int layout_insetEdge=0x7f040175;
     /**
-     * The index of a keyline this view should position relative to.
-     * android:layout_gravity will affect how the view aligns to the
-     * specified keyline.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int layout_keyline=0x7f040176;
@@ -3270,7 +2998,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -3306,8 +3034,6 @@ public final class R {
      */
     public static final int liftOnScroll=0x7f04017a;
     /**
-     * Explicit height between lines of text. If set, this will override the values set
-     * for lineSpacingExtra and lineSpacingMultiplier.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3324,7 +3050,6 @@ public final class R {
      */
     public static final int lineSpacing=0x7f04017c;
     /**
-     * Drawable used as a background for selected list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3332,7 +3057,6 @@ public final class R {
      */
     public static final int listChoiceBackgroundIndicator=0x7f04017d;
     /**
-     * Animated Drawable to use for single choice indicators.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3340,7 +3064,6 @@ public final class R {
      */
     public static final int listChoiceIndicatorMultipleAnimated=0x7f04017e;
     /**
-     * Animated Drawable to use for multiple choice indicators.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3348,7 +3071,6 @@ public final class R {
      */
     public static final int listChoiceIndicatorSingleAnimated=0x7f04017f;
     /**
-     * The list divider used in alert dialogs.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3370,7 +3092,6 @@ public final class R {
      */
     public static final int listLayout=0x7f040182;
     /**
-     * Default menu-style ListView style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3385,7 +3106,6 @@ public final class R {
      */
     public static final int listPopupWindowStyle=0x7f040184;
     /**
-     * The preferred list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3394,7 +3114,6 @@ public final class R {
      */
     public static final int listPreferredItemHeight=0x7f040185;
     /**
-     * A larger, more robust list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3403,7 +3122,6 @@ public final class R {
      */
     public static final int listPreferredItemHeightLarge=0x7f040186;
     /**
-     * A smaller, sleeker list item height.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3412,7 +3130,6 @@ public final class R {
      */
     public static final int listPreferredItemHeightSmall=0x7f040187;
     /**
-     * The preferred padding along the end edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3421,7 +3138,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingEnd=0x7f040188;
     /**
-     * The preferred padding along the left edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3430,7 +3146,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingLeft=0x7f040189;
     /**
-     * The preferred padding along the right edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3439,7 +3154,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingRight=0x7f04018a;
     /**
-     * The preferred padding along the start edge of list items.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3448,7 +3162,6 @@ public final class R {
      */
     public static final int listPreferredItemPaddingStart=0x7f04018b;
     /**
-     * Specifies the drawable used for the application logo.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3456,8 +3169,6 @@ public final class R {
      */
     public static final int logo=0x7f04018c;
     /**
-     * A content description string to describe the appearance of the
-     * associated logo image.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -3522,15 +3233,11 @@ public final class R {
      */
     public static final int measureBasedOnAspectRatio=0x7f040195;
     /**
-     * When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child. If false, all children are
-     * measured normally.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int measureWithLargestChild=0x7f040196;
     /**
-     * Menu resource to inflate to be shown in the toolbar
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3631,15 +3338,11 @@ public final class R {
      */
     public static final int multiChoiceItemLayout=0x7f0401a6;
     /**
-     * Text to set as the content description for the navigation button
-     * located at the start of the toolbar.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int navigationContentDescription=0x7f0401a7;
     /**
-     * Icon drawable to use for the navigation button located at
-     * the start of the toolbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3647,16 +3350,15 @@ public final class R {
      */
     public static final int navigationIcon=0x7f0401a8;
     /**
-     * The type of navigation to use.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
-     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
-     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
      * </table>
      */
     public static final int navigationMode=0x7f0401a9;
@@ -3668,8 +3370,6 @@ public final class R {
      */
     public static final int navigationViewStyle=0x7f0401aa;
     /**
-     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
-     * keyboard. The values should be kept in sync with KeyEvent
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -3706,13 +3406,11 @@ public final class R {
      */
     public static final int overScrollVertical=0x7f0401af;
     /**
-     * Whether the popup window should overlap its anchor view.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int overlapAnchor=0x7f0401b0;
     /**
-     * Bottom padding to use when no buttons are present.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3721,7 +3419,6 @@ public final class R {
      */
     public static final int paddingBottomNoButtons=0x7f0401b1;
     /**
-     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3730,7 +3427,6 @@ public final class R {
      */
     public static final int paddingEnd=0x7f0401b2;
     /**
-     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3739,7 +3435,6 @@ public final class R {
      */
     public static final int paddingStart=0x7f0401b3;
     /**
-     * Top padding to use when no title is present.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3754,7 +3449,6 @@ public final class R {
      */
     public static final int pageIndicatorColor=0x7f0401b5;
     /**
-     * The background of a panel when it is inset from the left and right edges of the screen.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3762,7 +3456,6 @@ public final class R {
      */
     public static final int panelBackground=0x7f0401b6;
     /**
-     * Default Panel Menu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3770,7 +3463,6 @@ public final class R {
      */
     public static final int panelMenuListTheme=0x7f0401b7;
     /**
-     * Default Panel Menu width.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3817,7 +3509,6 @@ public final class R {
      */
     public static final int passwordToggleTintMode=0x7f0401bd;
     /**
-     * Default PopupMenu style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3825,8 +3516,6 @@ public final class R {
      */
     public static final int popupMenuStyle=0x7f0401be;
     /**
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3834,7 +3523,6 @@ public final class R {
      */
     public static final int popupTheme=0x7f0401bf;
     /**
-     * Default PopupWindow style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3872,7 +3560,6 @@ public final class R {
      */
     public static final int precision=0x7f0401c5;
     /**
-     * Whether space should be reserved in layout when an icon is missing.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -3886,7 +3573,6 @@ public final class R {
      */
     public static final int pressedTranslationZ=0x7f0401c7;
     /**
-     * Specifies the horizontal padding on either end for an embedded progress bar.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -3895,7 +3581,6 @@ public final class R {
      */
     public static final int progressBarPadding=0x7f0401c8;
     /**
-     * Specifies a style resource to use for an embedded progress bar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3916,7 +3601,6 @@ public final class R {
      */
     public static final int progressMode=0x7f0401cb;
     /**
-     * Background for the section containing the search query
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3924,13 +3608,11 @@ public final class R {
      */
     public static final int queryBackground=0x7f0401cc;
     /**
-     * An optional user-defined query hint string to be displayed in the empty query field.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int queryHint=0x7f0401cd;
     /**
-     * Default RadioButton style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3938,7 +3620,6 @@ public final class R {
      */
     public static final int radioButtonStyle=0x7f0401ce;
     /**
-     * Default RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3946,7 +3627,6 @@ public final class R {
      */
     public static final int ratingBarStyle=0x7f0401cf;
     /**
-     * Indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -3954,7 +3634,6 @@ public final class R {
      */
     public static final int ratingBarStyleIndicator=0x7f0401d0;
     /**
-     * Small indicator RatingBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4007,7 +3686,6 @@ public final class R {
      */
     public static final int scrollEnabled=0x7f0401d8;
     /**
-     * Search icon displayed as a text field hint
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4015,7 +3693,6 @@ public final class R {
      */
     public static final int searchHintIcon=0x7f0401d9;
     /**
-     * Search icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4023,7 +3700,6 @@ public final class R {
      */
     public static final int searchIcon=0x7f0401da;
     /**
-     * Style for the search query widget.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4031,7 +3707,6 @@ public final class R {
      */
     public static final int searchViewStyle=0x7f0401db;
     /**
-     * Default SeekBar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4039,9 +3714,6 @@ public final class R {
      */
     public static final int seekBarStyle=0x7f0401dc;
     /**
-     * A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4049,7 +3721,6 @@ public final class R {
      */
     public static final int selectableItemBackground=0x7f0401dd;
     /**
-     * Background drawable for borderless standalone items that need focus/pressed states.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4073,32 +3744,21 @@ public final class R {
      */
     public static final int should_draw_under_status_bar=0x7f0401e1;
     /**
-     * How this item should display in the Action Bar, if present.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
-     * the system's limits of how much stuff to put there. This may make
-     * your action bar look bad on some screens. In most cases you should
-     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
-     * item. When expanded, the action view takes over a
-     * larger segment of its container.</td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
-     * by the system. Favor this option over "always" where possible.
-     * Mutually exclusive with "never" and "always".</td></tr>
-     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
-     * Mutually exclusive with "ifRoom" and "always".</td></tr>
-     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
-     * label with it even if it has an icon representation.</td></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
      * </table>
      */
     public static final int showAsAction=0x7f0401e2;
     /**
-     * Setting for which dividers to show.
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
@@ -4120,7 +3780,6 @@ public final class R {
      */
     public static final int showMotionSpec=0x7f0401e4;
     /**
-     * Whether to draw on/off text.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -4171,13 +3830,11 @@ public final class R {
      */
     public static final int spanCount=0x7f0401ed;
     /**
-     * Whether bars should rotate or not during transition
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int spinBars=0x7f0401ee;
     /**
-     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4185,7 +3842,6 @@ public final class R {
      */
     public static final int spinnerDropDownItemStyle=0x7f0401ef;
     /**
-     * Default Spinner style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4193,14 +3849,11 @@ public final class R {
      */
     public static final int spinnerStyle=0x7f0401f0;
     /**
-     * Whether to split the track and leave a gap for the thumb drawable.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int splitTrack=0x7f0401f1;
     /**
-     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
-     * when running on older versions of the platform.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4213,7 +3866,6 @@ public final class R {
      */
     public static final int stackFromEnd=0x7f0401f3;
     /**
-     * State identifier indicating the popup will be above the anchor.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -4239,7 +3891,6 @@ public final class R {
      */
     public static final int state_lifted=0x7f0401f8;
     /**
-     * Drawable to display behind the status bar when the view is set to draw behind it.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4274,7 +3925,6 @@ public final class R {
      */
     public static final int strokeWidth=0x7f0401fd;
     /**
-     * Drawable for the arrow icon indicating a particular item is a submenu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4282,7 +3932,6 @@ public final class R {
      */
     public static final int subMenuArrow=0x7f0401fe;
     /**
-     * Background for the section containing the action (e.g. voice search)
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4290,7 +3939,6 @@ public final class R {
      */
     public static final int submitBackground=0x7f0401ff;
     /**
-     * Specifies subtitle text used for navigationMode="normal"
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -4303,14 +3951,12 @@ public final class R {
      */
     public static final int subtitleTextAppearance=0x7f040201;
     /**
-     * A color to apply to the subtitle string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int subtitleTextColor=0x7f040202;
     /**
-     * Specifies a style to use for subtitle text.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4318,7 +3964,6 @@ public final class R {
      */
     public static final int subtitleTextStyle=0x7f040203;
     /**
-     * Layout for query suggestion rows
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4326,7 +3971,6 @@ public final class R {
      */
     public static final int suggestionRowLayout=0x7f040204;
     /**
-     * Minimum width for the switch component
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4335,7 +3979,6 @@ public final class R {
      */
     public static final int switchMinWidth=0x7f040205;
     /**
-     * Minimum space between the switch and caption text
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4344,7 +3987,6 @@ public final class R {
      */
     public static final int switchPadding=0x7f040206;
     /**
-     * Default style for the Switch widget.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4352,7 +3994,6 @@ public final class R {
      */
     public static final int switchStyle=0x7f040207;
     /**
-     * TextAppearance style for text displayed on the switch thumb.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4563,7 +4204,6 @@ public final class R {
      */
     public static final int tabUnboundedRipple=0x7f040222;
     /**
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4643,7 +4283,6 @@ public final class R {
      */
     public static final int textAppearanceHeadline6=0x7f04022d;
     /**
-     * Text color, typeface, size, and style for the text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4651,7 +4290,6 @@ public final class R {
      */
     public static final int textAppearanceLargePopupMenu=0x7f04022e;
     /**
-     * The preferred TextAppearance for the primary text of list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4659,7 +4297,6 @@ public final class R {
      */
     public static final int textAppearanceListItem=0x7f04022f;
     /**
-     * The preferred TextAppearance for the secondary text of list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4667,7 +4304,6 @@ public final class R {
      */
     public static final int textAppearanceListItemSecondary=0x7f040230;
     /**
-     * The preferred TextAppearance for the primary text of small list items.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4682,7 +4318,6 @@ public final class R {
      */
     public static final int textAppearanceOverline=0x7f040232;
     /**
-     * Text color, typeface, size, and style for header text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4690,7 +4325,6 @@ public final class R {
      */
     public static final int textAppearancePopupMenuHeader=0x7f040233;
     /**
-     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4698,7 +4332,6 @@ public final class R {
      */
     public static final int textAppearanceSearchResultSubtitle=0x7f040234;
     /**
-     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4706,7 +4339,6 @@ public final class R {
      */
     public static final int textAppearanceSearchResultTitle=0x7f040235;
     /**
-     * Text color, typeface, size, and style for small text inside of a popup menu.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4728,7 +4360,6 @@ public final class R {
      */
     public static final int textAppearanceSubtitle2=0x7f040238;
     /**
-     * Color of list item text in alert dialogs.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4739,7 +4370,6 @@ public final class R {
      */
     public static final int textColorAlertDialogListItem=0x7f040239;
     /**
-     * Text color for urls in search suggestions, used by things like global search
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4765,11 +4395,6 @@ public final class R {
      */
     public static final int textInputStyle=0x7f04023c;
     /**
-     * Set the textLocale by a comma-separated language tag string,
-     * for example "ja-JP,zh-CN". This attribute only takes effect on API 21 and above.
-     * Before API 24, only the first language tag is used. Starting from API 24,
-     * the string will be converted into a {@link android.os.LocaleList} and then used by
-     * {@link android.widget.TextView}
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
@@ -4783,7 +4408,6 @@ public final class R {
      */
     public static final int textStartPadding=0x7f04023e;
     /**
-     * Deprecated.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4791,7 +4415,6 @@ public final class R {
      */
     public static final int theme=0x7f04023f;
     /**
-     * The thickness (stroke size) for the bar paint
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4805,7 +4428,6 @@ public final class R {
      */
     public static final int threeFingersScrollEnabled=0x7f040241;
     /**
-     * Amount of padding on either side of text within the switch thumb.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4814,36 +4436,28 @@ public final class R {
      */
     public static final int thumbTextPadding=0x7f040242;
     /**
-     * Tint to apply to the thumb drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int thumbTint=0x7f040243;
     /**
-     * Blending mode used to apply the thumb tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int thumbTintMode=0x7f040244;
     /**
-     * Drawable displayed at each progress position on a seekbar.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -4851,60 +4465,46 @@ public final class R {
      */
     public static final int tickMark=0x7f040245;
     /**
-     * Tint to apply to the tick mark drawable.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int tickMarkTint=0x7f040246;
     /**
-     * Blending mode used to apply the tick mark tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int tickMarkTintMode=0x7f040247;
     /**
-     * Tint to apply to the image source.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int tint=0x7f040248;
     /**
-     * Blending mode used to apply the image source tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int tintMode=0x7f040249;
@@ -4919,8 +4519,6 @@ public final class R {
      */
     public static final int titleEnabled=0x7f04024b;
     /**
-     * Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4929,9 +4527,6 @@ public final class R {
      */
     public static final int titleMargin=0x7f04024c;
     /**
-     * Specifies extra space on the bottom side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4940,9 +4535,6 @@ public final class R {
      */
     public static final int titleMarginBottom=0x7f04024d;
     /**
-     * Specifies extra space on the end side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4951,9 +4543,6 @@ public final class R {
      */
     public static final int titleMarginEnd=0x7f04024e;
     /**
-     * Specifies extra space on the start side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4962,9 +4551,6 @@ public final class R {
      */
     public static final int titleMarginStart=0x7f04024f;
     /**
-     * Specifies extra space on the top side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -4973,14 +4559,12 @@ public final class R {
      */
     public static final int titleMarginTop=0x7f040250;
     /**
-     * {@deprecated Use titleMargin}
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      */
-    @Deprecated
     public static final int titleMargins=0x7f040251;
     /**
      * <p>May be a reference to another resource, in the form
@@ -4990,14 +4574,12 @@ public final class R {
      */
     public static final int titleTextAppearance=0x7f040252;
     /**
-     * A color to apply to the title string.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int titleTextColor=0x7f040253;
     /**
-     * Specifies a style to use for title text.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5012,7 +4594,6 @@ public final class R {
      */
     public static final int toolbarId=0x7f040255;
     /**
-     * Default Toolar NavigationButtonStyle
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5020,7 +4601,6 @@ public final class R {
      */
     public static final int toolbarNavigationButtonStyle=0x7f040256;
     /**
-     * Default Toolbar style.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5028,7 +4608,6 @@ public final class R {
      */
     public static final int toolbarStyle=0x7f040257;
     /**
-     * Foreground color to use for tooltips
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5039,7 +4618,6 @@ public final class R {
      */
     public static final int tooltipForegroundColor=0x7f040258;
     /**
-     * Background to use for tooltips
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5047,13 +4625,11 @@ public final class R {
      */
     public static final int tooltipFrameBackground=0x7f040259;
     /**
-     * The tooltip text associated with the item.
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      */
     public static final int tooltipText=0x7f04025a;
     /**
-     * Drawable to use as the "track" that the switch thumb slides within.
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5061,31 +4637,24 @@ public final class R {
      */
     public static final int track=0x7f04025b;
     /**
-     * Tint to apply to the track.
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      */
     public static final int trackTint=0x7f04025c;
     /**
-     * Blending mode used to apply the track tint.
      * <p>Must be one of the following constant values.</p>
      * <table>
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      */
     public static final int trackTintMode=0x7f04025d;
@@ -5121,8 +4690,6 @@ public final class R {
      */
     public static final int transformationGravity=0x7f04025f;
     /**
-     * The index of the font in the tcc font file. If the font file referenced is not in the
-     * tcc format, this attribute needs not be specified.
      * <p>May be an integer value, such as "<code>100</code>".
      */
     public static final int ttcIndex=0x7f040260;
@@ -5187,7 +4754,6 @@ public final class R {
      */
     public static final int viewInflaterClass=0x7f040269;
     /**
-     * Voice button icon
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
      * attribute in the form
@@ -5195,31 +4761,21 @@ public final class R {
      */
     public static final int voiceIcon=0x7f04026a;
     /**
-     * Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int windowActionBar=0x7f04026b;
     /**
-     * Flag indicating whether this window's Action Bar should overlay
-     * application content. Does nothing if the window would not
-     * have an Action Bar.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int windowActionBarOverlay=0x7f04026c;
     /**
-     * Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
     public static final int windowActionModeOverlay=0x7f04026d;
     /**
-     * A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5232,9 +4788,6 @@ public final class R {
      */
     public static final int windowFixedHeightMajor=0x7f04026e;
     /**
-     * A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5247,9 +4800,6 @@ public final class R {
      */
     public static final int windowFixedHeightMinor=0x7f04026f;
     /**
-     * A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5262,9 +4812,6 @@ public final class R {
      */
     public static final int windowFixedWidthMajor=0x7f040270;
     /**
-     * A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5277,10 +4824,6 @@ public final class R {
      */
     public static final int windowFixedWidthMinor=0x7f040271;
     /**
-     * The minimum width the window is allowed to be, along the major
-     * axis of the screen.  That is, when in landscape.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5293,10 +4836,6 @@ public final class R {
      */
     public static final int windowMinWidthMajor=0x7f040272;
     /**
-     * The minimum width the window is allowed to be, along the minor
-     * axis of the screen.  That is, when in portrait.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
      * Available units are: px (pixels), dp (density-independent pixels),
@@ -5309,7 +4848,6 @@ public final class R {
      */
     public static final int windowMinWidthMinor=0x7f040273;
     /**
-     * Flag indicating whether there should be no title on this window.
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      */
@@ -5782,52 +5320,53 @@ public final class R {
     public static final int switch_thumb_material_light=0x7f0601c4;
     public static final int switch_thumb_normal_material_dark=0x7f0601c5;
     public static final int switch_thumb_normal_material_light=0x7f0601c6;
-    public static final int tooltip_background_dark=0x7f0601c7;
-    public static final int tooltip_background_light=0x7f0601c8;
-    public static final int transparent=0x7f0601c9;
-    public static final int transparent_black_1=0x7f0601ca;
-    public static final int transparent_black_10=0x7f0601cb;
-    public static final int transparent_black_11=0x7f0601cc;
-    public static final int transparent_black_12=0x7f0601cd;
-    public static final int transparent_black_13=0x7f0601ce;
-    public static final int transparent_black_14=0x7f0601cf;
-    public static final int transparent_black_15=0x7f0601d0;
-    public static final int transparent_black_16=0x7f0601d1;
-    public static final int transparent_black_17=0x7f0601d2;
-    public static final int transparent_black_2=0x7f0601d3;
-    public static final int transparent_black_3=0x7f0601d4;
-    public static final int transparent_black_4=0x7f0601d5;
-    public static final int transparent_black_5=0x7f0601d6;
-    public static final int transparent_black_6=0x7f0601d7;
-    public static final int transparent_black_7=0x7f0601d8;
-    public static final int transparent_black_8=0x7f0601d9;
-    public static final int transparent_black_9=0x7f0601da;
-    public static final int transparent_black_hex_1=0x7f0601db;
-    public static final int transparent_black_percent_50=0x7f0601dc;
-    public static final int transparent_black_percent_85=0x7f0601dd;
-    public static final int transparent_green=0x7f0601de;
-    public static final int transparent_green2=0x7f0601df;
-    public static final int transparent_white_1=0x7f0601e0;
-    public static final int transparent_white_10=0x7f0601e1;
-    public static final int transparent_white_11=0x7f0601e2;
-    public static final int transparent_white_12=0x7f0601e3;
-    public static final int transparent_white_13=0x7f0601e4;
-    public static final int transparent_white_14=0x7f0601e5;
-    public static final int transparent_white_15=0x7f0601e6;
-    public static final int transparent_white_16=0x7f0601e7;
-    public static final int transparent_white_17=0x7f0601e8;
-    public static final int transparent_white_2=0x7f0601e9;
-    public static final int transparent_white_3=0x7f0601ea;
-    public static final int transparent_white_4=0x7f0601eb;
-    public static final int transparent_white_5=0x7f0601ec;
-    public static final int transparent_white_6=0x7f0601ed;
-    public static final int transparent_white_7=0x7f0601ee;
-    public static final int transparent_white_8=0x7f0601ef;
-    public static final int transparent_white_9=0x7f0601f0;
-    public static final int transparent_white_hex_1=0x7f0601f1;
-    public static final int transparent_white_hex_4=0x7f0601f2;
-    public static final int warningColor=0x7f0601f3;
-    public static final int white=0x7f0601f4;
+    public static final int text_desc=0x7f0601c7;
+    public static final int tooltip_background_dark=0x7f0601c8;
+    public static final int tooltip_background_light=0x7f0601c9;
+    public static final int transparent=0x7f0601ca;
+    public static final int transparent_black_1=0x7f0601cb;
+    public static final int transparent_black_10=0x7f0601cc;
+    public static final int transparent_black_11=0x7f0601cd;
+    public static final int transparent_black_12=0x7f0601ce;
+    public static final int transparent_black_13=0x7f0601cf;
+    public static final int transparent_black_14=0x7f0601d0;
+    public static final int transparent_black_15=0x7f0601d1;
+    public static final int transparent_black_16=0x7f0601d2;
+    public static final int transparent_black_17=0x7f0601d3;
+    public static final int transparent_black_2=0x7f0601d4;
+    public static final int transparent_black_3=0x7f0601d5;
+    public static final int transparent_black_4=0x7f0601d6;
+    public static final int transparent_black_5=0x7f0601d7;
+    public static final int transparent_black_6=0x7f0601d8;
+    public static final int transparent_black_7=0x7f0601d9;
+    public static final int transparent_black_8=0x7f0601da;
+    public static final int transparent_black_9=0x7f0601db;
+    public static final int transparent_black_hex_1=0x7f0601dc;
+    public static final int transparent_black_percent_50=0x7f0601dd;
+    public static final int transparent_black_percent_85=0x7f0601de;
+    public static final int transparent_green=0x7f0601df;
+    public static final int transparent_green2=0x7f0601e0;
+    public static final int transparent_white_1=0x7f0601e1;
+    public static final int transparent_white_10=0x7f0601e2;
+    public static final int transparent_white_11=0x7f0601e3;
+    public static final int transparent_white_12=0x7f0601e4;
+    public static final int transparent_white_13=0x7f0601e5;
+    public static final int transparent_white_14=0x7f0601e6;
+    public static final int transparent_white_15=0x7f0601e7;
+    public static final int transparent_white_16=0x7f0601e8;
+    public static final int transparent_white_17=0x7f0601e9;
+    public static final int transparent_white_2=0x7f0601ea;
+    public static final int transparent_white_3=0x7f0601eb;
+    public static final int transparent_white_4=0x7f0601ec;
+    public static final int transparent_white_5=0x7f0601ed;
+    public static final int transparent_white_6=0x7f0601ee;
+    public static final int transparent_white_7=0x7f0601ef;
+    public static final int transparent_white_8=0x7f0601f0;
+    public static final int transparent_white_9=0x7f0601f1;
+    public static final int transparent_white_hex_1=0x7f0601f2;
+    public static final int transparent_white_hex_4=0x7f0601f3;
+    public static final int warningColor=0x7f0601f4;
+    public static final int white=0x7f0601f5;
   }
   public static final class dimen {
     public static final int abc_action_bar_content_inset_material=0x7f070000;
@@ -6118,39 +5657,41 @@ public final class R {
     public static final int text_margin=0x7f07011d;
     public static final int text_margin_side=0x7f07011e;
     public static final int text_view_margin_side=0x7f07011f;
-    public static final int title_padding_left=0x7f070120;
-    public static final int title_padding_right=0x7f070121;
-    public static final int title_text_size=0x7f070122;
-    public static final int toolbar_elevation=0x7f070123;
-    public static final int toolbar_placeholder_height=0x7f070124;
-    public static final int toolbar_shadow_adjust=0x7f070125;
-    public static final int toolbar_shadow_height=0x7f070126;
-    public static final int tooltip_corner_radius=0x7f070127;
-    public static final int tooltip_horizontal_padding=0x7f070128;
-    public static final int tooltip_margin=0x7f070129;
-    public static final int tooltip_precise_anchor_extra_offset=0x7f07012a;
-    public static final int tooltip_precise_anchor_threshold=0x7f07012b;
-    public static final int tooltip_vertical_padding=0x7f07012c;
-    public static final int tooltip_y_offset_non_touch=0x7f07012d;
-    public static final int tooltip_y_offset_touch=0x7f07012e;
-    public static final int touch_raise=0x7f07012f;
-    public static final int view_header_padding_bottom=0x7f070130;
-    public static final int view_image_margin_side=0x7f070131;
-    public static final int widget_aa_text_size=0x7f070132;
-    public static final int widget_content_text_size=0x7f070133;
-    public static final int widget_current_weather_icon_size=0x7f070134;
-    public static final int widget_design_title_text_size=0x7f070135;
-    public static final int widget_grid_1=0x7f070136;
-    public static final int widget_grid_2=0x7f070137;
-    public static final int widget_grid_3=0x7f070138;
-    public static final int widget_grid_4=0x7f070139;
-    public static final int widget_large_title_text_size=0x7f07013a;
-    public static final int widget_little_weather_icon_size=0x7f07013b;
-    public static final int widget_mini_weather_icon_size=0x7f07013c;
-    public static final int widget_standard_weather_icon_size=0x7f07013d;
-    public static final int widget_subtitle_text_size=0x7f07013e;
-    public static final int widget_time_text_size=0x7f07013f;
-    public static final int widget_title_text_size=0x7f070140;
+    public static final int thirty_six=0x7f070120;
+    public static final int title_padding_left=0x7f070121;
+    public static final int title_padding_right=0x7f070122;
+    public static final int title_text_size=0x7f070123;
+    public static final int toolbar_elevation=0x7f070124;
+    public static final int toolbar_placeholder_height=0x7f070125;
+    public static final int toolbar_shadow_adjust=0x7f070126;
+    public static final int toolbar_shadow_height=0x7f070127;
+    public static final int tooltip_corner_radius=0x7f070128;
+    public static final int tooltip_horizontal_padding=0x7f070129;
+    public static final int tooltip_margin=0x7f07012a;
+    public static final int tooltip_precise_anchor_extra_offset=0x7f07012b;
+    public static final int tooltip_precise_anchor_threshold=0x7f07012c;
+    public static final int tooltip_vertical_padding=0x7f07012d;
+    public static final int tooltip_y_offset_non_touch=0x7f07012e;
+    public static final int tooltip_y_offset_touch=0x7f07012f;
+    public static final int touch_raise=0x7f070130;
+    public static final int twelve=0x7f070131;
+    public static final int view_header_padding_bottom=0x7f070132;
+    public static final int view_image_margin_side=0x7f070133;
+    public static final int widget_aa_text_size=0x7f070134;
+    public static final int widget_content_text_size=0x7f070135;
+    public static final int widget_current_weather_icon_size=0x7f070136;
+    public static final int widget_design_title_text_size=0x7f070137;
+    public static final int widget_grid_1=0x7f070138;
+    public static final int widget_grid_2=0x7f070139;
+    public static final int widget_grid_3=0x7f07013a;
+    public static final int widget_grid_4=0x7f07013b;
+    public static final int widget_large_title_text_size=0x7f07013c;
+    public static final int widget_little_weather_icon_size=0x7f07013d;
+    public static final int widget_mini_weather_icon_size=0x7f07013e;
+    public static final int widget_standard_weather_icon_size=0x7f07013f;
+    public static final int widget_subtitle_text_size=0x7f070140;
+    public static final int widget_time_text_size=0x7f070141;
+    public static final int widget_title_text_size=0x7f070142;
   }
   public static final class drawable {
     public static final int abc_ab_share_pack_mtrl_alpha=0x7f080007;
@@ -6262,346 +5803,347 @@ public final class R {
     public static final int button_round_with_transparency=0x7f080071;
     public static final int buttonshape=0x7f080072;
     public static final int card_gradient=0x7f080073;
-    public static final int checkbox_drawable=0x7f080074;
-    public static final int circle_shape=0x7f080075;
-    public static final int contact_placeholder=0x7f080076;
-    public static final int contact_placeholder_a=0x7f080077;
-    public static final int dark_blue_top_gradient=0x7f080078;
-    public static final int default_user_art_g_2=0x7f080079;
-    public static final int default_user_art_g_inverse=0x7f08007a;
-    public static final int design_bottom_navigation_item_background=0x7f08007b;
-    public static final int design_fab_background=0x7f08007c;
-    public static final int design_ic_visibility=0x7f08007d;
-    public static final int design_ic_visibility_off=0x7f08007e;
-    public static final int design_password_eye=0x7f08007f;
-    public static final int design_snackbar_background=0x7f080080;
-    public static final int dot_background=0x7f080081;
-    public static final int drawable_gradient_animation_list=0x7f080082;
-    public static final int edittext_accent=0x7f080083;
-    public static final int error_placeholder=0x7f080084;
-    public static final int error_placeholder2=0x7f080085;
-    public static final int exomedia_default_controls_interactive_background=0x7f080086;
-    public static final int exomedia_default_controls_text_background=0x7f080087;
-    public static final int exomedia_ic_fast_forward_white=0x7f080088;
-    public static final int exomedia_ic_pause_white=0x7f080089;
-    public static final int exomedia_ic_play_arrow_white=0x7f08008a;
-    public static final int exomedia_ic_rewind_white=0x7f08008b;
-    public static final int exomedia_ic_skip_next_white=0x7f08008c;
-    public static final int exomedia_ic_skip_previous_white=0x7f08008d;
-    public static final int exomedia_leanback_ripple_selector=0x7f08008e;
-    public static final int fram_camera=0x7f08008f;
-    public static final int github=0x7f080090;
-    public static final int gradient_1=0x7f080091;
-    public static final int gradient_10=0x7f080092;
-    public static final int gradient_11=0x7f080093;
-    public static final int gradient_12=0x7f080094;
-    public static final int gradient_13=0x7f080095;
-    public static final int gradient_14=0x7f080096;
-    public static final int gradient_15=0x7f080097;
-    public static final int gradient_16=0x7f080098;
-    public static final int gradient_17=0x7f080099;
-    public static final int gradient_18=0x7f08009a;
-    public static final int gradient_19=0x7f08009b;
-    public static final int gradient_2=0x7f08009c;
-    public static final int gradient_20=0x7f08009d;
-    public static final int gradient_3=0x7f08009e;
-    public static final int gradient_4=0x7f08009f;
-    public static final int gradient_5=0x7f0800a0;
-    public static final int gradient_6=0x7f0800a1;
-    public static final int gradient_7=0x7f0800a2;
-    public static final int gradient_8=0x7f0800a3;
-    public static final int gradient_9=0x7f0800a4;
-    public static final int gradient_green=0x7f0800a5;
-    public static final int grid_camera_icon_small=0x7f0800a6;
-    public static final int ic__down_white_24dp=0x7f0800a7;
-    public static final int ic_about=0x7f0800a8;
-    public static final int ic_accept_24dp=0x7f0800a9;
-    public static final int ic_account_outline_grey600_24dp=0x7f0800aa;
-    public static final int ic_action_copy=0x7f0800ab;
-    public static final int ic_action_delete=0x7f0800ac;
-    public static final int ic_action_forward=0x7f0800ad;
-    public static final int ic_add_24dp=0x7f0800ae;
-    public static final int ic_add_a_photo_black_24dp=0x7f0800af;
-    public static final int ic_add_alert_white_24dp=0x7f0800b0;
-    public static final int ic_add_black=0x7f0800b1;
-    public static final int ic_add_black_24dp=0x7f0800b2;
-    public static final int ic_add_blue=0x7f0800b3;
-    public static final int ic_add_btn=0x7f0800b4;
-    public static final int ic_add_white_24dp=0x7f0800b5;
-    public static final int ic_alarm_black_24dp=0x7f0800b6;
-    public static final int ic_arrow_back_black_24dp=0x7f0800b7;
-    public static final int ic_arrow_back_white_24dp=0x7f0800b8;
-    public static final int ic_arrow_drop_down_black_24dp=0x7f0800b9;
-    public static final int ic_arrow_forward_white_24dp=0x7f0800ba;
-    public static final int ic_back=0x7f0800bb;
-    public static final int ic_block_red_24dp=0x7f0800bc;
-    public static final int ic_bookmark_black_24dp=0x7f0800bd;
-    public static final int ic_bookmark_border_black_24dp=0x7f0800be;
-    public static final int ic_bookmark_white_24dp=0x7f0800bf;
-    public static final int ic_bubble_chart_black_24dp=0x7f0800c0;
-    public static final int ic_calendar_check_black_48dp=0x7f0800c1;
-    public static final int ic_call_black_24dp=0x7f0800c2;
-    public static final int ic_call_end_white_34dp=0x7f0800c3;
-    public static final int ic_call_green_34dp=0x7f0800c4;
-    public static final int ic_call_made_black_24dp=0x7f0800c5;
-    public static final int ic_call_made_white_24dp=0x7f0800c6;
-    public static final int ic_call_received_white_24dp=0x7f0800c7;
-    public static final int ic_camera=0x7f0800c8;
-    public static final int ic_camera_white_24dp=0x7f0800c9;
-    public static final int ic_cancel_grey_24dp=0x7f0800ca;
-    public static final int ic_cart_outline_grey600_24dp=0x7f0800cb;
-    public static final int ic_channel=0x7f0800cc;
-    public static final int ic_chat=0x7f0800cd;
-    public static final int ic_chat__24dp=0x7f0800ce;
-    public static final int ic_chat_bubble_white_24dp=0x7f0800cf;
-    public static final int ic_check_white_24dp=0x7f0800d0;
-    public static final int ic_clear_all_black_24dp=0x7f0800d1;
-    public static final int ic_clear_white_24dp=0x7f0800d2;
-    public static final int ic_close=0x7f0800d3;
-    public static final int ic_close_black_24dp=0x7f0800d4;
-    public static final int ic_close_white_24dp=0x7f0800d5;
-    public static final int ic_comment_blue=0x7f0800d6;
-    public static final int ic_comment_liked=0x7f0800d7;
-    public static final int ic_crop_rotate_black_24dp=0x7f0800d8;
-    public static final int ic_dashboard_black_24dp=0x7f0800d9;
-    public static final int ic_date=0x7f0800da;
-    public static final int ic_delete_black_24dp=0x7f0800db;
-    public static final int ic_delete_forever_black_24dp=0x7f0800dc;
-    public static final int ic_delete_forever_white_24dp=0x7f0800dd;
-    public static final int ic_delete_white_24dp=0x7f0800de;
-    public static final int ic_delivered_round=0x7f0800df;
-    public static final int ic_delivered_tick=0x7f0800e0;
-    public static final int ic_done_24dp=0x7f0800e1;
-    public static final int ic_done_black_24dp=0x7f0800e2;
-    public static final int ic_done_tick_white_24dp=0x7f0800e3;
-    public static final int ic_done_white_24dp=0x7f0800e4;
-    public static final int ic_down_arrow_green=0x7f0800e5;
-    public static final int ic_down_arrow_white=0x7f0800e6;
-    public static final int ic_download_white_24dp=0x7f0800e7;
-    public static final int ic_dress=0x7f0800e8;
-    public static final int ic_edit_24dp=0x7f0800e9;
-    public static final int ic_edit_black_24dp=0x7f0800ea;
-    public static final int ic_edit_blue_24dp=0x7f0800eb;
-    public static final int ic_edit_white_24dp=0x7f0800ec;
-    public static final int ic_email_black_24dp=0x7f0800ed;
-    public static final int ic_email_outline_grey600_24dp=0x7f0800ee;
-    public static final int ic_email_white_24dp=0x7f0800ef;
-    public static final int ic_error_outline_white_24dp=0x7f0800f0;
-    public static final int ic_exit=0x7f0800f1;
-    public static final int ic_expand_more=0x7f0800f2;
-    public static final int ic_fast_scroll_arrow_down=0x7f0800f3;
-    public static final int ic_favorite_black_24dp=0x7f0800f4;
-    public static final int ic_favorite_border_black_24dp=0x7f0800f5;
-    public static final int ic_favorite_border_white_24dp=0x7f0800f6;
-    public static final int ic_favorite_red_24dp=0x7f0800f7;
-    public static final int ic_favorite_white_24dp=0x7f0800f8;
-    public static final int ic_file_download_accent_24dp=0x7f0800f9;
-    public static final int ic_file_download_white_24dp=0x7f0800fa;
-    public static final int ic_file_upload_white_24dp=0x7f0800fb;
-    public static final int ic_flash=0x7f0800fc;
-    public static final int ic_forgot_24dp=0x7f0800fd;
-    public static final int ic_forum=0x7f0800fe;
-    public static final int ic_forward_white_24dp=0x7f0800ff;
-    public static final int ic_friend=0x7f080100;
-    public static final int ic_gallery=0x7f080101;
-    public static final int ic_github=0x7f080102;
-    public static final int ic_group=0x7f080103;
-    public static final int ic_group_add_green_24dp=0x7f080104;
-    public static final int ic_group_add_white_24dp=0x7f080105;
-    public static final int ic_group_black_24dp=0x7f080106;
-    public static final int ic_group_white_24dp=0x7f080107;
-    public static final int ic_heart_outline_white=0x7f080108;
-    public static final int ic_history_black_24dp=0x7f080109;
-    public static final int ic_home_black=0x7f08010a;
-    public static final int ic_home_black_24dp=0x7f08010b;
-    public static final int ic_home_outline_grey600_24dp=0x7f08010c;
-    public static final int ic_image_post=0x7f08010d;
-    public static final int ic_image_post_black=0x7f08010e;
-    public static final int ic_info_black_24dp=0x7f08010f;
-    public static final int ic_info_outline_white_24dp=0x7f080110;
-    public static final int ic_insert_emoticon_black_24dp=0x7f080111;
-    public static final int ic_invite=0x7f080112;
-    public static final int ic_launcher_background=0x7f080113;
-    public static final int ic_launcher_foreground=0x7f080114;
-    public static final int ic_like_flat=0x7f080115;
-    public static final int ic_link_white_24dp=0x7f080116;
-    public static final int ic_live_help_black_24dp=0x7f080117;
-    public static final int ic_local_airport=0x7f080118;
-    public static final int ic_location=0x7f080119;
-    public static final int ic_location_on_black_24dp=0x7f08011a;
-    public static final int ic_location_on_white_24dp=0x7f08011b;
-    public static final int ic_location_white=0x7f08011c;
-    public static final int ic_logout_grey600_24dp=0x7f08011d;
-    public static final int ic_logout_red=0x7f08011e;
-    public static final int ic_menu_camera=0x7f08011f;
-    public static final int ic_menu_gallery=0x7f080120;
-    public static final int ic_menu_manage=0x7f080121;
-    public static final int ic_menu_send=0x7f080122;
-    public static final int ic_menu_share=0x7f080123;
-    public static final int ic_menu_slideshow=0x7f080124;
-    public static final int ic_menu_white_24dp=0x7f080125;
-    public static final int ic_message_light_24dp=0x7f080126;
-    public static final int ic_message_pending_gray_24dp=0x7f080127;
-    public static final int ic_mic_black_24dp=0x7f080128;
-    public static final int ic_more_flat=0x7f080129;
-    public static final int ic_more_horiz_black_24dp=0x7f08012a;
-    public static final int ic_more_vert_white_24dp=0x7f08012b;
-    public static final int ic_mtrl_chip_checked_black=0x7f08012c;
-    public static final int ic_mtrl_chip_checked_circle=0x7f08012d;
-    public static final int ic_mtrl_chip_close_circle=0x7f08012e;
-    public static final int ic_mute_green=0x7f08012f;
-    public static final int ic_mute_light=0x7f080130;
-    public static final int ic_mutual=0x7f080131;
-    public static final int ic_my_msgs=0x7f080132;
-    public static final int ic_note_add_white_24dp=0x7f080133;
-    public static final int ic_perm_media_white_24dp=0x7f080134;
-    public static final int ic_person_24dp=0x7f080135;
-    public static final int ic_person_add_white_24dp=0x7f080136;
-    public static final int ic_person_add_white_padded_24dp=0x7f080137;
-    public static final int ic_person_add_yellow_24dp=0x7f080138;
-    public static final int ic_person_black_24dp=0x7f080139;
-    public static final int ic_person_flat=0x7f08013a;
-    public static final int ic_person_green_24dp=0x7f08013b;
-    public static final int ic_person_outline_black_24dp=0x7f08013c;
-    public static final int ic_person_outlined=0x7f08013d;
-    public static final int ic_person_white_24dp=0x7f08013e;
-    public static final int ic_phone_black_24dp=0x7f08013f;
-    public static final int ic_phone_green_24dp=0x7f080140;
-    public static final int ic_photo_camera_black_24dp=0x7f080141;
-    public static final int ic_photo_library_black_24dp=0x7f080142;
-    public static final int ic_photo_library_white_24dp=0x7f080143;
-    public static final int ic_play_black=0x7f080144;
-    public static final int ic_play_circle_outline_white_24dp=0x7f080145;
-    public static final int ic_play_white=0x7f080146;
-    public static final int ic_power=0x7f080147;
-    public static final int ic_public_black_24dp=0x7f080148;
-    public static final int ic_public_white_24dp=0x7f080149;
-    public static final int ic_question_answer_black_24dp=0x7f08014a;
-    public static final int ic_read_green=0x7f08014b;
-    public static final int ic_read_round=0x7f08014c;
-    public static final int ic_read_status=0x7f08014d;
-    public static final int ic_refresh_black_24dp=0x7f08014e;
-    public static final int ic_reply_black_24dp=0x7f08014f;
-    public static final int ic_rss_feed_black_24dp=0x7f080150;
-    public static final int ic_save_white_24dp=0x7f080151;
-    public static final int ic_search=0x7f080152;
-    public static final int ic_search_black_24dp=0x7f080153;
-    public static final int ic_search_white_24dp=0x7f080154;
-    public static final int ic_send_black=0x7f080155;
-    public static final int ic_send_black_24dp=0x7f080156;
-    public static final int ic_send_blue_24dp=0x7f080157;
-    public static final int ic_send_message=0x7f080158;
-    public static final int ic_send_white_24dp=0x7f080159;
-    public static final int ic_sent_round=0x7f08015a;
-    public static final int ic_sentiment_dissatisfied_black_24dp=0x7f08015b;
-    public static final int ic_sentiment_satisfied_black_24dp=0x7f08015c;
-    public static final int ic_sentiment_very_satisfied_black_24dp=0x7f08015d;
-    public static final int ic_sentiment_very_satisfied_black_large=0x7f08015e;
-    public static final int ic_setting_flat_black=0x7f08015f;
-    public static final int ic_settings=0x7f080160;
-    public static final int ic_settings_black_24dp=0x7f080161;
-    public static final int ic_share_flat=0x7f080162;
-    public static final int ic_share_liked=0x7f080163;
-    public static final int ic_show_chart_24dp=0x7f080164;
-    public static final int ic_speed=0x7f080165;
-    public static final int ic_star_black_24dp=0x7f080166;
-    public static final int ic_star_border_black_24dp=0x7f080167;
-    public static final int ic_star_border_white_24dp=0x7f080168;
-    public static final int ic_star_white_24dp=0x7f080169;
-    public static final int ic_storage=0x7f08016a;
-    public static final int ic_storage_white_24dp=0x7f08016b;
-    public static final int ic_swap_vert_grey600_48dp=0x7f08016c;
-    public static final int ic_temperature=0x7f08016d;
-    public static final int ic_text_post_grey=0x7f08016e;
-    public static final int ic_tick_sent_grey_24dp=0x7f08016f;
-    public static final int ic_time=0x7f080170;
-    public static final int ic_translate_white_24dp=0x7f080171;
-    public static final int ic_unfriend=0x7f080172;
-    public static final int ic_up_white_24dp=0x7f080173;
-    public static final int ic_vibration_white_24dp=0x7f080174;
-    public static final int ic_video=0x7f080175;
-    public static final int ic_video_library_white_24dp=0x7f080176;
-    public static final int ic_video_white_24dp=0x7f080177;
-    public static final int ic_videocam_black_24dp=0x7f080178;
-    public static final int ic_volume=0x7f080179;
-    public static final int ic_volume_up_white_24dp=0x7f08017a;
-    public static final int icons8_chat_80=0x7f08017b;
-    public static final int icons8_connection_status_on_80=0x7f08017c;
-    public static final int icons8_error_96=0x7f08017d;
-    public static final int icons8_eye_64=0x7f08017e;
-    public static final int icons8_news_feed_64=0x7f08017f;
-    public static final int icons8_plus_100=0x7f080180;
-    public static final int icons8_speech_bubble_64=0x7f080181;
-    public static final int icons8_video_call_100=0x7f080182;
-    public static final int icons8_video_file_64=0x7f080183;
-    public static final int image_placeholder=0x7f080184;
-    public static final int india_logo=0x7f080185;
-    public static final int input_backgtound=0x7f080186;
-    public static final int input_backgtound_grey=0x7f080187;
-    public static final int input_light_accent_square=0x7f080188;
-    public static final int input_light_white=0x7f080189;
-    public static final int instagram=0x7f08018a;
-    public static final int logo_gradient=0x7f08018b;
-    public static final int mail_box_img=0x7f08018c;
-    public static final int mtrl_snackbar_background=0x7f08018d;
-    public static final int mtrl_tabs_default_indicator=0x7f08018e;
-    public static final int navigation_empty_icon=0x7f08018f;
-    public static final int no_result=0x7f080190;
-    public static final int notification_action_background=0x7f080191;
-    public static final int notification_bg=0x7f080192;
-    public static final int notification_bg_low=0x7f080193;
-    public static final int notification_bg_low_normal=0x7f080194;
-    public static final int notification_bg_low_pressed=0x7f080195;
-    public static final int notification_bg_normal=0x7f080196;
-    public static final int notification_bg_normal_pressed=0x7f080197;
-    public static final int notification_icon_background=0x7f080198;
-    public static final int notification_template_icon_bg=0x7f080199;
-    public static final int notification_template_icon_low_bg=0x7f08019a;
-    public static final int notification_tile_bg=0x7f08019b;
-    public static final int notify_panel_notification_icon_bg=0x7f08019c;
-    public static final int oops=0x7f08019d;
-    public static final int pause_big=0x7f08019e;
-    public static final int picture_white=0x7f08019f;
-    public static final int placeholder=0x7f0801a0;
-    public static final int placeholder2=0x7f0801a1;
-    public static final int placeholder_image=0x7f0801a2;
-    public static final int play_big=0x7f0801a3;
-    public static final int posts_icon=0x7f0801a4;
-    public static final int progress_drawable=0x7f0801a5;
-    public static final int read_icon=0x7f0801a6;
-    public static final int round_background=0x7f0801a7;
-    public static final int round_badge=0x7f0801a8;
-    public static final int round_flash_on_black_18dp=0x7f0801a9;
-    public static final int round_white=0x7f0801aa;
-    public static final int rounded_suggestion_background=0x7f0801ab;
-    public static final int shape_bubble_left=0x7f0801ac;
-    public static final int shape_bubble_offline=0x7f0801ad;
-    public static final int shape_bubble_online=0x7f0801ae;
-    public static final int shape_bubble_online_large=0x7f0801af;
-    public static final int shape_bubble_right=0x7f0801b0;
-    public static final int shape_custom_cursor=0x7f0801b1;
-    public static final int shape_line=0x7f0801b2;
-    public static final int shape_message_left_2=0x7f0801b3;
-    public static final int shape_message_right_2=0x7f0801b4;
-    public static final int side_nav_bar=0x7f0801b5;
-    public static final int soundoff=0x7f0801b6;
-    public static final int soundon=0x7f0801b7;
-    public static final int splash_window_bg=0x7f0801b8;
-    public static final int spring_dot_background=0x7f0801b9;
-    public static final int spring_dot_stroke_background=0x7f0801ba;
-    public static final int textview_tab_style=0x7f0801bb;
-    public static final int textview_tab_style_black=0x7f0801bc;
-    public static final int textview_tab_style_blue=0x7f0801bd;
-    public static final int textview_tab_style_green=0x7f0801be;
-    public static final int toast_frame=0x7f0801bf;
-    public static final int tooltip_frame_dark=0x7f0801c0;
-    public static final int tooltip_frame_light=0x7f0801c1;
-    public static final int top_round_drawable=0x7f0801c2;
-    public static final int top_shadow=0x7f0801c3;
-    public static final int unread_icon=0x7f0801c4;
-    public static final int video_controller_bg_gradient=0x7f0801c5;
-    public static final int worm_dot_background=0x7f0801c6;
-    public static final int worm_dot_stroke_background=0x7f0801c7;
+    public static final int ccomment_items_background=0x7f080074;
+    public static final int checkbox_drawable=0x7f080075;
+    public static final int circle_shape=0x7f080076;
+    public static final int contact_placeholder=0x7f080077;
+    public static final int contact_placeholder_a=0x7f080078;
+    public static final int dark_blue_top_gradient=0x7f080079;
+    public static final int default_user_art_g_2=0x7f08007a;
+    public static final int default_user_art_g_inverse=0x7f08007b;
+    public static final int design_bottom_navigation_item_background=0x7f08007c;
+    public static final int design_fab_background=0x7f08007d;
+    public static final int design_ic_visibility=0x7f08007e;
+    public static final int design_ic_visibility_off=0x7f08007f;
+    public static final int design_password_eye=0x7f080080;
+    public static final int design_snackbar_background=0x7f080081;
+    public static final int dot_background=0x7f080082;
+    public static final int drawable_gradient_animation_list=0x7f080083;
+    public static final int edittext_accent=0x7f080084;
+    public static final int error_placeholder=0x7f080085;
+    public static final int error_placeholder2=0x7f080086;
+    public static final int exomedia_default_controls_interactive_background=0x7f080087;
+    public static final int exomedia_default_controls_text_background=0x7f080088;
+    public static final int exomedia_ic_fast_forward_white=0x7f080089;
+    public static final int exomedia_ic_pause_white=0x7f08008a;
+    public static final int exomedia_ic_play_arrow_white=0x7f08008b;
+    public static final int exomedia_ic_rewind_white=0x7f08008c;
+    public static final int exomedia_ic_skip_next_white=0x7f08008d;
+    public static final int exomedia_ic_skip_previous_white=0x7f08008e;
+    public static final int exomedia_leanback_ripple_selector=0x7f08008f;
+    public static final int fram_camera=0x7f080090;
+    public static final int github=0x7f080091;
+    public static final int gradient_1=0x7f080092;
+    public static final int gradient_10=0x7f080093;
+    public static final int gradient_11=0x7f080094;
+    public static final int gradient_12=0x7f080095;
+    public static final int gradient_13=0x7f080096;
+    public static final int gradient_14=0x7f080097;
+    public static final int gradient_15=0x7f080098;
+    public static final int gradient_16=0x7f080099;
+    public static final int gradient_17=0x7f08009a;
+    public static final int gradient_18=0x7f08009b;
+    public static final int gradient_19=0x7f08009c;
+    public static final int gradient_2=0x7f08009d;
+    public static final int gradient_20=0x7f08009e;
+    public static final int gradient_3=0x7f08009f;
+    public static final int gradient_4=0x7f0800a0;
+    public static final int gradient_5=0x7f0800a1;
+    public static final int gradient_6=0x7f0800a2;
+    public static final int gradient_7=0x7f0800a3;
+    public static final int gradient_8=0x7f0800a4;
+    public static final int gradient_9=0x7f0800a5;
+    public static final int gradient_green=0x7f0800a6;
+    public static final int grid_camera_icon_small=0x7f0800a7;
+    public static final int ic__down_white_24dp=0x7f0800a8;
+    public static final int ic_about=0x7f0800a9;
+    public static final int ic_accept_24dp=0x7f0800aa;
+    public static final int ic_account_outline_grey600_24dp=0x7f0800ab;
+    public static final int ic_action_copy=0x7f0800ac;
+    public static final int ic_action_delete=0x7f0800ad;
+    public static final int ic_action_forward=0x7f0800ae;
+    public static final int ic_add_24dp=0x7f0800af;
+    public static final int ic_add_a_photo_black_24dp=0x7f0800b0;
+    public static final int ic_add_alert_white_24dp=0x7f0800b1;
+    public static final int ic_add_black=0x7f0800b2;
+    public static final int ic_add_black_24dp=0x7f0800b3;
+    public static final int ic_add_blue=0x7f0800b4;
+    public static final int ic_add_btn=0x7f0800b5;
+    public static final int ic_add_white_24dp=0x7f0800b6;
+    public static final int ic_alarm_black_24dp=0x7f0800b7;
+    public static final int ic_arrow_back_black_24dp=0x7f0800b8;
+    public static final int ic_arrow_back_white_24dp=0x7f0800b9;
+    public static final int ic_arrow_drop_down_black_24dp=0x7f0800ba;
+    public static final int ic_arrow_forward_white_24dp=0x7f0800bb;
+    public static final int ic_back=0x7f0800bc;
+    public static final int ic_block_red_24dp=0x7f0800bd;
+    public static final int ic_bookmark_black_24dp=0x7f0800be;
+    public static final int ic_bookmark_border_black_24dp=0x7f0800bf;
+    public static final int ic_bookmark_white_24dp=0x7f0800c0;
+    public static final int ic_bubble_chart_black_24dp=0x7f0800c1;
+    public static final int ic_calendar_check_black_48dp=0x7f0800c2;
+    public static final int ic_call_black_24dp=0x7f0800c3;
+    public static final int ic_call_end_white_34dp=0x7f0800c4;
+    public static final int ic_call_green_34dp=0x7f0800c5;
+    public static final int ic_call_made_black_24dp=0x7f0800c6;
+    public static final int ic_call_made_white_24dp=0x7f0800c7;
+    public static final int ic_call_received_white_24dp=0x7f0800c8;
+    public static final int ic_camera=0x7f0800c9;
+    public static final int ic_camera_white_24dp=0x7f0800ca;
+    public static final int ic_cancel_grey_24dp=0x7f0800cb;
+    public static final int ic_cart_outline_grey600_24dp=0x7f0800cc;
+    public static final int ic_channel=0x7f0800cd;
+    public static final int ic_chat=0x7f0800ce;
+    public static final int ic_chat__24dp=0x7f0800cf;
+    public static final int ic_chat_bubble_white_24dp=0x7f0800d0;
+    public static final int ic_check_white_24dp=0x7f0800d1;
+    public static final int ic_clear_all_black_24dp=0x7f0800d2;
+    public static final int ic_clear_white_24dp=0x7f0800d3;
+    public static final int ic_close=0x7f0800d4;
+    public static final int ic_close_black_24dp=0x7f0800d5;
+    public static final int ic_close_white_24dp=0x7f0800d6;
+    public static final int ic_comment_blue=0x7f0800d7;
+    public static final int ic_comment_liked=0x7f0800d8;
+    public static final int ic_crop_rotate_black_24dp=0x7f0800d9;
+    public static final int ic_dashboard_black_24dp=0x7f0800da;
+    public static final int ic_date=0x7f0800db;
+    public static final int ic_delete_black_24dp=0x7f0800dc;
+    public static final int ic_delete_forever_black_24dp=0x7f0800dd;
+    public static final int ic_delete_forever_white_24dp=0x7f0800de;
+    public static final int ic_delete_white_24dp=0x7f0800df;
+    public static final int ic_delivered_round=0x7f0800e0;
+    public static final int ic_delivered_tick=0x7f0800e1;
+    public static final int ic_done_24dp=0x7f0800e2;
+    public static final int ic_done_black_24dp=0x7f0800e3;
+    public static final int ic_done_tick_white_24dp=0x7f0800e4;
+    public static final int ic_done_white_24dp=0x7f0800e5;
+    public static final int ic_down_arrow_green=0x7f0800e6;
+    public static final int ic_down_arrow_white=0x7f0800e7;
+    public static final int ic_download_white_24dp=0x7f0800e8;
+    public static final int ic_dress=0x7f0800e9;
+    public static final int ic_edit_24dp=0x7f0800ea;
+    public static final int ic_edit_black_24dp=0x7f0800eb;
+    public static final int ic_edit_blue_24dp=0x7f0800ec;
+    public static final int ic_edit_white_24dp=0x7f0800ed;
+    public static final int ic_email_black_24dp=0x7f0800ee;
+    public static final int ic_email_outline_grey600_24dp=0x7f0800ef;
+    public static final int ic_email_white_24dp=0x7f0800f0;
+    public static final int ic_error_outline_white_24dp=0x7f0800f1;
+    public static final int ic_exit=0x7f0800f2;
+    public static final int ic_expand_more=0x7f0800f3;
+    public static final int ic_fast_scroll_arrow_down=0x7f0800f4;
+    public static final int ic_favorite_black_24dp=0x7f0800f5;
+    public static final int ic_favorite_border_black_24dp=0x7f0800f6;
+    public static final int ic_favorite_border_white_24dp=0x7f0800f7;
+    public static final int ic_favorite_red_24dp=0x7f0800f8;
+    public static final int ic_favorite_white_24dp=0x7f0800f9;
+    public static final int ic_file_download_accent_24dp=0x7f0800fa;
+    public static final int ic_file_download_white_24dp=0x7f0800fb;
+    public static final int ic_file_upload_white_24dp=0x7f0800fc;
+    public static final int ic_flash=0x7f0800fd;
+    public static final int ic_forgot_24dp=0x7f0800fe;
+    public static final int ic_forum=0x7f0800ff;
+    public static final int ic_forward_white_24dp=0x7f080100;
+    public static final int ic_friend=0x7f080101;
+    public static final int ic_gallery=0x7f080102;
+    public static final int ic_github=0x7f080103;
+    public static final int ic_group=0x7f080104;
+    public static final int ic_group_add_green_24dp=0x7f080105;
+    public static final int ic_group_add_white_24dp=0x7f080106;
+    public static final int ic_group_black_24dp=0x7f080107;
+    public static final int ic_group_white_24dp=0x7f080108;
+    public static final int ic_heart_outline_white=0x7f080109;
+    public static final int ic_history_black_24dp=0x7f08010a;
+    public static final int ic_home_black=0x7f08010b;
+    public static final int ic_home_black_24dp=0x7f08010c;
+    public static final int ic_home_outline_grey600_24dp=0x7f08010d;
+    public static final int ic_image_post=0x7f08010e;
+    public static final int ic_image_post_black=0x7f08010f;
+    public static final int ic_info_black_24dp=0x7f080110;
+    public static final int ic_info_outline_white_24dp=0x7f080111;
+    public static final int ic_insert_emoticon_black_24dp=0x7f080112;
+    public static final int ic_invite=0x7f080113;
+    public static final int ic_launcher_background=0x7f080114;
+    public static final int ic_launcher_foreground=0x7f080115;
+    public static final int ic_like_flat=0x7f080116;
+    public static final int ic_link_white_24dp=0x7f080117;
+    public static final int ic_live_help_black_24dp=0x7f080118;
+    public static final int ic_local_airport=0x7f080119;
+    public static final int ic_location=0x7f08011a;
+    public static final int ic_location_on_black_24dp=0x7f08011b;
+    public static final int ic_location_on_white_24dp=0x7f08011c;
+    public static final int ic_location_white=0x7f08011d;
+    public static final int ic_logout_grey600_24dp=0x7f08011e;
+    public static final int ic_logout_red=0x7f08011f;
+    public static final int ic_menu_camera=0x7f080120;
+    public static final int ic_menu_gallery=0x7f080121;
+    public static final int ic_menu_manage=0x7f080122;
+    public static final int ic_menu_send=0x7f080123;
+    public static final int ic_menu_share=0x7f080124;
+    public static final int ic_menu_slideshow=0x7f080125;
+    public static final int ic_menu_white_24dp=0x7f080126;
+    public static final int ic_message_light_24dp=0x7f080127;
+    public static final int ic_message_pending_gray_24dp=0x7f080128;
+    public static final int ic_mic_black_24dp=0x7f080129;
+    public static final int ic_more_flat=0x7f08012a;
+    public static final int ic_more_horiz_black_24dp=0x7f08012b;
+    public static final int ic_more_vert_white_24dp=0x7f08012c;
+    public static final int ic_mtrl_chip_checked_black=0x7f08012d;
+    public static final int ic_mtrl_chip_checked_circle=0x7f08012e;
+    public static final int ic_mtrl_chip_close_circle=0x7f08012f;
+    public static final int ic_mute_green=0x7f080130;
+    public static final int ic_mute_light=0x7f080131;
+    public static final int ic_mutual=0x7f080132;
+    public static final int ic_my_msgs=0x7f080133;
+    public static final int ic_note_add_white_24dp=0x7f080134;
+    public static final int ic_perm_media_white_24dp=0x7f080135;
+    public static final int ic_person_24dp=0x7f080136;
+    public static final int ic_person_add_white_24dp=0x7f080137;
+    public static final int ic_person_add_white_padded_24dp=0x7f080138;
+    public static final int ic_person_add_yellow_24dp=0x7f080139;
+    public static final int ic_person_black_24dp=0x7f08013a;
+    public static final int ic_person_flat=0x7f08013b;
+    public static final int ic_person_green_24dp=0x7f08013c;
+    public static final int ic_person_outline_black_24dp=0x7f08013d;
+    public static final int ic_person_outlined=0x7f08013e;
+    public static final int ic_person_white_24dp=0x7f08013f;
+    public static final int ic_phone_black_24dp=0x7f080140;
+    public static final int ic_phone_green_24dp=0x7f080141;
+    public static final int ic_photo_camera_black_24dp=0x7f080142;
+    public static final int ic_photo_library_black_24dp=0x7f080143;
+    public static final int ic_photo_library_white_24dp=0x7f080144;
+    public static final int ic_play_black=0x7f080145;
+    public static final int ic_play_circle_outline_white_24dp=0x7f080146;
+    public static final int ic_play_white=0x7f080147;
+    public static final int ic_power=0x7f080148;
+    public static final int ic_public_black_24dp=0x7f080149;
+    public static final int ic_public_white_24dp=0x7f08014a;
+    public static final int ic_question_answer_black_24dp=0x7f08014b;
+    public static final int ic_read_green=0x7f08014c;
+    public static final int ic_read_round=0x7f08014d;
+    public static final int ic_read_status=0x7f08014e;
+    public static final int ic_refresh_black_24dp=0x7f08014f;
+    public static final int ic_reply_black_24dp=0x7f080150;
+    public static final int ic_rss_feed_black_24dp=0x7f080151;
+    public static final int ic_save_white_24dp=0x7f080152;
+    public static final int ic_search=0x7f080153;
+    public static final int ic_search_black_24dp=0x7f080154;
+    public static final int ic_search_white_24dp=0x7f080155;
+    public static final int ic_send_black=0x7f080156;
+    public static final int ic_send_black_24dp=0x7f080157;
+    public static final int ic_send_blue_24dp=0x7f080158;
+    public static final int ic_send_message=0x7f080159;
+    public static final int ic_send_white_24dp=0x7f08015a;
+    public static final int ic_sent_round=0x7f08015b;
+    public static final int ic_sentiment_dissatisfied_black_24dp=0x7f08015c;
+    public static final int ic_sentiment_satisfied_black_24dp=0x7f08015d;
+    public static final int ic_sentiment_very_satisfied_black_24dp=0x7f08015e;
+    public static final int ic_sentiment_very_satisfied_black_large=0x7f08015f;
+    public static final int ic_setting_flat_black=0x7f080160;
+    public static final int ic_settings=0x7f080161;
+    public static final int ic_settings_black_24dp=0x7f080162;
+    public static final int ic_share_flat=0x7f080163;
+    public static final int ic_share_liked=0x7f080164;
+    public static final int ic_show_chart_24dp=0x7f080165;
+    public static final int ic_speed=0x7f080166;
+    public static final int ic_star_black_24dp=0x7f080167;
+    public static final int ic_star_border_black_24dp=0x7f080168;
+    public static final int ic_star_border_white_24dp=0x7f080169;
+    public static final int ic_star_white_24dp=0x7f08016a;
+    public static final int ic_storage=0x7f08016b;
+    public static final int ic_storage_white_24dp=0x7f08016c;
+    public static final int ic_swap_vert_grey600_48dp=0x7f08016d;
+    public static final int ic_temperature=0x7f08016e;
+    public static final int ic_text_post_grey=0x7f08016f;
+    public static final int ic_tick_sent_grey_24dp=0x7f080170;
+    public static final int ic_time=0x7f080171;
+    public static final int ic_translate_white_24dp=0x7f080172;
+    public static final int ic_unfriend=0x7f080173;
+    public static final int ic_up_white_24dp=0x7f080174;
+    public static final int ic_vibration_white_24dp=0x7f080175;
+    public static final int ic_video=0x7f080176;
+    public static final int ic_video_library_white_24dp=0x7f080177;
+    public static final int ic_video_white_24dp=0x7f080178;
+    public static final int ic_videocam_black_24dp=0x7f080179;
+    public static final int ic_volume=0x7f08017a;
+    public static final int ic_volume_up_white_24dp=0x7f08017b;
+    public static final int icons8_chat_80=0x7f08017c;
+    public static final int icons8_connection_status_on_80=0x7f08017d;
+    public static final int icons8_error_96=0x7f08017e;
+    public static final int icons8_eye_64=0x7f08017f;
+    public static final int icons8_news_feed_64=0x7f080180;
+    public static final int icons8_plus_100=0x7f080181;
+    public static final int icons8_speech_bubble_64=0x7f080182;
+    public static final int icons8_video_call_100=0x7f080183;
+    public static final int icons8_video_file_64=0x7f080184;
+    public static final int image_placeholder=0x7f080185;
+    public static final int india_logo=0x7f080186;
+    public static final int input_backgtound=0x7f080187;
+    public static final int input_backgtound_grey=0x7f080188;
+    public static final int input_light_accent_square=0x7f080189;
+    public static final int input_light_white=0x7f08018a;
+    public static final int instagram=0x7f08018b;
+    public static final int logo_gradient=0x7f08018c;
+    public static final int mail_box_img=0x7f08018d;
+    public static final int mtrl_snackbar_background=0x7f08018e;
+    public static final int mtrl_tabs_default_indicator=0x7f08018f;
+    public static final int navigation_empty_icon=0x7f080190;
+    public static final int no_result=0x7f080191;
+    public static final int notification_action_background=0x7f080192;
+    public static final int notification_bg=0x7f080193;
+    public static final int notification_bg_low=0x7f080194;
+    public static final int notification_bg_low_normal=0x7f080195;
+    public static final int notification_bg_low_pressed=0x7f080196;
+    public static final int notification_bg_normal=0x7f080197;
+    public static final int notification_bg_normal_pressed=0x7f080198;
+    public static final int notification_icon_background=0x7f080199;
+    public static final int notification_template_icon_bg=0x7f08019a;
+    public static final int notification_template_icon_low_bg=0x7f08019b;
+    public static final int notification_tile_bg=0x7f08019c;
+    public static final int notify_panel_notification_icon_bg=0x7f08019d;
+    public static final int oops=0x7f08019e;
+    public static final int pause_big=0x7f08019f;
+    public static final int picture_white=0x7f0801a0;
+    public static final int placeholder=0x7f0801a1;
+    public static final int placeholder2=0x7f0801a2;
+    public static final int placeholder_image=0x7f0801a3;
+    public static final int play_big=0x7f0801a4;
+    public static final int posts_icon=0x7f0801a5;
+    public static final int progress_drawable=0x7f0801a6;
+    public static final int read_icon=0x7f0801a7;
+    public static final int round_background=0x7f0801a8;
+    public static final int round_badge=0x7f0801a9;
+    public static final int round_flash_on_black_18dp=0x7f0801aa;
+    public static final int round_white=0x7f0801ab;
+    public static final int rounded_suggestion_background=0x7f0801ac;
+    public static final int shape_bubble_left=0x7f0801ad;
+    public static final int shape_bubble_offline=0x7f0801ae;
+    public static final int shape_bubble_online=0x7f0801af;
+    public static final int shape_bubble_online_large=0x7f0801b0;
+    public static final int shape_bubble_right=0x7f0801b1;
+    public static final int shape_custom_cursor=0x7f0801b2;
+    public static final int shape_line=0x7f0801b3;
+    public static final int shape_message_left_2=0x7f0801b4;
+    public static final int shape_message_right_2=0x7f0801b5;
+    public static final int side_nav_bar=0x7f0801b6;
+    public static final int soundoff=0x7f0801b7;
+    public static final int soundon=0x7f0801b8;
+    public static final int splash_window_bg=0x7f0801b9;
+    public static final int spring_dot_background=0x7f0801ba;
+    public static final int spring_dot_stroke_background=0x7f0801bb;
+    public static final int textview_tab_style=0x7f0801bc;
+    public static final int textview_tab_style_black=0x7f0801bd;
+    public static final int textview_tab_style_blue=0x7f0801be;
+    public static final int textview_tab_style_green=0x7f0801bf;
+    public static final int toast_frame=0x7f0801c0;
+    public static final int tooltip_frame_dark=0x7f0801c1;
+    public static final int tooltip_frame_light=0x7f0801c2;
+    public static final int top_round_drawable=0x7f0801c3;
+    public static final int top_shadow=0x7f0801c4;
+    public static final int unread_icon=0x7f0801c5;
+    public static final int video_controller_bg_gradient=0x7f0801c6;
+    public static final int worm_dot_background=0x7f0801c7;
+    public static final int worm_dot_stroke_background=0x7f0801c8;
   }
   public static final class font {
     public static final int bold=0x7f090000;
@@ -6703,318 +6245,327 @@ public final class R {
     public static final int bottom_navigation_view=0x7f0b004c;
     public static final int bottom_sheet_coordinator=0x7f0b004d;
     public static final int bottom_sheet_drawer=0x7f0b004e;
-    public static final int buttonPanel=0x7f0b004f;
-    public static final int cancel_action=0x7f0b0050;
-    public static final int card_content=0x7f0b0051;
-    public static final int card_header=0x7f0b0052;
-    public static final int card_image=0x7f0b0053;
-    public static final int card_root=0x7f0b0054;
-    public static final int card_view=0x7f0b0055;
-    public static final int center=0x7f0b0056;
-    public static final int centerCrop=0x7f0b0057;
-    public static final int centerInside=0x7f0b0058;
-    public static final int center_horizontal=0x7f0b0059;
-    public static final int center_vertical=0x7f0b005a;
-    public static final int chains=0x7f0b005b;
-    public static final int chats_list_recyclerview_id=0x7f0b005c;
-    public static final int checkbox=0x7f0b005d;
-    public static final int checked=0x7f0b005e;
-    public static final int chronometer=0x7f0b005f;
-    public static final int circular_status_view=0x7f0b0060;
-    public static final int clip_horizontal=0x7f0b0061;
-    public static final int clip_vertical=0x7f0b0062;
-    public static final int close_imageView=0x7f0b0063;
-    public static final int collapseActionView=0x7f0b0064;
-    public static final int comment_button=0x7f0b0065;
-    public static final int comment_linearLayout=0x7f0b0066;
-    public static final int comment_textView=0x7f0b0067;
-    public static final int container=0x7f0b0068;
-    public static final int content=0x7f0b0069;
-    public static final int contentPanel=0x7f0b006a;
-    public static final int coordinator=0x7f0b006b;
-    public static final int custom=0x7f0b006c;
-    public static final int customPanel=0x7f0b006d;
-    public static final int decor_content_parent=0x7f0b006e;
-    public static final int default_activity_button=0x7f0b006f;
-    public static final int default_item=0x7f0b0070;
-    public static final int default_text=0x7f0b0071;
-    public static final int default_title=0x7f0b0072;
-    public static final int delete_button=0x7f0b0073;
-    public static final int design_bottom_sheet=0x7f0b0074;
-    public static final int design_menu_item_action_area=0x7f0b0075;
-    public static final int design_menu_item_action_area_stub=0x7f0b0076;
-    public static final int design_menu_item_text=0x7f0b0077;
-    public static final int design_navigation_view=0x7f0b0078;
-    public static final int dialog_button=0x7f0b0079;
-    public static final int dimensions=0x7f0b007a;
-    public static final int direct=0x7f0b007b;
-    public static final int disableHome=0x7f0b007c;
-    public static final int discover_image=0x7f0b007d;
-    public static final int discover_text=0x7f0b007e;
-    public static final int discover_videoView=0x7f0b007f;
-    public static final int discovery_photo=0x7f0b0080;
-    public static final int discovery_recycler=0x7f0b0081;
-    public static final int dot=0x7f0b0082;
-    public static final int edit_query=0x7f0b0083;
-    public static final int end=0x7f0b0084;
-    public static final int end_padder=0x7f0b0085;
-    public static final int enterAlways=0x7f0b0086;
-    public static final int enterAlwaysCollapsed=0x7f0b0087;
-    public static final int error_text=0x7f0b0088;
-    public static final int error_view=0x7f0b0089;
-    public static final int exitUntilCollapsed=0x7f0b008a;
-    public static final int exomedia_controls_current_time=0x7f0b008b;
-    public static final int exomedia_controls_description=0x7f0b008c;
-    public static final int exomedia_controls_end_time=0x7f0b008d;
-    public static final int exomedia_controls_extra_container=0x7f0b008e;
-    public static final int exomedia_controls_fast_forward_btn=0x7f0b008f;
-    public static final int exomedia_controls_interactive_container=0x7f0b0090;
-    public static final int exomedia_controls_leanback_ripple=0x7f0b0091;
-    public static final int exomedia_controls_next_btn=0x7f0b0092;
-    public static final int exomedia_controls_parent=0x7f0b0093;
-    public static final int exomedia_controls_play_pause_btn=0x7f0b0094;
-    public static final int exomedia_controls_previous_btn=0x7f0b0095;
-    public static final int exomedia_controls_rewind_btn=0x7f0b0096;
-    public static final int exomedia_controls_sub_title=0x7f0b0097;
-    public static final int exomedia_controls_text_container=0x7f0b0098;
-    public static final int exomedia_controls_title=0x7f0b0099;
-    public static final int exomedia_controls_video_loading=0x7f0b009a;
-    public static final int exomedia_controls_video_progress=0x7f0b009b;
-    public static final int exomedia_controls_video_seek=0x7f0b009c;
-    public static final int exomedia_video_preview_image=0x7f0b009d;
-    public static final int exomedia_video_view=0x7f0b009e;
-    public static final int expand_activities_button=0x7f0b009f;
-    public static final int expanded_menu=0x7f0b00a0;
-    public static final int fab_news_feed=0x7f0b00a1;
-    public static final int fill=0x7f0b00a2;
-    public static final int fill_horizontal=0x7f0b00a3;
-    public static final int fill_vertical=0x7f0b00a4;
-    public static final int filled=0x7f0b00a5;
-    public static final int first_stat=0x7f0b00a6;
-    public static final int fitCenter=0x7f0b00a7;
-    public static final int fitXY=0x7f0b00a8;
-    public static final int fixed=0x7f0b00a9;
-    public static final int forever=0x7f0b00aa;
-    public static final int front_progress=0x7f0b00ab;
-    public static final int ghost_view=0x7f0b00ac;
-    public static final int glide_custom_view_target_tag=0x7f0b00ad;
-    public static final int gone=0x7f0b00ae;
-    public static final int group_divider=0x7f0b00af;
-    public static final int groups=0x7f0b00b0;
-    public static final int handle_view=0x7f0b00b1;
-    public static final int header_expand_icon=0x7f0b00b2;
-    public static final int header_textview=0x7f0b00b3;
-    public static final int heart=0x7f0b00b4;
-    public static final int holder_linear_layout=0x7f0b00b5;
-    public static final int home=0x7f0b00b6;
-    public static final int homeAsUp=0x7f0b00b7;
-    public static final int icon=0x7f0b00b8;
-    public static final int icon_group=0x7f0b00b9;
-    public static final int ifRoom=0x7f0b00ba;
-    public static final int image=0x7f0b00bb;
-    public static final int image_holder=0x7f0b00bc;
-    public static final int image_layout=0x7f0b00bd;
-    public static final int indicator=0x7f0b00be;
-    public static final int indicator_holder=0x7f0b00bf;
-    public static final int info=0x7f0b00c0;
-    public static final int invisible=0x7f0b00c1;
-    public static final int italic=0x7f0b00c2;
-    public static final int item_touch_helper_previous_elevation=0x7f0b00c3;
-    public static final int ivLike=0x7f0b00c4;
-    public static final int labeled=0x7f0b00c5;
-    public static final int largeLabel=0x7f0b00c6;
-    public static final int left=0x7f0b00c7;
-    public static final int like_button=0x7f0b00c8;
-    public static final int like_count=0x7f0b00c9;
-    public static final int like_frame_layout=0x7f0b00ca;
-    public static final int like_layout=0x7f0b00cb;
-    public static final int like_linearLayout=0x7f0b00cc;
-    public static final int like_textView=0x7f0b00cd;
-    public static final int line1=0x7f0b00ce;
-    public static final int line3=0x7f0b00cf;
-    public static final int linearLayout=0x7f0b00d0;
-    public static final int list=0x7f0b00d1;
-    public static final int listMode=0x7f0b00d2;
-    public static final int list_item=0x7f0b00d3;
-    public static final int main_container=0x7f0b00d4;
-    public static final int masked=0x7f0b00d5;
-    public static final int max_progress=0x7f0b00d6;
-    public static final int media_actions=0x7f0b00d7;
-    public static final int message=0x7f0b00d8;
-    public static final int middle=0x7f0b00d9;
-    public static final int mini=0x7f0b00da;
-    public static final int mtrl_child_content_container=0x7f0b00db;
-    public static final int mtrl_internal_children_alpha_tag=0x7f0b00dc;
-    public static final int multiply=0x7f0b00dd;
-    public static final int navigation_header_container=0x7f0b00de;
-    public static final int never=0x7f0b00df;
-    public static final int none=0x7f0b00e0;
-    public static final int none_horizontal=0x7f0b00e1;
-    public static final int none_vertical=0x7f0b00e2;
-    public static final int normal=0x7f0b00e3;
-    public static final int notification_background=0x7f0b00e4;
-    public static final int notification_main_column=0x7f0b00e5;
-    public static final int notification_main_column_container=0x7f0b00e6;
-    public static final int nv_explorer=0x7f0b00e7;
-    public static final int nv_feeds=0x7f0b00e8;
-    public static final int nv_production=0x7f0b00e9;
-    public static final int nv_profile=0x7f0b00ea;
-    public static final int nv_stacks=0x7f0b00eb;
-    public static final int off=0x7f0b00ec;
-    public static final int on=0x7f0b00ed;
-    public static final int outline=0x7f0b00ee;
-    public static final int packed=0x7f0b00ef;
-    public static final int pager=0x7f0b00f0;
-    public static final int pager_layout=0x7f0b00f1;
-    public static final int parallax=0x7f0b00f2;
-    public static final int parent=0x7f0b00f3;
-    public static final int parentPanel=0x7f0b00f4;
-    public static final int parent_matrix=0x7f0b00f5;
-    public static final int pauseVideo=0x7f0b00f6;
-    public static final int percent=0x7f0b00f7;
-    public static final int pin=0x7f0b00f8;
-    public static final int playVideo=0x7f0b00f9;
-    public static final int post_desc=0x7f0b00fa;
-    public static final int post_text=0x7f0b00fb;
-    public static final int post_timestamp=0x7f0b00fc;
-    public static final int post_user_image=0x7f0b00fd;
-    public static final int post_username=0x7f0b00fe;
-    public static final int posted_time=0x7f0b00ff;
-    public static final int poster_image=0x7f0b0100;
-    public static final int poster_info=0x7f0b0101;
-    public static final int poster_name=0x7f0b0102;
-    public static final int posts_recyclerview=0x7f0b0103;
-    public static final int profile_image=0x7f0b0104;
-    public static final int progressBar=0x7f0b0105;
-    public static final int progress_circular=0x7f0b0106;
-    public static final int progress_horizontal=0x7f0b0107;
-    public static final int progress_loader=0x7f0b0108;
-    public static final int radio=0x7f0b0109;
-    public static final int react_layout=0x7f0b010a;
-    public static final int read=0x7f0b010b;
-    public static final int realZoom=0x7f0b010c;
-    public static final int refreshLayout=0x7f0b010d;
-    public static final int reverse=0x7f0b010e;
-    public static final int right=0x7f0b010f;
-    public static final int right_icon=0x7f0b0110;
-    public static final int right_side=0x7f0b0111;
-    public static final int save_button=0x7f0b0112;
-    public static final int save_image_matrix=0x7f0b0113;
-    public static final int save_non_transition_alpha=0x7f0b0114;
-    public static final int save_scale_type=0x7f0b0115;
-    public static final int screen=0x7f0b0116;
-    public static final int scroll=0x7f0b0117;
-    public static final int scrollIndicatorDown=0x7f0b0118;
-    public static final int scrollIndicatorUp=0x7f0b0119;
-    public static final int scrollView=0x7f0b011a;
-    public static final int scrollable=0x7f0b011b;
-    public static final int search_badge=0x7f0b011c;
-    public static final int search_bar=0x7f0b011d;
-    public static final int search_button=0x7f0b011e;
-    public static final int search_close_btn=0x7f0b011f;
-    public static final int search_edit_frame=0x7f0b0120;
-    public static final int search_go_btn=0x7f0b0121;
-    public static final int search_mag_icon=0x7f0b0122;
-    public static final int search_plate=0x7f0b0123;
-    public static final int search_src_text=0x7f0b0124;
-    public static final int search_voice_btn=0x7f0b0125;
-    public static final int select_dialog_listview=0x7f0b0126;
-    public static final int selected=0x7f0b0127;
-    public static final int share_button=0x7f0b0128;
-    public static final int shortcut=0x7f0b0129;
-    public static final int showCustom=0x7f0b012a;
-    public static final int showHome=0x7f0b012b;
-    public static final int showTitle=0x7f0b012c;
-    public static final int simple_header=0x7f0b012d;
-    public static final int skip=0x7f0b012e;
-    public static final int smallLabel=0x7f0b012f;
-    public static final int snackbar_action=0x7f0b0130;
-    public static final int snackbar_text=0x7f0b0131;
-    public static final int snap=0x7f0b0132;
-    public static final int snapMargins=0x7f0b0133;
-    public static final int soundOffView=0x7f0b0134;
-    public static final int soundOnView=0x7f0b0135;
-    public static final int spacer=0x7f0b0136;
-    public static final int split_action_bar=0x7f0b0137;
-    public static final int spread=0x7f0b0138;
-    public static final int spread_inside=0x7f0b0139;
-    public static final int spring_dot=0x7f0b013a;
-    public static final int src_atop=0x7f0b013b;
-    public static final int src_in=0x7f0b013c;
-    public static final int src_over=0x7f0b013d;
-    public static final int srn_root_layout=0x7f0b013e;
-    public static final int standard=0x7f0b013f;
-    public static final int star=0x7f0b0140;
-    public static final int start=0x7f0b0141;
-    public static final int stat_button=0x7f0b0142;
-    public static final int status_bar_latest_event_content=0x7f0b0143;
-    public static final int stories=0x7f0b0144;
-    public static final int story_recycler=0x7f0b0145;
-    public static final int stretch=0x7f0b0146;
-    public static final int submenuarrow=0x7f0b0147;
-    public static final int submit_area=0x7f0b0148;
-    public static final int surfaceView=0x7f0b0149;
-    public static final int tabMode=0x7f0b014a;
-    public static final int tag_accessibility_actions=0x7f0b014b;
-    public static final int tag_accessibility_clickable_spans=0x7f0b014c;
-    public static final int tag_accessibility_heading=0x7f0b014d;
-    public static final int tag_accessibility_pane_title=0x7f0b014e;
-    public static final int tag_screen_reader_focusable=0x7f0b014f;
-    public static final int tag_transition_group=0x7f0b0150;
-    public static final int tag_unhandled_key_event_manager=0x7f0b0151;
-    public static final int tag_unhandled_key_listeners=0x7f0b0152;
-    public static final int text=0x7f0b0153;
-    public static final int text2=0x7f0b0154;
-    public static final int textSpacerNoButtons=0x7f0b0155;
-    public static final int textSpacerNoTitle=0x7f0b0156;
-    public static final int textStart=0x7f0b0157;
-    public static final int text_input_password_toggle=0x7f0b0158;
-    public static final int textinput_counter=0x7f0b0159;
-    public static final int textinput_error=0x7f0b015a;
-    public static final int textinput_helper_text=0x7f0b015b;
-    public static final int time=0x7f0b015c;
-    public static final int title=0x7f0b015d;
-    public static final int titleDividerNoCustom=0x7f0b015e;
-    public static final int title_template=0x7f0b015f;
-    public static final int toast_icon=0x7f0b0160;
-    public static final int toast_root=0x7f0b0161;
-    public static final int toast_text=0x7f0b0162;
-    public static final int toolbar=0x7f0b0163;
-    public static final int top=0x7f0b0164;
-    public static final int topPanel=0x7f0b0165;
-    public static final int touch_outside=0x7f0b0166;
-    public static final int transition_current_scene=0x7f0b0167;
-    public static final int transition_layout_save=0x7f0b0168;
-    public static final int transition_position=0x7f0b0169;
-    public static final int transition_scene_layoutid_cache=0x7f0b016a;
-    public static final int transition_transform=0x7f0b016b;
-    public static final int unchecked=0x7f0b016c;
-    public static final int uniform=0x7f0b016d;
-    public static final int unlabeled=0x7f0b016e;
-    public static final int up=0x7f0b016f;
-    public static final int useLogo=0x7f0b0170;
-    public static final int user_image=0x7f0b0171;
-    public static final int username=0x7f0b0172;
-    public static final int vBgLike=0x7f0b0173;
-    public static final int vBigView=0x7f0b0174;
-    public static final int video_holder=0x7f0b0175;
-    public static final int video_indicator=0x7f0b0176;
-    public static final int video_indicator_holder=0x7f0b0177;
-    public static final int video_pager=0x7f0b0178;
-    public static final int video_pager_layout=0x7f0b0179;
-    public static final int video_view=0x7f0b017a;
-    public static final int video_view_api_impl_stub=0x7f0b017b;
-    public static final int view_offset_helper=0x7f0b017c;
-    public static final int view_stat_view=0x7f0b017d;
-    public static final int views_linearLayout=0x7f0b017e;
-    public static final int views_textView=0x7f0b017f;
-    public static final int visible=0x7f0b0180;
-    public static final int white=0x7f0b0181;
-    public static final int withText=0x7f0b0182;
-    public static final int worm_dot=0x7f0b0183;
-    public static final int wrap=0x7f0b0184;
-    public static final int wrap_content=0x7f0b0185;
-    public static final int zoom=0x7f0b0186;
+    public static final int bottom_sheetrecycler=0x7f0b004f;
+    public static final int buttonPanel=0x7f0b0050;
+    public static final int cancel=0x7f0b0051;
+    public static final int cancel_action=0x7f0b0052;
+    public static final int card_content=0x7f0b0053;
+    public static final int card_header=0x7f0b0054;
+    public static final int card_image=0x7f0b0055;
+    public static final int card_root=0x7f0b0056;
+    public static final int card_view=0x7f0b0057;
+    public static final int category_name=0x7f0b0058;
+    public static final int center=0x7f0b0059;
+    public static final int centerCrop=0x7f0b005a;
+    public static final int centerInside=0x7f0b005b;
+    public static final int center_horizontal=0x7f0b005c;
+    public static final int center_vertical=0x7f0b005d;
+    public static final int chains=0x7f0b005e;
+    public static final int chats_list_recyclerview_id=0x7f0b005f;
+    public static final int checkbox=0x7f0b0060;
+    public static final int checked=0x7f0b0061;
+    public static final int chronometer=0x7f0b0062;
+    public static final int circular_status_view=0x7f0b0063;
+    public static final int clip_horizontal=0x7f0b0064;
+    public static final int clip_vertical=0x7f0b0065;
+    public static final int close_imageView=0x7f0b0066;
+    public static final int collapseActionView=0x7f0b0067;
+    public static final int comment_button=0x7f0b0068;
+    public static final int comment_linearLayout=0x7f0b0069;
+    public static final int comment_textView=0x7f0b006a;
+    public static final int container=0x7f0b006b;
+    public static final int content=0x7f0b006c;
+    public static final int contentPanel=0x7f0b006d;
+    public static final int coordinator=0x7f0b006e;
+    public static final int custom=0x7f0b006f;
+    public static final int customPanel=0x7f0b0070;
+    public static final int decor_content_parent=0x7f0b0071;
+    public static final int default_activity_button=0x7f0b0072;
+    public static final int default_item=0x7f0b0073;
+    public static final int default_text=0x7f0b0074;
+    public static final int default_title=0x7f0b0075;
+    public static final int delete_button=0x7f0b0076;
+    public static final int design_bottom_sheet=0x7f0b0077;
+    public static final int design_menu_item_action_area=0x7f0b0078;
+    public static final int design_menu_item_action_area_stub=0x7f0b0079;
+    public static final int design_menu_item_text=0x7f0b007a;
+    public static final int design_navigation_view=0x7f0b007b;
+    public static final int dialog_button=0x7f0b007c;
+    public static final int dimensions=0x7f0b007d;
+    public static final int direct=0x7f0b007e;
+    public static final int disableHome=0x7f0b007f;
+    public static final int discover_image=0x7f0b0080;
+    public static final int discover_text=0x7f0b0081;
+    public static final int discover_videoView=0x7f0b0082;
+    public static final int discovery_photo=0x7f0b0083;
+    public static final int discovery_recycler=0x7f0b0084;
+    public static final int dot=0x7f0b0085;
+    public static final int edit_query=0x7f0b0086;
+    public static final int end=0x7f0b0087;
+    public static final int end_padder=0x7f0b0088;
+    public static final int enterAlways=0x7f0b0089;
+    public static final int enterAlwaysCollapsed=0x7f0b008a;
+    public static final int error_text=0x7f0b008b;
+    public static final int error_view=0x7f0b008c;
+    public static final int exitUntilCollapsed=0x7f0b008d;
+    public static final int exomedia_controls_current_time=0x7f0b008e;
+    public static final int exomedia_controls_description=0x7f0b008f;
+    public static final int exomedia_controls_end_time=0x7f0b0090;
+    public static final int exomedia_controls_extra_container=0x7f0b0091;
+    public static final int exomedia_controls_fast_forward_btn=0x7f0b0092;
+    public static final int exomedia_controls_interactive_container=0x7f0b0093;
+    public static final int exomedia_controls_leanback_ripple=0x7f0b0094;
+    public static final int exomedia_controls_next_btn=0x7f0b0095;
+    public static final int exomedia_controls_parent=0x7f0b0096;
+    public static final int exomedia_controls_play_pause_btn=0x7f0b0097;
+    public static final int exomedia_controls_previous_btn=0x7f0b0098;
+    public static final int exomedia_controls_rewind_btn=0x7f0b0099;
+    public static final int exomedia_controls_sub_title=0x7f0b009a;
+    public static final int exomedia_controls_text_container=0x7f0b009b;
+    public static final int exomedia_controls_title=0x7f0b009c;
+    public static final int exomedia_controls_video_loading=0x7f0b009d;
+    public static final int exomedia_controls_video_progress=0x7f0b009e;
+    public static final int exomedia_controls_video_seek=0x7f0b009f;
+    public static final int exomedia_video_preview_image=0x7f0b00a0;
+    public static final int exomedia_video_view=0x7f0b00a1;
+    public static final int expand_activities_button=0x7f0b00a2;
+    public static final int expandble_profile=0x7f0b00a3;
+    public static final int expanded_menu=0x7f0b00a4;
+    public static final int fab_news_feed=0x7f0b00a5;
+    public static final int fill=0x7f0b00a6;
+    public static final int fill_horizontal=0x7f0b00a7;
+    public static final int fill_vertical=0x7f0b00a8;
+    public static final int filled=0x7f0b00a9;
+    public static final int first_stat=0x7f0b00aa;
+    public static final int fitCenter=0x7f0b00ab;
+    public static final int fitXY=0x7f0b00ac;
+    public static final int fixed=0x7f0b00ad;
+    public static final int forever=0x7f0b00ae;
+    public static final int front_progress=0x7f0b00af;
+    public static final int ghost_view=0x7f0b00b0;
+    public static final int glide_custom_view_target_tag=0x7f0b00b1;
+    public static final int gone=0x7f0b00b2;
+    public static final int group_divider=0x7f0b00b3;
+    public static final int groups=0x7f0b00b4;
+    public static final int handle_view=0x7f0b00b5;
+    public static final int header_expand_icon=0x7f0b00b6;
+    public static final int header_textview=0x7f0b00b7;
+    public static final int heart=0x7f0b00b8;
+    public static final int holder_linear_layout=0x7f0b00b9;
+    public static final int home=0x7f0b00ba;
+    public static final int homeAsUp=0x7f0b00bb;
+    public static final int icon=0x7f0b00bc;
+    public static final int icon_group=0x7f0b00bd;
+    public static final int ifRoom=0x7f0b00be;
+    public static final int image=0x7f0b00bf;
+    public static final int image_holder=0x7f0b00c0;
+    public static final int image_layout=0x7f0b00c1;
+    public static final int indicator=0x7f0b00c2;
+    public static final int indicator_holder=0x7f0b00c3;
+    public static final int info=0x7f0b00c4;
+    public static final int invisible=0x7f0b00c5;
+    public static final int italic=0x7f0b00c6;
+    public static final int item_category_image=0x7f0b00c7;
+    public static final int item_category_layout=0x7f0b00c8;
+    public static final int item_category_name=0x7f0b00c9;
+    public static final int item_touch_helper_previous_elevation=0x7f0b00ca;
+    public static final int ivLike=0x7f0b00cb;
+    public static final int labeled=0x7f0b00cc;
+    public static final int largeLabel=0x7f0b00cd;
+    public static final int left=0x7f0b00ce;
+    public static final int like_button=0x7f0b00cf;
+    public static final int like_count=0x7f0b00d0;
+    public static final int like_frame_layout=0x7f0b00d1;
+    public static final int like_layout=0x7f0b00d2;
+    public static final int like_linearLayout=0x7f0b00d3;
+    public static final int like_textView=0x7f0b00d4;
+    public static final int line1=0x7f0b00d5;
+    public static final int line3=0x7f0b00d6;
+    public static final int linearLayout=0x7f0b00d7;
+    public static final int list=0x7f0b00d8;
+    public static final int listMode=0x7f0b00d9;
+    public static final int list_item=0x7f0b00da;
+    public static final int main_container=0x7f0b00db;
+    public static final int masked=0x7f0b00dc;
+    public static final int max_progress=0x7f0b00dd;
+    public static final int media_actions=0x7f0b00de;
+    public static final int message=0x7f0b00df;
+    public static final int middle=0x7f0b00e0;
+    public static final int mini=0x7f0b00e1;
+    public static final int mtrl_child_content_container=0x7f0b00e2;
+    public static final int mtrl_internal_children_alpha_tag=0x7f0b00e3;
+    public static final int multiply=0x7f0b00e4;
+    public static final int navigation_header_container=0x7f0b00e5;
+    public static final int never=0x7f0b00e6;
+    public static final int none=0x7f0b00e7;
+    public static final int none_horizontal=0x7f0b00e8;
+    public static final int none_vertical=0x7f0b00e9;
+    public static final int normal=0x7f0b00ea;
+    public static final int notification_background=0x7f0b00eb;
+    public static final int notification_main_column=0x7f0b00ec;
+    public static final int notification_main_column_container=0x7f0b00ed;
+    public static final int number_of_subcategories=0x7f0b00ee;
+    public static final int nv_explorer=0x7f0b00ef;
+    public static final int nv_feeds=0x7f0b00f0;
+    public static final int nv_production=0x7f0b00f1;
+    public static final int nv_profile=0x7f0b00f2;
+    public static final int nv_stacks=0x7f0b00f3;
+    public static final int off=0x7f0b00f4;
+    public static final int on=0x7f0b00f5;
+    public static final int outline=0x7f0b00f6;
+    public static final int packed=0x7f0b00f7;
+    public static final int pager=0x7f0b00f8;
+    public static final int pager_layout=0x7f0b00f9;
+    public static final int parallax=0x7f0b00fa;
+    public static final int parent=0x7f0b00fb;
+    public static final int parentPanel=0x7f0b00fc;
+    public static final int parent_matrix=0x7f0b00fd;
+    public static final int pauseVideo=0x7f0b00fe;
+    public static final int percent=0x7f0b00ff;
+    public static final int pin=0x7f0b0100;
+    public static final int playVideo=0x7f0b0101;
+    public static final int post_desc=0x7f0b0102;
+    public static final int post_text=0x7f0b0103;
+    public static final int post_timestamp=0x7f0b0104;
+    public static final int post_user_image=0x7f0b0105;
+    public static final int post_username=0x7f0b0106;
+    public static final int posted_time=0x7f0b0107;
+    public static final int poster_image=0x7f0b0108;
+    public static final int poster_info=0x7f0b0109;
+    public static final int poster_name=0x7f0b010a;
+    public static final int posts_recyclerview=0x7f0b010b;
+    public static final int profile_image=0x7f0b010c;
+    public static final int progressBar=0x7f0b010d;
+    public static final int progress_circular=0x7f0b010e;
+    public static final int progress_horizontal=0x7f0b010f;
+    public static final int progress_loader=0x7f0b0110;
+    public static final int radio=0x7f0b0111;
+    public static final int react_layout=0x7f0b0112;
+    public static final int read=0x7f0b0113;
+    public static final int realZoom=0x7f0b0114;
+    public static final int refreshLayout=0x7f0b0115;
+    public static final int reverse=0x7f0b0116;
+    public static final int right=0x7f0b0117;
+    public static final int right_icon=0x7f0b0118;
+    public static final int right_side=0x7f0b0119;
+    public static final int save_button=0x7f0b011a;
+    public static final int save_image_matrix=0x7f0b011b;
+    public static final int save_non_transition_alpha=0x7f0b011c;
+    public static final int save_scale_type=0x7f0b011d;
+    public static final int screen=0x7f0b011e;
+    public static final int scroll=0x7f0b011f;
+    public static final int scrollIndicatorDown=0x7f0b0120;
+    public static final int scrollIndicatorUp=0x7f0b0121;
+    public static final int scrollView=0x7f0b0122;
+    public static final int scrollable=0x7f0b0123;
+    public static final int search_badge=0x7f0b0124;
+    public static final int search_bar=0x7f0b0125;
+    public static final int search_button=0x7f0b0126;
+    public static final int search_close_btn=0x7f0b0127;
+    public static final int search_edit_frame=0x7f0b0128;
+    public static final int search_go_btn=0x7f0b0129;
+    public static final int search_mag_icon=0x7f0b012a;
+    public static final int search_plate=0x7f0b012b;
+    public static final int search_src_text=0x7f0b012c;
+    public static final int search_voice_btn=0x7f0b012d;
+    public static final int select_dialog_listview=0x7f0b012e;
+    public static final int selected=0x7f0b012f;
+    public static final int share_button=0x7f0b0130;
+    public static final int shortcut=0x7f0b0131;
+    public static final int showCustom=0x7f0b0132;
+    public static final int showHome=0x7f0b0133;
+    public static final int showTitle=0x7f0b0134;
+    public static final int simple_header=0x7f0b0135;
+    public static final int skip=0x7f0b0136;
+    public static final int smallLabel=0x7f0b0137;
+    public static final int snackbar_action=0x7f0b0138;
+    public static final int snackbar_text=0x7f0b0139;
+    public static final int snap=0x7f0b013a;
+    public static final int snapMargins=0x7f0b013b;
+    public static final int soundOffView=0x7f0b013c;
+    public static final int soundOnView=0x7f0b013d;
+    public static final int spacer=0x7f0b013e;
+    public static final int split_action_bar=0x7f0b013f;
+    public static final int spread=0x7f0b0140;
+    public static final int spread_inside=0x7f0b0141;
+    public static final int spring_dot=0x7f0b0142;
+    public static final int src_atop=0x7f0b0143;
+    public static final int src_in=0x7f0b0144;
+    public static final int src_over=0x7f0b0145;
+    public static final int srn_root_layout=0x7f0b0146;
+    public static final int standard=0x7f0b0147;
+    public static final int star=0x7f0b0148;
+    public static final int start=0x7f0b0149;
+    public static final int stat_button=0x7f0b014a;
+    public static final int status_bar_latest_event_content=0x7f0b014b;
+    public static final int stories=0x7f0b014c;
+    public static final int story_recycler=0x7f0b014d;
+    public static final int stretch=0x7f0b014e;
+    public static final int submenuarrow=0x7f0b014f;
+    public static final int submit_area=0x7f0b0150;
+    public static final int surfaceView=0x7f0b0151;
+    public static final int tabMode=0x7f0b0152;
+    public static final int tag_accessibility_actions=0x7f0b0153;
+    public static final int tag_accessibility_clickable_spans=0x7f0b0154;
+    public static final int tag_accessibility_heading=0x7f0b0155;
+    public static final int tag_accessibility_pane_title=0x7f0b0156;
+    public static final int tag_screen_reader_focusable=0x7f0b0157;
+    public static final int tag_transition_group=0x7f0b0158;
+    public static final int tag_unhandled_key_event_manager=0x7f0b0159;
+    public static final int tag_unhandled_key_listeners=0x7f0b015a;
+    public static final int text=0x7f0b015b;
+    public static final int text2=0x7f0b015c;
+    public static final int textSpacerNoButtons=0x7f0b015d;
+    public static final int textSpacerNoTitle=0x7f0b015e;
+    public static final int textStart=0x7f0b015f;
+    public static final int text_header=0x7f0b0160;
+    public static final int text_input_password_toggle=0x7f0b0161;
+    public static final int textinput_counter=0x7f0b0162;
+    public static final int textinput_error=0x7f0b0163;
+    public static final int textinput_helper_text=0x7f0b0164;
+    public static final int time=0x7f0b0165;
+    public static final int title=0x7f0b0166;
+    public static final int titleDividerNoCustom=0x7f0b0167;
+    public static final int title_template=0x7f0b0168;
+    public static final int toast_icon=0x7f0b0169;
+    public static final int toast_root=0x7f0b016a;
+    public static final int toast_text=0x7f0b016b;
+    public static final int toolbar=0x7f0b016c;
+    public static final int top=0x7f0b016d;
+    public static final int topPanel=0x7f0b016e;
+    public static final int touch_outside=0x7f0b016f;
+    public static final int transition_current_scene=0x7f0b0170;
+    public static final int transition_layout_save=0x7f0b0171;
+    public static final int transition_position=0x7f0b0172;
+    public static final int transition_scene_layoutid_cache=0x7f0b0173;
+    public static final int transition_transform=0x7f0b0174;
+    public static final int unchecked=0x7f0b0175;
+    public static final int uniform=0x7f0b0176;
+    public static final int unlabeled=0x7f0b0177;
+    public static final int up=0x7f0b0178;
+    public static final int useLogo=0x7f0b0179;
+    public static final int user_image=0x7f0b017a;
+    public static final int username=0x7f0b017b;
+    public static final int vBgLike=0x7f0b017c;
+    public static final int vBigView=0x7f0b017d;
+    public static final int video_holder=0x7f0b017e;
+    public static final int video_indicator=0x7f0b017f;
+    public static final int video_indicator_holder=0x7f0b0180;
+    public static final int video_pager=0x7f0b0181;
+    public static final int video_pager_layout=0x7f0b0182;
+    public static final int video_view=0x7f0b0183;
+    public static final int video_view_api_impl_stub=0x7f0b0184;
+    public static final int view_offset_helper=0x7f0b0185;
+    public static final int view_stat_view=0x7f0b0186;
+    public static final int views_linearLayout=0x7f0b0187;
+    public static final int views_textView=0x7f0b0188;
+    public static final int visible=0x7f0b0189;
+    public static final int white=0x7f0b018a;
+    public static final int withText=0x7f0b018b;
+    public static final int worm_dot=0x7f0b018c;
+    public static final int wrap=0x7f0b018d;
+    public static final int wrap_content=0x7f0b018e;
+    public static final int zoom=0x7f0b018f;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f0c0000;
@@ -7082,70 +6633,74 @@ public final class R {
     public static final int activity_main=0x7f0e001d;
     public static final int activity_story_view=0x7f0e001e;
     public static final int bottom_drawer_layout=0x7f0e001f;
-    public static final int custom_dialog=0x7f0e0020;
-    public static final int design_bottom_navigation_item=0x7f0e0021;
-    public static final int design_bottom_sheet_dialog=0x7f0e0022;
-    public static final int design_layout_snackbar=0x7f0e0023;
-    public static final int design_layout_snackbar_include=0x7f0e0024;
-    public static final int design_layout_tab_icon=0x7f0e0025;
-    public static final int design_layout_tab_text=0x7f0e0026;
-    public static final int design_menu_item_action_area=0x7f0e0027;
-    public static final int design_navigation_item=0x7f0e0028;
-    public static final int design_navigation_item_header=0x7f0e0029;
-    public static final int design_navigation_item_separator=0x7f0e002a;
-    public static final int design_navigation_item_subheader=0x7f0e002b;
-    public static final int design_navigation_menu=0x7f0e002c;
-    public static final int design_navigation_menu_item=0x7f0e002d;
-    public static final int design_text_input_password_icon=0x7f0e002e;
-    public static final int dot_layout=0x7f0e002f;
-    public static final int exomedia_default_controls_leanback=0x7f0e0030;
-    public static final int exomedia_default_controls_mobile=0x7f0e0031;
-    public static final int exomedia_default_exo_surface_video_view=0x7f0e0032;
-    public static final int exomedia_default_exo_texture_video_view=0x7f0e0033;
-    public static final int exomedia_default_native_surface_video_view=0x7f0e0034;
-    public static final int exomedia_default_native_texture_video_view=0x7f0e0035;
-    public static final int exomedia_video_view_layout=0x7f0e0036;
-    public static final int expandable_cardview=0x7f0e0037;
-    public static final int fragment_chat=0x7f0e0038;
-    public static final int fragment_feeds=0x7f0e0039;
-    public static final int fragment_home=0x7f0e003a;
-    public static final int fragment_stories=0x7f0e003b;
-    public static final int item_chat_list=0x7f0e003c;
-    public static final int item_custom_row_loading=0x7f0e003d;
-    public static final int item_feed_post=0x7f0e003e;
-    public static final int item_option=0x7f0e003f;
-    public static final int item_status_discoveries=0x7f0e0040;
-    public static final int item_status_stories=0x7f0e0041;
-    public static final int item_viewpager_image=0x7f0e0042;
-    public static final int item_viewpager_video=0x7f0e0043;
-    public static final int layout_video=0x7f0e0044;
-    public static final int menu_left_drawer=0x7f0e0045;
-    public static final int mtrl_layout_snackbar=0x7f0e0046;
-    public static final int mtrl_layout_snackbar_include=0x7f0e0047;
-    public static final int notification_action=0x7f0e0048;
-    public static final int notification_action_tombstone=0x7f0e0049;
-    public static final int notification_media_action=0x7f0e004a;
-    public static final int notification_media_cancel_action=0x7f0e004b;
-    public static final int notification_template_big_media=0x7f0e004c;
-    public static final int notification_template_big_media_custom=0x7f0e004d;
-    public static final int notification_template_big_media_narrow=0x7f0e004e;
-    public static final int notification_template_big_media_narrow_custom=0x7f0e004f;
-    public static final int notification_template_custom_big=0x7f0e0050;
-    public static final int notification_template_icon_group=0x7f0e0051;
-    public static final int notification_template_lines_media=0x7f0e0052;
-    public static final int notification_template_media=0x7f0e0053;
-    public static final int notification_template_media_custom=0x7f0e0054;
-    public static final int notification_template_part_chronometer=0x7f0e0055;
-    public static final int notification_template_part_time=0x7f0e0056;
-    public static final int pausable_progress=0x7f0e0057;
-    public static final int select_dialog_item_material=0x7f0e0058;
-    public static final int select_dialog_multichoice_material=0x7f0e0059;
-    public static final int select_dialog_singlechoice_material=0x7f0e005a;
-    public static final int simple_cardview_header=0x7f0e005b;
-    public static final int spring_dot_layout=0x7f0e005c;
-    public static final int support_simple_spinner_dropdown_item=0x7f0e005d;
-    public static final int toast_layout=0x7f0e005e;
-    public static final int worm_dot_layout=0x7f0e005f;
+    public static final int bottom_sheet_discovery=0x7f0e0020;
+    public static final int bottom_sheet_profile_content=0x7f0e0021;
+    public static final int custom_dialog=0x7f0e0022;
+    public static final int design_bottom_navigation_item=0x7f0e0023;
+    public static final int design_bottom_sheet_dialog=0x7f0e0024;
+    public static final int design_layout_snackbar=0x7f0e0025;
+    public static final int design_layout_snackbar_include=0x7f0e0026;
+    public static final int design_layout_tab_icon=0x7f0e0027;
+    public static final int design_layout_tab_text=0x7f0e0028;
+    public static final int design_menu_item_action_area=0x7f0e0029;
+    public static final int design_navigation_item=0x7f0e002a;
+    public static final int design_navigation_item_header=0x7f0e002b;
+    public static final int design_navigation_item_separator=0x7f0e002c;
+    public static final int design_navigation_item_subheader=0x7f0e002d;
+    public static final int design_navigation_menu=0x7f0e002e;
+    public static final int design_navigation_menu_item=0x7f0e002f;
+    public static final int design_text_input_password_icon=0x7f0e0030;
+    public static final int discovery_comment_header=0x7f0e0031;
+    public static final int dot_layout=0x7f0e0032;
+    public static final int exomedia_default_controls_leanback=0x7f0e0033;
+    public static final int exomedia_default_controls_mobile=0x7f0e0034;
+    public static final int exomedia_default_exo_surface_video_view=0x7f0e0035;
+    public static final int exomedia_default_exo_texture_video_view=0x7f0e0036;
+    public static final int exomedia_default_native_surface_video_view=0x7f0e0037;
+    public static final int exomedia_default_native_texture_video_view=0x7f0e0038;
+    public static final int exomedia_video_view_layout=0x7f0e0039;
+    public static final int expandable_cardview=0x7f0e003a;
+    public static final int fragment_chat=0x7f0e003b;
+    public static final int fragment_feeds=0x7f0e003c;
+    public static final int fragment_home=0x7f0e003d;
+    public static final int fragment_stories=0x7f0e003e;
+    public static final int item_chat_list=0x7f0e003f;
+    public static final int item_custom_row_loading=0x7f0e0040;
+    public static final int item_discovery_comment=0x7f0e0041;
+    public static final int item_feed_post=0x7f0e0042;
+    public static final int item_option=0x7f0e0043;
+    public static final int item_status_discoveries=0x7f0e0044;
+    public static final int item_status_stories=0x7f0e0045;
+    public static final int item_viewpager_image=0x7f0e0046;
+    public static final int item_viewpager_video=0x7f0e0047;
+    public static final int layout_video=0x7f0e0048;
+    public static final int menu_left_drawer=0x7f0e0049;
+    public static final int mtrl_layout_snackbar=0x7f0e004a;
+    public static final int mtrl_layout_snackbar_include=0x7f0e004b;
+    public static final int notification_action=0x7f0e004c;
+    public static final int notification_action_tombstone=0x7f0e004d;
+    public static final int notification_media_action=0x7f0e004e;
+    public static final int notification_media_cancel_action=0x7f0e004f;
+    public static final int notification_template_big_media=0x7f0e0050;
+    public static final int notification_template_big_media_custom=0x7f0e0051;
+    public static final int notification_template_big_media_narrow=0x7f0e0052;
+    public static final int notification_template_big_media_narrow_custom=0x7f0e0053;
+    public static final int notification_template_custom_big=0x7f0e0054;
+    public static final int notification_template_icon_group=0x7f0e0055;
+    public static final int notification_template_lines_media=0x7f0e0056;
+    public static final int notification_template_media=0x7f0e0057;
+    public static final int notification_template_media_custom=0x7f0e0058;
+    public static final int notification_template_part_chronometer=0x7f0e0059;
+    public static final int notification_template_part_time=0x7f0e005a;
+    public static final int pausable_progress=0x7f0e005b;
+    public static final int select_dialog_item_material=0x7f0e005c;
+    public static final int select_dialog_multichoice_material=0x7f0e005d;
+    public static final int select_dialog_singlechoice_material=0x7f0e005e;
+    public static final int simple_cardview_header=0x7f0e005f;
+    public static final int spring_dot_layout=0x7f0e0060;
+    public static final int support_simple_spinner_dropdown_item=0x7f0e0061;
+    public static final int toast_layout=0x7f0e0062;
+    public static final int worm_dot_layout=0x7f0e0063;
   }
   public static final class menu {
     public static final int bnvm_dash=0x7f0f0000;
@@ -7449,325 +7004,328 @@ public final class R {
     public static final int CardView=0x7f1300cf;
     public static final int CardView_Dark=0x7f1300d0;
     public static final int CardView_Light=0x7f1300d1;
-    public static final int GreenTheme=0x7f1300d2;
-    public static final int GreenTheme_AppBarOverlay=0x7f1300d3;
-    public static final int GreenTheme_NoActionBar=0x7f1300d4;
-    public static final int GreenTheme_PopupOverlay=0x7f1300d5;
-    public static final int LoginAppTheme=0x7f1300d6;
-    public static final int MySearchViewStyle=0x7f1300d7;
-    public static final int Platform_AppCompat=0x7f1300d8;
-    public static final int Platform_AppCompat_Light=0x7f1300d9;
-    public static final int Platform_MaterialComponents=0x7f1300da;
-    public static final int Platform_MaterialComponents_Dialog=0x7f1300db;
-    public static final int Platform_MaterialComponents_Light=0x7f1300dc;
-    public static final int Platform_MaterialComponents_Light_Dialog=0x7f1300dd;
-    public static final int Platform_ThemeOverlay_AppCompat=0x7f1300de;
-    public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f1300df;
-    public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f1300e0;
-    public static final int Platform_V21_AppCompat=0x7f1300e1;
-    public static final int Platform_V21_AppCompat_Light=0x7f1300e2;
-    public static final int Platform_V25_AppCompat=0x7f1300e3;
-    public static final int Platform_V25_AppCompat_Light=0x7f1300e4;
-    public static final int Platform_Widget_AppCompat_Spinner=0x7f1300e5;
-    public static final int RoundButton=0x7f1300e6;
-    public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f1300e7;
-    public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f1300e8;
-    public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f1300e9;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f1300ea;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f1300eb;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut=0x7f1300ec;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow=0x7f1300ed;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f1300ee;
-    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title=0x7f1300ef;
-    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f1300f0;
-    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f1300f1;
-    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f1300f2;
-    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f1300f3;
-    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f1300f4;
-    public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f1300f5;
-    public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f1300f6;
-    public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f1300f7;
-    public static final int SplashAppTheme=0x7f1300f8;
-    public static final int StoryViewThem=0x7f1300f9;
-    public static final int TextAppearance_AppCompat=0x7f1300fa;
-    public static final int TextAppearance_AppCompat_Body1=0x7f1300fb;
-    public static final int TextAppearance_AppCompat_Body2=0x7f1300fc;
-    public static final int TextAppearance_AppCompat_Button=0x7f1300fd;
-    public static final int TextAppearance_AppCompat_Caption=0x7f1300fe;
-    public static final int TextAppearance_AppCompat_Display1=0x7f1300ff;
-    public static final int TextAppearance_AppCompat_Display2=0x7f130100;
-    public static final int TextAppearance_AppCompat_Display3=0x7f130101;
-    public static final int TextAppearance_AppCompat_Display4=0x7f130102;
-    public static final int TextAppearance_AppCompat_Headline=0x7f130103;
-    public static final int TextAppearance_AppCompat_Inverse=0x7f130104;
-    public static final int TextAppearance_AppCompat_Large=0x7f130105;
-    public static final int TextAppearance_AppCompat_Large_Inverse=0x7f130106;
-    public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f130107;
-    public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f130108;
-    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f130109;
-    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f13010a;
-    public static final int TextAppearance_AppCompat_Medium=0x7f13010b;
-    public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f13010c;
-    public static final int TextAppearance_AppCompat_Menu=0x7f13010d;
-    public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f13010e;
-    public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f13010f;
-    public static final int TextAppearance_AppCompat_Small=0x7f130110;
-    public static final int TextAppearance_AppCompat_Small_Inverse=0x7f130111;
-    public static final int TextAppearance_AppCompat_Subhead=0x7f130112;
-    public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f130113;
-    public static final int TextAppearance_AppCompat_Title=0x7f130114;
-    public static final int TextAppearance_AppCompat_Title_Inverse=0x7f130115;
-    public static final int TextAppearance_AppCompat_Tooltip=0x7f130116;
-    public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f130117;
-    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f130118;
-    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f130119;
-    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f13011a;
-    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f13011b;
-    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f13011c;
-    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f13011d;
-    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f13011e;
-    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f13011f;
-    public static final int TextAppearance_AppCompat_Widget_Button=0x7f130120;
-    public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f130121;
-    public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f130122;
-    public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f130123;
-    public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f130124;
-    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f130125;
-    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f130126;
-    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f130127;
-    public static final int TextAppearance_AppCompat_Widget_Switch=0x7f130128;
-    public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f130129;
-    public static final int TextAppearance_Compat_Notification=0x7f13012a;
-    public static final int TextAppearance_Compat_Notification_Info=0x7f13012b;
-    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f13012c;
-    public static final int TextAppearance_Compat_Notification_Line2=0x7f13012d;
-    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f13012e;
-    public static final int TextAppearance_Compat_Notification_Media=0x7f13012f;
-    public static final int TextAppearance_Compat_Notification_Time=0x7f130130;
-    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f130131;
-    public static final int TextAppearance_Compat_Notification_Title=0x7f130132;
-    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f130133;
-    public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f130134;
-    public static final int TextAppearance_Design_Counter=0x7f130135;
-    public static final int TextAppearance_Design_Counter_Overflow=0x7f130136;
-    public static final int TextAppearance_Design_Error=0x7f130137;
-    public static final int TextAppearance_Design_HelperText=0x7f130138;
-    public static final int TextAppearance_Design_Hint=0x7f130139;
-    public static final int TextAppearance_Design_Snackbar_Message=0x7f13013a;
-    public static final int TextAppearance_Design_Tab=0x7f13013b;
-    public static final int TextAppearance_MaterialComponents_Body1=0x7f13013c;
-    public static final int TextAppearance_MaterialComponents_Body2=0x7f13013d;
-    public static final int TextAppearance_MaterialComponents_Button=0x7f13013e;
-    public static final int TextAppearance_MaterialComponents_Caption=0x7f13013f;
-    public static final int TextAppearance_MaterialComponents_Chip=0x7f130140;
-    public static final int TextAppearance_MaterialComponents_Headline1=0x7f130141;
-    public static final int TextAppearance_MaterialComponents_Headline2=0x7f130142;
-    public static final int TextAppearance_MaterialComponents_Headline3=0x7f130143;
-    public static final int TextAppearance_MaterialComponents_Headline4=0x7f130144;
-    public static final int TextAppearance_MaterialComponents_Headline5=0x7f130145;
-    public static final int TextAppearance_MaterialComponents_Headline6=0x7f130146;
-    public static final int TextAppearance_MaterialComponents_Overline=0x7f130147;
-    public static final int TextAppearance_MaterialComponents_Subtitle1=0x7f130148;
-    public static final int TextAppearance_MaterialComponents_Subtitle2=0x7f130149;
-    public static final int TextAppearance_MaterialComponents_Tab=0x7f13014a;
-    public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f13014b;
-    public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f13014c;
-    public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f13014d;
-    public static final int TextBaseFontStyle=0x7f13014e;
-    public static final int TextViewHeading=0x7f13014f;
-    public static final int TextViewHeadingLarge=0x7f130150;
-    public static final int TextViewSmallWhite=0x7f130151;
-    public static final int Theme_AppCompat=0x7f130152;
-    public static final int Theme_AppCompat_CompactMenu=0x7f130153;
-    public static final int Theme_AppCompat_DayNight=0x7f130154;
-    public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f130155;
-    public static final int Theme_AppCompat_DayNight_Dialog=0x7f130156;
-    public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f130157;
-    public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f130158;
-    public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f130159;
-    public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f13015a;
-    public static final int Theme_AppCompat_Dialog=0x7f13015b;
-    public static final int Theme_AppCompat_Dialog_Alert=0x7f13015c;
-    public static final int Theme_AppCompat_Dialog_MinWidth=0x7f13015d;
-    public static final int Theme_AppCompat_DialogWhenLarge=0x7f13015e;
-    public static final int Theme_AppCompat_Light=0x7f13015f;
-    public static final int Theme_AppCompat_Light_DarkActionBar=0x7f130160;
-    public static final int Theme_AppCompat_Light_Dialog=0x7f130161;
-    public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f130162;
-    public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f130163;
-    public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f130164;
-    public static final int Theme_AppCompat_Light_NoActionBar=0x7f130165;
-    public static final int Theme_AppCompat_NoActionBar=0x7f130166;
-    public static final int Theme_Design=0x7f130167;
-    public static final int Theme_Design_BottomSheetDialog=0x7f130168;
-    public static final int Theme_Design_Light=0x7f130169;
-    public static final int Theme_Design_Light_BottomSheetDialog=0x7f13016a;
-    public static final int Theme_Design_Light_NoActionBar=0x7f13016b;
-    public static final int Theme_Design_NoActionBar=0x7f13016c;
-    public static final int Theme_MaterialComponents=0x7f13016d;
-    public static final int Theme_MaterialComponents_BottomSheetDialog=0x7f13016e;
-    public static final int Theme_MaterialComponents_Bridge=0x7f13016f;
-    public static final int Theme_MaterialComponents_CompactMenu=0x7f130170;
-    public static final int Theme_MaterialComponents_Dialog=0x7f130171;
-    public static final int Theme_MaterialComponents_Dialog_Alert=0x7f130172;
-    public static final int Theme_MaterialComponents_Dialog_MinWidth=0x7f130173;
-    public static final int Theme_MaterialComponents_DialogWhenLarge=0x7f130174;
-    public static final int Theme_MaterialComponents_Light=0x7f130175;
-    public static final int Theme_MaterialComponents_Light_BottomSheetDialog=0x7f130176;
-    public static final int Theme_MaterialComponents_Light_Bridge=0x7f130177;
-    public static final int Theme_MaterialComponents_Light_DarkActionBar=0x7f130178;
-    public static final int Theme_MaterialComponents_Light_DarkActionBar_Bridge=0x7f130179;
-    public static final int Theme_MaterialComponents_Light_Dialog=0x7f13017a;
-    public static final int Theme_MaterialComponents_Light_Dialog_Alert=0x7f13017b;
-    public static final int Theme_MaterialComponents_Light_Dialog_MinWidth=0x7f13017c;
-    public static final int Theme_MaterialComponents_Light_DialogWhenLarge=0x7f13017d;
-    public static final int Theme_MaterialComponents_Light_NoActionBar=0x7f13017e;
-    public static final int Theme_MaterialComponents_Light_NoActionBar_Bridge=0x7f13017f;
-    public static final int Theme_MaterialComponents_NoActionBar=0x7f130180;
-    public static final int Theme_MaterialComponents_NoActionBar_Bridge=0x7f130181;
-    public static final int ThemeOverlay_AppCompat=0x7f130182;
-    public static final int ThemeOverlay_AppCompat_ActionBar=0x7f130183;
-    public static final int ThemeOverlay_AppCompat_Dark=0x7f130184;
-    public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f130185;
-    public static final int ThemeOverlay_AppCompat_DayNight=0x7f130186;
-    public static final int ThemeOverlay_AppCompat_DayNight_ActionBar=0x7f130187;
-    public static final int ThemeOverlay_AppCompat_Dialog=0x7f130188;
-    public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f130189;
-    public static final int ThemeOverlay_AppCompat_Light=0x7f13018a;
-    public static final int ThemeOverlay_MaterialComponents=0x7f13018b;
-    public static final int ThemeOverlay_MaterialComponents_ActionBar=0x7f13018c;
-    public static final int ThemeOverlay_MaterialComponents_Dark=0x7f13018d;
-    public static final int ThemeOverlay_MaterialComponents_Dark_ActionBar=0x7f13018e;
-    public static final int ThemeOverlay_MaterialComponents_Dialog=0x7f13018f;
-    public static final int ThemeOverlay_MaterialComponents_Dialog_Alert=0x7f130190;
-    public static final int ThemeOverlay_MaterialComponents_Light=0x7f130191;
-    public static final int ThemeOverlay_MaterialComponents_TextInputEditText=0x7f130192;
-    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox=0x7f130193;
-    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense=0x7f130194;
-    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox=0x7f130195;
-    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense=0x7f130196;
-    public static final int Widget_AppCompat_ActionBar=0x7f130197;
-    public static final int Widget_AppCompat_ActionBar_Solid=0x7f130198;
-    public static final int Widget_AppCompat_ActionBar_TabBar=0x7f130199;
-    public static final int Widget_AppCompat_ActionBar_TabText=0x7f13019a;
-    public static final int Widget_AppCompat_ActionBar_TabView=0x7f13019b;
-    public static final int Widget_AppCompat_ActionButton=0x7f13019c;
-    public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f13019d;
-    public static final int Widget_AppCompat_ActionButton_Overflow=0x7f13019e;
-    public static final int Widget_AppCompat_ActionMode=0x7f13019f;
-    public static final int Widget_AppCompat_ActivityChooserView=0x7f1301a0;
-    public static final int Widget_AppCompat_AutoCompleteTextView=0x7f1301a1;
-    public static final int Widget_AppCompat_Button=0x7f1301a2;
-    public static final int Widget_AppCompat_Button_Borderless=0x7f1301a3;
-    public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f1301a4;
-    public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f1301a5;
-    public static final int Widget_AppCompat_Button_Colored=0x7f1301a6;
-    public static final int Widget_AppCompat_Button_Small=0x7f1301a7;
-    public static final int Widget_AppCompat_ButtonBar=0x7f1301a8;
-    public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f1301a9;
-    public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f1301aa;
-    public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f1301ab;
-    public static final int Widget_AppCompat_CompoundButton_Switch=0x7f1301ac;
-    public static final int Widget_AppCompat_DrawerArrowToggle=0x7f1301ad;
-    public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f1301ae;
-    public static final int Widget_AppCompat_EditText=0x7f1301af;
-    public static final int Widget_AppCompat_ImageButton=0x7f1301b0;
-    public static final int Widget_AppCompat_Light_ActionBar=0x7f1301b1;
-    public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f1301b2;
-    public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f1301b3;
-    public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f1301b4;
-    public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f1301b5;
-    public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f1301b6;
-    public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f1301b7;
-    public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f1301b8;
-    public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f1301b9;
-    public static final int Widget_AppCompat_Light_ActionButton=0x7f1301ba;
-    public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f1301bb;
-    public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f1301bc;
-    public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f1301bd;
-    public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f1301be;
-    public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f1301bf;
-    public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f1301c0;
-    public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f1301c1;
-    public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f1301c2;
-    public static final int Widget_AppCompat_Light_PopupMenu=0x7f1301c3;
-    public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f1301c4;
-    public static final int Widget_AppCompat_Light_SearchView=0x7f1301c5;
-    public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f1301c6;
-    public static final int Widget_AppCompat_ListMenuView=0x7f1301c7;
-    public static final int Widget_AppCompat_ListPopupWindow=0x7f1301c8;
-    public static final int Widget_AppCompat_ListView=0x7f1301c9;
-    public static final int Widget_AppCompat_ListView_DropDown=0x7f1301ca;
-    public static final int Widget_AppCompat_ListView_Menu=0x7f1301cb;
-    public static final int Widget_AppCompat_PopupMenu=0x7f1301cc;
-    public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f1301cd;
-    public static final int Widget_AppCompat_PopupWindow=0x7f1301ce;
-    public static final int Widget_AppCompat_ProgressBar=0x7f1301cf;
-    public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f1301d0;
-    public static final int Widget_AppCompat_RatingBar=0x7f1301d1;
-    public static final int Widget_AppCompat_RatingBar_Indicator=0x7f1301d2;
-    public static final int Widget_AppCompat_RatingBar_Small=0x7f1301d3;
-    public static final int Widget_AppCompat_SearchView=0x7f1301d4;
-    public static final int Widget_AppCompat_SearchView_ActionBar=0x7f1301d5;
-    public static final int Widget_AppCompat_SeekBar=0x7f1301d6;
-    public static final int Widget_AppCompat_SeekBar_Discrete=0x7f1301d7;
-    public static final int Widget_AppCompat_Spinner=0x7f1301d8;
-    public static final int Widget_AppCompat_Spinner_DropDown=0x7f1301d9;
-    public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f1301da;
-    public static final int Widget_AppCompat_Spinner_Underlined=0x7f1301db;
-    public static final int Widget_AppCompat_TextView=0x7f1301dc;
-    public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f1301dd;
-    public static final int Widget_AppCompat_Toolbar=0x7f1301de;
-    public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f1301df;
-    public static final int Widget_Compat_NotificationActionContainer=0x7f1301e0;
-    public static final int Widget_Compat_NotificationActionText=0x7f1301e1;
-    public static final int Widget_Design_AppBarLayout=0x7f1301e2;
-    public static final int Widget_Design_BottomNavigationView=0x7f1301e3;
-    public static final int Widget_Design_BottomSheet_Modal=0x7f1301e4;
-    public static final int Widget_Design_CollapsingToolbar=0x7f1301e5;
-    public static final int Widget_Design_FloatingActionButton=0x7f1301e6;
-    public static final int Widget_Design_NavigationView=0x7f1301e7;
-    public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f1301e8;
-    public static final int Widget_Design_Snackbar=0x7f1301e9;
-    public static final int Widget_Design_TabLayout=0x7f1301ea;
-    public static final int Widget_Design_TextInputLayout=0x7f1301eb;
-    public static final int Widget_MaterialComponents_BottomAppBar=0x7f1301ec;
-    public static final int Widget_MaterialComponents_BottomAppBar_Colored=0x7f1301ed;
-    public static final int Widget_MaterialComponents_BottomNavigationView=0x7f1301ee;
-    public static final int Widget_MaterialComponents_BottomNavigationView_Colored=0x7f1301ef;
-    public static final int Widget_MaterialComponents_BottomSheet_Modal=0x7f1301f0;
-    public static final int Widget_MaterialComponents_Button=0x7f1301f1;
-    public static final int Widget_MaterialComponents_Button_Icon=0x7f1301f2;
-    public static final int Widget_MaterialComponents_Button_OutlinedButton=0x7f1301f3;
-    public static final int Widget_MaterialComponents_Button_OutlinedButton_Icon=0x7f1301f4;
-    public static final int Widget_MaterialComponents_Button_TextButton=0x7f1301f5;
-    public static final int Widget_MaterialComponents_Button_TextButton_Dialog=0x7f1301f6;
-    public static final int Widget_MaterialComponents_Button_TextButton_Dialog_Icon=0x7f1301f7;
-    public static final int Widget_MaterialComponents_Button_TextButton_Icon=0x7f1301f8;
-    public static final int Widget_MaterialComponents_Button_UnelevatedButton=0x7f1301f9;
-    public static final int Widget_MaterialComponents_Button_UnelevatedButton_Icon=0x7f1301fa;
-    public static final int Widget_MaterialComponents_CardView=0x7f1301fb;
-    public static final int Widget_MaterialComponents_Chip_Action=0x7f1301fc;
-    public static final int Widget_MaterialComponents_Chip_Choice=0x7f1301fd;
-    public static final int Widget_MaterialComponents_Chip_Entry=0x7f1301fe;
-    public static final int Widget_MaterialComponents_Chip_Filter=0x7f1301ff;
-    public static final int Widget_MaterialComponents_ChipGroup=0x7f130200;
-    public static final int Widget_MaterialComponents_FloatingActionButton=0x7f130201;
-    public static final int Widget_MaterialComponents_NavigationView=0x7f130202;
-    public static final int Widget_MaterialComponents_Snackbar=0x7f130203;
-    public static final int Widget_MaterialComponents_Snackbar_FullWidth=0x7f130204;
-    public static final int Widget_MaterialComponents_TabLayout=0x7f130205;
-    public static final int Widget_MaterialComponents_TabLayout_Colored=0x7f130206;
-    public static final int Widget_MaterialComponents_TextInputEditText_FilledBox=0x7f130207;
-    public static final int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense=0x7f130208;
-    public static final int Widget_MaterialComponents_TextInputEditText_OutlinedBox=0x7f130209;
-    public static final int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense=0x7f13020a;
-    public static final int Widget_MaterialComponents_TextInputLayout_FilledBox=0x7f13020b;
-    public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense=0x7f13020c;
-    public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox=0x7f13020d;
-    public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense=0x7f13020e;
-    public static final int Widget_MaterialComponents_Toolbar=0x7f13020f;
-    public static final int Widget_Support_CoordinatorLayout=0x7f130210;
+    public static final int Divider=0x7f1300d2;
+    public static final int Divider_Horizontal=0x7f1300d3;
+    public static final int GreenTheme=0x7f1300d4;
+    public static final int GreenTheme_AppBarOverlay=0x7f1300d5;
+    public static final int GreenTheme_NoActionBar=0x7f1300d6;
+    public static final int GreenTheme_PopupOverlay=0x7f1300d7;
+    public static final int LoginAppTheme=0x7f1300d8;
+    public static final int MySearchViewStyle=0x7f1300d9;
+    public static final int Platform_AppCompat=0x7f1300da;
+    public static final int Platform_AppCompat_Light=0x7f1300db;
+    public static final int Platform_MaterialComponents=0x7f1300dc;
+    public static final int Platform_MaterialComponents_Dialog=0x7f1300dd;
+    public static final int Platform_MaterialComponents_Light=0x7f1300de;
+    public static final int Platform_MaterialComponents_Light_Dialog=0x7f1300df;
+    public static final int Platform_ThemeOverlay_AppCompat=0x7f1300e0;
+    public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f1300e1;
+    public static final int Platform_ThemeOverlay_AppCompat_Light=0x7f1300e2;
+    public static final int Platform_V21_AppCompat=0x7f1300e3;
+    public static final int Platform_V21_AppCompat_Light=0x7f1300e4;
+    public static final int Platform_V25_AppCompat=0x7f1300e5;
+    public static final int Platform_V25_AppCompat_Light=0x7f1300e6;
+    public static final int Platform_Widget_AppCompat_Spinner=0x7f1300e7;
+    public static final int Pull=0x7f1300e8;
+    public static final int RoundButton=0x7f1300e9;
+    public static final int RtlOverlay_DialogWindowTitle_AppCompat=0x7f1300ea;
+    public static final int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f1300eb;
+    public static final int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f1300ec;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f1300ed;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f1300ee;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut=0x7f1300ef;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow=0x7f1300f0;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f1300f1;
+    public static final int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title=0x7f1300f2;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f1300f3;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f1300f4;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f1300f5;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f1300f6;
+    public static final int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f1300f7;
+    public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f1300f8;
+    public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f1300f9;
+    public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f1300fa;
+    public static final int SplashAppTheme=0x7f1300fb;
+    public static final int StoryViewThem=0x7f1300fc;
+    public static final int TextAppearance_AppCompat=0x7f1300fd;
+    public static final int TextAppearance_AppCompat_Body1=0x7f1300fe;
+    public static final int TextAppearance_AppCompat_Body2=0x7f1300ff;
+    public static final int TextAppearance_AppCompat_Button=0x7f130100;
+    public static final int TextAppearance_AppCompat_Caption=0x7f130101;
+    public static final int TextAppearance_AppCompat_Display1=0x7f130102;
+    public static final int TextAppearance_AppCompat_Display2=0x7f130103;
+    public static final int TextAppearance_AppCompat_Display3=0x7f130104;
+    public static final int TextAppearance_AppCompat_Display4=0x7f130105;
+    public static final int TextAppearance_AppCompat_Headline=0x7f130106;
+    public static final int TextAppearance_AppCompat_Inverse=0x7f130107;
+    public static final int TextAppearance_AppCompat_Large=0x7f130108;
+    public static final int TextAppearance_AppCompat_Large_Inverse=0x7f130109;
+    public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f13010a;
+    public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f13010b;
+    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f13010c;
+    public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f13010d;
+    public static final int TextAppearance_AppCompat_Medium=0x7f13010e;
+    public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f13010f;
+    public static final int TextAppearance_AppCompat_Menu=0x7f130110;
+    public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f130111;
+    public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f130112;
+    public static final int TextAppearance_AppCompat_Small=0x7f130113;
+    public static final int TextAppearance_AppCompat_Small_Inverse=0x7f130114;
+    public static final int TextAppearance_AppCompat_Subhead=0x7f130115;
+    public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f130116;
+    public static final int TextAppearance_AppCompat_Title=0x7f130117;
+    public static final int TextAppearance_AppCompat_Title_Inverse=0x7f130118;
+    public static final int TextAppearance_AppCompat_Tooltip=0x7f130119;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f13011a;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f13011b;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f13011c;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f13011d;
+    public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f13011e;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f13011f;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f130120;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f130121;
+    public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f130122;
+    public static final int TextAppearance_AppCompat_Widget_Button=0x7f130123;
+    public static final int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f130124;
+    public static final int TextAppearance_AppCompat_Widget_Button_Colored=0x7f130125;
+    public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f130126;
+    public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f130127;
+    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f130128;
+    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f130129;
+    public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f13012a;
+    public static final int TextAppearance_AppCompat_Widget_Switch=0x7f13012b;
+    public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f13012c;
+    public static final int TextAppearance_Compat_Notification=0x7f13012d;
+    public static final int TextAppearance_Compat_Notification_Info=0x7f13012e;
+    public static final int TextAppearance_Compat_Notification_Info_Media=0x7f13012f;
+    public static final int TextAppearance_Compat_Notification_Line2=0x7f130130;
+    public static final int TextAppearance_Compat_Notification_Line2_Media=0x7f130131;
+    public static final int TextAppearance_Compat_Notification_Media=0x7f130132;
+    public static final int TextAppearance_Compat_Notification_Time=0x7f130133;
+    public static final int TextAppearance_Compat_Notification_Time_Media=0x7f130134;
+    public static final int TextAppearance_Compat_Notification_Title=0x7f130135;
+    public static final int TextAppearance_Compat_Notification_Title_Media=0x7f130136;
+    public static final int TextAppearance_Design_CollapsingToolbar_Expanded=0x7f130137;
+    public static final int TextAppearance_Design_Counter=0x7f130138;
+    public static final int TextAppearance_Design_Counter_Overflow=0x7f130139;
+    public static final int TextAppearance_Design_Error=0x7f13013a;
+    public static final int TextAppearance_Design_HelperText=0x7f13013b;
+    public static final int TextAppearance_Design_Hint=0x7f13013c;
+    public static final int TextAppearance_Design_Snackbar_Message=0x7f13013d;
+    public static final int TextAppearance_Design_Tab=0x7f13013e;
+    public static final int TextAppearance_MaterialComponents_Body1=0x7f13013f;
+    public static final int TextAppearance_MaterialComponents_Body2=0x7f130140;
+    public static final int TextAppearance_MaterialComponents_Button=0x7f130141;
+    public static final int TextAppearance_MaterialComponents_Caption=0x7f130142;
+    public static final int TextAppearance_MaterialComponents_Chip=0x7f130143;
+    public static final int TextAppearance_MaterialComponents_Headline1=0x7f130144;
+    public static final int TextAppearance_MaterialComponents_Headline2=0x7f130145;
+    public static final int TextAppearance_MaterialComponents_Headline3=0x7f130146;
+    public static final int TextAppearance_MaterialComponents_Headline4=0x7f130147;
+    public static final int TextAppearance_MaterialComponents_Headline5=0x7f130148;
+    public static final int TextAppearance_MaterialComponents_Headline6=0x7f130149;
+    public static final int TextAppearance_MaterialComponents_Overline=0x7f13014a;
+    public static final int TextAppearance_MaterialComponents_Subtitle1=0x7f13014b;
+    public static final int TextAppearance_MaterialComponents_Subtitle2=0x7f13014c;
+    public static final int TextAppearance_MaterialComponents_Tab=0x7f13014d;
+    public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f13014e;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f13014f;
+    public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f130150;
+    public static final int TextBaseFontStyle=0x7f130151;
+    public static final int TextViewHeading=0x7f130152;
+    public static final int TextViewHeadingLarge=0x7f130153;
+    public static final int TextViewSmallWhite=0x7f130154;
+    public static final int Theme_AppCompat=0x7f130155;
+    public static final int Theme_AppCompat_CompactMenu=0x7f130156;
+    public static final int Theme_AppCompat_DayNight=0x7f130157;
+    public static final int Theme_AppCompat_DayNight_DarkActionBar=0x7f130158;
+    public static final int Theme_AppCompat_DayNight_Dialog=0x7f130159;
+    public static final int Theme_AppCompat_DayNight_Dialog_Alert=0x7f13015a;
+    public static final int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f13015b;
+    public static final int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f13015c;
+    public static final int Theme_AppCompat_DayNight_NoActionBar=0x7f13015d;
+    public static final int Theme_AppCompat_Dialog=0x7f13015e;
+    public static final int Theme_AppCompat_Dialog_Alert=0x7f13015f;
+    public static final int Theme_AppCompat_Dialog_MinWidth=0x7f130160;
+    public static final int Theme_AppCompat_DialogWhenLarge=0x7f130161;
+    public static final int Theme_AppCompat_Light=0x7f130162;
+    public static final int Theme_AppCompat_Light_DarkActionBar=0x7f130163;
+    public static final int Theme_AppCompat_Light_Dialog=0x7f130164;
+    public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f130165;
+    public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f130166;
+    public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f130167;
+    public static final int Theme_AppCompat_Light_NoActionBar=0x7f130168;
+    public static final int Theme_AppCompat_NoActionBar=0x7f130169;
+    public static final int Theme_Design=0x7f13016a;
+    public static final int Theme_Design_BottomSheetDialog=0x7f13016b;
+    public static final int Theme_Design_Light=0x7f13016c;
+    public static final int Theme_Design_Light_BottomSheetDialog=0x7f13016d;
+    public static final int Theme_Design_Light_NoActionBar=0x7f13016e;
+    public static final int Theme_Design_NoActionBar=0x7f13016f;
+    public static final int Theme_MaterialComponents=0x7f130170;
+    public static final int Theme_MaterialComponents_BottomSheetDialog=0x7f130171;
+    public static final int Theme_MaterialComponents_Bridge=0x7f130172;
+    public static final int Theme_MaterialComponents_CompactMenu=0x7f130173;
+    public static final int Theme_MaterialComponents_Dialog=0x7f130174;
+    public static final int Theme_MaterialComponents_Dialog_Alert=0x7f130175;
+    public static final int Theme_MaterialComponents_Dialog_MinWidth=0x7f130176;
+    public static final int Theme_MaterialComponents_DialogWhenLarge=0x7f130177;
+    public static final int Theme_MaterialComponents_Light=0x7f130178;
+    public static final int Theme_MaterialComponents_Light_BottomSheetDialog=0x7f130179;
+    public static final int Theme_MaterialComponents_Light_Bridge=0x7f13017a;
+    public static final int Theme_MaterialComponents_Light_DarkActionBar=0x7f13017b;
+    public static final int Theme_MaterialComponents_Light_DarkActionBar_Bridge=0x7f13017c;
+    public static final int Theme_MaterialComponents_Light_Dialog=0x7f13017d;
+    public static final int Theme_MaterialComponents_Light_Dialog_Alert=0x7f13017e;
+    public static final int Theme_MaterialComponents_Light_Dialog_MinWidth=0x7f13017f;
+    public static final int Theme_MaterialComponents_Light_DialogWhenLarge=0x7f130180;
+    public static final int Theme_MaterialComponents_Light_NoActionBar=0x7f130181;
+    public static final int Theme_MaterialComponents_Light_NoActionBar_Bridge=0x7f130182;
+    public static final int Theme_MaterialComponents_NoActionBar=0x7f130183;
+    public static final int Theme_MaterialComponents_NoActionBar_Bridge=0x7f130184;
+    public static final int ThemeOverlay_AppCompat=0x7f130185;
+    public static final int ThemeOverlay_AppCompat_ActionBar=0x7f130186;
+    public static final int ThemeOverlay_AppCompat_Dark=0x7f130187;
+    public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f130188;
+    public static final int ThemeOverlay_AppCompat_DayNight=0x7f130189;
+    public static final int ThemeOverlay_AppCompat_DayNight_ActionBar=0x7f13018a;
+    public static final int ThemeOverlay_AppCompat_Dialog=0x7f13018b;
+    public static final int ThemeOverlay_AppCompat_Dialog_Alert=0x7f13018c;
+    public static final int ThemeOverlay_AppCompat_Light=0x7f13018d;
+    public static final int ThemeOverlay_MaterialComponents=0x7f13018e;
+    public static final int ThemeOverlay_MaterialComponents_ActionBar=0x7f13018f;
+    public static final int ThemeOverlay_MaterialComponents_Dark=0x7f130190;
+    public static final int ThemeOverlay_MaterialComponents_Dark_ActionBar=0x7f130191;
+    public static final int ThemeOverlay_MaterialComponents_Dialog=0x7f130192;
+    public static final int ThemeOverlay_MaterialComponents_Dialog_Alert=0x7f130193;
+    public static final int ThemeOverlay_MaterialComponents_Light=0x7f130194;
+    public static final int ThemeOverlay_MaterialComponents_TextInputEditText=0x7f130195;
+    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox=0x7f130196;
+    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense=0x7f130197;
+    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox=0x7f130198;
+    public static final int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense=0x7f130199;
+    public static final int Widget_AppCompat_ActionBar=0x7f13019a;
+    public static final int Widget_AppCompat_ActionBar_Solid=0x7f13019b;
+    public static final int Widget_AppCompat_ActionBar_TabBar=0x7f13019c;
+    public static final int Widget_AppCompat_ActionBar_TabText=0x7f13019d;
+    public static final int Widget_AppCompat_ActionBar_TabView=0x7f13019e;
+    public static final int Widget_AppCompat_ActionButton=0x7f13019f;
+    public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f1301a0;
+    public static final int Widget_AppCompat_ActionButton_Overflow=0x7f1301a1;
+    public static final int Widget_AppCompat_ActionMode=0x7f1301a2;
+    public static final int Widget_AppCompat_ActivityChooserView=0x7f1301a3;
+    public static final int Widget_AppCompat_AutoCompleteTextView=0x7f1301a4;
+    public static final int Widget_AppCompat_Button=0x7f1301a5;
+    public static final int Widget_AppCompat_Button_Borderless=0x7f1301a6;
+    public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f1301a7;
+    public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f1301a8;
+    public static final int Widget_AppCompat_Button_Colored=0x7f1301a9;
+    public static final int Widget_AppCompat_Button_Small=0x7f1301aa;
+    public static final int Widget_AppCompat_ButtonBar=0x7f1301ab;
+    public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f1301ac;
+    public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f1301ad;
+    public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f1301ae;
+    public static final int Widget_AppCompat_CompoundButton_Switch=0x7f1301af;
+    public static final int Widget_AppCompat_DrawerArrowToggle=0x7f1301b0;
+    public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f1301b1;
+    public static final int Widget_AppCompat_EditText=0x7f1301b2;
+    public static final int Widget_AppCompat_ImageButton=0x7f1301b3;
+    public static final int Widget_AppCompat_Light_ActionBar=0x7f1301b4;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f1301b5;
+    public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f1301b6;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f1301b7;
+    public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f1301b8;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f1301b9;
+    public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f1301ba;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f1301bb;
+    public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f1301bc;
+    public static final int Widget_AppCompat_Light_ActionButton=0x7f1301bd;
+    public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f1301be;
+    public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f1301bf;
+    public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f1301c0;
+    public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f1301c1;
+    public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f1301c2;
+    public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f1301c3;
+    public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f1301c4;
+    public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f1301c5;
+    public static final int Widget_AppCompat_Light_PopupMenu=0x7f1301c6;
+    public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f1301c7;
+    public static final int Widget_AppCompat_Light_SearchView=0x7f1301c8;
+    public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f1301c9;
+    public static final int Widget_AppCompat_ListMenuView=0x7f1301ca;
+    public static final int Widget_AppCompat_ListPopupWindow=0x7f1301cb;
+    public static final int Widget_AppCompat_ListView=0x7f1301cc;
+    public static final int Widget_AppCompat_ListView_DropDown=0x7f1301cd;
+    public static final int Widget_AppCompat_ListView_Menu=0x7f1301ce;
+    public static final int Widget_AppCompat_PopupMenu=0x7f1301cf;
+    public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f1301d0;
+    public static final int Widget_AppCompat_PopupWindow=0x7f1301d1;
+    public static final int Widget_AppCompat_ProgressBar=0x7f1301d2;
+    public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f1301d3;
+    public static final int Widget_AppCompat_RatingBar=0x7f1301d4;
+    public static final int Widget_AppCompat_RatingBar_Indicator=0x7f1301d5;
+    public static final int Widget_AppCompat_RatingBar_Small=0x7f1301d6;
+    public static final int Widget_AppCompat_SearchView=0x7f1301d7;
+    public static final int Widget_AppCompat_SearchView_ActionBar=0x7f1301d8;
+    public static final int Widget_AppCompat_SeekBar=0x7f1301d9;
+    public static final int Widget_AppCompat_SeekBar_Discrete=0x7f1301da;
+    public static final int Widget_AppCompat_Spinner=0x7f1301db;
+    public static final int Widget_AppCompat_Spinner_DropDown=0x7f1301dc;
+    public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f1301dd;
+    public static final int Widget_AppCompat_Spinner_Underlined=0x7f1301de;
+    public static final int Widget_AppCompat_TextView=0x7f1301df;
+    public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f1301e0;
+    public static final int Widget_AppCompat_Toolbar=0x7f1301e1;
+    public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f1301e2;
+    public static final int Widget_Compat_NotificationActionContainer=0x7f1301e3;
+    public static final int Widget_Compat_NotificationActionText=0x7f1301e4;
+    public static final int Widget_Design_AppBarLayout=0x7f1301e5;
+    public static final int Widget_Design_BottomNavigationView=0x7f1301e6;
+    public static final int Widget_Design_BottomSheet_Modal=0x7f1301e7;
+    public static final int Widget_Design_CollapsingToolbar=0x7f1301e8;
+    public static final int Widget_Design_FloatingActionButton=0x7f1301e9;
+    public static final int Widget_Design_NavigationView=0x7f1301ea;
+    public static final int Widget_Design_ScrimInsetsFrameLayout=0x7f1301eb;
+    public static final int Widget_Design_Snackbar=0x7f1301ec;
+    public static final int Widget_Design_TabLayout=0x7f1301ed;
+    public static final int Widget_Design_TextInputLayout=0x7f1301ee;
+    public static final int Widget_MaterialComponents_BottomAppBar=0x7f1301ef;
+    public static final int Widget_MaterialComponents_BottomAppBar_Colored=0x7f1301f0;
+    public static final int Widget_MaterialComponents_BottomNavigationView=0x7f1301f1;
+    public static final int Widget_MaterialComponents_BottomNavigationView_Colored=0x7f1301f2;
+    public static final int Widget_MaterialComponents_BottomSheet_Modal=0x7f1301f3;
+    public static final int Widget_MaterialComponents_Button=0x7f1301f4;
+    public static final int Widget_MaterialComponents_Button_Icon=0x7f1301f5;
+    public static final int Widget_MaterialComponents_Button_OutlinedButton=0x7f1301f6;
+    public static final int Widget_MaterialComponents_Button_OutlinedButton_Icon=0x7f1301f7;
+    public static final int Widget_MaterialComponents_Button_TextButton=0x7f1301f8;
+    public static final int Widget_MaterialComponents_Button_TextButton_Dialog=0x7f1301f9;
+    public static final int Widget_MaterialComponents_Button_TextButton_Dialog_Icon=0x7f1301fa;
+    public static final int Widget_MaterialComponents_Button_TextButton_Icon=0x7f1301fb;
+    public static final int Widget_MaterialComponents_Button_UnelevatedButton=0x7f1301fc;
+    public static final int Widget_MaterialComponents_Button_UnelevatedButton_Icon=0x7f1301fd;
+    public static final int Widget_MaterialComponents_CardView=0x7f1301fe;
+    public static final int Widget_MaterialComponents_Chip_Action=0x7f1301ff;
+    public static final int Widget_MaterialComponents_Chip_Choice=0x7f130200;
+    public static final int Widget_MaterialComponents_Chip_Entry=0x7f130201;
+    public static final int Widget_MaterialComponents_Chip_Filter=0x7f130202;
+    public static final int Widget_MaterialComponents_ChipGroup=0x7f130203;
+    public static final int Widget_MaterialComponents_FloatingActionButton=0x7f130204;
+    public static final int Widget_MaterialComponents_NavigationView=0x7f130205;
+    public static final int Widget_MaterialComponents_Snackbar=0x7f130206;
+    public static final int Widget_MaterialComponents_Snackbar_FullWidth=0x7f130207;
+    public static final int Widget_MaterialComponents_TabLayout=0x7f130208;
+    public static final int Widget_MaterialComponents_TabLayout_Colored=0x7f130209;
+    public static final int Widget_MaterialComponents_TextInputEditText_FilledBox=0x7f13020a;
+    public static final int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense=0x7f13020b;
+    public static final int Widget_MaterialComponents_TextInputEditText_OutlinedBox=0x7f13020c;
+    public static final int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense=0x7f13020d;
+    public static final int Widget_MaterialComponents_TextInputLayout_FilledBox=0x7f13020e;
+    public static final int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense=0x7f13020f;
+    public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox=0x7f130210;
+    public static final int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense=0x7f130211;
+    public static final int Widget_MaterialComponents_Toolbar=0x7f130212;
+    public static final int Widget_Support_CoordinatorLayout=0x7f130213;
   }
   public static final class styleable {
     /**
@@ -7777,39 +7335,35 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionBar_background com.nsromapa.say.frenzapp_redesign:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundSplit com.nsromapa.say.frenzapp_redesign:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_backgroundStacked com.nsromapa.say.frenzapp_redesign:backgroundStacked}</code></td><td>Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.nsromapa.say.frenzapp_redesign:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.nsromapa.say.frenzapp_redesign:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
-     * are present.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.nsromapa.say.frenzapp_redesign:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetRight com.nsromapa.say.frenzapp_redesign:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStart com.nsromapa.say.frenzapp_redesign:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.nsromapa.say.frenzapp_redesign:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.nsromapa.say.frenzapp_redesign:customNavigationLayout}</code></td><td>Specifies a layout for custom navigation.</td></tr>
-     * <tr><td><code>{@link #ActionBar_displayOptions com.nsromapa.say.frenzapp_redesign:displayOptions}</code></td><td>Options affecting how the action bar is displayed.</td></tr>
-     * <tr><td><code>{@link #ActionBar_divider com.nsromapa.say.frenzapp_redesign:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #ActionBar_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #ActionBar_background com.nsromapa.say.frenzapp_redesign:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundSplit com.nsromapa.say.frenzapp_redesign:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_backgroundStacked com.nsromapa.say.frenzapp_redesign:backgroundStacked}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEnd com.nsromapa.say.frenzapp_redesign:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetEndWithActions com.nsromapa.say.frenzapp_redesign:contentInsetEndWithActions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetLeft com.nsromapa.say.frenzapp_redesign:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetRight com.nsromapa.say.frenzapp_redesign:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStart com.nsromapa.say.frenzapp_redesign:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_contentInsetStartWithNavigation com.nsromapa.say.frenzapp_redesign:contentInsetStartWithNavigation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_customNavigationLayout com.nsromapa.say.frenzapp_redesign:customNavigationLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_displayOptions com.nsromapa.say.frenzapp_redesign:displayOptions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_divider com.nsromapa.say.frenzapp_redesign:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_height com.nsromapa.say.frenzapp_redesign:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.nsromapa.say.frenzapp_redesign:hideOnContentScroll}</code></td><td>Set true to hide the action bar on a vertical nested scroll of content.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.nsromapa.say.frenzapp_redesign:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #ActionBar_homeLayout com.nsromapa.say.frenzapp_redesign:homeLayout}</code></td><td>Specifies a layout to use for the "home" section of the action bar.</td></tr>
+     * <tr><td><code>{@link #ActionBar_hideOnContentScroll com.nsromapa.say.frenzapp_redesign:hideOnContentScroll}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.nsromapa.say.frenzapp_redesign:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_homeLayout com.nsromapa.say.frenzapp_redesign:homeLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_icon com.nsromapa.say.frenzapp_redesign:icon}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.nsromapa.say.frenzapp_redesign:indeterminateProgressStyle}</code></td><td>Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-     * <tr><td><code>{@link #ActionBar_itemPadding com.nsromapa.say.frenzapp_redesign:itemPadding}</code></td><td>Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_logo com.nsromapa.say.frenzapp_redesign:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #ActionBar_navigationMode com.nsromapa.say.frenzapp_redesign:navigationMode}</code></td><td>The type of navigation to use.</td></tr>
-     * <tr><td><code>{@link #ActionBar_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarPadding com.nsromapa.say.frenzapp_redesign:progressBarPadding}</code></td><td>Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_progressBarStyle com.nsromapa.say.frenzapp_redesign:progressBarStyle}</code></td><td>Specifies a style resource to use for an embedded progress bar.</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitle com.nsromapa.say.frenzapp_redesign:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
-     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.nsromapa.say.frenzapp_redesign:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.nsromapa.say.frenzapp_redesign:indeterminateProgressStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_itemPadding com.nsromapa.say.frenzapp_redesign:itemPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_logo com.nsromapa.say.frenzapp_redesign:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_navigationMode com.nsromapa.say.frenzapp_redesign:navigationMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarPadding com.nsromapa.say.frenzapp_redesign:progressBarPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_progressBarStyle com.nsromapa.say.frenzapp_redesign:progressBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitle com.nsromapa.say.frenzapp_redesign:subtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionBar_subtitleTextStyle com.nsromapa.say.frenzapp_redesign:subtitleTextStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionBar_title com.nsromapa.say.frenzapp_redesign:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionBar_titleTextStyle com.nsromapa.say.frenzapp_redesign:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionBar_titleTextStyle com.nsromapa.say.frenzapp_redesign:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionBar_background
      * @see #ActionBar_backgroundSplit
@@ -7852,9 +7406,8 @@ public final class R {
       0x7f040254
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#background}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -7865,9 +7418,8 @@ public final class R {
      */
     public static final int ActionBar_background=0;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for the bottom component of a split action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -7881,9 +7433,8 @@ public final class R {
      */
     public static final int ActionBar_backgroundSplit=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background drawable for a second stacked row of the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundStacked}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -7897,10 +7448,8 @@ public final class R {
      */
     public static final int ActionBar_backgroundStacked=2;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7912,10 +7461,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEnd=3;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetEndWithActions}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7927,10 +7474,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetEndWithActions=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7942,10 +7487,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetLeft=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7957,10 +7500,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetRight=6;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7972,10 +7513,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStart=7;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetStartWithNavigation}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -7987,9 +7526,8 @@ public final class R {
      */
     public static final int ActionBar_contentInsetStartWithNavigation=8;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout for custom navigation. Overrides navigationMode.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#customNavigationLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8000,9 +7538,8 @@ public final class R {
      */
     public static final int ActionBar_customNavigationLayout=9;
     /**
-     * <p>
-     * @attr description
-     * Options affecting how the action bar is displayed.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#displayOptions}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -8023,9 +7560,8 @@ public final class R {
      */
     public static final int ActionBar_displayOptions=10;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for item dividers.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#divider}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8036,9 +7572,8 @@ public final class R {
      */
     public static final int ActionBar_divider=11;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8050,9 +7585,8 @@ public final class R {
      */
     public static final int ActionBar_elevation=12;
     /**
-     * <p>
-     * @attr description
-     * Specifies a fixed height.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#height}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8064,9 +7598,8 @@ public final class R {
      */
     public static final int ActionBar_height=13;
     /**
-     * <p>
-     * @attr description
-     * Set true to hide the action bar on a vertical nested scroll of content.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#hideOnContentScroll}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8075,9 +7608,8 @@ public final class R {
      */
     public static final int ActionBar_hideOnContentScroll=14;
     /**
-     * <p>
-     * @attr description
-     * Up navigation glyph
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8088,9 +7620,8 @@ public final class R {
      */
     public static final int ActionBar_homeAsUpIndicator=15;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout to use for the "home" section of the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#homeLayout}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8101,9 +7632,8 @@ public final class R {
      */
     public static final int ActionBar_homeLayout=16;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for the application icon.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#icon}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8114,9 +7644,8 @@ public final class R {
      */
     public static final int ActionBar_icon=17;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style resource to use for an indeterminate progress spinner.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#indeterminateProgressStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8127,10 +7656,8 @@ public final class R {
      */
     public static final int ActionBar_indeterminateProgressStyle=18;
     /**
-     * <p>
-     * @attr description
-     * Specifies padding that should be applied to the left and right sides of
-     * system-provided items in the bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#itemPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8142,9 +7669,8 @@ public final class R {
      */
     public static final int ActionBar_itemPadding=19;
     /**
-     * <p>
-     * @attr description
-     * Specifies the drawable used for the application logo.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#logo}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8155,9 +7681,8 @@ public final class R {
      */
     public static final int ActionBar_logo=20;
     /**
-     * <p>
-     * @attr description
-     * The type of navigation to use.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#navigationMode}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -8165,19 +7690,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>listMode</td><td>1</td><td>The action bar will use a selection list for navigation.</td></tr>
-     * <tr><td>normal</td><td>0</td><td>Normal static title text</td></tr>
-     * <tr><td>tabMode</td><td>2</td><td>The action bar will use a series of horizontal tabs for navigation.</td></tr>
+     * <tr><td>listMode</td><td>1</td><td></td></tr>
+     * <tr><td>normal</td><td>0</td><td></td></tr>
+     * <tr><td>tabMode</td><td>2</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:navigationMode
      */
     public static final int ActionBar_navigationMode=21;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8188,9 +7711,8 @@ public final class R {
      */
     public static final int ActionBar_popupTheme=22;
     /**
-     * <p>
-     * @attr description
-     * Specifies the horizontal padding on either end for an embedded progress bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#progressBarPadding}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8202,9 +7724,8 @@ public final class R {
      */
     public static final int ActionBar_progressBarPadding=23;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style resource to use for an embedded progress bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#progressBarStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8215,9 +7736,8 @@ public final class R {
      */
     public static final int ActionBar_progressBarStyle=24;
     /**
-     * <p>
-     * @attr description
-     * Specifies subtitle text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subtitle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8226,9 +7746,8 @@ public final class R {
      */
     public static final int ActionBar_subtitle=25;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for subtitle text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8239,9 +7758,8 @@ public final class R {
      */
     public static final int ActionBar_subtitleTextStyle=26;
     /**
-     * <p>
-     * @attr description
-     * Specifies title text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#title}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8250,9 +7768,8 @@ public final class R {
      */
     public static final int ActionBar_title=27;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for title text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8341,12 +7858,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActionMode_background com.nsromapa.say.frenzapp_redesign:background}</code></td><td>Specifies a background drawable for the action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_backgroundSplit com.nsromapa.say.frenzapp_redesign:backgroundSplit}</code></td><td>Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-     * <tr><td><code>{@link #ActionMode_closeItemLayout com.nsromapa.say.frenzapp_redesign:closeItemLayout}</code></td><td>Specifies a layout to use for the "close" item at the starting edge.</td></tr>
+     * <tr><td><code>{@link #ActionMode_background com.nsromapa.say.frenzapp_redesign:background}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_backgroundSplit com.nsromapa.say.frenzapp_redesign:backgroundSplit}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_closeItemLayout com.nsromapa.say.frenzapp_redesign:closeItemLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #ActionMode_height com.nsromapa.say.frenzapp_redesign:height}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.nsromapa.say.frenzapp_redesign:subtitleTextStyle}</code></td><td>Specifies a style to use for subtitle text.</td></tr>
-     * <tr><td><code>{@link #ActionMode_titleTextStyle com.nsromapa.say.frenzapp_redesign:titleTextStyle}</code></td><td>Specifies a style to use for title text.</td></tr>
+     * <tr><td><code>{@link #ActionMode_subtitleTextStyle com.nsromapa.say.frenzapp_redesign:subtitleTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActionMode_titleTextStyle com.nsromapa.say.frenzapp_redesign:titleTextStyle}</code></td><td></td></tr>
      * </table>
      * @see #ActionMode_background
      * @see #ActionMode_backgroundSplit
@@ -8360,9 +7877,8 @@ public final class R {
       0x7f040203, 0x7f040254
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a background for the action mode bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#background}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8373,9 +7889,8 @@ public final class R {
      */
     public static final int ActionMode_background=0;
     /**
-     * <p>
-     * @attr description
-     * Specifies a background for the split action mode bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundSplit}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8389,9 +7904,8 @@ public final class R {
      */
     public static final int ActionMode_backgroundSplit=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies a layout to use for the "close" item at the starting edge.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#closeItemLayout}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8402,9 +7916,8 @@ public final class R {
      */
     public static final int ActionMode_closeItemLayout=2;
     /**
-     * <p>
-     * @attr description
-     * Specifies a fixed height for the action mode bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#height}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -8416,9 +7929,8 @@ public final class R {
      */
     public static final int ActionMode_height=3;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for subtitle text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subtitleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8429,9 +7941,8 @@ public final class R {
      */
     public static final int ActionMode_subtitleTextStyle=4;
     /**
-     * <p>
-     * @attr description
-     * Specifies a style to use for title text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleTextStyle}
+     * attribute's value can be found in the {@link #ActionMode} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8448,8 +7959,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.nsromapa.say.frenzapp_redesign:expandActivityOverflowButtonDrawable}</code></td><td>The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.nsromapa.say.frenzapp_redesign:initialActivityCount}</code></td><td>The maximal number of items initially shown in the activity list.</td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.nsromapa.say.frenzapp_redesign:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.nsromapa.say.frenzapp_redesign:initialActivityCount}</code></td><td></td></tr>
      * </table>
      * @see #ActivityChooserView_expandActivityOverflowButtonDrawable
      * @see #ActivityChooserView_initialActivityCount
@@ -8458,13 +7969,8 @@ public final class R {
       0x7f0400e5, 0x7f040126
     };
     /**
-     * <p>
-     * @attr description
-     * The drawable to show in the button for expanding the activities overflow popup.
-     * <strong>Note:</strong> Clients would like to set this drawable
-     * as a clue about the action the chosen activity will perform. For
-     * example, if share activity is to be chosen the drawable should
-     * give a clue that sharing is to be performed.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#expandActivityOverflowButtonDrawable}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8475,9 +7981,8 @@ public final class R {
      */
     public static final int ActivityChooserView_expandActivityOverflowButtonDrawable=0;
     /**
-     * <p>
-     * @attr description
-     * The maximal number of items initially shown in the activity list.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#initialActivityCount}
+     * attribute's value can be found in the {@link #ActivityChooserView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -8635,11 +8140,8 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>
-     * @attr description
-     * Enables or disables dithering of the bitmap if the bitmap does not have the
-     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
-     * an RGB 565 screen).
+     * <p>This symbol is the offset where the {@link android.R.attr#dither}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8648,9 +8150,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_dither=0;
     /**
-     * <p>
-     * @attr description
-     * Indicates whether the drawable should be initially visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8659,14 +8160,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_visible=1;
     /**
-     * <p>
-     * @attr description
-     * If true, allows the drawable's padding to change based on the
-     * current state that is selected.  If false, the padding will
-     * stay the same (based on the maximum padding of all the states).
-     * Enabling this feature requires that the owner of the drawable
-     * deal with performing layout when the state changes, which is
-     * often not supported.
+     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8675,12 +8170,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_variablePadding=2;
     /**
-     * <p>
-     * @attr description
-     * If true, the drawable's reported internal size will remain
-     * constant as the state changes; the size is the maximum of all
-     * of the states.  If false, the size will vary based on the
-     * current state.
+     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8689,9 +8180,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_constantSize=3;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade in a new state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -8699,9 +8189,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableCompat_android_enterFadeDuration=4;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade out an old state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -8725,9 +8214,8 @@ public final class R {
       0x010100d0, 0x01010199
     };
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for use in specifying transitions.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8738,10 +8226,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableItem_android_id=0;
     /**
-     * <p>
-     * @attr description
-     * Reference to a drawable resource to use for the frame.  If not
-     * given, the drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8772,10 +8258,8 @@ public final class R {
       0x01010199, 0x01010449, 0x0101044a, 0x0101044b
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to a animation drawable resource to use for the frame.  If not
-     * given, the animation drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8786,9 +8270,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_drawable=0;
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for the ending state.
+     * <p>This symbol is the offset where the {@link android.R.attr#toId}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8799,9 +8282,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_toId=1;
     /**
-     * <p>
-     * @attr description
-     * Keyframe identifier for the starting state.
+     * <p>This symbol is the offset where the {@link android.R.attr#fromId}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -8812,9 +8294,8 @@ public final class R {
      */
     public static final int AnimatedStateListDrawableTransition_android_fromId=2;
     /**
-     * <p>
-     * @attr description
-     * Whether this transition is reversible.
+     * <p>This symbol is the offset where the {@link android.R.attr#reversible}
+     * attribute's value can be found in the {@link #AnimatedStateListDrawableTransition} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -8832,7 +8313,7 @@ public final class R {
      * <tr><td><code>{@link #AppBarLayout_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_touchscreenBlocksFocus android:touchscreenBlocksFocus}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_android_keyboardNavigationCluster android:keyboardNavigationCluster}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppBarLayout_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #AppBarLayout_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_expanded com.nsromapa.say.frenzapp_redesign:expanded}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppBarLayout_liftOnScroll com.nsromapa.say.frenzapp_redesign:liftOnScroll}</code></td><td></td></tr>
      * </table>
@@ -8883,9 +8364,8 @@ public final class R {
      */
     public static final int AppBarLayout_android_keyboardNavigationCluster=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #AppBarLayout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9033,9 +8513,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatImageView_android_src android:src}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.nsromapa.say.frenzapp_redesign:srcCompat}</code></td><td>Sets a drawable as the content of this ImageView.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tint com.nsromapa.say.frenzapp_redesign:tint}</code></td><td>Tint to apply to the image source.</td></tr>
-     * <tr><td><code>{@link #AppCompatImageView_tintMode com.nsromapa.say.frenzapp_redesign:tintMode}</code></td><td>Blending mode used to apply the image source tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_srcCompat com.nsromapa.say.frenzapp_redesign:srcCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tint com.nsromapa.say.frenzapp_redesign:tint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatImageView_tintMode com.nsromapa.say.frenzapp_redesign:tintMode}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatImageView_android_src
      * @see #AppCompatImageView_srcCompat
@@ -9061,10 +8541,8 @@ public final class R {
      */
     public static final int AppCompatImageView_android_src=0;
     /**
-     * <p>
-     * @attr description
-     * Sets a drawable as the content of this ImageView. Allows the use of vector drawable
-     * when running on older versions of the platform.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#srcCompat}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9075,9 +8553,8 @@ public final class R {
      */
     public static final int AppCompatImageView_srcCompat=1;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the image source.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tint}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9087,9 +8564,8 @@ public final class R {
      */
     public static final int AppCompatImageView_tint=2;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the image source tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tintMode}
+     * attribute's value can be found in the {@link #AppCompatImageView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9097,17 +8573,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:tintMode
@@ -9121,9 +8592,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatSeekBar_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.nsromapa.say.frenzapp_redesign:tickMark}</code></td><td>Drawable displayed at each progress position on a seekbar.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.nsromapa.say.frenzapp_redesign:tickMarkTint}</code></td><td>Tint to apply to the tick mark drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.nsromapa.say.frenzapp_redesign:tickMarkTintMode}</code></td><td>Blending mode used to apply the tick mark tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMark com.nsromapa.say.frenzapp_redesign:tickMark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTint com.nsromapa.say.frenzapp_redesign:tickMarkTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatSeekBar_tickMarkTintMode com.nsromapa.say.frenzapp_redesign:tickMarkTintMode}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatSeekBar_android_thumb
      * @see #AppCompatSeekBar_tickMark
@@ -9146,9 +8617,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_android_thumb=0;
     /**
-     * <p>
-     * @attr description
-     * Drawable displayed at each progress position on a seekbar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tickMark}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9159,9 +8629,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMark=1;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the tick mark drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tickMarkTint}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9171,9 +8640,8 @@ public final class R {
      */
     public static final int AppCompatSeekBar_tickMarkTint=2;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the tick mark tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tickMarkTintMode}
+     * attribute's value can be found in the {@link #AppCompatSeekBar} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9181,17 +8649,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:tickMarkTintMode
@@ -9334,30 +8797,26 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.nsromapa.say.frenzapp_redesign:autoSizeMaxTextSize}</code></td><td>The maximum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.nsromapa.say.frenzapp_redesign:autoSizeMinTextSize}</code></td><td>The minimum text size constraint to be used when auto-sizing text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.nsromapa.say.frenzapp_redesign:autoSizePresetSizes}</code></td><td>Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.nsromapa.say.frenzapp_redesign:autoSizeStepGranularity}</code></td><td>Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.nsromapa.say.frenzapp_redesign:autoSizeTextType}</code></td><td>Specify the type of auto-size.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMaxTextSize com.nsromapa.say.frenzapp_redesign:autoSizeMaxTextSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeMinTextSize com.nsromapa.say.frenzapp_redesign:autoSizeMinTextSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizePresetSizes com.nsromapa.say.frenzapp_redesign:autoSizePresetSizes}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeStepGranularity com.nsromapa.say.frenzapp_redesign:autoSizeStepGranularity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_autoSizeTextType com.nsromapa.say.frenzapp_redesign:autoSizeTextType}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTextView_drawableBottomCompat com.nsromapa.say.frenzapp_redesign:drawableBottomCompat}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTextView_drawableEndCompat com.nsromapa.say.frenzapp_redesign:drawableEndCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableLeftCompat com.nsromapa.say.frenzapp_redesign:drawableLeftCompat}</code></td><td>Compound drawables allowing the use of vector drawable when running on older versions
-     * of the platform.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableLeftCompat com.nsromapa.say.frenzapp_redesign:drawableLeftCompat}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTextView_drawableRightCompat com.nsromapa.say.frenzapp_redesign:drawableRightCompat}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTextView_drawableStartCompat com.nsromapa.say.frenzapp_redesign:drawableStartCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableTint com.nsromapa.say.frenzapp_redesign:drawableTint}</code></td><td>Tint to apply to the compound (left, top, etc.) drawables.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_drawableTintMode com.nsromapa.say.frenzapp_redesign:drawableTintMode}</code></td><td>Blending mode used to apply the compound (left, top, etc.) drawables tint.</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableTint com.nsromapa.say.frenzapp_redesign:drawableTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_drawableTintMode com.nsromapa.say.frenzapp_redesign:drawableTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTextView_drawableTopCompat com.nsromapa.say.frenzapp_redesign:drawableTopCompat}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.nsromapa.say.frenzapp_redesign:firstBaselineToTopHeight}</code></td><td>Distance from the top of the TextView to the first text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.nsromapa.say.frenzapp_redesign:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.nsromapa.say.frenzapp_redesign:lastBaselineToBottomHeight}</code></td><td>Distance from the bottom of the TextView to the last text baseline.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.nsromapa.say.frenzapp_redesign:lineHeight}</code></td><td>Explicit height between lines of text.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.nsromapa.say.frenzapp_redesign:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
-     * <tr><td><code>{@link #AppCompatTextView_textLocale com.nsromapa.say.frenzapp_redesign:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
-     * for example "ja-JP,zh-CN".</td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_firstBaselineToTopHeight com.nsromapa.say.frenzapp_redesign:firstBaselineToTopHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontFamily com.nsromapa.say.frenzapp_redesign:fontFamily}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lastBaselineToBottomHeight com.nsromapa.say.frenzapp_redesign:lastBaselineToBottomHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_lineHeight com.nsromapa.say.frenzapp_redesign:lineHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textAllCaps com.nsromapa.say.frenzapp_redesign:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTextView_textLocale com.nsromapa.say.frenzapp_redesign:textLocale}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTextView_android_textAppearance
      * @see #AppCompatTextView_autoSizeMaxTextSize
@@ -9402,9 +8861,8 @@ public final class R {
      */
     public static final int AppCompatTextView_android_textAppearance=0;
     /**
-     * <p>
-     * @attr description
-     * The maximum text size constraint to be used when auto-sizing text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoSizeMaxTextSize}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9416,9 +8874,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMaxTextSize=1;
     /**
-     * <p>
-     * @attr description
-     * The minimum text size constraint to be used when auto-sizing text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoSizeMinTextSize}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9430,11 +8887,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeMinTextSize=2;
     /**
-     * <p>
-     * @attr description
-     * Resource array of dimensions to be used in conjunction with
-     * <code>autoSizeTextType</code> set to <code>uniform</code>. Overrides
-     * <code>autoSizeStepGranularity</code> if set.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoSizePresetSizes}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9445,11 +8899,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizePresetSizes=3;
     /**
-     * <p>
-     * @attr description
-     * Specify the auto-size step size if <code>autoSizeTextType</code> is set to
-     * <code>uniform</code>. The default is 1px. Overwrites
-     * <code>autoSizePresetSizes</code> if set.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoSizeStepGranularity}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9461,10 +8912,8 @@ public final class R {
      */
     public static final int AppCompatTextView_autoSizeStepGranularity=4;
     /**
-     * <p>
-     * @attr description
-     * Specify the type of auto-size. Note that this feature is not supported by EditText,
-     * works only for TextView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoSizeTextType}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9472,9 +8921,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>none</td><td>0</td><td>No auto-sizing (default).</td></tr>
-     * <tr><td>uniform</td><td>1</td><td>Uniform horizontal and vertical text size scaling to fit within the
-     * container.</td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>uniform</td><td>1</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:autoSizeTextType
@@ -9505,10 +8953,8 @@ public final class R {
      */
     public static final int AppCompatTextView_drawableEndCompat=7;
     /**
-     * <p>
-     * @attr description
-     * Compound drawables allowing the use of vector drawable when running on older versions
-     * of the platform.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#drawableLeftCompat}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9543,9 +8989,8 @@ public final class R {
      */
     public static final int AppCompatTextView_drawableStartCompat=10;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the compound (left, top, etc.) drawables.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#drawableTint}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -9555,9 +9000,8 @@ public final class R {
      */
     public static final int AppCompatTextView_drawableTint=11;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the compound (left, top, etc.) drawables tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#drawableTintMode}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -9565,17 +9009,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:drawableTintMode
@@ -9594,10 +9033,8 @@ public final class R {
      */
     public static final int AppCompatTextView_drawableTopCompat=13;
     /**
-     * <p>
-     * @attr description
-     * Distance from the top of the TextView to the first text baseline. If set, this
-     * overrides the value set for paddingTop.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#firstBaselineToTopHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9609,9 +9046,8 @@ public final class R {
      */
     public static final int AppCompatTextView_firstBaselineToTopHeight=14;
     /**
-     * <p>
-     * @attr description
-     * The attribute for the font family.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontFamily}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9620,9 +9056,8 @@ public final class R {
      */
     public static final int AppCompatTextView_fontFamily=15;
     /**
-     * <p>
-     * @attr description
-     * OpenType font variation settings, available after api 26.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontVariationSettings}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9631,10 +9066,8 @@ public final class R {
      */
     public static final int AppCompatTextView_fontVariationSettings=16;
     /**
-     * <p>
-     * @attr description
-     * Distance from the bottom of the TextView to the last text baseline. If set, this
-     * overrides the value set for paddingBottom.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#lastBaselineToBottomHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9646,10 +9079,8 @@ public final class R {
      */
     public static final int AppCompatTextView_lastBaselineToBottomHeight=17;
     /**
-     * <p>
-     * @attr description
-     * Explicit height between lines of text. If set, this will override the values set
-     * for lineSpacingExtra and lineSpacingMultiplier.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#lineHeight}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -9661,9 +9092,8 @@ public final class R {
      */
     public static final int AppCompatTextView_lineHeight=18;
     /**
-     * <p>
-     * @attr description
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -9676,13 +9106,8 @@ public final class R {
      */
     public static final int AppCompatTextView_textAllCaps=19;
     /**
-     * <p>
-     * @attr description
-     * Set the textLocale by a comma-separated language tag string,
-     * for example "ja-JP,zh-CN". This attribute only takes effect on API 21 and above.
-     * Before API 24, only the first language tag is used. Starting from API 24,
-     * the string will be converted into a {@link android.os.LocaleList} and then used by
-     * {@link android.widget.TextView}
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textLocale}
+     * attribute's value can be found in the {@link #AppCompatTextView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -9699,146 +9124,129 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.nsromapa.say.frenzapp_redesign:actionBarDivider}</code></td><td>Custom divider drawable to use for elements in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.nsromapa.say.frenzapp_redesign:actionBarItemBackground}</code></td><td>Custom item state list drawable background for action bar items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.nsromapa.say.frenzapp_redesign:actionBarPopupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.nsromapa.say.frenzapp_redesign:actionBarSize}</code></td><td>Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.nsromapa.say.frenzapp_redesign:actionBarSplitStyle}</code></td><td>Reference to a style for the split Action Bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.nsromapa.say.frenzapp_redesign:actionBarStyle}</code></td><td>Reference to a style for the Action Bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarDivider com.nsromapa.say.frenzapp_redesign:actionBarDivider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarItemBackground com.nsromapa.say.frenzapp_redesign:actionBarItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarPopupTheme com.nsromapa.say.frenzapp_redesign:actionBarPopupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSize com.nsromapa.say.frenzapp_redesign:actionBarSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarSplitStyle com.nsromapa.say.frenzapp_redesign:actionBarSplitStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarStyle com.nsromapa.say.frenzapp_redesign:actionBarStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabBarStyle com.nsromapa.say.frenzapp_redesign:actionBarTabBarStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.nsromapa.say.frenzapp_redesign:actionBarTabStyle}</code></td><td>Default style for tabs within an action bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTabStyle com.nsromapa.say.frenzapp_redesign:actionBarTabStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionBarTabTextStyle com.nsromapa.say.frenzapp_redesign:actionBarTabTextStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.nsromapa.say.frenzapp_redesign:actionBarTheme}</code></td><td>Reference to a theme that should be used to inflate the
-     * action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.nsromapa.say.frenzapp_redesign:actionBarWidgetTheme}</code></td><td>Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.nsromapa.say.frenzapp_redesign:actionButtonStyle}</code></td><td>Default action button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.nsromapa.say.frenzapp_redesign:actionDropDownStyle}</code></td><td>Default ActionBar dropdown style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.nsromapa.say.frenzapp_redesign:actionMenuTextAppearance}</code></td><td>TextAppearance style that will be applied to text that
-     * appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.nsromapa.say.frenzapp_redesign:actionMenuTextColor}</code></td><td>Color for text that appears within action menu items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.nsromapa.say.frenzapp_redesign:actionModeBackground}</code></td><td>Background drawable to use for action mode UI</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarTheme com.nsromapa.say.frenzapp_redesign:actionBarTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionBarWidgetTheme com.nsromapa.say.frenzapp_redesign:actionBarWidgetTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionButtonStyle com.nsromapa.say.frenzapp_redesign:actionButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionDropDownStyle com.nsromapa.say.frenzapp_redesign:actionDropDownStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextAppearance com.nsromapa.say.frenzapp_redesign:actionMenuTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionMenuTextColor com.nsromapa.say.frenzapp_redesign:actionMenuTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeBackground com.nsromapa.say.frenzapp_redesign:actionModeBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeCloseButtonStyle com.nsromapa.say.frenzapp_redesign:actionModeCloseButtonStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.nsromapa.say.frenzapp_redesign:actionModeCloseDrawable}</code></td><td>Drawable to use for the close action mode button</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.nsromapa.say.frenzapp_redesign:actionModeCopyDrawable}</code></td><td>Drawable to use for the Copy action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.nsromapa.say.frenzapp_redesign:actionModeCutDrawable}</code></td><td>Drawable to use for the Cut action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.nsromapa.say.frenzapp_redesign:actionModeFindDrawable}</code></td><td>Drawable to use for the Find action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.nsromapa.say.frenzapp_redesign:actionModePasteDrawable}</code></td><td>Drawable to use for the Paste action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.nsromapa.say.frenzapp_redesign:actionModePopupWindowStyle}</code></td><td>PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.nsromapa.say.frenzapp_redesign:actionModeSelectAllDrawable}</code></td><td>Drawable to use for the Select all action button in Contextual Action Bar</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.nsromapa.say.frenzapp_redesign:actionModeShareDrawable}</code></td><td>Drawable to use for the Share action button in WebView selection action modes</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.nsromapa.say.frenzapp_redesign:actionModeSplitBackground}</code></td><td>Background drawable to use for action mode UI in the lower split bar</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCloseDrawable com.nsromapa.say.frenzapp_redesign:actionModeCloseDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCopyDrawable com.nsromapa.say.frenzapp_redesign:actionModeCopyDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeCutDrawable com.nsromapa.say.frenzapp_redesign:actionModeCutDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeFindDrawable com.nsromapa.say.frenzapp_redesign:actionModeFindDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePasteDrawable com.nsromapa.say.frenzapp_redesign:actionModePasteDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModePopupWindowStyle com.nsromapa.say.frenzapp_redesign:actionModePopupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSelectAllDrawable com.nsromapa.say.frenzapp_redesign:actionModeSelectAllDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeShareDrawable com.nsromapa.say.frenzapp_redesign:actionModeShareDrawable}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeSplitBackground com.nsromapa.say.frenzapp_redesign:actionModeSplitBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionModeStyle com.nsromapa.say.frenzapp_redesign:actionModeStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.nsromapa.say.frenzapp_redesign:actionModeWebSearchDrawable}</code></td><td>Drawable to use for the Web Search action button in WebView selection action modes</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_actionModeWebSearchDrawable com.nsromapa.say.frenzapp_redesign:actionModeWebSearchDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowButtonStyle com.nsromapa.say.frenzapp_redesign:actionOverflowButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_actionOverflowMenuStyle com.nsromapa.say.frenzapp_redesign:actionOverflowMenuStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.nsromapa.say.frenzapp_redesign:activityChooserViewStyle}</code></td><td>Default ActivityChooserView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_activityChooserViewStyle com.nsromapa.say.frenzapp_redesign:activityChooserViewStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogButtonGroupStyle com.nsromapa.say.frenzapp_redesign:alertDialogButtonGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogCenterButtons com.nsromapa.say.frenzapp_redesign:alertDialogCenterButtons}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_alertDialogStyle com.nsromapa.say.frenzapp_redesign:alertDialogStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.nsromapa.say.frenzapp_redesign:alertDialogTheme}</code></td><td>Theme to use for alert dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.nsromapa.say.frenzapp_redesign:autoCompleteTextViewStyle}</code></td><td>Default AutoCompleteTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.nsromapa.say.frenzapp_redesign:borderlessButtonStyle}</code></td><td>Style for buttons without an explicit border, often used in groups.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarButtonStyle}</code></td><td>Style for buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarNegativeButtonStyle}</code></td><td>Style for the "negative" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarNeutralButtonStyle}</code></td><td>Style for the "neutral" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarPositiveButtonStyle}</code></td><td>Style for the "positive" buttons within button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.nsromapa.say.frenzapp_redesign:buttonBarStyle}</code></td><td>Style for button bars</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.nsromapa.say.frenzapp_redesign:buttonStyle}</code></td><td>Normal Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.nsromapa.say.frenzapp_redesign:buttonStyleSmall}</code></td><td>Small Button style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.nsromapa.say.frenzapp_redesign:checkboxStyle}</code></td><td>Default Checkbox style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.nsromapa.say.frenzapp_redesign:checkedTextViewStyle}</code></td><td>Default CheckedTextView style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.nsromapa.say.frenzapp_redesign:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.nsromapa.say.frenzapp_redesign:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.nsromapa.say.frenzapp_redesign:colorButtonNormal}</code></td><td>The color applied to framework buttons in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.nsromapa.say.frenzapp_redesign:colorControlActivated}</code></td><td>The color applied to framework controls in their activated (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.nsromapa.say.frenzapp_redesign:colorControlHighlight}</code></td><td>The color applied to framework control highlights (ex.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.nsromapa.say.frenzapp_redesign:colorControlNormal}</code></td><td>The color applied to framework controls in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorError com.nsromapa.say.frenzapp_redesign:colorError}</code></td><td>Color used for error states and things that need to be drawn to
-     * the user's attention.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.nsromapa.say.frenzapp_redesign:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.nsromapa.say.frenzapp_redesign:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.nsromapa.say.frenzapp_redesign:colorSwitchThumbNormal}</code></td><td>The color applied to framework switch thumbs in their normal state.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.nsromapa.say.frenzapp_redesign:controlBackground}</code></td><td>The background used by framework controls.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.nsromapa.say.frenzapp_redesign:dialogCornerRadius}</code></td><td>Preferred corner radius of dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.nsromapa.say.frenzapp_redesign:dialogPreferredPadding}</code></td><td>Preferred padding for dialog content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.nsromapa.say.frenzapp_redesign:dialogTheme}</code></td><td>Theme to use for dialogs spawned from this theme.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.nsromapa.say.frenzapp_redesign:dividerHorizontal}</code></td><td>A drawable that may be used as a horizontal divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.nsromapa.say.frenzapp_redesign:dividerVertical}</code></td><td>A drawable that may be used as a vertical divider between visual elements.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.nsromapa.say.frenzapp_redesign:dropDownListViewStyle}</code></td><td>ListPopupWindow compatibility</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.nsromapa.say.frenzapp_redesign:dropdownListPreferredItemHeight}</code></td><td>The preferred item height for dropdown lists.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.nsromapa.say.frenzapp_redesign:editTextBackground}</code></td><td>EditText background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.nsromapa.say.frenzapp_redesign:editTextColor}</code></td><td>EditText text foreground color.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.nsromapa.say.frenzapp_redesign:editTextStyle}</code></td><td>Default EditText style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.nsromapa.say.frenzapp_redesign:homeAsUpIndicator}</code></td><td>Specifies a drawable to use for the 'home as up' indicator.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.nsromapa.say.frenzapp_redesign:imageButtonStyle}</code></td><td>ImageButton background drawable.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.nsromapa.say.frenzapp_redesign:listChoiceBackgroundIndicator}</code></td><td>Drawable used as a background for selected list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorMultipleAnimated com.nsromapa.say.frenzapp_redesign:listChoiceIndicatorMultipleAnimated}</code></td><td>Animated Drawable to use for single choice indicators.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorSingleAnimated com.nsromapa.say.frenzapp_redesign:listChoiceIndicatorSingleAnimated}</code></td><td>Animated Drawable to use for multiple choice indicators.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.nsromapa.say.frenzapp_redesign:listDividerAlertDialog}</code></td><td>The list divider used in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.nsromapa.say.frenzapp_redesign:listMenuViewStyle}</code></td><td>Default menu-style ListView style.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_alertDialogTheme com.nsromapa.say.frenzapp_redesign:alertDialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_autoCompleteTextViewStyle com.nsromapa.say.frenzapp_redesign:autoCompleteTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_borderlessButtonStyle com.nsromapa.say.frenzapp_redesign:borderlessButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNegativeButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarNeutralButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarPositiveButtonStyle com.nsromapa.say.frenzapp_redesign:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonBarStyle com.nsromapa.say.frenzapp_redesign:buttonBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyle com.nsromapa.say.frenzapp_redesign:buttonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_buttonStyleSmall com.nsromapa.say.frenzapp_redesign:buttonStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkboxStyle com.nsromapa.say.frenzapp_redesign:checkboxStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_checkedTextViewStyle com.nsromapa.say.frenzapp_redesign:checkedTextViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorAccent com.nsromapa.say.frenzapp_redesign:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorBackgroundFloating com.nsromapa.say.frenzapp_redesign:colorBackgroundFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorButtonNormal com.nsromapa.say.frenzapp_redesign:colorButtonNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlActivated com.nsromapa.say.frenzapp_redesign:colorControlActivated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlHighlight com.nsromapa.say.frenzapp_redesign:colorControlHighlight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorControlNormal com.nsromapa.say.frenzapp_redesign:colorControlNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorError com.nsromapa.say.frenzapp_redesign:colorError}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimary com.nsromapa.say.frenzapp_redesign:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorPrimaryDark com.nsromapa.say.frenzapp_redesign:colorPrimaryDark}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_colorSwitchThumbNormal com.nsromapa.say.frenzapp_redesign:colorSwitchThumbNormal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_controlBackground com.nsromapa.say.frenzapp_redesign:controlBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogCornerRadius com.nsromapa.say.frenzapp_redesign:dialogCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogPreferredPadding com.nsromapa.say.frenzapp_redesign:dialogPreferredPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dialogTheme com.nsromapa.say.frenzapp_redesign:dialogTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerHorizontal com.nsromapa.say.frenzapp_redesign:dividerHorizontal}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dividerVertical com.nsromapa.say.frenzapp_redesign:dividerVertical}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropDownListViewStyle com.nsromapa.say.frenzapp_redesign:dropDownListViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_dropdownListPreferredItemHeight com.nsromapa.say.frenzapp_redesign:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextBackground com.nsromapa.say.frenzapp_redesign:editTextBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextColor com.nsromapa.say.frenzapp_redesign:editTextColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_editTextStyle com.nsromapa.say.frenzapp_redesign:editTextStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_homeAsUpIndicator com.nsromapa.say.frenzapp_redesign:homeAsUpIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_imageButtonStyle com.nsromapa.say.frenzapp_redesign:imageButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceBackgroundIndicator com.nsromapa.say.frenzapp_redesign:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorMultipleAnimated com.nsromapa.say.frenzapp_redesign:listChoiceIndicatorMultipleAnimated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listChoiceIndicatorSingleAnimated com.nsromapa.say.frenzapp_redesign:listChoiceIndicatorSingleAnimated}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listDividerAlertDialog com.nsromapa.say.frenzapp_redesign:listDividerAlertDialog}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listMenuViewStyle com.nsromapa.say.frenzapp_redesign:listMenuViewStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_listPopupWindowStyle com.nsromapa.say.frenzapp_redesign:listPopupWindowStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.nsromapa.say.frenzapp_redesign:listPreferredItemHeight}</code></td><td>The preferred list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.nsromapa.say.frenzapp_redesign:listPreferredItemHeightLarge}</code></td><td>A larger, more robust list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.nsromapa.say.frenzapp_redesign:listPreferredItemHeightSmall}</code></td><td>A smaller, sleeker list item height.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingEnd com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingEnd}</code></td><td>The preferred padding along the end edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingLeft}</code></td><td>The preferred padding along the left edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingRight}</code></td><td>The preferred padding along the right edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingStart com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingStart}</code></td><td>The preferred padding along the start edge of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.nsromapa.say.frenzapp_redesign:panelBackground}</code></td><td>The background of a panel when it is inset from the left and right edges of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.nsromapa.say.frenzapp_redesign:panelMenuListTheme}</code></td><td>Default Panel Menu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.nsromapa.say.frenzapp_redesign:panelMenuListWidth}</code></td><td>Default Panel Menu width.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.nsromapa.say.frenzapp_redesign:popupMenuStyle}</code></td><td>Default PopupMenu style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.nsromapa.say.frenzapp_redesign:popupWindowStyle}</code></td><td>Default PopupWindow style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.nsromapa.say.frenzapp_redesign:radioButtonStyle}</code></td><td>Default RadioButton style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.nsromapa.say.frenzapp_redesign:ratingBarStyle}</code></td><td>Default RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.nsromapa.say.frenzapp_redesign:ratingBarStyleIndicator}</code></td><td>Indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.nsromapa.say.frenzapp_redesign:ratingBarStyleSmall}</code></td><td>Small indicator RatingBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.nsromapa.say.frenzapp_redesign:searchViewStyle}</code></td><td>Style for the search query widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.nsromapa.say.frenzapp_redesign:seekBarStyle}</code></td><td>Default SeekBar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.nsromapa.say.frenzapp_redesign:selectableItemBackground}</code></td><td>A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.nsromapa.say.frenzapp_redesign:selectableItemBackgroundBorderless}</code></td><td>Background drawable for borderless standalone items that need focus/pressed states.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.nsromapa.say.frenzapp_redesign:spinnerDropDownItemStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.nsromapa.say.frenzapp_redesign:spinnerStyle}</code></td><td>Default Spinner style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.nsromapa.say.frenzapp_redesign:switchStyle}</code></td><td>Default style for the Switch widget.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.nsromapa.say.frenzapp_redesign:textAppearanceLargePopupMenu}</code></td><td>Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.nsromapa.say.frenzapp_redesign:textAppearanceListItem}</code></td><td>The preferred TextAppearance for the primary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.nsromapa.say.frenzapp_redesign:textAppearanceListItemSecondary}</code></td><td>The preferred TextAppearance for the secondary text of list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.nsromapa.say.frenzapp_redesign:textAppearanceListItemSmall}</code></td><td>The preferred TextAppearance for the primary text of small list items.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.nsromapa.say.frenzapp_redesign:textAppearancePopupMenuHeader}</code></td><td>Text color, typeface, size, and style for header text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.nsromapa.say.frenzapp_redesign:textAppearanceSearchResultSubtitle}</code></td><td>Text color, typeface, size, and style for system search result subtitle.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.nsromapa.say.frenzapp_redesign:textAppearanceSearchResultTitle}</code></td><td>Text color, typeface, size, and style for system search result title.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.nsromapa.say.frenzapp_redesign:textAppearanceSmallPopupMenu}</code></td><td>Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.nsromapa.say.frenzapp_redesign:textColorAlertDialogListItem}</code></td><td>Color of list item text in alert dialogs.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.nsromapa.say.frenzapp_redesign:textColorSearchUrl}</code></td><td>Text color for urls in search suggestions, used by things like global search</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.nsromapa.say.frenzapp_redesign:toolbarNavigationButtonStyle}</code></td><td>Default Toolar NavigationButtonStyle</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.nsromapa.say.frenzapp_redesign:toolbarStyle}</code></td><td>Default Toolbar style.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.nsromapa.say.frenzapp_redesign:tooltipForegroundColor}</code></td><td>Foreground color to use for tooltips</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.nsromapa.say.frenzapp_redesign:tooltipFrameBackground}</code></td><td>Background to use for tooltips</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeight com.nsromapa.say.frenzapp_redesign:listPreferredItemHeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightLarge com.nsromapa.say.frenzapp_redesign:listPreferredItemHeightLarge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemHeightSmall com.nsromapa.say.frenzapp_redesign:listPreferredItemHeightSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingEnd com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingLeft com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingRight com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_listPreferredItemPaddingStart com.nsromapa.say.frenzapp_redesign:listPreferredItemPaddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelBackground com.nsromapa.say.frenzapp_redesign:panelBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListTheme com.nsromapa.say.frenzapp_redesign:panelMenuListTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_panelMenuListWidth com.nsromapa.say.frenzapp_redesign:panelMenuListWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupMenuStyle com.nsromapa.say.frenzapp_redesign:popupMenuStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_popupWindowStyle com.nsromapa.say.frenzapp_redesign:popupWindowStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_radioButtonStyle com.nsromapa.say.frenzapp_redesign:radioButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyle com.nsromapa.say.frenzapp_redesign:ratingBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleIndicator com.nsromapa.say.frenzapp_redesign:ratingBarStyleIndicator}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_ratingBarStyleSmall com.nsromapa.say.frenzapp_redesign:ratingBarStyleSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_searchViewStyle com.nsromapa.say.frenzapp_redesign:searchViewStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_seekBarStyle com.nsromapa.say.frenzapp_redesign:seekBarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackground com.nsromapa.say.frenzapp_redesign:selectableItemBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_selectableItemBackgroundBorderless com.nsromapa.say.frenzapp_redesign:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerDropDownItemStyle com.nsromapa.say.frenzapp_redesign:spinnerDropDownItemStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_spinnerStyle com.nsromapa.say.frenzapp_redesign:spinnerStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_switchStyle com.nsromapa.say.frenzapp_redesign:switchStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceLargePopupMenu com.nsromapa.say.frenzapp_redesign:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItem com.nsromapa.say.frenzapp_redesign:textAppearanceListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSecondary com.nsromapa.say.frenzapp_redesign:textAppearanceListItemSecondary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceListItemSmall com.nsromapa.say.frenzapp_redesign:textAppearanceListItemSmall}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearancePopupMenuHeader com.nsromapa.say.frenzapp_redesign:textAppearancePopupMenuHeader}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultSubtitle com.nsromapa.say.frenzapp_redesign:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSearchResultTitle com.nsromapa.say.frenzapp_redesign:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textAppearanceSmallPopupMenu com.nsromapa.say.frenzapp_redesign:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorAlertDialogListItem com.nsromapa.say.frenzapp_redesign:textColorAlertDialogListItem}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_textColorSearchUrl com.nsromapa.say.frenzapp_redesign:textColorSearchUrl}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarNavigationButtonStyle com.nsromapa.say.frenzapp_redesign:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_toolbarStyle com.nsromapa.say.frenzapp_redesign:toolbarStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipForegroundColor com.nsromapa.say.frenzapp_redesign:tooltipForegroundColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_tooltipFrameBackground com.nsromapa.say.frenzapp_redesign:tooltipFrameBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #AppCompatTheme_viewInflaterClass com.nsromapa.say.frenzapp_redesign:viewInflaterClass}</code></td><td></td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.nsromapa.say.frenzapp_redesign:windowActionBar}</code></td><td>Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.nsromapa.say.frenzapp_redesign:windowActionBarOverlay}</code></td><td>Flag indicating whether this window's Action Bar should overlay
-     * application content.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.nsromapa.say.frenzapp_redesign:windowActionModeOverlay}</code></td><td>Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.nsromapa.say.frenzapp_redesign:windowFixedHeightMajor}</code></td><td>A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.nsromapa.say.frenzapp_redesign:windowFixedHeightMinor}</code></td><td>A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.nsromapa.say.frenzapp_redesign:windowFixedWidthMajor}</code></td><td>A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.nsromapa.say.frenzapp_redesign:windowFixedWidthMinor}</code></td><td>A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.nsromapa.say.frenzapp_redesign:windowMinWidthMajor}</code></td><td>The minimum width the window is allowed to be, along the major
-     * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.nsromapa.say.frenzapp_redesign:windowMinWidthMinor}</code></td><td>The minimum width the window is allowed to be, along the minor
-     * axis of the screen.</td></tr>
-     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.nsromapa.say.frenzapp_redesign:windowNoTitle}</code></td><td>Flag indicating whether there should be no title on this window.</td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBar com.nsromapa.say.frenzapp_redesign:windowActionBar}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionBarOverlay com.nsromapa.say.frenzapp_redesign:windowActionBarOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowActionModeOverlay com.nsromapa.say.frenzapp_redesign:windowActionModeOverlay}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMajor com.nsromapa.say.frenzapp_redesign:windowFixedHeightMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedHeightMinor com.nsromapa.say.frenzapp_redesign:windowFixedHeightMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMajor com.nsromapa.say.frenzapp_redesign:windowFixedWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowFixedWidthMinor com.nsromapa.say.frenzapp_redesign:windowFixedWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMajor com.nsromapa.say.frenzapp_redesign:windowMinWidthMajor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowMinWidthMinor com.nsromapa.say.frenzapp_redesign:windowMinWidthMinor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #AppCompatTheme_windowNoTitle com.nsromapa.say.frenzapp_redesign:windowNoTitle}</code></td><td></td></tr>
      * </table>
      * @see #AppCompatTheme_android_windowIsFloating
      * @see #AppCompatTheme_android_windowAnimationStyle
@@ -10023,9 +9431,8 @@ public final class R {
      */
     public static final int AppCompatTheme_android_windowAnimationStyle=1;
     /**
-     * <p>
-     * @attr description
-     * Custom divider drawable to use for elements in the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarDivider}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10036,9 +9443,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarDivider=2;
     /**
-     * <p>
-     * @attr description
-     * Custom item state list drawable background for action bar items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarItemBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10049,10 +9455,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarItemBackground=3;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarPopupTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10063,10 +9467,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarPopupTheme=4;
     /**
-     * <p>
-     * @attr description
-     * Size of the Action Bar, including the contextual
-     * bar used to present Action Modes.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarSize}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10086,12 +9488,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSize=5;
     /**
-     * <p>
-     * @attr description
-     * Reference to a style for the split Action Bar. This style
-     * controls the split component that holds the menu/action
-     * buttons. actionBarStyle is still used for the primary
-     * bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarSplitStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10102,9 +9500,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarSplitStyle=6;
     /**
-     * <p>
-     * @attr description
-     * Reference to a style for the Action Bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10127,9 +9524,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabBarStyle=8;
     /**
-     * <p>
-     * @attr description
-     * Default style for tabs within an action bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarTabStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10152,11 +9548,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTabTextStyle=10;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate the
-     * action bar. This will be inherited by any widget inflated
-     * into the action bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10167,15 +9560,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarTheme=11;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate widgets
-     * and layouts destined for the action bar. Most of the time
-     * this will be a reference to the current theme, but when
-     * the action bar has a significantly different contrast
-     * profile than the rest of the activity the difference
-     * can become important. If this is set to @null the current
-     * theme will be used.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionBarWidgetTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10186,9 +9572,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionBarWidgetTheme=12;
     /**
-     * <p>
-     * @attr description
-     * Default action button style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10199,9 +9584,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionButtonStyle=13;
     /**
-     * <p>
-     * @attr description
-     * Default ActionBar dropdown style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionDropDownStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10212,10 +9596,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionDropDownStyle=14;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance style that will be applied to text that
-     * appears within action menu items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionMenuTextAppearance}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10226,9 +9608,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextAppearance=15;
     /**
-     * <p>
-     * @attr description
-     * Color for text that appears within action menu items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionMenuTextColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10242,9 +9623,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionMenuTextColor=16;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for action mode UI
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10267,9 +9647,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseButtonStyle=18;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the close action mode button
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeCloseDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10280,9 +9659,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCloseDrawable=19;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Copy action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeCopyDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10293,9 +9671,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCopyDrawable=20;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Cut action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeCutDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10306,9 +9683,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeCutDrawable=21;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Find action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeFindDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10319,9 +9695,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeFindDrawable=22;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Paste action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModePasteDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10332,9 +9707,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePasteDrawable=23;
     /**
-     * <p>
-     * @attr description
-     * PopupWindow style to use for action modes when showing as a window overlay.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModePopupWindowStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10345,9 +9719,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModePopupWindowStyle=24;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Select all action button in Contextual Action Bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeSelectAllDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10358,9 +9731,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeSelectAllDrawable=25;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Share action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeShareDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10371,9 +9743,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeShareDrawable=26;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for action mode UI in the lower split bar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeSplitBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10396,9 +9767,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionModeStyle=28;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use for the Web Search action button in WebView selection action modes
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionModeWebSearchDrawable}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10433,9 +9803,8 @@ public final class R {
      */
     public static final int AppCompatTheme_actionOverflowMenuStyle=31;
     /**
-     * <p>
-     * @attr description
-     * Default ActivityChooserView style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#activityChooserViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10480,9 +9849,8 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogStyle=35;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for alert dialogs spawned from this theme.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#alertDialogTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10493,9 +9861,8 @@ public final class R {
      */
     public static final int AppCompatTheme_alertDialogTheme=36;
     /**
-     * <p>
-     * @attr description
-     * Default AutoCompleteTextView style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#autoCompleteTextViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10506,9 +9873,8 @@ public final class R {
      */
     public static final int AppCompatTheme_autoCompleteTextViewStyle=37;
     /**
-     * <p>
-     * @attr description
-     * Style for buttons without an explicit border, often used in groups.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#borderlessButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10519,9 +9885,8 @@ public final class R {
      */
     public static final int AppCompatTheme_borderlessButtonStyle=38;
     /**
-     * <p>
-     * @attr description
-     * Style for buttons within button bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonBarButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10532,9 +9897,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarButtonStyle=39;
     /**
-     * <p>
-     * @attr description
-     * Style for the "negative" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonBarNegativeButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10545,9 +9909,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNegativeButtonStyle=40;
     /**
-     * <p>
-     * @attr description
-     * Style for the "neutral" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonBarNeutralButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10558,9 +9921,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarNeutralButtonStyle=41;
     /**
-     * <p>
-     * @attr description
-     * Style for the "positive" buttons within button bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonBarPositiveButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10571,9 +9933,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarPositiveButtonStyle=42;
     /**
-     * <p>
-     * @attr description
-     * Style for button bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10584,9 +9945,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonBarStyle=43;
     /**
-     * <p>
-     * @attr description
-     * Normal Button style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10597,9 +9957,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyle=44;
     /**
-     * <p>
-     * @attr description
-     * Small Button style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonStyleSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10610,9 +9969,8 @@ public final class R {
      */
     public static final int AppCompatTheme_buttonStyleSmall=45;
     /**
-     * <p>
-     * @attr description
-     * Default Checkbox style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#checkboxStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10623,9 +9981,8 @@ public final class R {
      */
     public static final int AppCompatTheme_checkboxStyle=46;
     /**
-     * <p>
-     * @attr description
-     * Default CheckedTextView style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#checkedTextViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10636,10 +9993,8 @@ public final class R {
      */
     public static final int AppCompatTheme_checkedTextViewStyle=47;
     /**
-     * <p>
-     * @attr description
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorAccent}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10649,9 +10004,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorAccent=48;
     /**
-     * <p>
-     * @attr description
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorBackgroundFloating}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10661,9 +10015,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorBackgroundFloating=49;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework buttons in their normal state.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorButtonNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10673,9 +10026,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorButtonNormal=50;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework controls in their activated (ex. checked) state.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorControlActivated}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10685,9 +10037,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlActivated=51;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework control highlights (ex. ripples, list selectors).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorControlHighlight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10697,9 +10048,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlHighlight=52;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework controls in their normal state.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorControlNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10709,10 +10059,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorControlNormal=53;
     /**
-     * <p>
-     * @attr description
-     * Color used for error states and things that need to be drawn to
-     * the user's attention.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorError}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10726,10 +10074,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorError=54;
     /**
-     * <p>
-     * @attr description
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorPrimary}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10739,10 +10085,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimary=55;
     /**
-     * <p>
-     * @attr description
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorPrimaryDark}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10752,9 +10096,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorPrimaryDark=56;
     /**
-     * <p>
-     * @attr description
-     * The color applied to framework switch thumbs in their normal state.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorSwitchThumbNormal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -10764,9 +10107,8 @@ public final class R {
      */
     public static final int AppCompatTheme_colorSwitchThumbNormal=57;
     /**
-     * <p>
-     * @attr description
-     * The background used by framework controls.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#controlBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10777,9 +10119,8 @@ public final class R {
      */
     public static final int AppCompatTheme_controlBackground=58;
     /**
-     * <p>
-     * @attr description
-     * Preferred corner radius of dialogs.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dialogCornerRadius}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10791,9 +10132,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogCornerRadius=59;
     /**
-     * <p>
-     * @attr description
-     * Preferred padding for dialog content.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dialogPreferredPadding}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10805,9 +10145,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogPreferredPadding=60;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for dialogs spawned from this theme.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dialogTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10818,9 +10157,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dialogTheme=61;
     /**
-     * <p>
-     * @attr description
-     * A drawable that may be used as a horizontal divider between visual elements.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dividerHorizontal}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10831,9 +10169,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerHorizontal=62;
     /**
-     * <p>
-     * @attr description
-     * A drawable that may be used as a vertical divider between visual elements.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dividerVertical}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10844,9 +10181,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dividerVertical=63;
     /**
-     * <p>
-     * @attr description
-     * ListPopupWindow compatibility
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dropDownListViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10857,9 +10193,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dropDownListViewStyle=64;
     /**
-     * <p>
-     * @attr description
-     * The preferred item height for dropdown lists.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dropdownListPreferredItemHeight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -10871,9 +10206,8 @@ public final class R {
      */
     public static final int AppCompatTheme_dropdownListPreferredItemHeight=65;
     /**
-     * <p>
-     * @attr description
-     * EditText background drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#editTextBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10884,9 +10218,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextBackground=66;
     /**
-     * <p>
-     * @attr description
-     * EditText text foreground color.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#editTextColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10900,9 +10233,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextColor=67;
     /**
-     * <p>
-     * @attr description
-     * Default EditText style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#editTextStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10913,9 +10245,8 @@ public final class R {
      */
     public static final int AppCompatTheme_editTextStyle=68;
     /**
-     * <p>
-     * @attr description
-     * Specifies a drawable to use for the 'home as up' indicator.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#homeAsUpIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10926,9 +10257,8 @@ public final class R {
      */
     public static final int AppCompatTheme_homeAsUpIndicator=69;
     /**
-     * <p>
-     * @attr description
-     * ImageButton background drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#imageButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10939,9 +10269,8 @@ public final class R {
      */
     public static final int AppCompatTheme_imageButtonStyle=70;
     /**
-     * <p>
-     * @attr description
-     * Drawable used as a background for selected list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listChoiceBackgroundIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10952,9 +10281,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listChoiceBackgroundIndicator=71;
     /**
-     * <p>
-     * @attr description
-     * Animated Drawable to use for single choice indicators.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listChoiceIndicatorMultipleAnimated}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10965,9 +10293,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listChoiceIndicatorMultipleAnimated=72;
     /**
-     * <p>
-     * @attr description
-     * Animated Drawable to use for multiple choice indicators.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listChoiceIndicatorSingleAnimated}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10978,9 +10305,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listChoiceIndicatorSingleAnimated=73;
     /**
-     * <p>
-     * @attr description
-     * The list divider used in alert dialogs.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listDividerAlertDialog}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -10991,9 +10317,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listDividerAlertDialog=74;
     /**
-     * <p>
-     * @attr description
-     * Default menu-style ListView style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listMenuViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11016,9 +10341,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPopupWindowStyle=76;
     /**
-     * <p>
-     * @attr description
-     * The preferred list item height.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemHeight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11030,9 +10354,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeight=77;
     /**
-     * <p>
-     * @attr description
-     * A larger, more robust list item height.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemHeightLarge}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11044,9 +10367,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightLarge=78;
     /**
-     * <p>
-     * @attr description
-     * A smaller, sleeker list item height.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemHeightSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11058,9 +10380,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemHeightSmall=79;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the end edge of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemPaddingEnd}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11072,9 +10393,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingEnd=80;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the left edge of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemPaddingLeft}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11086,9 +10406,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingLeft=81;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the right edge of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemPaddingRight}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11100,9 +10419,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingRight=82;
     /**
-     * <p>
-     * @attr description
-     * The preferred padding along the start edge of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#listPreferredItemPaddingStart}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11114,9 +10432,8 @@ public final class R {
      */
     public static final int AppCompatTheme_listPreferredItemPaddingStart=83;
     /**
-     * <p>
-     * @attr description
-     * The background of a panel when it is inset from the left and right edges of the screen.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#panelBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11127,9 +10444,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelBackground=84;
     /**
-     * <p>
-     * @attr description
-     * Default Panel Menu style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#panelMenuListTheme}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11140,9 +10456,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListTheme=85;
     /**
-     * <p>
-     * @attr description
-     * Default Panel Menu width.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#panelMenuListWidth}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11154,9 +10469,8 @@ public final class R {
      */
     public static final int AppCompatTheme_panelMenuListWidth=86;
     /**
-     * <p>
-     * @attr description
-     * Default PopupMenu style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#popupMenuStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11167,9 +10481,8 @@ public final class R {
      */
     public static final int AppCompatTheme_popupMenuStyle=87;
     /**
-     * <p>
-     * @attr description
-     * Default PopupWindow style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#popupWindowStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11180,9 +10493,8 @@ public final class R {
      */
     public static final int AppCompatTheme_popupWindowStyle=88;
     /**
-     * <p>
-     * @attr description
-     * Default RadioButton style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#radioButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11193,9 +10505,8 @@ public final class R {
      */
     public static final int AppCompatTheme_radioButtonStyle=89;
     /**
-     * <p>
-     * @attr description
-     * Default RatingBar style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#ratingBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11206,9 +10517,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyle=90;
     /**
-     * <p>
-     * @attr description
-     * Indicator RatingBar style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#ratingBarStyleIndicator}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11219,9 +10529,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleIndicator=91;
     /**
-     * <p>
-     * @attr description
-     * Small indicator RatingBar style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#ratingBarStyleSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11232,9 +10541,8 @@ public final class R {
      */
     public static final int AppCompatTheme_ratingBarStyleSmall=92;
     /**
-     * <p>
-     * @attr description
-     * Style for the search query widget.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#searchViewStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11245,9 +10553,8 @@ public final class R {
      */
     public static final int AppCompatTheme_searchViewStyle=93;
     /**
-     * <p>
-     * @attr description
-     * Default SeekBar style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#seekBarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11258,11 +10565,8 @@ public final class R {
      */
     public static final int AppCompatTheme_seekBarStyle=94;
     /**
-     * <p>
-     * @attr description
-     * A style that may be applied to buttons or other selectable items
-     * that should react to pressed and focus states, but that do not
-     * have a clear visual border along the edges.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#selectableItemBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11273,9 +10577,8 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackground=95;
     /**
-     * <p>
-     * @attr description
-     * Background drawable for borderless standalone items that need focus/pressed states.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#selectableItemBackgroundBorderless}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11286,9 +10589,8 @@ public final class R {
      */
     public static final int AppCompatTheme_selectableItemBackgroundBorderless=96;
     /**
-     * <p>
-     * @attr description
-     * Default Spinner style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#spinnerDropDownItemStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11299,9 +10601,8 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerDropDownItemStyle=97;
     /**
-     * <p>
-     * @attr description
-     * Default Spinner style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#spinnerStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11312,9 +10613,8 @@ public final class R {
      */
     public static final int AppCompatTheme_spinnerStyle=98;
     /**
-     * <p>
-     * @attr description
-     * Default style for the Switch widget.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#switchStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11325,9 +10625,8 @@ public final class R {
      */
     public static final int AppCompatTheme_switchStyle=99;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for the text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceLargePopupMenu}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11338,9 +10637,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceLargePopupMenu=100;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the primary text of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceListItem}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11351,9 +10649,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItem=101;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the secondary text of list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceListItemSecondary}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11364,9 +10661,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSecondary=102;
     /**
-     * <p>
-     * @attr description
-     * The preferred TextAppearance for the primary text of small list items.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceListItemSmall}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11377,9 +10673,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceListItemSmall=103;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for header text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearancePopupMenuHeader}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11390,9 +10685,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearancePopupMenuHeader=104;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceSearchResultSubtitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11403,9 +10697,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultSubtitle=105;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceSearchResultTitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11416,9 +10709,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSearchResultTitle=106;
     /**
-     * <p>
-     * @attr description
-     * Text color, typeface, size, and style for small text inside of a popup menu.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAppearanceSmallPopupMenu}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11429,9 +10721,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textAppearanceSmallPopupMenu=107;
     /**
-     * <p>
-     * @attr description
-     * Color of list item text in alert dialogs.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textColorAlertDialogListItem}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11445,9 +10736,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorAlertDialogListItem=108;
     /**
-     * <p>
-     * @attr description
-     * Text color for urls in search suggestions, used by things like global search
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textColorSearchUrl}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11461,9 +10751,8 @@ public final class R {
      */
     public static final int AppCompatTheme_textColorSearchUrl=109;
     /**
-     * <p>
-     * @attr description
-     * Default Toolar NavigationButtonStyle
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#toolbarNavigationButtonStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11474,9 +10763,8 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarNavigationButtonStyle=110;
     /**
-     * <p>
-     * @attr description
-     * Default Toolbar style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#toolbarStyle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11487,9 +10775,8 @@ public final class R {
      */
     public static final int AppCompatTheme_toolbarStyle=111;
     /**
-     * <p>
-     * @attr description
-     * Foreground color to use for tooltips
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tooltipForegroundColor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11503,9 +10790,8 @@ public final class R {
      */
     public static final int AppCompatTheme_tooltipForegroundColor=112;
     /**
-     * <p>
-     * @attr description
-     * Background to use for tooltips
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tooltipFrameBackground}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -11526,10 +10812,8 @@ public final class R {
      */
     public static final int AppCompatTheme_viewInflaterClass=114;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether this window should have an Action Bar
-     * in place of the usual title bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowActionBar}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11538,11 +10822,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBar=115;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether this window's Action Bar should overlay
-     * application content. Does nothing if the window would not
-     * have an Action Bar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowActionBarOverlay}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11551,10 +10832,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionBarOverlay=116;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether action modes should overlay window content
-     * when there is not reserved space for their UI (such as an Action Bar).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowActionModeOverlay}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11563,11 +10842,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowActionModeOverlay=117;
     /**
-     * <p>
-     * @attr description
-     * A fixed height for the window along the major axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowFixedHeightMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11583,11 +10859,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMajor=118;
     /**
-     * <p>
-     * @attr description
-     * A fixed height for the window along the minor axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowFixedHeightMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11603,11 +10876,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedHeightMinor=119;
     /**
-     * <p>
-     * @attr description
-     * A fixed width for the window along the major axis of the screen,
-     * that is, when in landscape. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowFixedWidthMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11623,11 +10893,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMajor=120;
     /**
-     * <p>
-     * @attr description
-     * A fixed width for the window along the minor axis of the screen,
-     * that is, when in portrait. Can be either an absolute dimension
-     * or a fraction of the screen size in that dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowFixedWidthMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11643,12 +10910,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowFixedWidthMinor=121;
     /**
-     * <p>
-     * @attr description
-     * The minimum width the window is allowed to be, along the major
-     * axis of the screen.  That is, when in landscape.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowMinWidthMajor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11664,12 +10927,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMajor=122;
     /**
-     * <p>
-     * @attr description
-     * The minimum width the window is allowed to be, along the minor
-     * axis of the screen.  That is, when in portrait.  Can be either
-     * an absolute dimension or a fraction of the screen size in that
-     * dimension.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowMinWidthMinor}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -11685,9 +10944,8 @@ public final class R {
      */
     public static final int AppCompatTheme_windowMinWidthMinor=123;
     /**
-     * <p>
-     * @attr description
-     * Flag indicating whether there should be no title on this window.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#windowNoTitle}
+     * attribute's value can be found in the {@link #AppCompatTheme} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -11752,7 +11010,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
+     * <tr><td><code>{@link #BottomAppBar_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabAlignmentMode com.nsromapa.say.frenzapp_redesign:fabAlignmentMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleMargin com.nsromapa.say.frenzapp_redesign:fabCradleMargin}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomAppBar_fabCradleRoundedCornerRadius com.nsromapa.say.frenzapp_redesign:fabCradleRoundedCornerRadius}</code></td><td></td></tr>
@@ -11771,9 +11029,8 @@ public final class R {
       0x7f0400f1, 0x7f040113
     };
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #BottomAppBar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -11960,7 +11217,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BottomNavigationView_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #BottomNavigationView_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemBackground com.nsromapa.say.frenzapp_redesign:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemHorizontalTranslationEnabled com.nsromapa.say.frenzapp_redesign:itemHorizontalTranslationEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemIconSize com.nsromapa.say.frenzapp_redesign:itemIconSize}</code></td><td></td></tr>
@@ -11969,7 +11226,7 @@ public final class R {
      * <tr><td><code>{@link #BottomNavigationView_itemTextAppearanceInactive com.nsromapa.say.frenzapp_redesign:itemTextAppearanceInactive}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_itemTextColor com.nsromapa.say.frenzapp_redesign:itemTextColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #BottomNavigationView_labelVisibilityMode com.nsromapa.say.frenzapp_redesign:labelVisibilityMode}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BottomNavigationView_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td>Menu resource to inflate to be shown in the toolbar</td></tr>
+     * <tr><td><code>{@link #BottomNavigationView_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td></td></tr>
      * </table>
      * @see #BottomNavigationView_elevation
      * @see #BottomNavigationView_itemBackground
@@ -11988,9 +11245,8 @@ public final class R {
       0x7f04013a, 0x7f040197
     };
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #BottomNavigationView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12102,9 +11358,8 @@ public final class R {
      */
     public static final int BottomNavigationView_labelVisibilityMode=8;
     /**
-     * <p>
-     * @attr description
-     * Menu resource to inflate to be shown in the toolbar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#menu}
+     * attribute's value can be found in the {@link #BottomNavigationView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -12192,8 +11447,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.nsromapa.say.frenzapp_redesign:allowStacking}</code></td><td>Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.</td></tr>
+     * <tr><td><code>{@link #ButtonBarLayout_allowStacking com.nsromapa.say.frenzapp_redesign:allowStacking}</code></td><td></td></tr>
      * </table>
      * @see #ButtonBarLayout_allowStacking
      */
@@ -12201,10 +11455,8 @@ public final class R {
       0x7f040028
     };
     /**
-     * <p>
-     * @attr description
-     * Whether to automatically stack the buttons when there is not
-     * enough space to lay them out side-by-side.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#allowStacking}
+     * attribute's value can be found in the {@link #ButtonBarLayout} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12221,17 +11473,17 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CardView_android_minWidth android:minWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #CardView_android_minHeight android:minHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CardView_cardBackgroundColor com.nsromapa.say.frenzapp_redesign:cardBackgroundColor}</code></td><td>Background color for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardCornerRadius com.nsromapa.say.frenzapp_redesign:cardCornerRadius}</code></td><td>Corner radius for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardElevation com.nsromapa.say.frenzapp_redesign:cardElevation}</code></td><td>Elevation for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardMaxElevation com.nsromapa.say.frenzapp_redesign:cardMaxElevation}</code></td><td>Maximum Elevation for CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.nsromapa.say.frenzapp_redesign:cardPreventCornerOverlap}</code></td><td>Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.</td></tr>
-     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.nsromapa.say.frenzapp_redesign:cardUseCompatPadding}</code></td><td>Add padding in API v21+ as well to have the same measurements with previous versions.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPadding com.nsromapa.say.frenzapp_redesign:contentPadding}</code></td><td>Inner padding between the edges of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingBottom com.nsromapa.say.frenzapp_redesign:contentPaddingBottom}</code></td><td>Inner padding between the bottom edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingLeft com.nsromapa.say.frenzapp_redesign:contentPaddingLeft}</code></td><td>Inner padding between the left edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingRight com.nsromapa.say.frenzapp_redesign:contentPaddingRight}</code></td><td>Inner padding between the right edge of the Card and children of the CardView.</td></tr>
-     * <tr><td><code>{@link #CardView_contentPaddingTop com.nsromapa.say.frenzapp_redesign:contentPaddingTop}</code></td><td>Inner padding between the top edge of the Card and children of the CardView.</td></tr>
+     * <tr><td><code>{@link #CardView_cardBackgroundColor com.nsromapa.say.frenzapp_redesign:cardBackgroundColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardCornerRadius com.nsromapa.say.frenzapp_redesign:cardCornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardElevation com.nsromapa.say.frenzapp_redesign:cardElevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardMaxElevation com.nsromapa.say.frenzapp_redesign:cardMaxElevation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardPreventCornerOverlap com.nsromapa.say.frenzapp_redesign:cardPreventCornerOverlap}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_cardUseCompatPadding com.nsromapa.say.frenzapp_redesign:cardUseCompatPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPadding com.nsromapa.say.frenzapp_redesign:contentPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingBottom com.nsromapa.say.frenzapp_redesign:contentPaddingBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingLeft com.nsromapa.say.frenzapp_redesign:contentPaddingLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingRight com.nsromapa.say.frenzapp_redesign:contentPaddingRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CardView_contentPaddingTop com.nsromapa.say.frenzapp_redesign:contentPaddingTop}</code></td><td></td></tr>
      * </table>
      * @see #CardView_android_minWidth
      * @see #CardView_android_minHeight
@@ -12254,9 +11506,8 @@ public final class R {
       0x7f0400ad
     };
     /**
-     * <p>
-     * @attr description
-     * Workaround to read user defined minimum width
+     * <p>This symbol is the offset where the {@link android.R.attr#minWidth}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12268,9 +11519,8 @@ public final class R {
      */
     public static final int CardView_android_minWidth=0;
     /**
-     * <p>
-     * @attr description
-     * Workaround to read user defined minimum height
+     * <p>This symbol is the offset where the {@link android.R.attr#minHeight}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12282,9 +11532,8 @@ public final class R {
      */
     public static final int CardView_android_minHeight=1;
     /**
-     * <p>
-     * @attr description
-     * Background color for CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardBackgroundColor}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -12294,9 +11543,8 @@ public final class R {
      */
     public static final int CardView_cardBackgroundColor=2;
     /**
-     * <p>
-     * @attr description
-     * Corner radius for CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardCornerRadius}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12308,9 +11556,8 @@ public final class R {
      */
     public static final int CardView_cardCornerRadius=3;
     /**
-     * <p>
-     * @attr description
-     * Elevation for CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardElevation}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12322,9 +11569,8 @@ public final class R {
      */
     public static final int CardView_cardElevation=4;
     /**
-     * <p>
-     * @attr description
-     * Maximum Elevation for CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardMaxElevation}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12336,9 +11582,8 @@ public final class R {
      */
     public static final int CardView_cardMaxElevation=5;
     /**
-     * <p>
-     * @attr description
-     * Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardPreventCornerOverlap}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12347,9 +11592,8 @@ public final class R {
      */
     public static final int CardView_cardPreventCornerOverlap=6;
     /**
-     * <p>
-     * @attr description
-     * Add padding in API v21+ as well to have the same measurements with previous versions.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#cardUseCompatPadding}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -12358,9 +11602,8 @@ public final class R {
      */
     public static final int CardView_cardUseCompatPadding=7;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the edges of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentPadding}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12372,9 +11615,8 @@ public final class R {
      */
     public static final int CardView_contentPadding=8;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the bottom edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentPaddingBottom}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12386,9 +11628,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingBottom=9;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the left edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentPaddingLeft}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12400,9 +11641,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingLeft=10;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the right edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentPaddingRight}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12414,9 +11654,8 @@ public final class R {
      */
     public static final int CardView_contentPaddingRight=11;
     /**
-     * <p>
-     * @attr description
-     * Inner padding between the top edge of the Card and children of the CardView.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentPaddingTop}
+     * attribute's value can be found in the {@link #CardView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -12454,7 +11693,7 @@ public final class R {
      * <tr><td><code>{@link #Chip_chipStartPadding com.nsromapa.say.frenzapp_redesign:chipStartPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeColor com.nsromapa.say.frenzapp_redesign:chipStrokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_chipStrokeWidth com.nsromapa.say.frenzapp_redesign:chipStrokeWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Chip_closeIcon com.nsromapa.say.frenzapp_redesign:closeIcon}</code></td><td>Close button icon</td></tr>
+     * <tr><td><code>{@link #Chip_closeIcon com.nsromapa.say.frenzapp_redesign:closeIcon}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEnabled com.nsromapa.say.frenzapp_redesign:closeIconEnabled}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconEndPadding com.nsromapa.say.frenzapp_redesign:closeIconEndPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #Chip_closeIconSize com.nsromapa.say.frenzapp_redesign:closeIconSize}</code></td><td></td></tr>
@@ -12756,9 +11995,8 @@ public final class R {
      */
     public static final int Chip_chipStrokeWidth=19;
     /**
-     * <p>
-     * @attr description
-     * Close button icon
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#closeIcon}
+     * attribute's value can be found in the {@link #Chip} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -13466,7 +12704,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.nsromapa.say.frenzapp_redesign:alpha}</code></td><td>Alpha multiplier applied to the base color.</td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha com.nsromapa.say.frenzapp_redesign:alpha}</code></td><td></td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -13476,9 +12714,8 @@ public final class R {
       0x010101a5, 0x0101031f, 0x7f040029
     };
     /**
-     * <p>
-     * @attr description
-     * Base color for this state.
+     * <p>This symbol is the offset where the {@link android.R.attr#color}
+     * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13497,9 +12734,8 @@ public final class R {
      */
     public static final int ColorStateListItem_android_alpha=1;
     /**
-     * <p>
-     * @attr description
-     * Alpha multiplier applied to the base color.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#alpha}
+     * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -13514,9 +12750,9 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonCompat com.nsromapa.say.frenzapp_redesign:buttonCompat}</code></td><td>Compat attr to load backported drawable types</td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTint com.nsromapa.say.frenzapp_redesign:buttonTint}</code></td><td>Tint to apply to the button drawable.</td></tr>
-     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.nsromapa.say.frenzapp_redesign:buttonTintMode}</code></td><td>Blending mode used to apply the button tint.</td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonCompat com.nsromapa.say.frenzapp_redesign:buttonCompat}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTint com.nsromapa.say.frenzapp_redesign:buttonTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CompoundButton_buttonTintMode com.nsromapa.say.frenzapp_redesign:buttonTintMode}</code></td><td></td></tr>
      * </table>
      * @see #CompoundButton_android_button
      * @see #CompoundButton_buttonCompat
@@ -13539,9 +12775,8 @@ public final class R {
      */
     public static final int CompoundButton_android_button=0;
     /**
-     * <p>
-     * @attr description
-     * Compat attr to load backported drawable types
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonCompat}
+     * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -13552,9 +12787,8 @@ public final class R {
      */
     public static final int CompoundButton_buttonCompat=1;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the button drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonTint}
+     * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -13564,9 +12798,8 @@ public final class R {
      */
     public static final int CompoundButton_buttonTint=2;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the button tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#buttonTintMode}
+     * attribute's value can be found in the {@link #CompoundButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -13574,17 +12807,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:buttonTintMode
@@ -14599,7 +13827,7 @@ public final class R {
      * <tr><td>barrier</td><td>2</td><td></td></tr>
      * <tr><td>chains</td><td>4</td><td></td></tr>
      * <tr><td>dimensions</td><td>8</td><td></td></tr>
-     * <tr><td>direct</td><td>1</td><td>direct, barriers, chains</td></tr>
+     * <tr><td>direct</td><td>1</td><td></td></tr>
      * <tr><td>groups</td><td>20</td><td></td></tr>
      * <tr><td>none</td><td>0</td><td></td></tr>
      * <tr><td>standard</td><td>7</td><td></td></tr>
@@ -15975,9 +15203,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines com.nsromapa.say.frenzapp_redesign:keylines}</code></td><td>A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.nsromapa.say.frenzapp_redesign:statusBarBackground}</code></td><td>Drawable to display behind the status bar when the view is set to draw behind it.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines com.nsromapa.say.frenzapp_redesign:keylines}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.nsromapa.say.frenzapp_redesign:statusBarBackground}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_keylines
      * @see #CoordinatorLayout_statusBarBackground
@@ -15986,13 +15213,8 @@ public final class R {
       0x7f040137, 0x7f0401f9
     };
     /**
-     * <p>
-     * @attr description
-     * A reference to an array of integers representing the
-     * locations of horizontal keylines in dp from the starting edge.
-     * Child views can refer to these keylines for alignment using
-     * layout_keyline="index" where index is a 0-based index into
-     * this array.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#keylines}
+     * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -16003,9 +15225,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_keylines=0;
     /**
-     * <p>
-     * @attr description
-     * Drawable to display behind the status bar when the view is set to draw behind it.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#statusBarBackground}
+     * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -16026,15 +15247,12 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.nsromapa.say.frenzapp_redesign:layout_anchor}</code></td><td>The id of an anchor view that this view should position relative to.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.nsromapa.say.frenzapp_redesign:layout_anchorGravity}</code></td><td>Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.nsromapa.say.frenzapp_redesign:layout_behavior}</code></td><td>The class name of a Behavior class defining special runtime behavior
-     * for this child view.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.nsromapa.say.frenzapp_redesign:layout_dodgeInsetEdges}</code></td><td>Specifies how this view dodges the inset edges of the CoordinatorLayout.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.nsromapa.say.frenzapp_redesign:layout_insetEdge}</code></td><td>Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.</td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.nsromapa.say.frenzapp_redesign:layout_keyline}</code></td><td>The index of a keyline this view should position relative to.</td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.nsromapa.say.frenzapp_redesign:layout_anchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.nsromapa.say.frenzapp_redesign:layout_anchorGravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.nsromapa.say.frenzapp_redesign:layout_behavior}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.nsromapa.say.frenzapp_redesign:layout_dodgeInsetEdges}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.nsromapa.say.frenzapp_redesign:layout_insetEdge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.nsromapa.say.frenzapp_redesign:layout_keyline}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_Layout_android_layout_gravity
      * @see #CoordinatorLayout_Layout_layout_anchor
@@ -16078,9 +15296,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
     /**
-     * <p>
-     * @attr description
-     * The id of an anchor view that this view should position relative to.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_anchor}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -16091,10 +15308,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_anchor=1;
     /**
-     * <p>
-     * @attr description
-     * Specifies how an object should position relative to an anchor, on both the X and Y axes,
-     * within its parent's bounds.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_anchorGravity}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -16102,36 +15317,28 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center</td><td>11</td><td>Place the object in the center of its container in both the vertical and horizontal axis, not changing its size.</td></tr>
-     * <tr><td>center_horizontal</td><td>1</td><td>Place object in the horizontal center of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>clip_horizontal</td><td>8</td><td>Additional option that can be set to have the left and/or right edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the horizontal gravity: a left gravity will clip the right
-     * edge, a right gravity will clip the left edge, and neither will clip both edges.</td></tr>
-     * <tr><td>clip_vertical</td><td>80</td><td>Additional option that can be set to have the top and/or bottom edges of
-     * the child clipped to its container's bounds.
-     * The clip will be based on the vertical gravity: a top gravity will clip the bottom
-     * edge, a bottom gravity will clip the top edge, and neither will clip both edges.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Push object to the end of its container, not changing its size.</td></tr>
-     * <tr><td>fill</td><td>77</td><td>Grow the horizontal and vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_horizontal</td><td>7</td><td>Grow the horizontal size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>fill_vertical</td><td>70</td><td>Grow the vertical size of the object if needed so it completely fills its container.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Push object to the left of its container, not changing its size.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Push object to the right of its container, not changing its size.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Push object to the beginning of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center</td><td>11</td><td></td></tr>
+     * <tr><td>center_horizontal</td><td>1</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>clip_horizontal</td><td>8</td><td></td></tr>
+     * <tr><td>clip_vertical</td><td>80</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>fill</td><td>77</td><td></td></tr>
+     * <tr><td>fill_horizontal</td><td>7</td><td></td></tr>
+     * <tr><td>fill_vertical</td><td>70</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:layout_anchorGravity
      */
     public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
     /**
-     * <p>
-     * @attr description
-     * The class name of a Behavior class defining special runtime behavior
-     * for this child view.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_behavior}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -16140,9 +15347,8 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_layout_behavior=3;
     /**
-     * <p>
-     * @attr description
-     * Specifies how this view dodges the inset edges of the CoordinatorLayout.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_dodgeInsetEdges}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -16150,24 +15356,22 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>all</td><td>77</td><td>Dodge all the inset edges.</td></tr>
-     * <tr><td>bottom</td><td>50</td><td>Dodge the bottom inset edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Dodge the end inset edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Dodge the left inset edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't dodge any edges</td></tr>
-     * <tr><td>right</td><td>5</td><td>Dodge the right inset edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Dodge the start inset edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Dodge the top inset edge.</td></tr>
+     * <tr><td>all</td><td>77</td><td></td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:layout_dodgeInsetEdges
      */
     public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
     /**
-     * <p>
-     * @attr description
-     * Specifies how this view insets the CoordinatorLayout and make some other views
-     * dodge it.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_insetEdge}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -16175,24 +15379,21 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Inset the bottom edge.</td></tr>
-     * <tr><td>end</td><td>800005</td><td>Inset the end edge.</td></tr>
-     * <tr><td>left</td><td>3</td><td>Inset the left edge.</td></tr>
-     * <tr><td>none</td><td>0</td><td>Don't inset.</td></tr>
-     * <tr><td>right</td><td>5</td><td>Inset the right edge.</td></tr>
-     * <tr><td>start</td><td>800003</td><td>Inset the start edge.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Inset the top edge.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>end</td><td>800005</td><td></td></tr>
+     * <tr><td>left</td><td>3</td><td></td></tr>
+     * <tr><td>none</td><td>0</td><td></td></tr>
+     * <tr><td>right</td><td>5</td><td></td></tr>
+     * <tr><td>start</td><td>800003</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:layout_insetEdge
      */
     public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
     /**
-     * <p>
-     * @attr description
-     * The index of a keyline this view should position relative to.
-     * android:layout_gravity will affect how the view aligns to the
-     * specified keyline.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout_keyline}
+     * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -16382,14 +15583,14 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.nsromapa.say.frenzapp_redesign:arrowHeadLength}</code></td><td>The length of the arrow head when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.nsromapa.say.frenzapp_redesign:arrowShaftLength}</code></td><td>The length of the shaft when formed to make an arrow</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.nsromapa.say.frenzapp_redesign:barLength}</code></td><td>The length of the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_color com.nsromapa.say.frenzapp_redesign:color}</code></td><td>The drawing color for the bars</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.nsromapa.say.frenzapp_redesign:drawableSize}</code></td><td>The total size of the drawable</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.nsromapa.say.frenzapp_redesign:gapBetweenBars}</code></td><td>The max gap between the bars when they are parallel to each other</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.nsromapa.say.frenzapp_redesign:spinBars}</code></td><td>Whether bars should rotate or not during transition</td></tr>
-     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.nsromapa.say.frenzapp_redesign:thickness}</code></td><td>The thickness (stroke size) for the bar paint</td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.nsromapa.say.frenzapp_redesign:arrowHeadLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.nsromapa.say.frenzapp_redesign:arrowShaftLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_barLength com.nsromapa.say.frenzapp_redesign:barLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_color com.nsromapa.say.frenzapp_redesign:color}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.nsromapa.say.frenzapp_redesign:drawableSize}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.nsromapa.say.frenzapp_redesign:gapBetweenBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_spinBars com.nsromapa.say.frenzapp_redesign:spinBars}</code></td><td></td></tr>
+     * <tr><td><code>{@link #DrawerArrowToggle_thickness com.nsromapa.say.frenzapp_redesign:thickness}</code></td><td></td></tr>
      * </table>
      * @see #DrawerArrowToggle_arrowHeadLength
      * @see #DrawerArrowToggle_arrowShaftLength
@@ -16405,9 +15606,8 @@ public final class R {
       0x7f0400d2, 0x7f040108, 0x7f0401ee, 0x7f040240
     };
     /**
-     * <p>
-     * @attr description
-     * The length of the arrow head when formed to make an arrow
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#arrowHeadLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16419,9 +15619,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowHeadLength=0;
     /**
-     * <p>
-     * @attr description
-     * The length of the shaft when formed to make an arrow
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#arrowShaftLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16433,9 +15632,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_arrowShaftLength=1;
     /**
-     * <p>
-     * @attr description
-     * The length of the bars when they are parallel to each other
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#barLength}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16447,9 +15645,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_barLength=2;
     /**
-     * <p>
-     * @attr description
-     * The drawing color for the bars
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#color}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -16459,9 +15656,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_color=3;
     /**
-     * <p>
-     * @attr description
-     * The total size of the drawable
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#drawableSize}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16473,9 +15669,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_drawableSize=4;
     /**
-     * <p>
-     * @attr description
-     * The max gap between the bars when they are parallel to each other
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#gapBetweenBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16487,9 +15682,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_gapBetweenBars=5;
     /**
-     * <p>
-     * @attr description
-     * Whether bars should rotate or not during transition
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#spinBars}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -16498,9 +15692,8 @@ public final class R {
      */
     public static final int DrawerArrowToggle_spinBars=6;
     /**
-     * <p>
-     * @attr description
-     * The thickness (stroke size) for the bar paint
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#thickness}
+     * attribute's value can be found in the {@link #DrawerArrowToggle} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16581,10 +15774,10 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_borderWidth com.nsromapa.say.frenzapp_redesign:borderWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FloatingActionButton_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #FloatingActionButton_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabCustomSize com.nsromapa.say.frenzapp_redesign:fabCustomSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_fabSize com.nsromapa.say.frenzapp_redesign:fabSize}</code></td><td></td></tr>
      * <tr><td><code>{@link #FloatingActionButton_hideMotionSpec com.nsromapa.say.frenzapp_redesign:hideMotionSpec}</code></td><td></td></tr>
@@ -16616,9 +15809,8 @@ public final class R {
       0x7f040262
     };
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -16628,9 +15820,8 @@ public final class R {
      */
     public static final int FloatingActionButton_backgroundTint=0;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -16638,17 +15829,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:backgroundTintMode
@@ -16668,9 +15854,8 @@ public final class R {
      */
     public static final int FloatingActionButton_borderWidth=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #FloatingActionButton} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -16869,12 +16054,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.nsromapa.say.frenzapp_redesign:fontProviderAuthority}</code></td><td>The authority of the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.nsromapa.say.frenzapp_redesign:fontProviderCerts}</code></td><td>The sets of hashes for the certificates the provider should be signed with.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.nsromapa.say.frenzapp_redesign:fontProviderFetchStrategy}</code></td><td>The strategy to be used when fetching font data from a font provider in XML layouts.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.nsromapa.say.frenzapp_redesign:fontProviderFetchTimeout}</code></td><td>The length of the timeout during fetching.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.nsromapa.say.frenzapp_redesign:fontProviderPackage}</code></td><td>The package for the Font Provider to be used for the request.</td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.nsromapa.say.frenzapp_redesign:fontProviderQuery}</code></td><td>The query to be sent over to the provider.</td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.nsromapa.say.frenzapp_redesign:fontProviderAuthority}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.nsromapa.say.frenzapp_redesign:fontProviderCerts}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.nsromapa.say.frenzapp_redesign:fontProviderFetchStrategy}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.nsromapa.say.frenzapp_redesign:fontProviderFetchTimeout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.nsromapa.say.frenzapp_redesign:fontProviderPackage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.nsromapa.say.frenzapp_redesign:fontProviderQuery}</code></td><td></td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -16888,9 +16073,8 @@ public final class R {
       0x7f040102, 0x7f040103
     };
     /**
-     * <p>
-     * @attr description
-     * The authority of the Font Provider to be used for the request.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderAuthority}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -16899,13 +16083,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>
-     * @attr description
-     * The sets of hashes for the certificates the provider should be signed with. This is
-     * used to verify the identity of the provider, and is only required if the provider is not
-     * part of the system image. This value may point to one list or a list of lists, where each
-     * individual list represents one collection of signature hashes. Refer to your font provider's
-     * documentation for these values.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderCerts}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -16916,15 +16095,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>
-     * @attr description
-     * The strategy to be used when fetching font data from a font provider in XML layouts.
-     * This attribute is ignored when the resource is loaded from code, as it is equivalent to the
-     * choice of API between {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int)} (blocking) and
-     * {@link
-     * androidx.core.content.res.ResourcesCompat#getFont(Context, int, FontCallback, Handler)}
-     * (async).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderFetchStrategy}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -16932,25 +16104,16 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>async</td><td>1</td><td>The async font fetch works as follows.
-     * First, check the local cache, then if the requeted font is not cached, trigger a
-     * request the font and continue with layout inflation. Once the font fetch succeeds, the
-     * target text view will be refreshed with the downloaded font data. The
-     * fontProviderFetchTimeout will be ignored if async loading is specified.</td></tr>
-     * <tr><td>blocking</td><td>0</td><td>The blocking font fetch works as follows.
-     * First, check the local cache, then if the requested font is not cached, request the
-     * font from the provider and wait until it is finished.  You can change the length of
-     * the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
-     * default typeface will be used instead.</td></tr>
+     * <tr><td>async</td><td>1</td><td></td></tr>
+     * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>
-     * @attr description
-     * The length of the timeout during fetching.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderFetchTimeout}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      * <p>Must be one of the following constant values.</p>
@@ -16959,18 +16122,15 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>forever</td><td>ffffffff</td><td>A special value for the timeout. In this case, the blocking font fetching will not
-     * timeout and wait until a reply is received from the font provider.</td></tr>
+     * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>
-     * @attr description
-     * The package for the Font Provider to be used for the request. This is used to verify
-     * the identity of the provider.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderPackage}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -16979,10 +16139,8 @@ public final class R {
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>
-     * @attr description
-     * The query to be sent over to the provider. Refer to your font provider's documentation
-     * on the format of this string.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontProviderQuery}
+     * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -17002,11 +16160,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.nsromapa.say.frenzapp_redesign:font}</code></td><td>The reference to the font file to be used.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.nsromapa.say.frenzapp_redesign:fontStyle}</code></td><td>The style of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.nsromapa.say.frenzapp_redesign:fontWeight}</code></td><td>The weight of the given font file.</td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.nsromapa.say.frenzapp_redesign:ttcIndex}</code></td><td>The index of the font in the tcc font file.</td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.nsromapa.say.frenzapp_redesign:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.nsromapa.say.frenzapp_redesign:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.nsromapa.say.frenzapp_redesign:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.nsromapa.say.frenzapp_redesign:ttcIndex}</code></td><td></td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -17046,9 +16204,8 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontWeight=1;
     /**
-     * <p>
-     * @attr description
-     * References to the framework attrs
+     * <p>This symbol is the offset where the {@link android.R.attr#fontStyle}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17083,10 +16240,8 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontVariationSettings=4;
     /**
-     * <p>
-     * @attr description
-     * The reference to the font file to be used. This should be a file in the res/font folder
-     * and should therefore have an R reference value. E.g. @font/myfont
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#font}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -17097,11 +16252,8 @@ public final class R {
      */
     public static final int FontFamilyFont_font=5;
     /**
-     * <p>
-     * @attr description
-     * The style of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any style information in the font's header tables. If
-     * unspecified, the value in the font's header tables will be used.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontStyle}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17117,12 +16269,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>
-     * @attr description
-     * The variation settings to be applied to the font. The string should be in the following
-     * format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
-     * used, or the font used does not support variation settings, this attribute needs not be
-     * specified.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontVariationSettings}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -17131,13 +16279,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
-     * <p>
-     * @attr description
-     * The weight of the given font file. This will be used when the font is being loaded into
-     * the font stack and will override any weight information in the font's header tables. Must
-     * be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
-     * common values are 400 for regular weight and 700 for bold weight. If unspecified, the value
-     * in the font's header tables will be used.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontWeight}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -17145,10 +16288,8 @@ public final class R {
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
-     * <p>
-     * @attr description
-     * The index of the font in the tcc font file. If the font file referenced is not in the
-     * tcc format, this attribute needs not be specified.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#ttcIndex}
+     * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -17264,9 +16405,8 @@ public final class R {
       0x01010510, 0x01010511, 0x01010512, 0x01010513
     };
     /**
-     * <p>
-     * @attr description
-     * Start color of the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#startColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17276,9 +16416,8 @@ public final class R {
      */
     public static final int GradientColor_android_startColor=0;
     /**
-     * <p>
-     * @attr description
-     * End color of the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#endColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17288,9 +16427,8 @@ public final class R {
      */
     public static final int GradientColor_android_endColor=1;
     /**
-     * <p>
-     * @attr description
-     * Type of gradient. The default type is linear.
+     * <p>This symbol is the offset where the {@link android.R.attr#type}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17307,9 +16445,8 @@ public final class R {
      */
     public static final int GradientColor_android_type=2;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the center of the gradient within the path.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -17321,9 +16458,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerX=3;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the center of the gradient within the path.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a fractional value, which is a floating point number appended with
@@ -17335,9 +16471,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerY=4;
     /**
-     * <p>
-     * @attr description
-     * Radius of the gradient, used only with radial gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#gradientRadius}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -17354,9 +16489,8 @@ public final class R {
      */
     public static final int GradientColor_android_gradientRadius=5;
     /**
-     * <p>
-     * @attr description
-     * Defines the tile mode of the gradient. SweepGradient doesn't support tiling.
+     * <p>This symbol is the offset where the {@link android.R.attr#tileMode}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17374,9 +16508,8 @@ public final class R {
      */
     public static final int GradientColor_android_tileMode=6;
     /**
-     * <p>
-     * @attr description
-     * Optional center color.
+     * <p>This symbol is the offset where the {@link android.R.attr#centerColor}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17386,10 +16519,8 @@ public final class R {
      */
     public static final int GradientColor_android_centerColor=7;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the start point origin of the gradient.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#startX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17397,10 +16528,8 @@ public final class R {
      */
     public static final int GradientColor_android_startX=8;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the start point of the gradient within the shape.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#startY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17408,10 +16537,8 @@ public final class R {
      */
     public static final int GradientColor_android_startY=9;
     /**
-     * <p>
-     * @attr description
-     * X coordinate of the end point origin of the gradient.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#endX}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17419,10 +16546,8 @@ public final class R {
      */
     public static final int GradientColor_android_endX=10;
     /**
-     * <p>
-     * @attr description
-     * Y coordinate of the end point of the gradient within the shape.
-     * Defined in same coordinates as the path itself
+     * <p>This symbol is the offset where the {@link android.R.attr#endY}
+     * attribute's value can be found in the {@link #GradientColor} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17446,9 +16571,8 @@ public final class R {
       0x010101a5, 0x01010514
     };
     /**
-     * <p>
-     * @attr description
-     * The current color for the offset inside the gradient.
+     * <p>This symbol is the offset where the {@link android.R.attr#color}
+     * attribute's value can be found in the {@link #GradientColorItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -17458,10 +16582,8 @@ public final class R {
      */
     public static final int GradientColorItem_android_color=0;
     /**
-     * <p>
-     * @attr description
-     * The offset (or ratio) of this current color item inside the gradient.
-     * The value is only meaningful when it is between 0 and 1.
+     * <p>This symbol is the offset where the {@link android.R.attr#offset}
+     * attribute's value can be found in the {@link #GradientColorItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17591,11 +16713,10 @@ public final class R {
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAligned android:baselineAligned}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_baselineAlignedChildIndex android:baselineAlignedChildIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_divider com.nsromapa.say.frenzapp_redesign:divider}</code></td><td>Specifies the drawable used for item dividers.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.nsromapa.say.frenzapp_redesign:dividerPadding}</code></td><td>Size of padding on either end of a divider.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.nsromapa.say.frenzapp_redesign:measureWithLargestChild}</code></td><td>When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child.</td></tr>
-     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.nsromapa.say.frenzapp_redesign:showDividers}</code></td><td>Setting for which dividers to show.</td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_divider com.nsromapa.say.frenzapp_redesign:divider}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.nsromapa.say.frenzapp_redesign:dividerPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.nsromapa.say.frenzapp_redesign:measureWithLargestChild}</code></td><td></td></tr>
+     * <tr><td><code>{@link #LinearLayoutCompat_showDividers com.nsromapa.say.frenzapp_redesign:showDividers}</code></td><td></td></tr>
      * </table>
      * @see #LinearLayoutCompat_android_gravity
      * @see #LinearLayoutCompat_android_orientation
@@ -17642,11 +16763,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_gravity=0;
     /**
-     * <p>
-     * @attr description
-     * Should the layout be a column or a row?  Use "horizontal"
-     * for a row, "vertical" for a column.  The default is
-     * horizontal.
+     * <p>This symbol is the offset where the {@link android.R.attr#orientation}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -17662,11 +16780,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_orientation=1;
     /**
-     * <p>
-     * @attr description
-     * When set to false, prevents the layout from aligning its children's
-     * baselines. This attribute is particularly useful when the children
-     * use different values for gravity. The default value is true.
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAligned}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -17675,11 +16790,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAligned=2;
     /**
-     * <p>
-     * @attr description
-     * When a linear layout is part of another layout that is baseline
-     * aligned, it can specify which of its children to baseline align to
-     * (that is, which child TextView).
+     * <p>This symbol is the offset where the {@link android.R.attr#baselineAlignedChildIndex}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -17687,13 +16799,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_baselineAlignedChildIndex=3;
     /**
-     * <p>
-     * @attr description
-     * Defines the maximum weight sum. If unspecified, the sum is computed
-     * by adding the layout_weight of all of the children. This can be
-     * used for instance to give a single child 50% of the total available
-     * space by giving it a layout_weight of 0.5 and setting the weightSum
-     * to 1.0.
+     * <p>This symbol is the offset where the {@link android.R.attr#weightSum}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -17701,9 +16808,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_android_weightSum=4;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as a vertical divider between buttons.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#divider}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -17714,9 +16820,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_divider=5;
     /**
-     * <p>
-     * @attr description
-     * Size of padding on either end of a divider.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#dividerPadding}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17728,11 +16833,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_dividerPadding=6;
     /**
-     * <p>
-     * @attr description
-     * When set to true, all children with a weight will be considered having
-     * the minimum size of the largest child. If false, all children are
-     * measured normally.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#measureWithLargestChild}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -17741,9 +16843,8 @@ public final class R {
      */
     public static final int LinearLayoutCompat_measureWithLargestChild=7;
     /**
-     * <p>
-     * @attr description
-     * Setting for which dividers to show.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#showDividers}
+     * attribute's value can be found in the {@link #LinearLayoutCompat} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -17881,9 +16982,8 @@ public final class R {
       0x010102ac, 0x010102ad
     };
     /**
-     * <p>
-     * @attr description
-     * Amount of pixels by which the drop down should be offset horizontally.
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownHorizontalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17895,9 +16995,8 @@ public final class R {
      */
     public static final int ListPopupWindow_android_dropDownHorizontalOffset=0;
     /**
-     * <p>
-     * @attr description
-     * Amount of pixels by which the drop down should be offset vertically.
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownVerticalOffset}
+     * attribute's value can be found in the {@link #ListPopupWindow} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -17919,15 +17018,15 @@ public final class R {
      * <tr><td><code>{@link #MaterialButton_android_insetRight android:insetRight}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetTop android:insetTop}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_android_insetBottom android:insetBottom}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_cornerRadius com.nsromapa.say.frenzapp_redesign:cornerRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_icon com.nsromapa.say.frenzapp_redesign:icon}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconGravity com.nsromapa.say.frenzapp_redesign:iconGravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconPadding com.nsromapa.say.frenzapp_redesign:iconPadding}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_iconSize com.nsromapa.say.frenzapp_redesign:iconSize}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTint com.nsromapa.say.frenzapp_redesign:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
-     * <tr><td><code>{@link #MaterialButton_iconTintMode com.nsromapa.say.frenzapp_redesign:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTint com.nsromapa.say.frenzapp_redesign:iconTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialButton_iconTintMode com.nsromapa.say.frenzapp_redesign:iconTintMode}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_rippleColor com.nsromapa.say.frenzapp_redesign:rippleColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeColor com.nsromapa.say.frenzapp_redesign:strokeColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialButton_strokeWidth com.nsromapa.say.frenzapp_redesign:strokeWidth}</code></td><td></td></tr>
@@ -18024,9 +17123,8 @@ public final class R {
      */
     public static final int MaterialButton_android_insetBottom=3;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18036,9 +17134,8 @@ public final class R {
      */
     public static final int MaterialButton_backgroundTint=4;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18046,17 +17143,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:backgroundTintMode
@@ -18131,9 +17223,8 @@ public final class R {
      */
     public static final int MaterialButton_iconSize=10;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the icon.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#iconTint}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18143,9 +17234,8 @@ public final class R {
      */
     public static final int MaterialButton_iconTint=11;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the icon tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#iconTintMode}
+     * attribute's value can be found in the {@link #MaterialButton} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18153,17 +17243,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:iconTintMode
@@ -18256,12 +17341,12 @@ public final class R {
      * <tr><td><code>{@link #MaterialComponentsTheme_chipGroupStyle com.nsromapa.say.frenzapp_redesign:chipGroupStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStandaloneStyle com.nsromapa.say.frenzapp_redesign:chipStandaloneStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_chipStyle com.nsromapa.say.frenzapp_redesign:chipStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.nsromapa.say.frenzapp_redesign:colorAccent}</code></td><td>Bright complement to the primary branding color.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.nsromapa.say.frenzapp_redesign:colorBackgroundFloating}</code></td><td>Default color of background imagery for floating components, ex.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.nsromapa.say.frenzapp_redesign:colorPrimary}</code></td><td>The primary branding color for the app.</td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.nsromapa.say.frenzapp_redesign:colorPrimaryDark}</code></td><td>Dark variant of the primary branding color.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorAccent com.nsromapa.say.frenzapp_redesign:colorAccent}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorBackgroundFloating com.nsromapa.say.frenzapp_redesign:colorBackgroundFloating}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimary com.nsromapa.say.frenzapp_redesign:colorPrimary}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_colorPrimaryDark com.nsromapa.say.frenzapp_redesign:colorPrimaryDark}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_colorSecondary com.nsromapa.say.frenzapp_redesign:colorSecondary}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.nsromapa.say.frenzapp_redesign:editTextStyle}</code></td><td>Default EditText style.</td></tr>
+     * <tr><td><code>{@link #MaterialComponentsTheme_editTextStyle com.nsromapa.say.frenzapp_redesign:editTextStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_floatingActionButtonStyle com.nsromapa.say.frenzapp_redesign:floatingActionButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialButtonStyle com.nsromapa.say.frenzapp_redesign:materialButtonStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #MaterialComponentsTheme_materialCardViewStyle com.nsromapa.say.frenzapp_redesign:materialCardViewStyle}</code></td><td></td></tr>
@@ -18388,10 +17473,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_chipStyle=4;
     /**
-     * <p>
-     * @attr description
-     * Bright complement to the primary branding color. By default, this is the color applied
-     * to framework controls (via colorControlActivated).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorAccent}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18401,9 +17484,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorAccent=5;
     /**
-     * <p>
-     * @attr description
-     * Default color of background imagery for floating components, ex. dialogs, popups, and cards.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorBackgroundFloating}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18413,10 +17495,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorBackgroundFloating=6;
     /**
-     * <p>
-     * @attr description
-     * The primary branding color for the app. By default, this is the color applied to the
-     * action bar background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorPrimary}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18426,10 +17506,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorPrimary=7;
     /**
-     * <p>
-     * @attr description
-     * Dark variant of the primary branding color. By default, this is the color applied to
-     * the status bar (via statusBarColor) and navigation bar (via navigationBarColor).
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#colorPrimaryDark}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -18450,9 +17528,8 @@ public final class R {
      */
     public static final int MaterialComponentsTheme_colorSecondary=9;
     /**
-     * <p>
-     * @attr description
-     * Default EditText style.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#editTextStyle}
+     * attribute's value can be found in the {@link #MaterialComponentsTheme} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -18914,9 +17991,8 @@ public final class R {
       0x010101df, 0x010101e0
     };
     /**
-     * <p>
-     * @attr description
-     * Whether the items are enabled.
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -18925,9 +18001,8 @@ public final class R {
      */
     public static final int MenuGroup_android_enabled=0;
     /**
-     * <p>
-     * @attr description
-     * The ID of the group.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -18938,9 +18013,8 @@ public final class R {
      */
     public static final int MenuGroup_android_id=1;
     /**
-     * <p>
-     * @attr description
-     * Whether the items are shown/visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -18949,10 +18023,8 @@ public final class R {
      */
     public static final int MenuGroup_android_visible=2;
     /**
-     * <p>
-     * @attr description
-     * The category applied to all items within this group.
-     * (This will be or'ed with the orderInCategory attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -18970,10 +18042,8 @@ public final class R {
      */
     public static final int MenuGroup_android_menuCategory=3;
     /**
-     * <p>
-     * @attr description
-     * The order within the category applied to all items within this group.
-     * (This will be or'ed with the category attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -18981,9 +18051,8 @@ public final class R {
      */
     public static final int MenuGroup_android_orderInCategory=4;
     /**
-     * <p>
-     * @attr description
-     * Whether the items are capable of displaying a check mark.
+     * <p>This symbol is the offset where the {@link android.R.attr#checkableBehavior}
+     * attribute's value can be found in the {@link #MenuGroup} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19019,18 +18088,16 @@ public final class R {
      * <tr><td><code>{@link #MenuItem_android_numericShortcut android:numericShortcut}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuItem_android_onClick android:onClick}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuItem_actionLayout com.nsromapa.say.frenzapp_redesign:actionLayout}</code></td><td>An optional layout to be used as an action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionProviderClass com.nsromapa.say.frenzapp_redesign:actionProviderClass}</code></td><td>The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_actionViewClass com.nsromapa.say.frenzapp_redesign:actionViewClass}</code></td><td>The name of an optional View class to instantiate and use as an
-     * action view.</td></tr>
-     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.nsromapa.say.frenzapp_redesign:alphabeticModifiers}</code></td><td>The alphabetic modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_contentDescription com.nsromapa.say.frenzapp_redesign:contentDescription}</code></td><td>The content description associated with the item.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTint com.nsromapa.say.frenzapp_redesign:iconTint}</code></td><td>Tint to apply to the icon.</td></tr>
-     * <tr><td><code>{@link #MenuItem_iconTintMode com.nsromapa.say.frenzapp_redesign:iconTintMode}</code></td><td>Blending mode used to apply the icon tint.</td></tr>
-     * <tr><td><code>{@link #MenuItem_numericModifiers com.nsromapa.say.frenzapp_redesign:numericModifiers}</code></td><td>The numeric modifier key.</td></tr>
-     * <tr><td><code>{@link #MenuItem_showAsAction com.nsromapa.say.frenzapp_redesign:showAsAction}</code></td><td>How this item should display in the Action Bar, if present.</td></tr>
-     * <tr><td><code>{@link #MenuItem_tooltipText com.nsromapa.say.frenzapp_redesign:tooltipText}</code></td><td>The tooltip text associated with the item.</td></tr>
+     * <tr><td><code>{@link #MenuItem_actionLayout com.nsromapa.say.frenzapp_redesign:actionLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionProviderClass com.nsromapa.say.frenzapp_redesign:actionProviderClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_actionViewClass com.nsromapa.say.frenzapp_redesign:actionViewClass}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_alphabeticModifiers com.nsromapa.say.frenzapp_redesign:alphabeticModifiers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_contentDescription com.nsromapa.say.frenzapp_redesign:contentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTint com.nsromapa.say.frenzapp_redesign:iconTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_iconTintMode com.nsromapa.say.frenzapp_redesign:iconTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_numericModifiers com.nsromapa.say.frenzapp_redesign:numericModifiers}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_showAsAction com.nsromapa.say.frenzapp_redesign:showAsAction}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuItem_tooltipText com.nsromapa.say.frenzapp_redesign:tooltipText}</code></td><td></td></tr>
      * </table>
      * @see #MenuItem_android_icon
      * @see #MenuItem_android_enabled
@@ -19065,10 +18132,8 @@ public final class R {
       0x7f0401ab, 0x7f0401e2, 0x7f04025a
     };
     /**
-     * <p>
-     * @attr description
-     * The icon associated with this item.  This icon will not always be shown, so
-     * the title should be sufficient in describing this item.
+     * <p>This symbol is the offset where the {@link android.R.attr#icon}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19079,9 +18144,8 @@ public final class R {
      */
     public static final int MenuItem_android_icon=0;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is enabled.
+     * <p>This symbol is the offset where the {@link android.R.attr#enabled}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19090,9 +18154,8 @@ public final class R {
      */
     public static final int MenuItem_android_enabled=1;
     /**
-     * <p>
-     * @attr description
-     * The ID of the item.
+     * <p>This symbol is the offset where the {@link android.R.attr#id}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19103,10 +18166,8 @@ public final class R {
      */
     public static final int MenuItem_android_id=2;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is checked.  Note that you must first have enabled checking with
-     * the checkable attribute or else the check mark will not appear.
+     * <p>This symbol is the offset where the {@link android.R.attr#checked}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19115,9 +18176,8 @@ public final class R {
      */
     public static final int MenuItem_android_checked=3;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is shown/visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19126,10 +18186,8 @@ public final class R {
      */
     public static final int MenuItem_android_visible=4;
     /**
-     * <p>
-     * @attr description
-     * The category applied to the item.
-     * (This will be or'ed with the orderInCategory attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#menuCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19147,10 +18205,8 @@ public final class R {
      */
     public static final int MenuItem_android_menuCategory=5;
     /**
-     * <p>
-     * @attr description
-     * The order within the category applied to the item.
-     * (This will be or'ed with the category attribute.)
+     * <p>This symbol is the offset where the {@link android.R.attr#orderInCategory}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -19158,9 +18214,8 @@ public final class R {
      */
     public static final int MenuItem_android_orderInCategory=6;
     /**
-     * <p>
-     * @attr description
-     * The title associated with the item.
+     * <p>This symbol is the offset where the {@link android.R.attr#title}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19169,10 +18224,8 @@ public final class R {
      */
     public static final int MenuItem_android_title=7;
     /**
-     * <p>
-     * @attr description
-     * The condensed title associated with the item.  This is used in situations where the
-     * normal title may be too long to be displayed.
+     * <p>This symbol is the offset where the {@link android.R.attr#titleCondensed}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19181,10 +18234,8 @@ public final class R {
      */
     public static final int MenuItem_android_titleCondensed=8;
     /**
-     * <p>
-     * @attr description
-     * The alphabetic shortcut key.  This is the shortcut when using a keyboard
-     * with alphabetic keys.
+     * <p>This symbol is the offset where the {@link android.R.attr#alphabeticShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19193,10 +18244,8 @@ public final class R {
      */
     public static final int MenuItem_android_alphabeticShortcut=9;
     /**
-     * <p>
-     * @attr description
-     * The numeric shortcut key.  This is the shortcut when using a numeric (e.g., 12-key)
-     * keyboard.
+     * <p>This symbol is the offset where the {@link android.R.attr#numericShortcut}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19205,9 +18254,8 @@ public final class R {
      */
     public static final int MenuItem_android_numericShortcut=10;
     /**
-     * <p>
-     * @attr description
-     * Whether the item is capable of displaying a check mark.
+     * <p>This symbol is the offset where the {@link android.R.attr#checkable}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19216,10 +18264,8 @@ public final class R {
      */
     public static final int MenuItem_android_checkable=11;
     /**
-     * <p>
-     * @attr description
-     * Name of a method on the Context used to inflate the menu that will be
-     * called when the item is clicked.
+     * <p>This symbol is the offset where the {@link android.R.attr#onClick}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19228,11 +18274,8 @@ public final class R {
      */
     public static final int MenuItem_android_onClick=12;
     /**
-     * <p>
-     * @attr description
-     * An optional layout to be used as an action view.
-     * See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionLayout}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19243,12 +18286,8 @@ public final class R {
      */
     public static final int MenuItem_actionLayout=13;
     /**
-     * <p>
-     * @attr description
-     * The name of an optional ActionProvider class to instantiate an action view
-     * and perform operations such as default action for that menu item.
-     * See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionProviderClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19257,11 +18296,8 @@ public final class R {
      */
     public static final int MenuItem_actionProviderClass=14;
     /**
-     * <p>
-     * @attr description
-     * The name of an optional View class to instantiate and use as an
-     * action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
-     * for more info.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#actionViewClass}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19270,10 +18306,8 @@ public final class R {
      */
     public static final int MenuItem_actionViewClass=15;
     /**
-     * <p>
-     * @attr description
-     * The alphabetic modifier key. This is the modifier when using a keyboard
-     * with alphabetic keys. The values should be kept in sync with KeyEvent
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#alphabeticModifiers}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -19293,9 +18327,8 @@ public final class R {
      */
     public static final int MenuItem_alphabeticModifiers=16;
     /**
-     * <p>
-     * @attr description
-     * The content description associated with the item.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentDescription}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19304,9 +18337,8 @@ public final class R {
      */
     public static final int MenuItem_contentDescription=17;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the icon.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#iconTint}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -19316,9 +18348,8 @@ public final class R {
      */
     public static final int MenuItem_iconTint=18;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the icon tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#iconTintMode}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -19326,27 +18357,20 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the icon with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the icon, but with the icon’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the icon. The icon’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the icon.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:iconTintMode
      */
     public static final int MenuItem_iconTintMode=19;
     /**
-     * <p>
-     * @attr description
-     * The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
-     * keyboard. The values should be kept in sync with KeyEvent
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#numericModifiers}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -19366,9 +18390,8 @@ public final class R {
      */
     public static final int MenuItem_numericModifiers=20;
     /**
-     * <p>
-     * @attr description
-     * How this item should display in the Action Bar, if present.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#showAsAction}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -19376,29 +18399,19 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>always</td><td>2</td><td>Always show this item in an actionbar, even if it would override
-     * the system's limits of how much stuff to put there. This may make
-     * your action bar look bad on some screens. In most cases you should
-     * use "ifRoom" instead. Mutually exclusive with "ifRoom" and "never".</td></tr>
-     * <tr><td>collapseActionView</td><td>8</td><td>This item's action view collapses to a normal menu
-     * item. When expanded, the action view takes over a
-     * larger segment of its container.</td></tr>
-     * <tr><td>ifRoom</td><td>1</td><td>Show this item in an action bar if there is room for it as determined
-     * by the system. Favor this option over "always" where possible.
-     * Mutually exclusive with "never" and "always".</td></tr>
-     * <tr><td>never</td><td>0</td><td>Never show this item in an action bar, show it in the overflow menu instead.
-     * Mutually exclusive with "ifRoom" and "always".</td></tr>
-     * <tr><td>withText</td><td>4</td><td>When this item is shown as an action in the action bar, show a text
-     * label with it even if it has an icon representation.</td></tr>
+     * <tr><td>always</td><td>2</td><td></td></tr>
+     * <tr><td>collapseActionView</td><td>8</td><td></td></tr>
+     * <tr><td>ifRoom</td><td>1</td><td></td></tr>
+     * <tr><td>never</td><td>0</td><td></td></tr>
+     * <tr><td>withText</td><td>4</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:showAsAction
      */
     public static final int MenuItem_showAsAction=21;
     /**
-     * <p>
-     * @attr description
-     * The tooltip text associated with the item.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#tooltipText}
+     * attribute's value can be found in the {@link #MenuItem} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -19420,8 +18433,8 @@ public final class R {
      * <tr><td><code>{@link #MenuView_android_headerBackground android:headerBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemBackground android:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #MenuView_android_itemIconDisabledAlpha android:itemIconDisabledAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.nsromapa.say.frenzapp_redesign:preserveIconSpacing}</code></td><td>Whether space should be reserved in layout when an icon is missing.</td></tr>
-     * <tr><td><code>{@link #MenuView_subMenuArrow com.nsromapa.say.frenzapp_redesign:subMenuArrow}</code></td><td>Drawable for the arrow icon indicating a particular item is a submenu.</td></tr>
+     * <tr><td><code>{@link #MenuView_preserveIconSpacing com.nsromapa.say.frenzapp_redesign:preserveIconSpacing}</code></td><td></td></tr>
+     * <tr><td><code>{@link #MenuView_subMenuArrow com.nsromapa.say.frenzapp_redesign:subMenuArrow}</code></td><td></td></tr>
      * </table>
      * @see #MenuView_android_windowAnimationStyle
      * @see #MenuView_android_itemTextAppearance
@@ -19439,9 +18452,8 @@ public final class R {
       0x7f0401fe
     };
     /**
-     * <p>
-     * @attr description
-     * Default animations for the menu.
+     * <p>This symbol is the offset where the {@link android.R.attr#windowAnimationStyle}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19452,9 +18464,8 @@ public final class R {
      */
     public static final int MenuView_android_windowAnimationStyle=0;
     /**
-     * <p>
-     * @attr description
-     * Default appearance of menu item text.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemTextAppearance}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19465,9 +18476,8 @@ public final class R {
      */
     public static final int MenuView_android_itemTextAppearance=1;
     /**
-     * <p>
-     * @attr description
-     * Default horizontal divider between rows of menu items.
+     * <p>This symbol is the offset where the {@link android.R.attr#horizontalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19478,9 +18488,8 @@ public final class R {
      */
     public static final int MenuView_android_horizontalDivider=2;
     /**
-     * <p>
-     * @attr description
-     * Default vertical divider between menu items.
+     * <p>This symbol is the offset where the {@link android.R.attr#verticalDivider}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19491,9 +18500,8 @@ public final class R {
      */
     public static final int MenuView_android_verticalDivider=3;
     /**
-     * <p>
-     * @attr description
-     * Default background for the menu header.
+     * <p>This symbol is the offset where the {@link android.R.attr#headerBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19507,9 +18515,8 @@ public final class R {
      */
     public static final int MenuView_android_headerBackground=4;
     /**
-     * <p>
-     * @attr description
-     * Default background for each menu item.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemBackground}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19523,9 +18530,8 @@ public final class R {
      */
     public static final int MenuView_android_itemBackground=5;
     /**
-     * <p>
-     * @attr description
-     * Default disabled icon alpha for each menu item that shows an icon.
+     * <p>This symbol is the offset where the {@link android.R.attr#itemIconDisabledAlpha}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
@@ -19533,9 +18539,8 @@ public final class R {
      */
     public static final int MenuView_android_itemIconDisabledAlpha=6;
     /**
-     * <p>
-     * @attr description
-     * Whether space should be reserved in layout when an icon is missing.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#preserveIconSpacing}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19544,9 +18549,8 @@ public final class R {
      */
     public static final int MenuView_preserveIconSpacing=7;
     /**
-     * <p>
-     * @attr description
-     * Drawable for the arrow icon indicating a particular item is a submenu.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subMenuArrow}
+     * attribute's value can be found in the {@link #MenuView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19566,7 +18570,7 @@ public final class R {
      * <tr><td><code>{@link #NavigationView_android_background android:background}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_fitsSystemWindows android:fitsSystemWindows}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #NavigationView_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #NavigationView_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_headerLayout com.nsromapa.say.frenzapp_redesign:headerLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemBackground com.nsromapa.say.frenzapp_redesign:itemBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemHorizontalPadding com.nsromapa.say.frenzapp_redesign:itemHorizontalPadding}</code></td><td></td></tr>
@@ -19574,7 +18578,7 @@ public final class R {
      * <tr><td><code>{@link #NavigationView_itemIconTint com.nsromapa.say.frenzapp_redesign:itemIconTint}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemTextAppearance com.nsromapa.say.frenzapp_redesign:itemTextAppearance}</code></td><td></td></tr>
      * <tr><td><code>{@link #NavigationView_itemTextColor com.nsromapa.say.frenzapp_redesign:itemTextColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #NavigationView_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td>Menu resource to inflate to be shown in the toolbar</td></tr>
+     * <tr><td><code>{@link #NavigationView_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td></td></tr>
      * </table>
      * @see #NavigationView_android_background
      * @see #NavigationView_android_fitsSystemWindows
@@ -19633,9 +18637,8 @@ public final class R {
      */
     public static final int NavigationView_android_maxWidth=2;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #NavigationView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -19731,9 +18734,8 @@ public final class R {
      */
     public static final int NavigationView_itemTextColor=10;
     /**
-     * <p>
-     * @attr description
-     * Menu resource to inflate to be shown in the toolbar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#menu}
+     * attribute's value can be found in the {@link #NavigationView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -19752,7 +18754,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #PopupWindow_android_popupAnimationStyle android:popupAnimationStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.nsromapa.say.frenzapp_redesign:overlapAnchor}</code></td><td>Whether the popup window should overlap its anchor view.</td></tr>
+     * <tr><td><code>{@link #PopupWindow_overlapAnchor com.nsromapa.say.frenzapp_redesign:overlapAnchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindow_android_popupBackground
      * @see #PopupWindow_android_popupAnimationStyle
@@ -19789,9 +18791,8 @@ public final class R {
      */
     public static final int PopupWindow_android_popupAnimationStyle=1;
     /**
-     * <p>
-     * @attr description
-     * Whether the popup window should overlap its anchor view.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#overlapAnchor}
+     * attribute's value can be found in the {@link #PopupWindow} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19806,7 +18807,7 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.nsromapa.say.frenzapp_redesign:state_above_anchor}</code></td><td>State identifier indicating the popup will be above the anchor.</td></tr>
+     * <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.nsromapa.say.frenzapp_redesign:state_above_anchor}</code></td><td></td></tr>
      * </table>
      * @see #PopupWindowBackgroundState_state_above_anchor
      */
@@ -19814,9 +18815,8 @@ public final class R {
       0x7f0401f4
     };
     /**
-     * <p>
-     * @attr description
-     * State identifier indicating the popup will be above the anchor.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#state_above_anchor}
+     * attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -19831,8 +18831,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.nsromapa.say.frenzapp_redesign:paddingBottomNoButtons}</code></td><td>Bottom padding to use when no buttons are present.</td></tr>
-     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.nsromapa.say.frenzapp_redesign:paddingTopNoTitle}</code></td><td>Top padding to use when no title is present.</td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingBottomNoButtons com.nsromapa.say.frenzapp_redesign:paddingBottomNoButtons}</code></td><td></td></tr>
+     * <tr><td><code>{@link #RecycleListView_paddingTopNoTitle com.nsromapa.say.frenzapp_redesign:paddingTopNoTitle}</code></td><td></td></tr>
      * </table>
      * @see #RecycleListView_paddingBottomNoButtons
      * @see #RecycleListView_paddingTopNoTitle
@@ -19841,9 +18841,8 @@ public final class R {
       0x7f0401b1, 0x7f0401b4
     };
     /**
-     * <p>
-     * @attr description
-     * Bottom padding to use when no buttons are present.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#paddingBottomNoButtons}
+     * attribute's value can be found in the {@link #RecycleListView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -19855,9 +18854,8 @@ public final class R {
      */
     public static final int RecycleListView_paddingBottomNoButtons=0;
     /**
-     * <p>
-     * @attr description
-     * Top padding to use when no title is present.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#paddingTopNoTitle}
+     * attribute's value can be found in the {@link #RecycleListView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -19883,7 +18881,7 @@ public final class R {
      * <tr><td><code>{@link #RecyclerView_fastScrollHorizontalTrackDrawable com.nsromapa.say.frenzapp_redesign:fastScrollHorizontalTrackDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalThumbDrawable com.nsromapa.say.frenzapp_redesign:fastScrollVerticalThumbDrawable}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_fastScrollVerticalTrackDrawable com.nsromapa.say.frenzapp_redesign:fastScrollVerticalTrackDrawable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #RecyclerView_layoutManager com.nsromapa.say.frenzapp_redesign:layoutManager}</code></td><td>Class name of the Layout Manager to be used.</td></tr>
+     * <tr><td><code>{@link #RecyclerView_layoutManager com.nsromapa.say.frenzapp_redesign:layoutManager}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_reverseLayout com.nsromapa.say.frenzapp_redesign:reverseLayout}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_spanCount com.nsromapa.say.frenzapp_redesign:spanCount}</code></td><td></td></tr>
      * <tr><td><code>{@link #RecyclerView_stackFromEnd com.nsromapa.say.frenzapp_redesign:stackFromEnd}</code></td><td></td></tr>
@@ -20010,17 +19008,8 @@ public final class R {
      */
     public static final int RecyclerView_fastScrollVerticalTrackDrawable=7;
     /**
-     * <p>
-     * @attr description
-     * Class name of the Layout Manager to be used.
-     * <p/>
-     * The class must ext androidx.recyclerview.widget.RecyclerViewView$LayoutManager
-     * and have either a default constructor or constructor with the signature
-     * (android.content.Context, android.util.AttributeSet, int, int).
-     * <p/>
-     * If the name starts with a '.', application package is prefixed.
-     * Else, if the name contains a '.', the classname is assumed to be a full class name.
-     * Else, the recycler view package naandroidx.appcompat.widgetdget) is prefixed.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layoutManager}
+     * attribute's value can be found in the {@link #RecyclerView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -20124,20 +19113,19 @@ public final class R {
      * <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
      * <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SearchView_closeIcon com.nsromapa.say.frenzapp_redesign:closeIcon}</code></td><td>Close button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_commitIcon com.nsromapa.say.frenzapp_redesign:commitIcon}</code></td><td>Commit icon shown in the query suggestion row</td></tr>
-     * <tr><td><code>{@link #SearchView_defaultQueryHint com.nsromapa.say.frenzapp_redesign:defaultQueryHint}</code></td><td>Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.</td></tr>
-     * <tr><td><code>{@link #SearchView_goIcon com.nsromapa.say.frenzapp_redesign:goIcon}</code></td><td>Go button icon</td></tr>
-     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.nsromapa.say.frenzapp_redesign:iconifiedByDefault}</code></td><td>The default state of the SearchView.</td></tr>
-     * <tr><td><code>{@link #SearchView_layout com.nsromapa.say.frenzapp_redesign:layout}</code></td><td>The layout to use for the search view.</td></tr>
-     * <tr><td><code>{@link #SearchView_queryBackground com.nsromapa.say.frenzapp_redesign:queryBackground}</code></td><td>Background for the section containing the search query</td></tr>
-     * <tr><td><code>{@link #SearchView_queryHint com.nsromapa.say.frenzapp_redesign:queryHint}</code></td><td>An optional user-defined query hint string to be displayed in the empty query field.</td></tr>
-     * <tr><td><code>{@link #SearchView_searchHintIcon com.nsromapa.say.frenzapp_redesign:searchHintIcon}</code></td><td>Search icon displayed as a text field hint</td></tr>
-     * <tr><td><code>{@link #SearchView_searchIcon com.nsromapa.say.frenzapp_redesign:searchIcon}</code></td><td>Search icon</td></tr>
-     * <tr><td><code>{@link #SearchView_submitBackground com.nsromapa.say.frenzapp_redesign:submitBackground}</code></td><td>Background for the section containing the action (e.g.</td></tr>
-     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.nsromapa.say.frenzapp_redesign:suggestionRowLayout}</code></td><td>Layout for query suggestion rows</td></tr>
-     * <tr><td><code>{@link #SearchView_voiceIcon com.nsromapa.say.frenzapp_redesign:voiceIcon}</code></td><td>Voice button icon</td></tr>
+     * <tr><td><code>{@link #SearchView_closeIcon com.nsromapa.say.frenzapp_redesign:closeIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_commitIcon com.nsromapa.say.frenzapp_redesign:commitIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_defaultQueryHint com.nsromapa.say.frenzapp_redesign:defaultQueryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_goIcon com.nsromapa.say.frenzapp_redesign:goIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_iconifiedByDefault com.nsromapa.say.frenzapp_redesign:iconifiedByDefault}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_layout com.nsromapa.say.frenzapp_redesign:layout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryBackground com.nsromapa.say.frenzapp_redesign:queryBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_queryHint com.nsromapa.say.frenzapp_redesign:queryHint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchHintIcon com.nsromapa.say.frenzapp_redesign:searchHintIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_searchIcon com.nsromapa.say.frenzapp_redesign:searchIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_submitBackground com.nsromapa.say.frenzapp_redesign:submitBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_suggestionRowLayout com.nsromapa.say.frenzapp_redesign:suggestionRowLayout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SearchView_voiceIcon com.nsromapa.say.frenzapp_redesign:voiceIcon}</code></td><td></td></tr>
      * </table>
      * @see #SearchView_android_focusable
      * @see #SearchView_android_maxWidth
@@ -20183,9 +19171,8 @@ public final class R {
      */
     public static final int SearchView_android_focusable=0;
     /**
-     * <p>
-     * @attr description
-     * An optional maximum width of the SearchView.
+     * <p>This symbol is the offset where the {@link android.R.attr#maxWidth}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20197,9 +19184,8 @@ public final class R {
      */
     public static final int SearchView_android_maxWidth=1;
     /**
-     * <p>
-     * @attr description
-     * The input type to set on the query text field.
+     * <p>This symbol is the offset where the {@link android.R.attr#inputType}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -20245,9 +19231,8 @@ public final class R {
      */
     public static final int SearchView_android_inputType=2;
     /**
-     * <p>
-     * @attr description
-     * The IME options to set on the query text field.
+     * <p>This symbol is the offset where the {@link android.R.attr#imeOptions}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
      * <table>
@@ -20278,9 +19263,8 @@ public final class R {
      */
     public static final int SearchView_android_imeOptions=3;
     /**
-     * <p>
-     * @attr description
-     * Close button icon
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#closeIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20291,9 +19275,8 @@ public final class R {
      */
     public static final int SearchView_closeIcon=4;
     /**
-     * <p>
-     * @attr description
-     * Commit icon shown in the query suggestion row
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#commitIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20304,10 +19287,8 @@ public final class R {
      */
     public static final int SearchView_commitIcon=5;
     /**
-     * <p>
-     * @attr description
-     * Default query hint used when {@code queryHint} is undefined and
-     * the search view's {@code SearchableInfo} does not provide a hint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#defaultQueryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -20316,9 +19297,8 @@ public final class R {
      */
     public static final int SearchView_defaultQueryHint=6;
     /**
-     * <p>
-     * @attr description
-     * Go button icon
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#goIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20329,10 +19309,8 @@ public final class R {
      */
     public static final int SearchView_goIcon=7;
     /**
-     * <p>
-     * @attr description
-     * The default state of the SearchView. If true, it will be iconified when not in
-     * use and expanded when clicked.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#iconifiedByDefault}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20341,9 +19319,8 @@ public final class R {
      */
     public static final int SearchView_iconifiedByDefault=8;
     /**
-     * <p>
-     * @attr description
-     * The layout to use for the search view.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#layout}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20354,9 +19331,8 @@ public final class R {
      */
     public static final int SearchView_layout=9;
     /**
-     * <p>
-     * @attr description
-     * Background for the section containing the search query
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#queryBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20367,9 +19343,8 @@ public final class R {
      */
     public static final int SearchView_queryBackground=10;
     /**
-     * <p>
-     * @attr description
-     * An optional user-defined query hint string to be displayed in the empty query field.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#queryHint}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -20378,9 +19353,8 @@ public final class R {
      */
     public static final int SearchView_queryHint=11;
     /**
-     * <p>
-     * @attr description
-     * Search icon displayed as a text field hint
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#searchHintIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20391,9 +19365,8 @@ public final class R {
      */
     public static final int SearchView_searchHintIcon=12;
     /**
-     * <p>
-     * @attr description
-     * Search icon
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#searchIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20404,9 +19377,8 @@ public final class R {
      */
     public static final int SearchView_searchIcon=13;
     /**
-     * <p>
-     * @attr description
-     * Background for the section containing the action (e.g. voice search)
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#submitBackground}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20417,9 +19389,8 @@ public final class R {
      */
     public static final int SearchView_submitBackground=14;
     /**
-     * <p>
-     * @attr description
-     * Layout for query suggestion rows
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#suggestionRowLayout}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20430,9 +19401,8 @@ public final class R {
      */
     public static final int SearchView_suggestionRowLayout=15;
     /**
-     * <p>
-     * @attr description
-     * Voice button icon
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#voiceIcon}
+     * attribute's value can be found in the {@link #SearchView} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20539,7 +19509,7 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #SnackbarLayout_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SnackbarLayout_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td>Elevation for the action bar itself</td></tr>
+     * <tr><td><code>{@link #SnackbarLayout_elevation com.nsromapa.say.frenzapp_redesign:elevation}</code></td><td></td></tr>
      * <tr><td><code>{@link #SnackbarLayout_maxActionInlineWidth com.nsromapa.say.frenzapp_redesign:maxActionInlineWidth}</code></td><td></td></tr>
      * </table>
      * @see #SnackbarLayout_android_maxWidth
@@ -20563,9 +19533,8 @@ public final class R {
      */
     public static final int SnackbarLayout_android_maxWidth=0;
     /**
-     * <p>
-     * @attr description
-     * Elevation for the action bar itself
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#elevation}
+     * attribute's value can be found in the {@link #SnackbarLayout} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20600,8 +19569,7 @@ public final class R {
      * <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
      * <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Spinner_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
+     * <tr><td><code>{@link #Spinner_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td></td></tr>
      * </table>
      * @see #Spinner_android_entries
      * @see #Spinner_android_popupBackground
@@ -20614,9 +19582,8 @@ public final class R {
       0x7f0401bf
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to an array resource that will populate the Spinner.
+     * <p>This symbol is the offset where the {@link android.R.attr#entries}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20627,9 +19594,8 @@ public final class R {
      */
     public static final int Spinner_android_entries=0;
     /**
-     * <p>
-     * @attr description
-     * Background drawable to use for the dropdown in spinnerMode="dropdown".
+     * <p>This symbol is the offset where the {@link android.R.attr#popupBackground}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20643,9 +19609,8 @@ public final class R {
      */
     public static final int Spinner_android_popupBackground=1;
     /**
-     * <p>
-     * @attr description
-     * The prompt to display when the spinner's dialog is shown.
+     * <p>This symbol is the offset where the {@link android.R.attr#prompt}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20656,9 +19621,8 @@ public final class R {
      */
     public static final int Spinner_android_prompt=2;
     /**
-     * <p>
-     * @attr description
-     * Width of the dropdown in spinnerMode="dropdown".
+     * <p>This symbol is the offset where the {@link android.R.attr#dropDownWidth}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -20680,9 +19644,8 @@ public final class R {
      */
     public static final int Spinner_android_dropDownWidth=3;
     /**
-     * <p>
-     * @attr description
-     * Theme to use for the drop-down or dialog popup window.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #Spinner} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20839,11 +19802,8 @@ public final class R {
       0x0101030c, 0x0101030d
     };
     /**
-     * <p>
-     * @attr description
-     * Enables or disables dithering of the bitmap if the bitmap does not have the
-     * same pixel configuration as the screen (for instance: a ARGB 8888 bitmap with
-     * an RGB 565 screen).
+     * <p>This symbol is the offset where the {@link android.R.attr#dither}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20852,9 +19812,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_dither=0;
     /**
-     * <p>
-     * @attr description
-     * Indicates whether the drawable should be initially visible.
+     * <p>This symbol is the offset where the {@link android.R.attr#visible}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20863,14 +19822,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_visible=1;
     /**
-     * <p>
-     * @attr description
-     * If true, allows the drawable's padding to change based on the
-     * current state that is selected.  If false, the padding will
-     * stay the same (based on the maximum padding of all the states).
-     * Enabling this feature requires that the owner of the drawable
-     * deal with performing layout when the state changes, which is
-     * often not supported.
+     * <p>This symbol is the offset where the {@link android.R.attr#variablePadding}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20879,12 +19832,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_variablePadding=2;
     /**
-     * <p>
-     * @attr description
-     * If true, the drawable's reported internal size will remain
-     * constant as the state changes; the size is the maximum of all
-     * of the states.  If false, the size will vary based on the
-     * current state.
+     * <p>This symbol is the offset where the {@link android.R.attr#constantSize}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -20893,9 +19842,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_constantSize=3;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade in a new state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#enterFadeDuration}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -20903,9 +19851,8 @@ public final class R {
      */
     public static final int StateListDrawable_android_enterFadeDuration=4;
     /**
-     * <p>
-     * @attr description
-     * Amount of time (in milliseconds) to fade out an old state drawable.
+     * <p>This symbol is the offset where the {@link android.R.attr#exitFadeDuration}
+     * attribute's value can be found in the {@link #StateListDrawable} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
@@ -20927,10 +19874,8 @@ public final class R {
       0x01010199
     };
     /**
-     * <p>
-     * @attr description
-     * Reference to a drawable resource to use for the state. If not
-     * given, the drawable must be defined by the first child tag.
+     * <p>This symbol is the offset where the {@link android.R.attr#drawable}
+     * attribute's value can be found in the {@link #StateListDrawableItem} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -20977,17 +19922,17 @@ public final class R {
      * <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
      * <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-     * <tr><td><code>{@link #SwitchCompat_showText com.nsromapa.say.frenzapp_redesign:showText}</code></td><td>Whether to draw on/off text.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_splitTrack com.nsromapa.say.frenzapp_redesign:splitTrack}</code></td><td>Whether to split the track and leave a gap for the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.nsromapa.say.frenzapp_redesign:switchMinWidth}</code></td><td>Minimum width for the switch component</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchPadding com.nsromapa.say.frenzapp_redesign:switchPadding}</code></td><td>Minimum space between the switch and caption text</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.nsromapa.say.frenzapp_redesign:switchTextAppearance}</code></td><td>TextAppearance style for text displayed on the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.nsromapa.say.frenzapp_redesign:thumbTextPadding}</code></td><td>Amount of padding on either side of text within the switch thumb.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTint com.nsromapa.say.frenzapp_redesign:thumbTint}</code></td><td>Tint to apply to the thumb drawable.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.nsromapa.say.frenzapp_redesign:thumbTintMode}</code></td><td>Blending mode used to apply the thumb tint.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_track com.nsromapa.say.frenzapp_redesign:track}</code></td><td>Drawable to use as the "track" that the switch thumb slides within.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTint com.nsromapa.say.frenzapp_redesign:trackTint}</code></td><td>Tint to apply to the track.</td></tr>
-     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.nsromapa.say.frenzapp_redesign:trackTintMode}</code></td><td>Blending mode used to apply the track tint.</td></tr>
+     * <tr><td><code>{@link #SwitchCompat_showText com.nsromapa.say.frenzapp_redesign:showText}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_splitTrack com.nsromapa.say.frenzapp_redesign:splitTrack}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchMinWidth com.nsromapa.say.frenzapp_redesign:switchMinWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchPadding com.nsromapa.say.frenzapp_redesign:switchPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.nsromapa.say.frenzapp_redesign:switchTextAppearance}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.nsromapa.say.frenzapp_redesign:thumbTextPadding}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTint com.nsromapa.say.frenzapp_redesign:thumbTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_thumbTintMode com.nsromapa.say.frenzapp_redesign:thumbTintMode}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_track com.nsromapa.say.frenzapp_redesign:track}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTint com.nsromapa.say.frenzapp_redesign:trackTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #SwitchCompat_trackTintMode com.nsromapa.say.frenzapp_redesign:trackTintMode}</code></td><td></td></tr>
      * </table>
      * @see #SwitchCompat_android_textOn
      * @see #SwitchCompat_android_textOff
@@ -21011,9 +19956,8 @@ public final class R {
       0x7f04025c, 0x7f04025d
     };
     /**
-     * <p>
-     * @attr description
-     * Text to use when the switch is in the checked/"on" state.
+     * <p>This symbol is the offset where the {@link android.R.attr#textOn}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21022,9 +19966,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOn=0;
     /**
-     * <p>
-     * @attr description
-     * Text to use when the switch is in the unchecked/"off" state.
+     * <p>This symbol is the offset where the {@link android.R.attr#textOff}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21033,9 +19976,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_textOff=1;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as the "thumb" that switches back and forth.
+     * <p>This symbol is the offset where the {@link android.R.attr#thumb}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21046,9 +19988,8 @@ public final class R {
      */
     public static final int SwitchCompat_android_thumb=2;
     /**
-     * <p>
-     * @attr description
-     * Whether to draw on/off text.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#showText}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -21057,9 +19998,8 @@ public final class R {
      */
     public static final int SwitchCompat_showText=3;
     /**
-     * <p>
-     * @attr description
-     * Whether to split the track and leave a gap for the thumb drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#splitTrack}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -21068,9 +20008,8 @@ public final class R {
      */
     public static final int SwitchCompat_splitTrack=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum width for the switch component
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#switchMinWidth}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -21082,9 +20021,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchMinWidth=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum space between the switch and caption text
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#switchPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -21096,9 +20034,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchPadding=6;
     /**
-     * <p>
-     * @attr description
-     * TextAppearance style for text displayed on the switch thumb.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#switchTextAppearance}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21109,9 +20046,8 @@ public final class R {
      */
     public static final int SwitchCompat_switchTextAppearance=7;
     /**
-     * <p>
-     * @attr description
-     * Amount of padding on either side of text within the switch thumb.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#thumbTextPadding}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -21123,9 +20059,8 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTextPadding=8;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the thumb drawable.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#thumbTint}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21135,9 +20070,8 @@ public final class R {
      */
     public static final int SwitchCompat_thumbTint=9;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the thumb tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#thumbTintMode}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21145,26 +20079,20 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:thumbTintMode
      */
     public static final int SwitchCompat_thumbTintMode=10;
     /**
-     * <p>
-     * @attr description
-     * Drawable to use as the "track" that the switch thumb slides within.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#track}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21175,9 +20103,8 @@ public final class R {
      */
     public static final int SwitchCompat_track=11;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the track.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#trackTint}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -21187,9 +20114,8 @@ public final class R {
      */
     public static final int SwitchCompat_trackTint=12;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the track tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#trackTintMode}
+     * attribute's value can be found in the {@link #SwitchCompat} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -21197,17 +20123,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and drawable color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:trackTintMode
@@ -21713,11 +20634,10 @@ public final class R {
      * <tr><td><code>{@link #TextAppearance_android_shadowRadius android:shadowRadius}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_fontFamily android:fontFamily}</code></td><td></td></tr>
      * <tr><td><code>{@link #TextAppearance_android_textFontWeight android:textFontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontFamily com.nsromapa.say.frenzapp_redesign:fontFamily}</code></td><td>The attribute for the font family.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td>The variation settings to be applied to the font.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_textAllCaps com.nsromapa.say.frenzapp_redesign:textAllCaps}</code></td><td>Present the text in ALL CAPS.</td></tr>
-     * <tr><td><code>{@link #TextAppearance_textLocale com.nsromapa.say.frenzapp_redesign:textLocale}</code></td><td>Set the textLocale by a comma-separated language tag string,
-     * for example "ja-JP,zh-CN".</td></tr>
+     * <tr><td><code>{@link #TextAppearance_fontFamily com.nsromapa.say.frenzapp_redesign:fontFamily}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_fontVariationSettings com.nsromapa.say.frenzapp_redesign:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_textAllCaps com.nsromapa.say.frenzapp_redesign:textAllCaps}</code></td><td></td></tr>
+     * <tr><td><code>{@link #TextAppearance_textLocale com.nsromapa.say.frenzapp_redesign:textLocale}</code></td><td></td></tr>
      * </table>
      * @see #TextAppearance_android_textSize
      * @see #TextAppearance_android_typeface
@@ -21895,9 +20815,8 @@ public final class R {
      */
     public static final int TextAppearance_android_textFontWeight=11;
     /**
-     * <p>
-     * @attr description
-     * The attribute for the font family.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontFamily}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21906,9 +20825,8 @@ public final class R {
      */
     public static final int TextAppearance_fontFamily=12;
     /**
-     * <p>
-     * @attr description
-     * OpenType font variation settings, available aftear api 26.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#fontVariationSettings}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -21917,9 +20835,8 @@ public final class R {
      */
     public static final int TextAppearance_fontVariationSettings=13;
     /**
-     * <p>
-     * @attr description
-     * Present the text in ALL CAPS. This may use a small-caps form when available.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textAllCaps}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -21932,13 +20849,8 @@ public final class R {
      */
     public static final int TextAppearance_textAllCaps=14;
     /**
-     * <p>
-     * @attr description
-     * Set the textLocale by a comma-separated language tag string,
-     * for example "ja-JP,zh-CN". This attribute only takes effect on API 21 and above.
-     * Before API 24, only the first language tag is used. Starting from API 24,
-     * the string will be converted into a {@link android.os.LocaleList} and then used by
-     * {@link android.widget.TextView}
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#textLocale}
+     * attribute's value can be found in the {@link #TextAppearance} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -22415,40 +21327,33 @@ public final class R {
      * <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_buttonGravity com.nsromapa.say.frenzapp_redesign:buttonGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.nsromapa.say.frenzapp_redesign:collapseContentDescription}</code></td><td>Text to set as the content description for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_collapseIcon com.nsromapa.say.frenzapp_redesign:collapseIcon}</code></td><td>Icon drawable to use for the collapse button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.nsromapa.say.frenzapp_redesign:contentInsetEnd}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.nsromapa.say.frenzapp_redesign:contentInsetEndWithActions}</code></td><td>Minimum inset for content views within a bar when actions from a menu
-     * are present.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.nsromapa.say.frenzapp_redesign:contentInsetLeft}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetRight com.nsromapa.say.frenzapp_redesign:contentInsetRight}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStart com.nsromapa.say.frenzapp_redesign:contentInsetStart}</code></td><td>Minimum inset for content views within a bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.nsromapa.say.frenzapp_redesign:contentInsetStartWithNavigation}</code></td><td>Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logo com.nsromapa.say.frenzapp_redesign:logo}</code></td><td>Specifies the drawable used for the application logo.</td></tr>
-     * <tr><td><code>{@link #Toolbar_logoDescription com.nsromapa.say.frenzapp_redesign:logoDescription}</code></td><td>A content description string to describe the appearance of the
-     * associated logo image.</td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseContentDescription com.nsromapa.say.frenzapp_redesign:collapseContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_collapseIcon com.nsromapa.say.frenzapp_redesign:collapseIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEnd com.nsromapa.say.frenzapp_redesign:contentInsetEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetEndWithActions com.nsromapa.say.frenzapp_redesign:contentInsetEndWithActions}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetLeft com.nsromapa.say.frenzapp_redesign:contentInsetLeft}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetRight com.nsromapa.say.frenzapp_redesign:contentInsetRight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStart com.nsromapa.say.frenzapp_redesign:contentInsetStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_contentInsetStartWithNavigation com.nsromapa.say.frenzapp_redesign:contentInsetStartWithNavigation}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logo com.nsromapa.say.frenzapp_redesign:logo}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_logoDescription com.nsromapa.say.frenzapp_redesign:logoDescription}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_maxButtonHeight com.nsromapa.say.frenzapp_redesign:maxButtonHeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td>Menu resource to inflate to be shown in the toolbar</td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.nsromapa.say.frenzapp_redesign:navigationContentDescription}</code></td><td>Text to set as the content description for the navigation button
-     * located at the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_navigationIcon com.nsromapa.say.frenzapp_redesign:navigationIcon}</code></td><td>Icon drawable to use for the navigation button located at
-     * the start of the toolbar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td>Reference to a theme that should be used to inflate popups
-     * shown by widgets in the action bar.</td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitle com.nsromapa.say.frenzapp_redesign:subtitle}</code></td><td>Specifies subtitle text used for navigationMode="normal"</td></tr>
+     * <tr><td><code>{@link #Toolbar_menu com.nsromapa.say.frenzapp_redesign:menu}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationContentDescription com.nsromapa.say.frenzapp_redesign:navigationContentDescription}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_navigationIcon com.nsromapa.say.frenzapp_redesign:navigationIcon}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_popupTheme com.nsromapa.say.frenzapp_redesign:popupTheme}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitle com.nsromapa.say.frenzapp_redesign:subtitle}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.nsromapa.say.frenzapp_redesign:subtitleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.nsromapa.say.frenzapp_redesign:subtitleTextColor}</code></td><td>A color to apply to the subtitle string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_subtitleTextColor com.nsromapa.say.frenzapp_redesign:subtitleTextColor}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_title com.nsromapa.say.frenzapp_redesign:title}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargin com.nsromapa.say.frenzapp_redesign:titleMargin}</code></td><td>Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.nsromapa.say.frenzapp_redesign:titleMarginBottom}</code></td><td>Specifies extra space on the bottom side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.nsromapa.say.frenzapp_redesign:titleMarginEnd}</code></td><td>Specifies extra space on the end side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginStart com.nsromapa.say.frenzapp_redesign:titleMarginStart}</code></td><td>Specifies extra space on the start side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMarginTop com.nsromapa.say.frenzapp_redesign:titleMarginTop}</code></td><td>Specifies extra space on the top side of the toolbar's title.</td></tr>
-     * <tr><td><code>{@link #Toolbar_titleMargins com.nsromapa.say.frenzapp_redesign:titleMargins}</code></td><td>{@deprecated Use titleMargin}</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargin com.nsromapa.say.frenzapp_redesign:titleMargin}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginBottom com.nsromapa.say.frenzapp_redesign:titleMarginBottom}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginEnd com.nsromapa.say.frenzapp_redesign:titleMarginEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginStart com.nsromapa.say.frenzapp_redesign:titleMarginStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMarginTop com.nsromapa.say.frenzapp_redesign:titleMarginTop}</code></td><td></td></tr>
+     * <tr><td><code>{@link #Toolbar_titleMargins com.nsromapa.say.frenzapp_redesign:titleMargins}</code></td><td></td></tr>
      * <tr><td><code>{@link #Toolbar_titleTextAppearance com.nsromapa.say.frenzapp_redesign:titleTextAppearance}</code></td><td></td></tr>
-     * <tr><td><code>{@link #Toolbar_titleTextColor com.nsromapa.say.frenzapp_redesign:titleTextColor}</code></td><td>A color to apply to the title string.</td></tr>
+     * <tr><td><code>{@link #Toolbar_titleTextColor com.nsromapa.say.frenzapp_redesign:titleTextColor}</code></td><td></td></tr>
      * </table>
      * @see #Toolbar_android_gravity
      * @see #Toolbar_android_minHeight
@@ -22481,7 +21386,6 @@ public final class R {
      * @see #Toolbar_titleTextAppearance
      * @see #Toolbar_titleTextColor
      */
-    @Deprecated
     public static final int[] Toolbar={
       0x010100af, 0x01010140, 0x7f04005b, 0x7f04008e, 
       0x7f04008f, 0x7f0400a3, 0x7f0400a4, 0x7f0400a5, 
@@ -22544,18 +21448,17 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>bottom</td><td>50</td><td>Push object to the bottom of its container, not changing its size.</td></tr>
-     * <tr><td>center_vertical</td><td>10</td><td>Place object in the vertical center of its container, not changing its size.</td></tr>
-     * <tr><td>top</td><td>30</td><td>Push object to the top of its container, not changing its size.</td></tr>
+     * <tr><td>bottom</td><td>50</td><td></td></tr>
+     * <tr><td>center_vertical</td><td>10</td><td></td></tr>
+     * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:buttonGravity
      */
     public static final int Toolbar_buttonGravity=2;
     /**
-     * <p>
-     * @attr description
-     * Text to set as the content description for the collapse button.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#collapseContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -22564,9 +21467,8 @@ public final class R {
      */
     public static final int Toolbar_collapseContentDescription=3;
     /**
-     * <p>
-     * @attr description
-     * Icon drawable to use for the collapse button.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#collapseIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22577,10 +21479,8 @@ public final class R {
      */
     public static final int Toolbar_collapseIcon=4;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22592,10 +21492,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEnd=5;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when actions from a menu
-     * are present. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetEndWithActions}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22607,10 +21505,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetEndWithActions=6;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetLeft}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22622,10 +21518,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetLeft=7;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetRight}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22637,10 +21531,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetRight=8;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar. Navigation buttons and
-     * menu views are excepted. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22652,10 +21544,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStart=9;
     /**
-     * <p>
-     * @attr description
-     * Minimum inset for content views within a bar when a navigation button
-     * is present, such as the Up button. Only valid for some themes and configurations.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#contentInsetStartWithNavigation}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22667,10 +21557,8 @@ public final class R {
      */
     public static final int Toolbar_contentInsetStartWithNavigation=10;
     /**
-     * <p>
-     * @attr description
-     * Drawable to set as the logo that appears at the starting side of
-     * the Toolbar, just after the navigation button.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#logo}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22681,10 +21569,8 @@ public final class R {
      */
     public static final int Toolbar_logo=11;
     /**
-     * <p>
-     * @attr description
-     * A content description string to describe the appearance of the
-     * associated logo image.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#logoDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -22706,9 +21592,8 @@ public final class R {
      */
     public static final int Toolbar_maxButtonHeight=13;
     /**
-     * <p>
-     * @attr description
-     * Menu resource to inflate to be shown in the toolbar
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#menu}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22719,10 +21604,8 @@ public final class R {
      */
     public static final int Toolbar_menu=14;
     /**
-     * <p>
-     * @attr description
-     * Text to set as the content description for the navigation button
-     * located at the start of the toolbar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#navigationContentDescription}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -22731,10 +21614,8 @@ public final class R {
      */
     public static final int Toolbar_navigationContentDescription=15;
     /**
-     * <p>
-     * @attr description
-     * Icon drawable to use for the navigation button located at
-     * the start of the toolbar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#navigationIcon}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22745,10 +21626,8 @@ public final class R {
      */
     public static final int Toolbar_navigationIcon=16;
     /**
-     * <p>
-     * @attr description
-     * Reference to a theme that should be used to inflate popups
-     * shown by widgets in the toolbar.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#popupTheme}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -22759,9 +21638,8 @@ public final class R {
      */
     public static final int Toolbar_popupTheme=17;
     /**
-     * <p>
-     * @attr description
-     * Specifies subtitle text used for navigationMode="normal"
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subtitle}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
@@ -22782,9 +21660,8 @@ public final class R {
      */
     public static final int Toolbar_subtitleTextAppearance=19;
     /**
-     * <p>
-     * @attr description
-     * A color to apply to the subtitle string.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#subtitleTextColor}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -22804,10 +21681,8 @@ public final class R {
      */
     public static final int Toolbar_title=21;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the left, start, right and end sides
-     * of the toolbar's title. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMargin}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22819,11 +21694,8 @@ public final class R {
      */
     public static final int Toolbar_titleMargin=22;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the bottom side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMarginBottom}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22835,11 +21707,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginBottom=23;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the end side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMarginEnd}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22851,11 +21720,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginEnd=24;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the start side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMarginStart}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22867,11 +21733,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginStart=25;
     /**
-     * <p>
-     * @attr description
-     * Specifies extra space on the top side of the toolbar's title.
-     * If both this attribute and titleMargin are specified, then this
-     * attribute takes precedence. Margin values should be positive.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMarginTop}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22883,9 +21746,8 @@ public final class R {
      */
     public static final int Toolbar_titleMarginTop=26;
     /**
-     * <p>
-     * @attr description
-     * {@deprecated Use titleMargin}
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleMargins}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -22895,7 +21757,6 @@ public final class R {
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:titleMargins
      */
-    @Deprecated
     public static final int Toolbar_titleMargins=27;
     /**
      * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleTextAppearance}
@@ -22910,9 +21771,8 @@ public final class R {
      */
     public static final int Toolbar_titleTextAppearance=28;
     /**
-     * <p>
-     * @attr description
-     * A color to apply to the title string.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#titleTextColor}
+     * attribute's value can be found in the {@link #Toolbar} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -23030,9 +21890,9 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
      * <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
-     * <tr><td><code>{@link #View_paddingEnd com.nsromapa.say.frenzapp_redesign:paddingEnd}</code></td><td>Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_paddingStart com.nsromapa.say.frenzapp_redesign:paddingStart}</code></td><td>Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
-     * <tr><td><code>{@link #View_theme com.nsromapa.say.frenzapp_redesign:theme}</code></td><td>Deprecated.</td></tr>
+     * <tr><td><code>{@link #View_paddingEnd com.nsromapa.say.frenzapp_redesign:paddingEnd}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_paddingStart com.nsromapa.say.frenzapp_redesign:paddingStart}</code></td><td></td></tr>
+     * <tr><td><code>{@link #View_theme com.nsromapa.say.frenzapp_redesign:theme}</code></td><td></td></tr>
      * </table>
      * @see #View_android_theme
      * @see #View_android_focusable
@@ -23045,11 +21905,8 @@ public final class R {
       0x7f04023f
     };
     /**
-     * <p>
-     * @attr description
-     * Specifies a theme override for a view. When a theme override is set, the
-     * view will be inflated using a {@link android.content.Context} themed with
-     * the specified resource.
+     * <p>This symbol is the offset where the {@link android.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23060,14 +21917,8 @@ public final class R {
      */
     public static final int View_android_theme=0;
     /**
-     * <p>
-     * @attr description
-     * Boolean that controls whether a view can take focus.  By default the user can not
-     * move focus to a view; by setting this attribute to true the view is
-     * allowed to take focus.  This value does not impact the behavior of
-     * directly calling {@link android.view.View#requestFocus}, which will
-     * always request focus regardless of this view.  It only impacts where
-     * focus navigation will try to move focus.
+     * <p>This symbol is the offset where the {@link android.R.attr#focusable}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
@@ -23084,9 +21935,8 @@ public final class R {
      */
     public static final int View_android_focusable=1;
     /**
-     * <p>
-     * @attr description
-     * Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#paddingEnd}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -23098,9 +21948,8 @@ public final class R {
      */
     public static final int View_paddingEnd=2;
     /**
-     * <p>
-     * @attr description
-     * Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#paddingStart}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
      * unit such as "<code>14.5sp</code>".
@@ -23112,9 +21961,8 @@ public final class R {
      */
     public static final int View_paddingStart=3;
     /**
-     * <p>
-     * @attr description
-     * Deprecated.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#theme}
+     * attribute's value can be found in the {@link #View} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23132,8 +21980,8 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td>Tint to apply to the background.</td></tr>
-     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td>Blending mode used to apply the background tint.</td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.nsromapa.say.frenzapp_redesign:backgroundTint}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.nsromapa.say.frenzapp_redesign:backgroundTintMode}</code></td><td></td></tr>
      * </table>
      * @see #ViewBackgroundHelper_android_background
      * @see #ViewBackgroundHelper_backgroundTint
@@ -23158,9 +22006,8 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_android_background=0;
     /**
-     * <p>
-     * @attr description
-     * Tint to apply to the background.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTint}
+     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
@@ -23170,9 +22017,8 @@ public final class R {
      */
     public static final int ViewBackgroundHelper_backgroundTint=1;
     /**
-     * <p>
-     * @attr description
-     * Blending mode used to apply the background tint.
+     * <p>This symbol is the offset where the {@link com.nsromapa.say.frenzapp_redesign.R.attr#backgroundTintMode}
+     * attribute's value can be found in the {@link #ViewBackgroundHelper} array.
      *
      * <p>Must be one of the following constant values.</p>
      * <table>
@@ -23180,17 +22026,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-     * <tr><td>add</td><td>10</td><td>Combines the tint and icon color and alpha channels, clamping the
-     * result to valid color values. Saturate(S + D)</td></tr>
-     * <tr><td>multiply</td><td>e</td><td>Multiplies the color and alpha channels of the drawable with those of
-     * the tint. [Sa * Da, Sc * Dc]</td></tr>
-     * <tr><td>screen</td><td>f</td><td>[Sa + Da - Sa * Da, Sc + Dc - Sc * Dc]</td></tr>
-     * <tr><td>src_atop</td><td>9</td><td>The tint is drawn above the drawable, but with the drawable’s alpha
-     * channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc]</td></tr>
-     * <tr><td>src_in</td><td>5</td><td>The tint is masked by the alpha channel of the drawable. The drawable’s
-     * color channels are thrown out. [Sa * Da, Sc * Da]</td></tr>
-     * <tr><td>src_over</td><td>3</td><td>The tint is drawn on top of the drawable.
-     * [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc]</td></tr>
+     * <tr><td>add</td><td>10</td><td></td></tr>
+     * <tr><td>multiply</td><td>e</td><td></td></tr>
+     * <tr><td>screen</td><td>f</td><td></td></tr>
+     * <tr><td>src_atop</td><td>9</td><td></td></tr>
+     * <tr><td>src_in</td><td>5</td><td></td></tr>
+     * <tr><td>src_over</td><td>3</td><td></td></tr>
      * </table>
      *
      * @attr name com.nsromapa.say.frenzapp_redesign:backgroundTintMode
@@ -23258,11 +22099,8 @@ public final class R {
      */
     public static final int ViewStubCompat_android_id=0;
     /**
-     * <p>
-     * @attr description
-     * Supply an identifier for the layout resource to inflate when the ViewStub
-     * becomes visible or when forced to do so. The layout resource must be a
-     * valid reference to a layout.
+     * <p>This symbol is the offset where the {@link android.R.attr#layout}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme
@@ -23273,9 +22111,8 @@ public final class R {
      */
     public static final int ViewStubCompat_android_layout=1;
     /**
-     * <p>
-     * @attr description
-     * Overrides the id of the inflated View with this value.
+     * <p>This symbol is the offset where the {@link android.R.attr#inflatedId}
+     * attribute's value can be found in the {@link #ViewStubCompat} array.
      *
      * <p>May be a reference to another resource, in the form
      * "<code>@[+][<i>package</i>:]<i>type</i>/<i>name</i></code>" or a theme

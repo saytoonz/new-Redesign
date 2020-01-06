@@ -94,7 +94,7 @@
 
     </LinearLayout>
 
-    <com.nsromapa.say.frenzapp_redesign.stories_lib.StoriesProgressView
+    <com.nsromapa.say.frenzapp_redesign.helpers.StoriesProgressView
         android:id="@+id/stories"
         android:layout_width="match_parent"
         android:layout_height="3dp"

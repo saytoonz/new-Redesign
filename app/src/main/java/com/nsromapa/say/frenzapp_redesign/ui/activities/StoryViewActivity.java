@@ -2,7 +2,6 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -30,7 +29,7 @@ import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.StoriesData;
-import com.nsromapa.say.frenzapp_redesign.stories_lib.StoriesProgressView;
+import com.nsromapa.say.frenzapp_redesign.helpers.StoriesProgressView;
 
 import java.util.ArrayList;
 

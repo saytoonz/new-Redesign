@@ -3,6 +3,8 @@
     <dimen name="progress_bar_height">2dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
 
+    <dimen name="thirty_six">36dp</dimen>
+    <dimen name="twelve">12dp</dimen>
     <dimen name="margin_view_small">4dp</dimen>
     <dimen name="margin_view_typical">8dp</dimen>
     <dimen name="margin_view_large">16dp</dimen>

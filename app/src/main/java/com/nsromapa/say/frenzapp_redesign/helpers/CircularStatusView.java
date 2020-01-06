@@ -1,4 +1,4 @@
-package com.nsromapa.say.frenzapp_redesign.stories_lib;
+package com.nsromapa.say.frenzapp_redesign.helpers;
 
 import android.content.Context;
 import android.content.res.TypedArray;

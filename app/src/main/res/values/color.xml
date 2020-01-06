@@ -10,6 +10,7 @@
     <color name="colorPrimaryDark">#1a1a1a</color>
     <color name="colorAccent">#5093FF</color>
 
+    <color name="text_desc">#636060</color>
 
 
     <color name="progress_primary">@color/white</color>

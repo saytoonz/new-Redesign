@@ -10,9 +10,7 @@ import android.widget.TextView;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
 
-/**
- * Created by yarolegovich on 25.03.2017.
- */
+
 public class SimpleItem extends DrawerItem<SimpleItem.ViewHolder> {
 
     private int selectedItemIconTint;

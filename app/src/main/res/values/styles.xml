@@ -4,7 +4,7 @@
         <item name="colorPrimary">@color/colorPrimaryy</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkk</item>
         <item name="colorAccent">@color/colorAccentt</item>
-<!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
+        <!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
         <item name="android:windowBackground">@color/colorPrimaryy</item>
         <item name="android:textAppearance">@style/TextBaseFontStyle</item>
     </style>
@@ -15,6 +15,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+    <style name="Pull" parent="BottomDialogTheme">
+        <item name="bottom_sheet_extra_padding">0dp</item>
+        <item name="bottom_sheet_corner_radius">26dp</item>
+        <item name="should_draw_content_under_handle_view">true</item>
     </style>
 
 
@@ -30,19 +39,18 @@
     </style>
 
 
-
     <style name="BottomNavigationBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorAccentt</item>
         <item name="colorPrimaryDark">@color/colorAccentt</item>
         <item name="colorAccent">@color/colorPrimary</item>
-<!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
+        <!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
     </style>
 
     <style name="LoginAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryy</item>
         <item name="android:windowBackground">@color/colorPrimaryy</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkk</item>
-<!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
+        <!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
         <item name="colorAccent">@color/colorAccentt</item>
     </style>
 
@@ -55,18 +63,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDarkk</item>
         <item name="colorAccent">@color/colorAccentt</item>
         <item name="android:windowBackground">@drawable/splash_window_bg</item>
-<!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
+        <!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
     </style>
-
-
-
-
-
-
-
-
-
-
 
 
     <style name="AppTheme.NoActionBar" parent="AppTheme2">
@@ -87,7 +85,7 @@
 
     <!-- <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/> -->
 
-    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar"/>
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar" />
 
 
     <style name="BlueTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -117,15 +115,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="GreenTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="GreenTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="GreenTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
+    <style name="GreenTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
     <!--my styles-->
 
-    <style name="TextBaseFontStyle" >
+    <style name="TextBaseFontStyle">
         <item name="android:fontFamily">@font/segoeui</item>
     </style>
 
@@ -172,7 +169,7 @@
 
 
     <style name="AppToolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-      <item name="android:actionMenuTextColor">@color/colorPrimary</item>
+        <item name="android:actionMenuTextColor">@color/colorPrimary</item>
     </style>
 
     <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
@@ -193,5 +190,12 @@
         <!-- Layout for query suggestion rows -->
         <!--<item name="suggestionRowLayout">...</item>-->
     </style>
+    <style name="Divider">
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
 
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
 </resources>

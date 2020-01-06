@@ -1,8 +1,10 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,6 +23,7 @@ import com.bumptech.glide.request.target.Target;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.helpers.ShowDiscoveryComments;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 
 import org.json.JSONException;
@@ -76,7 +79,9 @@ public class DiscoverActivity extends AppCompatActivity {
         VideoView discover_videoView = findViewById(R.id.discover_videoView);
         AutofitTextView discover_text = findViewById(R.id.discover_text);
         ImageView discover_image = findViewById(R.id.discover_image);
+        discover_text.setMovementMethod(new ScrollingMovementMethod());
 
+        commentLinearLayout.setOnClickListener(v -> showDiscoveryComments());
 
         if (mDiscoveryList.getMimeType().contains("image")) {
             discover_videoView.setVisibility(View.GONE);
@@ -100,6 +105,7 @@ public class DiscoverActivity extends AppCompatActivity {
     }
 
     private void setTextDiscovery(AutofitTextView discover_text) {
+        mProgressBar.setVisibility(View.GONE);
         discover_text.setText(mDiscoveryList.getDescription());
         setmImageHolderBg(mDiscoveryList.getBackground(), mViewHolderLayout);
     }
@@ -108,27 +114,26 @@ public class DiscoverActivity extends AppCompatActivity {
         HttpProxyCacheServer proxy = App.getProxy(this);
         String proxyUrl = proxy.getProxyUrl(mDiscoveryList.getMediaUrl());
         video.setVideoPath(proxyUrl);
-        video.setOnPreparedListener(mp -> {
-            mp.setOnInfoListener((mp1, what, extra) -> {
-                switch (what) {
-                    case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
-                        mProgressBar.setVisibility(View.GONE);
-                        return true;
-                    }
-                    case MediaPlayer.MEDIA_INFO_BUFFERING_START:
-                    case MediaPlayer.MEDIA_INFO_BUFFERING_END:
-                    case MediaPlayer.MEDIA_ERROR_TIMED_OUT:
-                    case MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING: {
-                        mProgressBar.setVisibility(View.VISIBLE);
-                        return true;
-                    }
+        video.setOnPreparedListener(mp -> mp.setOnInfoListener((mp1, what, extra) -> {
+            switch (what) {
+                case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
+                    mProgressBar.setVisibility(View.GONE);
+                    return true;
                 }
-                return false;
-            });
-        });
+                case MediaPlayer.MEDIA_INFO_BUFFERING_START:
+                case MediaPlayer.MEDIA_INFO_BUFFERING_END:
+                case MediaPlayer.MEDIA_ERROR_TIMED_OUT:
+                case MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING: {
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    return true;
+                }
+            }
+            return false;
+        }));
     }
 
     private void setImageDiscovery(ImageView discover_image) {
+        mProgressBar.setVisibility(View.GONE);
         Glide.with(this)
                 .load(mDiscoveryList.getMediaUrl())
                 .addListener(new RequestListener<Drawable>() {
@@ -172,5 +177,11 @@ public class DiscoverActivity extends AppCompatActivity {
 
     private void addToWatchesList() {
 
+    }
+    private void showDiscoveryComments() {
+        this.getSupportFragmentManager().beginTransaction()
+                .add(new ShowDiscoveryComments("", "",
+                        "", "", ""), "DicoverActivity")
+                .commit();
     }
 }

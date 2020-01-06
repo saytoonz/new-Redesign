@@ -1128,6 +1128,7 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_desc
 color tooltip_background_dark
 color tooltip_background_light
 color transparent
@@ -1462,6 +1463,7 @@ dimen text_dialog_padding_side
 dimen text_margin
 dimen text_margin_side
 dimen text_view_margin_side
+dimen thirty_six
 dimen title_padding_left
 dimen title_padding_right
 dimen title_text_size
@@ -1478,6 +1480,7 @@ dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
 dimen touch_raise
+dimen twelve
 dimen view_header_padding_bottom
 dimen view_image_margin_side
 dimen widget_aa_text_size
@@ -1604,6 +1607,7 @@ drawable button_round_with_stroke
 drawable button_round_with_transparency
 drawable buttonshape
 drawable card_gradient
+drawable ccomment_items_background
 drawable checkbox_drawable
 drawable circle_shape
 drawable contact_placeholder
@@ -2039,13 +2043,16 @@ id bottom
 id bottom_navigation_view
 id bottom_sheet_coordinator
 id bottom_sheet_drawer
+id bottom_sheetrecycler
 id buttonPanel
+id cancel
 id cancel_action
 id card_content
 id card_header
 id card_image
 id card_root
 id card_view
+id category_name
 id center
 id centerCrop
 id centerInside
@@ -2120,6 +2127,7 @@ id exomedia_controls_video_seek
 id exomedia_video_preview_image
 id exomedia_video_view
 id expand_activities_button
+id expandble_profile
 id expanded_menu
 id fab_news_feed
 id fill
@@ -2155,6 +2163,9 @@ id indicator_holder
 id info
 id invisible
 id italic
+id item_category_image
+id item_category_layout
+id item_category_name
 id item_touch_helper_previous_elevation
 id ivLike
 id labeled
@@ -2191,6 +2202,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id number_of_subcategories
 id nv_explorer
 id nv_feeds
 id nv_production
@@ -2304,6 +2316,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id text_header
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -2412,6 +2425,8 @@ layout activity_discover
 layout activity_main
 layout activity_story_view
 layout bottom_drawer_layout
+layout bottom_sheet_discovery
+layout bottom_sheet_profile_content
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2427,6 +2442,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout discovery_comment_header
 layout dot_layout
 layout exomedia_default_controls_leanback
 layout exomedia_default_controls_mobile
@@ -2442,6 +2458,7 @@ layout fragment_home
 layout fragment_stories
 layout item_chat_list
 layout item_custom_row_loading
+layout item_discovery_comment
 layout item_feed_post
 layout item_option
 layout item_status_discoveries
@@ -2769,6 +2786,8 @@ style BottomNavigationBarTheme
 style CardView
 style CardView_Dark
 style CardView_Light
+style Divider
+style Divider_Horizontal
 style GreenTheme
 style GreenTheme_AppBarOverlay
 style GreenTheme_NoActionBar
@@ -2789,6 +2808,7 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style Pull
 style RoundButton
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem

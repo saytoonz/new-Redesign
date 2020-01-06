@@ -17,7 +17,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.StoryStatus;
-import com.nsromapa.say.frenzapp_redesign.stories_lib.CircularStatusView;
+import com.nsromapa.say.frenzapp_redesign.helpers.CircularStatusView;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 

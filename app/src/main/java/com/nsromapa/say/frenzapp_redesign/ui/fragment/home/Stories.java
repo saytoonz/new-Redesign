@@ -93,7 +93,7 @@ public class Stories extends Fragment {
 
         discovery_recycler.addOnScrollListener(endlessScrollListener);
         discovery_recycler.setAdapter(discoveriesStatusAdapter);
-        endlessScrollListener.onLoadMore(0, 0, 20);
+        endlessScrollListener.onLoadMore(0, 0, 21);
         return view;
     }
 
