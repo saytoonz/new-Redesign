@@ -1870,8 +1870,10 @@ drawable ic_volume_up_white_24dp
 drawable icons8_chat_80
 drawable icons8_connection_status_on_80
 drawable icons8_error_96
+drawable icons8_eye_64
 drawable icons8_news_feed_64
 drawable icons8_plus_100
+drawable icons8_speech_bubble_64
 drawable icons8_video_call_100
 drawable icons8_video_file_64
 drawable image_placeholder

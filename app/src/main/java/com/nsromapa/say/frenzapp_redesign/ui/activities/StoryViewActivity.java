@@ -230,6 +230,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
         textView.setMinTextSize(14);
         textView.setSizeToFit();
         textView.setTextColor(getResources().getColor(R.color.white));
+        textView.setSingleLine(true);
         textView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return textView;
     }

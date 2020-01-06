@@ -14,6 +14,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 
 import com.nsromapa.say.frenzapp_redesign.R;
@@ -159,6 +160,25 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     @ColorInt
     private int color(@ColorRes int res) {
         return ContextCompat.getColor(this, res);
+    }
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", false).apply();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", false).apply();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", true).apply();
     }
 }
 
