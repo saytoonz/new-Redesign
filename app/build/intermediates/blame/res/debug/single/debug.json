@@ -2528,6 +2528,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_comment_items_background.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\comment_items_background.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_cab_background_top_material.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
@@ -2610,6 +2614,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_send.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xhdpi\\send.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_mute_green.png.flat",
@@ -2722,10 +2730,6 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_save_white_24dp.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xxhdpi\\ic_save_white_24dp.png"
-    },
-    {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ccomment_items_background.xml.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ccomment_items_background.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",

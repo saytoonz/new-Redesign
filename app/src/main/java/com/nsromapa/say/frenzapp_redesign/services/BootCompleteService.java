@@ -1,9 +1,8 @@
 package com.nsromapa.say.frenzapp_redesign.services;
 
-import android.app.ActivityManager;
 import android.app.Service;
 import android.content.Intent;
-import android.os.Build;
+import android.os.Handler;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -12,12 +11,15 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
-import java.util.List;
 
 import es.dmoral.toasty.Toasty;
 
 public class BootCompleteService extends Service {
+    private Handler handler;
+
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -27,21 +29,37 @@ public class BootCompleteService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Toasty.normal(this,"My Service Stopped").show();
+        Toasty.normal(this, "My Service Stopped").show();
         Log.e("BootCompleteService", "onDestroy");
     }
 
     @Override
-    public void onStart(Intent intent, int startid) {
+    public void onStart(Intent intent, int startId) {
+        handler = new Handler();
+
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                runThisFunction1();
+                handler.postDelayed(this, 300);
+            }
+        };
+        handler.postDelayed(runnable, 700);
+    }
+
+
+
+
+
+
+
+    protected void runThisFunction1(){
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("isMainActivityActive", false)) {
-            Toast.makeText(this, "My Service Started", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Main Activity Active", Toast.LENGTH_LONG).show();
             Log.d("BootCompleteService", "onStart");
         }else {
-            Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent1);
+            Toast.makeText(this, "Main Activity Closed", Toast.LENGTH_LONG).show();
         }
-
     }
 
 }

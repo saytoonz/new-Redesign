@@ -3,6 +3,7 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -225,11 +226,12 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
     private AutofitTextView getTextView(int position) {
         final AutofitTextView textView = new AutofitTextView(this);
         textView.setGravity(Gravity.CENTER);
-        textView.setMaxTextSize(60);
+        textView.setMaxTextSize(32);
         textView.setMinTextSize(14);
         textView.setSizeToFit();
         textView.setTextColor(getResources().getColor(R.color.white));
-        textView.setSingleLine(true);
+//        textView.setVerticalScrollBarEnabled(true);
+//        textView.setMovementMethod(new ScrollingMovementMethod());
         textView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return textView;
     }

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_margin="4dp"
-    android:background="@drawable/ccomment_items_background"
+    android:background="@drawable/comment_items_background"
     android:id="@+id/item_category_layout"
     android:orientation="horizontal">
 

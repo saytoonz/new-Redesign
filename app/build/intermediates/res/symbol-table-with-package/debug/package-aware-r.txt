@@ -1607,9 +1607,9 @@ drawable button_round_with_stroke
 drawable button_round_with_transparency
 drawable buttonshape
 drawable card_gradient
-drawable ccomment_items_background
 drawable checkbox_drawable
 drawable circle_shape
+drawable comment_items_background
 drawable contact_placeholder
 drawable contact_placeholder_a
 drawable dark_blue_top_gradient
@@ -1920,6 +1920,7 @@ drawable round_badge
 drawable round_flash_on_black_18dp
 drawable round_white
 drawable rounded_suggestion_background
+drawable send
 drawable shape_bubble_left
 drawable shape_bubble_offline
 drawable shape_bubble_online
@@ -2268,6 +2269,8 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id sendReply_iv
+id sendReply_tv
 id share_button
 id shortcut
 id showCustom
