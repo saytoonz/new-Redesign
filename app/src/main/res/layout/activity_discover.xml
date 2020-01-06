@@ -37,13 +37,11 @@
             app:sizeToFit="true"
             android:visibility="gone" />
 
-        <com.devbrackets.android.exomedia.ui.widget.VideoView
+        <VideoView
             android:id="@+id/discover_videoView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            app:useDefaultControls="false"
-            app:videoScale="fitCenter"
             android:visibility="gone"/>
 
 
@@ -120,7 +118,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:orientation="horizontal"
-        android:padding="6dp">
+        android:padding="6dp"
+        android:elevation="30dp">
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -187,7 +186,8 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:paddingBottom="6dp"
-        android:weightSum="3">
+        android:weightSum="3"
+        android:elevation="30dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -243,7 +243,7 @@
                     android:layout_height="28dp"
                     android:layout_gravity="center"
                     android:elevation="4dp"
-                    android:src="@drawable/soundoff"
+                    android:src="@drawable/icons8_eye_64"
                     android:tint="@color/white" />
 
                 <TextView
@@ -277,7 +277,7 @@
                     android:layout_height="28dp"
                     android:layout_gravity="center"
                     android:elevation="4dp"
-                    android:src="@drawable/ic_comment_liked"
+                    android:src="@drawable/icons8_speech_bubble_64"
                     android:tint="@color/white" />
 
                 <TextView

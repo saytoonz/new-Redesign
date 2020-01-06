@@ -2,7 +2,9 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +35,10 @@ import com.nsromapa.say.frenzapp_redesign.stories_lib.StoriesProgressView;
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
+import me.grantland.widget.AutofitTextView;
+
+import static com.nsromapa.say.frenzapp_redesign.ui.getTextBackground.setmImageHolderBg;
 
 
 public class StoryViewActivity extends AppCompatActivity implements StoriesProgressView.StoriesListener {
@@ -108,6 +114,8 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                 mediaPlayerArrayList.add(getVideoView(i));
             } else if (mStoriesList.get(i).mimeType.contains("image")) {
                 mediaPlayerArrayList.add(getImageView(i));
+            } else if (mStoriesList.get(i).mimeType.contains("text")) {
+                mediaPlayerArrayList.add(getTextView(i));
             }
         }
 
@@ -165,7 +173,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                     .load(mStoriesList.get(counter).mediaUrl).addListener(new RequestListener<Drawable>() {
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                    Toast.makeText(StoryViewActivity.this, "Failed to load media...", Toast.LENGTH_SHORT).show();
+                    Toasty.error(StoryViewActivity.this, "Failed to load media...", Toasty.LENGTH_SHORT).show();
                     mProgressBar.setVisibility(View.GONE);
                     return false;
                 }
@@ -179,6 +187,18 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                     return false;
                 }
             }).into(image);
+        } else if (view instanceof AutofitTextView) {
+            final AutofitTextView textView = (AutofitTextView) view;
+
+            postedTimeTV.setText(mStoriesList.get(counter).postedTime);
+
+            textView.setText(mStoriesList.get(counter).description);
+            setmImageHolderBg(mStoriesList.get(counter).background, textView);
+
+            mProgressBar.setVisibility(View.GONE);
+            storiesProgressView.setStoryDuration(5000);
+            storiesProgressView.startStories(counter);
+            setUserSeenThisStatus();
         }
     }
 
@@ -200,6 +220,18 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
         final ImageView imageView = new ImageView(this);
         imageView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         return imageView;
+    }
+
+
+    private AutofitTextView getTextView(int position) {
+        final AutofitTextView textView = new AutofitTextView(this);
+        textView.setGravity(Gravity.CENTER);
+        textView.setMaxTextSize(60);
+        textView.setMinTextSize(14);
+        textView.setSizeToFit();
+        textView.setTextColor(getResources().getColor(R.color.white));
+        textView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        return textView;
     }
 
     @Override

@@ -244,6 +244,7 @@ public class Stories extends Fragment {
                         story.getString("media_url"),
                         story.getString("type"),
                         story.getString("description"),
+                        story.getString("background"),
                         story.getString("0")
                 ));
             }
@@ -291,6 +292,7 @@ public class Stories extends Fragment {
                                     discoveryPosts.getString("media_url"),
                                     discoveryPosts.getString("type"),
                                     discoveryPosts.getString("description"),
+                                    discoveryPosts.getString("background"),
                                     discoveryPosts.getString("0"),
                                     poster_info.toString()
                             ));
