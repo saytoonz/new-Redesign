@@ -4,16 +4,16 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable\\btn_radio_on_mtrl.xml"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_badge_background.xml.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\badge_background.xml"
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_ic_favorite_black_24dp.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\f7153f48d47acd74cfa82bba8f90f035\\materialfavoritebutton-0.1.4\\res\\drawable-xhdpi-v4\\ic_favorite_black_24dp.png"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_badge_background.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\badge_background.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_tile_bg.xml.flat",
@@ -134,6 +134,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dislike.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\dislike.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_reply_black_24dp.xml.flat",
@@ -1940,6 +1944,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\color\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_delete.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\delete.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search_white_24dp.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-mdpi\\ic_search_white_24dp.png"
     },
@@ -2498,6 +2506,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_image_post.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_image_post.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_dislike.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-v24\\dislike.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\xml_file_provider.xml.flat",

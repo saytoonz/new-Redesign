@@ -24,5 +24,9 @@
         Add some friends to see their posts here Add some friends to see their
         posts here Add some friends to see their posts here v</string>
     <string name="image_container">Image Container</string>
+    <string name="like">Like</string>
+    <string name="delete">Delete</string>
+    <string name="dislike">Dislike</string>
+    <string name="add_comment">Add Comment…</string>
 </resources>
 

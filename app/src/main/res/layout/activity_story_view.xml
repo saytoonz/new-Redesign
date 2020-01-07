@@ -36,7 +36,7 @@
         android:paddingStart="6dp"
         android:paddingBottom="16dp"
         android:elevation="30dp">
-        <TextView
+        <EditText
             android:id="@+id/sendReply_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -60,6 +60,7 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:src="@drawable/send"
             android:tint="@color/off_white"
             android:layout_gravity="top"

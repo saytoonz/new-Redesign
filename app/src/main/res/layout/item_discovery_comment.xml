@@ -10,20 +10,117 @@
     android:orientation="horizontal">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/item_category_image"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:id="@+id/commenter_image"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
         android:src="@drawable/contact_placeholder"/>
 
-    <TextView
-        android:id="@+id/item_category_name"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:textSize="14sp"
-        android:layout_gravity="center"
-        android:gravity="center_vertical"
-        android:layout_marginStart="8dp"
-        android:textColor="@color/text_desc"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/commenter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_desc"/>
+            <TextView
+                android:id="@+id/comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/text_desc"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:padding="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/actionsContainerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/like_comment"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_like_flat"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/like"/>
+                <TextView
+                    android:id="@+id/likers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/dislike_comment"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/dislike"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/dislike"/>
+                <TextView
+                    android:id="@+id/dislikers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="6dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/delete_comment"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/delete"
+                android:focusable="true"
+                android:clickable="true"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/delete"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

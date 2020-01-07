@@ -3,8 +3,10 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
@@ -18,6 +20,9 @@ import android.widget.VideoView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
@@ -28,16 +33,27 @@ import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.helpers.ShowDiscoveryComments;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
+import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment;
+import com.nsromapa.say.frenzapp_redesign.models.StoryStatus;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.otaliastudios.zoom.ZoomImageView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
 import static com.nsromapa.say.frenzapp_redesign.ui.getTextBackground.setmImageHolderBg;
+import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
 import static com.nsromapa.say.frenzapp_redesign.utils.OpenIntents.profileWithUserJson;
 
 public class DiscoverActivity extends AppCompatActivity {
@@ -45,6 +61,8 @@ public class DiscoverActivity extends AppCompatActivity {
     private Discoveries mDiscoveryList;
     private ProgressBar mProgressBar;
     private LinearLayout mViewHolderLayout;
+    private int loadCount;
+   private DiscoveryComment description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +104,12 @@ public class DiscoverActivity extends AppCompatActivity {
         discover_text.setMovementMethod(new ScrollingMovementMethod());
 
 
-        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
-                if (discover_image.getZoom() > 1 || discover_image.getZoom() < 1){
+                if (discover_image.getZoom() > 1 || discover_image.getZoom() < 1) {
                     discover_image.zoomTo(1f, true);
-                }else{
+                } else {
                     discover_image.zoomTo(2.7f, true);
                 }
                 return true;
@@ -99,7 +117,7 @@ public class DiscoverActivity extends AppCompatActivity {
         });
         discover_image.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
 
-        commentLinearLayout.setOnClickListener(v -> showDiscoveryComments());
+        commentLinearLayout.setOnClickListener(v -> showDiscoveryComments(mDiscoveryList.getId()));
 
         if (mDiscoveryList.getMimeType().contains("image")) {
             discover_videoView.setVisibility(View.GONE);
@@ -173,7 +191,8 @@ public class DiscoverActivity extends AppCompatActivity {
     }
 
     private void setDiscoveryInfo(CircleImageView posterImageView,
-                                   TextView posterNameTV, TextView postedTimeTV) {
+                                  TextView posterNameTV, TextView postedTimeTV) {
+
         try {
             JSONObject posterJson = new JSONObject(mDiscoveryList.getPosterJson());
 
@@ -184,8 +203,23 @@ public class DiscoverActivity extends AppCompatActivity {
             posterNameTV.setText(posterJson.getString("username"));
             postedTimeTV.setText(mDiscoveryList.getTimeAgo());
 
+            description= new DiscoveryComment(
+                    posterJson.getString("id"),
+                    posterJson.getString("username"),
+                    posterJson.getString("image"),
+                    posterJson.toString(),
+                    "",
+                    mDiscoveryList.getTimeAgo(),
+                    mDiscoveryList.getDescription(),
+                    "",
+                    "",
+                    "description"
+            );
+
+
             posterNameTV.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
             posterImageView.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
+
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -196,10 +230,42 @@ public class DiscoverActivity extends AppCompatActivity {
     private void addToWatchesList() {
 
     }
-    private void showDiscoveryComments() {
-        this.getSupportFragmentManager().beginTransaction()
-                .add(new ShowDiscoveryComments("", "",
-                        "", "", ""), "DicoverActivity")
-                .commit();
+
+    private void showDiscoveryComments(String discovery_id) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response -> {
+                    Log.e("Volley Result", "" + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
+
+                        this.getSupportFragmentManager().beginTransaction()
+                                .add(new ShowDiscoveryComments(jsonArray.toString(), description), "DicoverActivity")
+                                .commit();
+
+                        loadCount += 16;
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                },
+                error -> {
+
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("discovery_comments", "true");
+                postMap.put("load", String.valueOf(loadCount));
+                postMap.put("discovery_id", discovery_id);
+                return postMap;
+            }
+        };
+
+        Volley.newRequestQueue(this).add(stringRequest);
+
     }
 }

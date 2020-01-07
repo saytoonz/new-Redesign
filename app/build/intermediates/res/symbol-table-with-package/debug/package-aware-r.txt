@@ -1615,12 +1615,14 @@ drawable contact_placeholder_a
 drawable dark_blue_top_gradient
 drawable default_user_art_g_2
 drawable default_user_art_g_inverse
+drawable delete
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dislike
 drawable dot_background
 drawable drawable_gradient_animation_list
 drawable edittext_accent
@@ -2026,6 +2028,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
+id actionsContainerLL
 id activity_chooser_view_content
 id activity_main
 id add
@@ -2053,7 +2056,6 @@ id card_header
 id card_image
 id card_root
 id card_view
-id category_name
 id center
 id centerCrop
 id centerInside
@@ -2072,10 +2074,15 @@ id collapseActionView
 id comment_button
 id comment_linearLayout
 id comment_textView
+id comment_time
+id comment_tv
+id commenter_image
+id commenter_name
 id container
 id content
 id contentPanel
 id coordinator
+id create_comment
 id custom
 id customPanel
 id decor_content_parent
@@ -2084,6 +2091,7 @@ id default_item
 id default_text
 id default_title
 id delete_button
+id delete_comment
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2098,6 +2106,8 @@ id discover_text
 id discover_videoView
 id discovery_photo
 id discovery_recycler
+id dislike_comment
+id dislikers
 id dot
 id edit_query
 id end
@@ -2164,20 +2174,20 @@ id indicator_holder
 id info
 id invisible
 id italic
-id item_category_image
 id item_category_layout
-id item_category_name
 id item_touch_helper_previous_elevation
 id ivLike
 id labeled
 id largeLabel
 id left
 id like_button
+id like_comment
 id like_count
 id like_frame_layout
 id like_layout
 id like_linearLayout
 id like_textView
+id likers
 id line1
 id line3
 id linearLayout
@@ -2203,7 +2213,6 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id number_of_subcategories
 id nv_explorer
 id nv_feeds
 id nv_production
@@ -2271,6 +2280,7 @@ id select_dialog_listview
 id selected
 id sendReply_iv
 id sendReply_tv
+id send_comment
 id share_button
 id shortcut
 id showCustom
@@ -2319,7 +2329,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id text_header
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -2346,6 +2355,7 @@ id unlabeled
 id up
 id useLogo
 id user_image
+id user_name
 id username
 id vBgLike
 id vBigView
@@ -2537,6 +2547,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string addUnitId
+string add_comment
 string add_some_friends_to_see_their_posts_here
 string admob_appId
 string an_unrecognized_error_occurred
@@ -2547,7 +2558,9 @@ string character_counter_content_description
 string character_counter_pattern
 string chat
 string click_marker
+string delete
 string developer_name
+string dislike
 string email
 string error
 string fab_transformation_scrim_behavior
@@ -2555,6 +2568,7 @@ string fab_transformation_sheet_behavior
 string feeds
 string hide_bottom_view_on_scroll_behavior
 string image_container
+string like
 string loading
 string long_text
 string maps_api_key

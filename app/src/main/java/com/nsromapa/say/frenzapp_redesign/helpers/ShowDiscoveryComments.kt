@@ -5,9 +5,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -16,23 +14,24 @@ import com.github.heyalex.bottomdrawer.BottomDrawerFragment
 import com.github.heyalex.handle.PullHandleView
 import com.nsromapa.say.frenzapp_redesign.R
 import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment
+import com.nsromapa.say.frenzapp_redesign.utils.Utils
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.item_discovery_comment.view.*
 import org.json.JSONArray
 import org.json.JSONException
 
-class ShowDiscoveryComments(private var categoryId: String,
-                            private var category_name_string: String,
-                            private var icon_letter: String,
-                            private var number_of_subcategories_string: String,
-                            private var subCategory_jObj: String) : BottomDrawerFragment() {
+class ShowDiscoveryComments(private var dicoveryComment_jObj: String,
+                            private var description:DiscoveryComment) : BottomDrawerFragment() {
 
     private var alphaCancelButton = 0f
     private lateinit var cancelButton: ImageView
 
-    private lateinit var text_header: TextView
-    private lateinit var category_name: TextView
-    private lateinit var number_of_subcategories: TextView
+    private lateinit var user_image: CircleImageView
+    private lateinit var user_name: TextView
+    private lateinit var create_comment: EditText
     private lateinit var bottom_sheetrecycler: RecyclerView
+    private lateinit var send_comment : ImageView
+
     var commentList: MutableList<DiscoveryComment> = ArrayList()
 
 
@@ -53,38 +52,44 @@ class ShowDiscoveryComments(private var categoryId: String,
         cancelButton.setOnClickListener { dismissWithBehavior() }
 
 
-        text_header = view.findViewById(R.id.text_header)
-        text_header.text = icon_letter
+        user_image = view.findViewById(R.id.user_image)
+        context?.let {
+            Glide.with(it)
+                    .load(Utils.getUserImage())
+                    .into(user_image)
+        }
 
-        category_name = view.findViewById(R.id.category_name)
-        category_name.text = category_name_string
+        user_name = view.findViewById(R.id.user_name)
+        user_name.text = Utils.getUserName()
 
-        number_of_subcategories = view.findViewById(R.id.number_of_subcategories)
-        number_of_subcategories.text = number_of_subcategories_string
+        create_comment = view.findViewById(R.id.create_comment)
+        send_comment = view.findViewById(R.id.send_comment)
+        send_comment.setOnClickListener { createComment(create_comment) }
 
         bottom_sheetrecycler = view.findViewById(R.id.bottom_sheetrecycler)
 
-        commentList.add(DiscoveryComment(
-                "Comment_id",
-                "Comment Name",
-                "commentImage.png",
-                "json Object"))
 
 
-
-
+        commentList.add(description)
 
         try {
-//            val jsonObject = JSONObject(subCategory_jObj)
-            val jsonArray = JSONArray(subCategory_jObj)
-            //now looping through all the elements of the json array
+            val jsonArray = JSONArray(dicoveryComment_jObj)
             for (i in 0 until jsonArray.length()) {
-                val subCateObj = jsonArray.getJSONObject(i)
+
+                val commentObj = jsonArray.getJSONObject(i)
+                val commenterObj = commentObj.getJSONObject("1")
+
                 commentList.add(DiscoveryComment(
-                        subCateObj.getString("id"),
-                        subCateObj.getString("name"),
-                        subCateObj.getString("image"),
-                        subCateObj.toString()))
+                        commenterObj.getString("id"),
+                        commenterObj.getString("username"),
+                        commenterObj.getString("image"),
+                        commenterObj.toString(),
+                        commentObj.getString("id"),
+                        commentObj.getString("0"),
+                        commentObj.getString("comment"),
+                        commentObj.getString("likes"),
+                        commentObj.getString("dislikes"),
+                        "comment"))
             }
 
         } catch (e: JSONException) {
@@ -96,21 +101,29 @@ class ShowDiscoveryComments(private var categoryId: String,
     }
 
 
-    class ParticipantHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name = itemView.item_category_name!!
-        val image = itemView.item_category_image!!
-        val click = itemView.item_category_layout!!
+
+    class commentsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val commenter_name = itemView.commenter_name!!
+        val commenter_image = itemView.commenter_image!!
+        val comment_time = itemView.comment_time!!
+        val comment_tv = itemView.comment_tv!!
+        val actionsContainerLL = itemView.actionsContainerLL!!
+        val likers = itemView.likers!!
+        val dislikers = itemView.dislikers!!
+        val like_comment = itemView.like_comment!!
+        val dislike_comment = itemView.dislike_comment!!
+        val delete_comment = itemView.delete_comment!!
+
     }
 
-    private fun setLinearAdapter(subCategories: ArrayList<DiscoveryComment>?) {
+    private fun setLinearAdapter(commentList: ArrayList<DiscoveryComment>?) {
 
-//        bottom_sheetrecycler.layoutManager = GridLayoutManager(context, 4)
         bottom_sheetrecycler.layoutManager = LinearLayoutManager(context)
         bottom_sheetrecycler.setHasFixedSize(true)
 
-        val horizontalAdapter = object : RecyclerView.Adapter<ParticipantHolder>() {
-            override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ParticipantHolder {
-                return ParticipantHolder(
+        val horizontalAdapter = object : RecyclerView.Adapter<commentsHolder>() {
+            override fun onCreateViewHolder(p0: ViewGroup, p1: Int): commentsHolder {
+                return commentsHolder(
                         layoutInflater.inflate(
                                 R.layout.item_discovery_comment,
                                 p0,
@@ -119,30 +132,75 @@ class ShowDiscoveryComments(private var categoryId: String,
                 )
             }
 
-            override fun getItemCount(): Int = subCategories!!.size
+            override fun getItemCount(): Int = commentList!!.size
 
-            override fun onBindViewHolder(p0: ParticipantHolder, p1: Int) {
+            override fun onBindViewHolder(p0: commentsHolder, p1: Int) {
                 context?.let {
                     Glide.with(it)
-                            .load(subCategories?.get(p1)!!.commenter_image)
-                            .into(p0.image)
+                            .load(commentList?.get(p1)!!.commenter_image)
+                            .into(p0.commenter_image)
                 }
-                p0.name.text = subCategories?.get(p1)!!.commenter_name//
-//                p0.click.setOnClickListener {
-//                    val intent = Intent(context, ProductsActivity::class.java).apply {
-//                        putExtra("sub_category_id", subCategories[p1].subCategory_id)
-//                        putExtra("category_name", subCategories[p1].subCategory_name)
-//                        putExtra("sub_category_JObj", subCategories[p1].subCategory_JObj)
-//                        putExtra("category_name_string", category_name_string)
-//                    }
-//                    context!!.startActivity(intent)
-//                }
+                p0.commenter_name.text = commentList?.get(p1)!!.commenter_name
+                p0.comment_time.text = commentList.get(p1).comment_time
+                p0.comment_tv.text = commentList.get(p1).comment
+                p0.likers.text = commentList.get(p1).comment_likes
+                p0.dislikers.text = commentList.get(p1).comment_dislikes
+
+                p0.like_comment.setOnClickListener{
+                    likeComment();
+                }
+
+                p0.dislike_comment.setOnClickListener{
+                    dislikeComment();
+                }
+
+
+                if (commentList.get(p1).comment_or_description.equals("comment")
+                        && commentList.get(p1).commenter_id.equals(Utils.getUserUid())){
+                    p0.delete_comment.visibility = View.VISIBLE
+                    p0.delete_comment.setOnClickListener {
+                        deleteComment(commentList.get(p1).comment_id)
+                        commentList.removeAt(p1)
+                    }
+                }
+                else
+                    p0.delete_comment.visibility = View.GONE
+
+
+                if (commentList.get(p1).comment_or_description.equals("description")){
+                    p0.actionsContainerLL.visibility = View.GONE
+                }
+
             }
 
         }
 
         bottom_sheetrecycler.adapter = horizontalAdapter
     }
+
+
+
+
+
+    private fun dislikeComment() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    private fun likeComment() {
+
+    }
+
+
+    private fun deleteComment(commentId: String?) {
+
+    }
+
+    private fun createComment(createComment: EditText?) {
+
+    }
+
+
+
 
     override fun configureBottomDrawer(): BottomDrawerDialog {
         return BottomDrawerDialog.build(context!!) {
