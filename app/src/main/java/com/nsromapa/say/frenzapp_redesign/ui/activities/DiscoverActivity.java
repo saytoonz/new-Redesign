@@ -5,6 +5,9 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -81,6 +84,20 @@ public class DiscoverActivity extends AppCompatActivity {
         AutofitTextView discover_text = findViewById(R.id.discover_text);
         ZoomImageView discover_image = findViewById(R.id.discover_image);
         discover_text.setMovementMethod(new ScrollingMovementMethod());
+
+
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                if (discover_image.getZoom() > 1 || discover_image.getZoom() < 1){
+                    discover_image.zoomTo(1f, true);
+                }else{
+                    discover_image.zoomTo(2.7f, true);
+                }
+                return true;
+            }
+        });
+        discover_image.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
 
         commentLinearLayout.setOnClickListener(v -> showDiscoveryComments());
 
