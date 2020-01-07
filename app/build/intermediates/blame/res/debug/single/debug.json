@@ -4316,12 +4316,12 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_alarm_black_24dp.png.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-hdpi\\ic_alarm_black_24dp.png"
-    },
-    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_bottom_sheet_profile_content.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\bottom_sheet_profile_content.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_alarm_black_24dp.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-hdpi\\ic_alarm_black_24dp.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_icon.xml.flat",

@@ -16,89 +16,57 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_29.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_HeyAlex_BottomDrawer_v1_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_HeyAlex_BottomDrawer_v1_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_HeyAlex_ExapandableCardView__SNAPSHOT_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_HeyAlex_ExapandableCardView__SNAPSHOT_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_10_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_annotations_4_10_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_10_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_disklrucache_4_10_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_10_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_gifdecoder_4_10_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_10_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_bumptech_glide_glide_4_10_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_otaliastudios_zoomlayout_1_7_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_otaliastudios_zoomlayout_1_7_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/activity/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/activity/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/resources/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/appcompat/resources/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/asynclayoutinflater/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/asynclayoutinflater/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/constraintlayout/widget/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/constraintlayout/widget/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/coordinatorlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/coordinatorlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/core/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/customview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/customview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/drawerlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/drawerlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/dynamicanimation/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/dynamicanimation/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/fragment/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/fragment/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreui/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreutils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/legacy/coreutils/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/loader/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/loader/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/media/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/media/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/recyclerview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/slidingpanelayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/slidingpanelayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/swiperefreshlayout/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/swiperefreshlayout/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/transition/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/transition/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/animated/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/vectordrawable/animated/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager2/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/androidx/viewpager2/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/bumptech/glide/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/bumptech/glide/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/devbrackets/android/exomedia/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/devbrackets/android/exomedia/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/heyalex/bottomdrawer/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/heyalex/bottomdrawer/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/heyalex/expandable_cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/heyalex/expandable_cardview/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/ivbaranov/mfb/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/github/ivbaranov/mfb/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/google/android/material/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/google/android/material/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/ittianyu/bottomnavigationviewex/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/ittianyu/bottomnavigationviewex/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/nsromapa/say/frenzapp_redesign/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/nsromapa/say/frenzapp_redesign/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/otaliastudios/zoom/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/otaliastudios/zoom/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/tbuonomo/viewpagerdotsindicator/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/tbuonomo/viewpagerdotsindicator/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/watermark/androidwm_light/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/watermark/androidwm_light/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/yarolegovich/slidingrootnav/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/com/yarolegovich/slidingrootnav/R.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/es/dmoral/toasty/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/not_namespaced_r_class_sources/debug/r/es/dmoral/toasty/R.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+ONFEpjZszRZCdVsY7Dqm7PmZZg=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/+ONFEpjZszRZCdVsY7Dqm7PmZZg=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/8nh5eXauLkEwygDDSskU4j8Gmlo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BWGDzQOy2SiFbm+vws+i1ipuieQ=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/BWGDzQOy2SiFbm+vws+i1ipuieQ=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/KJrEU9YMMt3OKzBsiOsHwHHyaHA=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/KJrEU9YMMt3OKzBsiOsHwHHyaHA=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WqIO3aPVtrBT44s8D7B+yIr6aGE=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/WqIO3aPVtrBT44s8D7B+yIr6aGE=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/aY_9kYjPRQKBVHvOIxssyD18A9c=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/aY_9kYjPRQKBVHvOIxssyD18A9c=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/dndUQmwZeUfR0a5VE8EFsiWuAUw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/fXxcpfrYy2ESPiJSdAZvu35+oiw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/mgzDVkR3KMmGyTo87j3Ixp6rRaI=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/mgzDVkR3KMmGyTo87j3Ixp6rRaI=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/sqIDVsVjPr2LPvt+1WQx6bo9++Q=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uc3ZSUxR_sbVnOp01S9IIE4egxs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/uc3ZSUxR_sbVnOp01S9IIE4egxs=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/+ONFEpjZszRZCdVsY7Dqm7PmZZg=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/+ONFEpjZszRZCdVsY7Dqm7PmZZg=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/8nh5eXauLkEwygDDSskU4j8Gmlo=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/BWGDzQOy2SiFbm+vws+i1ipuieQ=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/BWGDzQOy2SiFbm+vws+i1ipuieQ=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/KJrEU9YMMt3OKzBsiOsHwHHyaHA=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/KJrEU9YMMt3OKzBsiOsHwHHyaHA=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WqIO3aPVtrBT44s8D7B+yIr6aGE=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WqIO3aPVtrBT44s8D7B+yIr6aGE=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/aY_9kYjPRQKBVHvOIxssyD18A9c=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/aY_9kYjPRQKBVHvOIxssyD18A9c=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/dndUQmwZeUfR0a5VE8EFsiWuAUw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/fXxcpfrYy2ESPiJSdAZvu35+oiw=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/mgzDVkR3KMmGyTo87j3Ixp6rRaI=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/mgzDVkR3KMmGyTo87j3Ixp6rRaI=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/sqIDVsVjPr2LPvt+1WQx6bo9++Q=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/uc3ZSUxR_sbVnOp01S9IIE4egxs=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/debug-mergeNativeLibs/zip-cache/uc3ZSUxR_sbVnOp01S9IIE4egxs=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/5IYXhQt6vaCMn1CRanAuySmenLQ=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/5IYXhQt6vaCMn1CRanAuySmenLQ=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/uS+P7mB2JHbUKyP2XM2ULikq8U0=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/uS+P7mB2JHbUKyP2XM2ULikq8U0=" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/activity/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/activity/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/resources/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/appcompat/resources/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/asynclayoutinflater/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/asynclayoutinflater/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/constraintlayout/widget/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/constraintlayout/widget/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/coordinatorlayout/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/coordinatorlayout/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/core/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/core/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/customview/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/customview/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/drawerlayout/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/drawerlayout/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/dynamicanimation/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/dynamicanimation/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/fragment/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/fragment/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/legacy/coreui/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/legacy/coreui/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/legacy/coreutils/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/legacy/coreutils/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/loader/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/loader/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/media/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/media/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/recyclerview/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/recyclerview/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/slidingpanelayout/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/slidingpanelayout/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/swiperefreshlayout/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/swiperefreshlayout/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/transition/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/transition/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/vectordrawable/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/vectordrawable/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/vectordrawable/animated/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/vectordrawable/animated/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/viewpager/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/viewpager/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/viewpager2/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/androidx/viewpager2/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/bumptech/glide/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/bumptech/glide/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/devbrackets/android/exomedia/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/devbrackets/android/exomedia/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/devbrackets/android/exomedia/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/devbrackets/android/exomedia/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/bottomdrawer/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/bottomdrawer/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/bottomdrawer/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/bottomdrawer/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/expandable_cardview/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/heyalex/expandable_cardview/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/ivbaranov/mfb/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/github/ivbaranov/mfb/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/google/android/material/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/google/android/material/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/google/android/material/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/google/android/material/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ittianyu/bottomnavigationviewex/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ittianyu/bottomnavigationviewex/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ittianyu/bottomnavigationviewex/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/ittianyu/bottomnavigationviewex/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$attr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$bool.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$bool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$color.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$color.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$dimen.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$dimen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$drawable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$font.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$font.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$fraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$fraction.class" afterDir="false" />
@@ -113,83 +81,16 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$style.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$style.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$styleable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$xml.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/R$xml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/ContactListInChatAdapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/ContactListInChatAdapter$ViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostPhotosAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostPhotosAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostVideosAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostVideosAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostsAdapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/PostsAdapter$ViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter$ViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/helpers/SimpleItem$ViewHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/helpers/SimpleItem$ViewHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/CircularStatusView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$Callback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$PausableScaleAnimation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView$StoriesListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Feeds.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Feeds.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/VideoFeeds.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/VideoFeeds.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/nsromapa/say/frenzapp_redesign/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/otaliastudios/zoom/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/otaliastudios/zoom/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/tbuonomo/viewpagerdotsindicator/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/tbuonomo/viewpagerdotsindicator/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/tbuonomo/viewpagerdotsindicator/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/tbuonomo/viewpagerdotsindicator/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/watermark/androidwm_light/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/watermark/androidwm_light/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/watermark/androidwm_light/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/watermark/androidwm_light/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/yarolegovich/slidingrootnav/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/yarolegovich/slidingrootnav/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/yarolegovich/slidingrootnav/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/com/yarolegovich/slidingrootnav/R$id.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/es/dmoral/toasty/R$drawable.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/es/dmoral/toasty/R$drawable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/es/dmoral/toasty/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/es/dmoral/toasty/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable_ccomment_items_background.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_story_view.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_story_view.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_discovery_comment.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_discovery_comment.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_status_stories.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_item_status_stories.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/activity/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/appcompat/resources/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/asynclayoutinflater/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/constraintlayout/widget/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/constraintlayout/widget/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/coordinatorlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/core/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/customview/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/drawerlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/dynamicanimation/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/dynamicanimation/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/fragment/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreui/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/legacy/coreutils/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/loader/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/media/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/recyclerview/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/slidingpanelayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/swiperefreshlayout/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/transition/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/vectordrawable/animated/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/androidx/viewpager2/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/bumptech/glide/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/devbrackets/android/exomedia/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/devbrackets/android/exomedia/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/devbrackets/android/exomedia/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/devbrackets/android/exomedia/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/bottomdrawer/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/bottomdrawer/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/bottomdrawer/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/bottomdrawer/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/expandable_cardview/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/heyalex/expandable_cardview/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/ivbaranov/mfb/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/github/ivbaranov/mfb/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/google/android/material/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/ittianyu/bottomnavigationviewex/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/ittianyu/bottomnavigationviewex/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/ittianyu/bottomnavigationviewex/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/ittianyu/bottomnavigationviewex/R$id.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_discover.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_discover.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$attr.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$attr.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$bool.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$bool.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$color.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$color.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$dimen.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$dimen.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$drawable.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$font.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$font.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$fraction.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$fraction.dex" afterDir="false" />
@@ -204,42 +105,8 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$style.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$style.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$styleable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$styleable.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$xml.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/R$xml.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/ContactListInChatAdapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/ContactListInChatAdapter$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostPhotosAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostPhotosAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostVideosAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostVideosAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostsAdapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/PostsAdapter$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/helpers/SimpleItem$ViewHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/helpers/SimpleItem$ViewHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/CircularStatusView.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$Callback.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar$PausableScaleAnimation.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/PausableProgressBar.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView$StoriesListener.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/stories_lib/StoriesProgressView.dex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity$1.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Feeds.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Feeds.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/Stories.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/VideoFeeds.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/ui/fragment/home/VideoFeeds.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/utils/Constants.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/nsromapa/say/frenzapp_redesign/utils/Constants.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/otaliastudios/zoom/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/otaliastudios/zoom/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/tbuonomo/viewpagerdotsindicator/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/tbuonomo/viewpagerdotsindicator/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/tbuonomo/viewpagerdotsindicator/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/tbuonomo/viewpagerdotsindicator/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/watermark/androidwm_light/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/watermark/androidwm_light/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/watermark/androidwm_light/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/watermark/androidwm_light/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/yarolegovich/slidingrootnav/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/yarolegovich/slidingrootnav/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/yarolegovich/slidingrootnav/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/com/yarolegovich/slidingrootnav/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/es/dmoral/toasty/R$drawable.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/es/dmoral/toasty/R$drawable.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/es/dmoral/toasty/R$id.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/es/dmoral/toasty/R$id.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1/com/nsromapa/say/frenzapp_redesign/helpers/ShowDiscoveryComments.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/1/com/nsromapa/say/frenzapp_redesign/helpers/ShowDiscoveryComments.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
@@ -247,9 +114,9 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" afterDir="false" />
@@ -264,14 +131,14 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.s" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterDir="false" />
@@ -285,17 +152,17 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/compileDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/build-history.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
@@ -304,30 +171,32 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.s" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.len" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i.len" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/proto.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.s" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/subtypes.tab.keystream" afterDir="false" />
@@ -341,25 +210,36 @@
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/jvm/kotlin/supertypes.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab_i" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/kotlin/kaptGenerateStubsDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/java-cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kapt3/incApCache/debug/java-cache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/nsromapa/say/frenzapp_redesign/helpers/ShowDiscoveryComments.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/com/nsromapa/say/frenzapp_redesign/helpers/ShowDiscoveryComments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/adapters/DiscoveriesStatusAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/adapters/DiscoveriesStatusAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/broadcasts/BootCompleteBroadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/broadcasts/BootCompleteBroadcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/models/Discoveries.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/models/Discoveries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/models/DiscoveryComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/models/DiscoveryComment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ccomment_items_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_story_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_story_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/getTextBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/getTextBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/utils/OpenIntents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/utils/OpenIntents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/comment_items_background.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/comment_items_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_discovery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_discovery.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_profile_content.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_profile_content.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/discovery_comment_header.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/discovery_comment_header.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_custom_row_loading.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_custom_row_loading.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_discovery_comment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_discovery_comment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_status_discoveries.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_status_discoveries.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -370,7 +250,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="192.168.8.101:5555" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="920135d5f64c444a" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -388,8 +268,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="233" column="30" lean-forward="true" selection-start-line="233" selection-start-column="30" selection-end-line="233" selection-end-column="30" />
+            <state relative-caret-position="3315">
+              <caret line="233" column="30" selection-start-line="233" selection-start-column="30" selection-end-line="233" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -397,25 +277,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_story_view.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            <state relative-caret-position="1309">
+              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
+            <state relative-caret-position="364">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setVideoDiscovery#0;class#DiscoverActivity#0" />
-                <element signature="method#setImageDiscovery#0;class#DiscoverActivity#0" />
                 <element signature="method#setDiscoveryInfo#0;class#DiscoverActivity#0" />
               </folding>
             </state>
@@ -424,12 +301,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml">
-          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -504,18 +381,18 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/discovery_comment_header.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/adapters/DiscoveriesStatusAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/helpers/ShowDiscoveryComments.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/models/DiscoveryComment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/services/BootCompleteService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/utils/Constants.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_story_view.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="212" />
     <option name="width" value="1236" />
     <option name="height" value="867" />
@@ -528,51 +405,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="frenzapp_redesign" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="frenzapp_redesign" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="frenzapp_redesign" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="activities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FrenzApp-Redesign" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -582,7 +418,7 @@
     <property name="android.recentlyUsedThemes" value="StoryViewThem" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -705,8 +541,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20558739" />
@@ -726,13 +561,13 @@
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5007163" side_tool="true" weight="0.325419" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Build" order="8" sideWeight="0.49928367" weight="0.32357043" />
+      <window_info active="true" anchor="bottom" id="Build" order="8" sideWeight="0.49928367" visible="true" weight="0.3230148" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.32839838" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.3295129" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.3295129" />
       <window_info anchor="right" id="Flutter Inspector" order="5" />
       <window_info anchor="right" id="Android WiFi ADB" order="6" weight="0.3295129" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -778,12 +613,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_feed_post.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="128" column="11" lean-forward="true" selection-start-line="128" selection-start-column="11" selection-end-line="141" selection-end-column="49" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6958a031492e63d19507881e347921d/autofittextview-0.2.1/res/values/values.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -821,12 +656,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_viewpager_video.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/adapters/StoryStatusAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1032,20 +867,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/helpers/showDiscoveryComments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/helpers/showDiscoveryComments.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1061,15 +884,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_discovery_comment.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/discovery_comment_header.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
           <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
@@ -1078,6 +900,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1087,15 +910,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_discovery.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_profile_content.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
@@ -1104,6 +926,7 @@
           </folding>
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1193,31 +1016,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="80" column="63" selection-start-line="80" selection-start-column="63" selection-end-line="80" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setVideoDiscovery#0;class#DiscoverActivity#0" />
-            <element signature="method#setImageDiscovery#0;class#DiscoverActivity#0" />
-            <element signature="method#setDiscoveryInfo#0;class#DiscoverActivity#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/StoryViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="233" column="30" lean-forward="true" selection-start-line="233" selection-start-column="30" selection-end-line="233" selection-end-column="30" />
+        <state relative-caret-position="3315">
+          <caret line="233" column="30" selection-start-line="233" selection-start-column="30" selection-end-line="233" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1225,10 +1027,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_story_view.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="1309">
+          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_discover.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/nsromapa/say/frenzapp_redesign/ui/activities/DiscoverActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="method#setDiscoveryInfo#0;class#DiscoverActivity#0" />
+          </folding>
         </state>
       </provider>
     </entry>

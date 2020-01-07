@@ -25,6 +25,7 @@ import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.helpers.ShowDiscoveryComments;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
+import com.otaliastudios.zoom.ZoomImageView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -78,7 +79,7 @@ public class DiscoverActivity extends AppCompatActivity {
 
         VideoView discover_videoView = findViewById(R.id.discover_videoView);
         AutofitTextView discover_text = findViewById(R.id.discover_text);
-        ImageView discover_image = findViewById(R.id.discover_image);
+        ZoomImageView discover_image = findViewById(R.id.discover_image);
         discover_text.setMovementMethod(new ScrollingMovementMethod());
 
         commentLinearLayout.setOnClickListener(v -> showDiscoveryComments());

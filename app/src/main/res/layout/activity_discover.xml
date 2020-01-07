@@ -13,12 +13,31 @@
         android:orientation="vertical">
 
 
-        <ImageView
+        <com.otaliastudios.zoom.ZoomImageView
             android:id="@+id/discover_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/image_container"
+            android:layout_height="match_parent"
+            app:transformation="centerInside"
+            app:transformationGravity="auto"
+            app:alignment="center"
+            app:overScrollHorizontal="true"
+            app:overScrollVertical="true"
+            app:overPinchable="true"
+            app:horizontalPanEnabled="true"
+            app:verticalPanEnabled="true"
+            app:zoomEnabled="true"
+            app:flingEnabled="true"
+            app:scrollEnabled="true"
+            app:oneFingerScrollEnabled="true"
+            app:twoFingersScrollEnabled="true"
+            app:threeFingersScrollEnabled="true"
+            app:minZoom="0.7"
+            app:minZoomType="zoom"
+            app:maxZoom="2.5"
+            app:maxZoomType="zoom"
+            app:animationDuration="280"
             android:visibility="gone"/>
+
 
         <me.grantland.widget.AutofitTextView
             android:id="@+id/discover_text"
