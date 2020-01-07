@@ -23,6 +23,7 @@ MERGED from [com.android.volley:volley:1.1.1] C:\Users\Saytoonz\.gradle\caches\t
 MERGED from [me.grantland:autofittextview:0.2.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\c6958a031492e63d19507881e347921d\autofittextview-0.2.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.ivbaranov:materialfavoritebutton:0.1.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\f7153f48d47acd74cfa82bba8f90f035\materialfavoritebutton-0.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\7c77097fa3d8848604e5bb4a1c63be17\glide-4.10.0\AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d9fd0f9d2413d1485b690ac340fd0bdd\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\44c4e2edaa28a3d1ae970d2434ff5eb3\compressor-2.1.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\0a707ec23ce242b805498002f1f03b3f\videocache-2.7.1\AndroidManifest.xml:2:1-14:12
 MERGED from [com.otaliastudios:zoomlayout:1.7.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e8c4065ab968889d521b989284be5062\zoomlayout-1.7.0\AndroidManifest.xml:2:1-11:12
@@ -226,6 +227,8 @@ MERGED from [com.github.ivbaranov:materialfavoritebutton:0.1.4] C:\Users\Saytoon
 MERGED from [com.github.ivbaranov:materialfavoritebutton:0.1.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\f7153f48d47acd74cfa82bba8f90f035\materialfavoritebutton-0.1.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\7c77097fa3d8848604e5bb4a1c63be17\glide-4.10.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\7c77097fa3d8848604e5bb4a1c63be17\glide-4.10.0\AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d9fd0f9d2413d1485b690ac340fd0bdd\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d9fd0f9d2413d1485b690ac340fd0bdd\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\44c4e2edaa28a3d1ae970d2434ff5eb3\compressor-2.1.0\AndroidManifest.xml:8:5-10:41
 MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\44c4e2edaa28a3d1ae970d2434ff5eb3\compressor-2.1.0\AndroidManifest.xml:8:5-10:41
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\0a707ec23ce242b805498002f1f03b3f\videocache-2.7.1\AndroidManifest.xml:8:5-10:41

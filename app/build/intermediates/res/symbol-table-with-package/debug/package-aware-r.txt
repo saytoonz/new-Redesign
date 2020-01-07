@@ -1637,6 +1637,7 @@ drawable exomedia_ic_rewind_white
 drawable exomedia_ic_skip_next_white
 drawable exomedia_ic_skip_previous_white
 drawable exomedia_leanback_ripple_selector
+drawable follow_button_curve
 drawable fram_camera
 drawable github
 drawable gradient_1
@@ -2149,8 +2150,10 @@ id first_stat
 id fitCenter
 id fitXY
 id fixed
+id followers_ryc_id
 id forever
 id front_progress
+id fullname_id
 id ghost_view
 id glide_custom_view_target_tag
 id gone
@@ -2252,6 +2255,7 @@ id react_layout
 id read
 id realZoom
 id refreshLayout
+id remove_followers_btn
 id reverse
 id right
 id right_icon
@@ -2357,6 +2361,7 @@ id useLogo
 id user_image
 id user_name
 id username
+id username_id
 id vBgLike
 id vBigView
 id video_holder
@@ -2467,12 +2472,14 @@ layout exomedia_video_view_layout
 layout expandable_cardview
 layout fragment_chat
 layout fragment_feeds
+layout fragment_followers
 layout fragment_home
 layout fragment_stories
 layout item_chat_list
 layout item_custom_row_loading
 layout item_discovery_comment
 layout item_feed_post
+layout item_followers_list
 layout item_option
 layout item_status_discoveries
 layout item_status_stories
@@ -2566,6 +2573,7 @@ string error
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string feeds
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string image_container
 string like
@@ -2575,6 +2583,7 @@ string maps_api_key
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
 string no_contact_yet
+string no_followers_yet
 string no_posts_yet
 string oops
 string password_toggle_content_description

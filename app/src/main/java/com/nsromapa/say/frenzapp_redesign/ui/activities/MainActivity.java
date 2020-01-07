@@ -18,6 +18,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.ui.fragment.Followers;
 import com.nsromapa.say.frenzapp_redesign.ui.fragment.Home;
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
 import com.nsromapa.say.frenzapp_redesign.helpers.DrawerItem;
@@ -32,16 +33,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     public static MainActivity activity;
     public static Fragment mCurrentFragment;
     private static final int POS_HOME = 0;
-    private static final int POS_CHATS = 1;
-    private static final int POS_SEND_MESSAGE = 2;
-    private static final int POS_CREATE_GROUP = 3;
-    private static final int POS_CREATE_CHANNEL = 4;
-    private static final int POS_CONVENTION = 5;
-    private static final int POS_FRIENDS = 6;
-    private static final int POS_INVITE = 7;
-    private static final int POS_SETTINGS = 8;
-    private static final int POS_ABOUT = 9;
-    private static final int POS_LOGOUT = 11;
+    private static final int POS_FOLLOWERS = 1;
+    private static final int POS_FOLLOWING = 2;
+    private static final int POS_FRIENDS = 3;
+    private static final int POS_INVITE = 4;
+    private static final int POS_SETTINGS = 5;
+    private static final int POS_ABOUT = 6;
+    private static final int POS_LOGOUT = 7;
 
     public static Toolbar toolbar;
     private DrawerAdapter adapter;
@@ -81,11 +79,8 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
         adapter = new DrawerAdapter(Arrays.asList(
                 createItemFor(POS_HOME).setChecked(true),
-                createItemFor(POS_CHATS),
-                createItemFor(POS_SEND_MESSAGE),
-                createItemFor(POS_CREATE_GROUP),
-                createItemFor(POS_CREATE_CHANNEL),
-                createItemFor(POS_CONVENTION),
+                createItemFor(POS_FOLLOWERS),
+                createItemFor(POS_FOLLOWING),
                 createItemFor(POS_FRIENDS),
                 createItemFor(POS_INVITE),
                 createItemFor(POS_SETTINGS),
@@ -115,7 +110,14 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             slidingRootNav.closeMenu();
             Fragment selectedScreen = new Home();
             showFragment(selectedScreen);
-        }else{
+        }else if (position == POS_FOLLOWERS){
+
+            slidingRootNav.closeMenu();
+            Fragment selectedScreen = new Followers();
+            showFragment(selectedScreen);
+        }
+
+        else{
             Fragment selectedScreen = Home.createFor(screenTitles[position]);
             showFragment(selectedScreen);
         }

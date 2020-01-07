@@ -54,6 +54,7 @@ dependencies {
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
     // do not update this library or else file picker library will crash
     implementation 'com.github.bumptech.glide:glide:4.10.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt 'com.github.bumptech.glide:compiler:4.10.0'
     //Watermark Library
     implementation 'com.huangyz0918:androidwm-light:0.1.2'

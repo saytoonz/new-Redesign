@@ -1,5 +1,6 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
@@ -146,11 +147,12 @@ public class DiscoverActivity extends AppCompatActivity {
         setmImageHolderBg(mDiscoveryList.getBackground(), mViewHolderLayout);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void setVideoDiscovery(VideoView video) {
         HttpProxyCacheServer proxy = App.getProxy(this);
         String proxyUrl = proxy.getProxyUrl(mDiscoveryList.getMediaUrl());
         video.setVideoPath(proxyUrl);
-        video.setOnPreparedListener(mp -> mp.setOnInfoListener((mp1, what, extra) -> {
+        video.setOnPreparedListener(mp -> {mp.setOnInfoListener((mp1, what, extra) -> {
             switch (what) {
                 case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
                     mProgressBar.setVisibility(View.GONE);
@@ -165,10 +167,30 @@ public class DiscoverActivity extends AppCompatActivity {
                 }
             }
             return false;
-        }));
+        });
+            video.start();
+            mProgressBar.setVisibility(View.GONE);
+        });
+
+        video.setOnCompletionListener(mp12 -> video.start());
+
+
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                if (video.isPlaying()){
+                    video.pause();
+                }else{
+                    video.start();
+                }
+                return true;
+            }
+        });
+
+        video.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
     }
 
-    private void setImageDiscovery(ImageView discover_image) {
+    private void setImageDiscovery(ZoomImageView discover_image) {
         mProgressBar.setVisibility(View.GONE);
         Glide.with(this)
                 .load(mDiscoveryList.getMediaUrl())

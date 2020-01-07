@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/colorPrimaryy"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/contact_placeholder"
+        app:civ_border_width="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="195dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="-22dp"
+        android:layout_toStartOf="@+id/read"
+        android:layout_toEndOf="@+id/user_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usernamne"
+            android:textColor="#212121"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fullname_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/remove_followers_btn"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/linearLayout"
+        android:background="@drawable/follow_button_curve"
+        android:backgroundTint="@color/white"
+        android:text="Remove"
+        android:textColor="@color/black"
+        android:textStyle="normal"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

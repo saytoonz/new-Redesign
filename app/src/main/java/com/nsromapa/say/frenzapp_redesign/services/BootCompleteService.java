@@ -41,7 +41,7 @@ public class BootCompleteService extends Service {
             @Override
             public void run() {
                 runThisFunction1();
-                handler.postDelayed(this, 300);
+                handler.postDelayed(this, 3000);
             }
         };
         handler.postDelayed(runnable, 700);
