@@ -55,9 +55,9 @@ public class DiscoverActivity extends AppCompatActivity {
     private Discoveries mDiscoveryList;
     private ProgressBar mProgressBar;
     private LinearLayout mViewHolderLayout;
-    private int loadCount;
    private DiscoveryComment description;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,7 +111,9 @@ public class DiscoverActivity extends AppCompatActivity {
         });
         discover_image.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
 
-        commentLinearLayout.setOnClickListener(v -> showDiscoveryComments(mDiscoveryList.getId()));
+        commentLinearLayout.setOnClickListener(v -> this.getSupportFragmentManager().beginTransaction()
+                .add(new ShowDiscoveryComment(getApplicationContext(), mDiscoveryList.getId(), description), "DicoverActivity")
+                .commit());
 
         if (mDiscoveryList.getMimeType().contains("image")) {
             discover_videoView.setVisibility(View.GONE);
@@ -246,41 +248,41 @@ public class DiscoverActivity extends AppCompatActivity {
 
     }
 
-    private void showDiscoveryComments(String discovery_id) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
-                response -> {
-                    Log.e("Volley Result", "" + response);
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
-
-                        this.getSupportFragmentManager().beginTransaction()
-                                .add(new ShowDiscoveryComment(getApplicationContext(),jsonArray.toString(), description), "DicoverActivity")
-                                .commit();
-
-                        loadCount += 16;
-
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-                },
-                error -> {
-
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
-                postMap.put("discovery_comments", "true");
-                postMap.put("load", String.valueOf(loadCount));
-                postMap.put("discovery_id", discovery_id);
-                return postMap;
-            }
-        };
-
-        Volley.newRequestQueue(this).add(stringRequest);
-
-    }
+//    private void showDiscoveryComments(String discovery_id) {
+//        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+//                response -> {
+//                    Log.e("Volley Result", "" + response);
+//                    try {
+//                        JSONObject jsonObject = new JSONObject(response);
+//                        JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
+//
+//                        this.getSupportFragmentManager().beginTransaction()
+//                                .add(new ShowDiscoveryComment(getApplicationContext(), discovery_id, description), "DicoverActivity")
+//                                .commit();
+//
+//                        loadCount += 16;
+//
+//
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//
+//                },
+//                error -> {
+//
+//                }) {
+//            @Override
+//            protected Map<String, String> getParams() {
+//                Map<String, String> postMap = new HashMap<>();
+//                postMap.put("user_id", Utils.getUserUid());
+//                postMap.put("discovery_comments", "true");
+//                postMap.put("load", String.valueOf(loadCount));
+//                postMap.put("discovery_id", discovery_id);
+//                return postMap;
+//            }
+//        };
+//
+//        Volley.newRequestQueue(this).add(stringRequest);
+//
+//    }
 }

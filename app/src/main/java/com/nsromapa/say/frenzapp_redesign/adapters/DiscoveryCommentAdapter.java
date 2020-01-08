@@ -2,6 +2,7 @@ package com.nsromapa.say.frenzapp_redesign.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,40 +68,44 @@ public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (holder instanceof DiscoveryCommentAdapter.CommentsHolder) {
-
             DiscoveryComment list = commentList.get(position);
-            DiscoveryCommentAdapter.CommentsHolder p0 = (DiscoveryCommentAdapter.CommentsHolder) holder;
-            Glide.with(context)
-                    .load(list.getCommenter_image())
-                    .into(p0.commenter_image);
-            p0.commenter_name.setText(list.getCommenter_name());
 
-            p0.comment_time.setText(list.getComment_time());
-            p0.comment_tv.setText(list.getComment());
-            p0.likers.setText(list.getComment_likes());
-            p0.dislikers.setText(list.getComment_dislikes());
+            if (!TextUtils.isEmpty(list.getComment())){
+                DiscoveryCommentAdapter.CommentsHolder p0 = (DiscoveryCommentAdapter.CommentsHolder) holder;
 
-            p0.like_comment.setOnClickListener(v -> likeComment(list.getComment_id()));
+                Glide.with(context)
+                        .load(list.getCommenter_image())
+                        .into(p0.commenter_image);
+                p0.commenter_name.setText(list.getCommenter_name());
 
-            p0.dislike_comment.setOnClickListener(v -> dislikeComment(list.getComment_id()));
+                p0.comment_time.setText(list.getComment_time());
+                p0.comment_tv.setText(list.getComment());
+                p0.likers.setText(list.getComment_likes());
+                p0.dislikers.setText(list.getComment_dislikes());
 
-            if (list.getComment_or_description().equals("comment")
-                    && list.getComment_id().equals(Utils.getUserUid())){
-                p0.delete_comment.setVisibility(View.VISIBLE);
-                p0.delete_comment.setOnClickListener (v -> {
-                    deleteComment(list.getComment_id());
-                    commentList.remove(position);
-                    notifyDataSetChanged();
-                });
+                p0.like_comment.setOnClickListener(v -> likeComment(list.getComment_id()));
+
+                p0.dislike_comment.setOnClickListener(v -> dislikeComment(list.getComment_id()));
+
+                if (list.getComment_or_description().equals("comment")
+                        && list.getComment_id().equals(Utils.getUserUid())){
+                    p0.delete_comment.setVisibility(View.VISIBLE);
+                    p0.delete_comment.setOnClickListener (v -> {
+                        deleteComment(list.getComment_id());
+                        commentList.remove(position);
+                        notifyDataSetChanged();
+                    });
+                }
+                else
+                    p0.delete_comment.setVisibility(View.GONE);
+
+
+                if (list.getComment_or_description().equals("description")){
+                    p0.actionsContainerLL.setVisibility(View.GONE);
+                }
+
+
             }
-            else
-                p0.delete_comment.setVisibility(View.GONE);
-
-
-            if (list.getComment_or_description().equals("description")){
-                p0.actionsContainerLL.setVisibility(View.GONE);
-            }
-
 
         } else if (holder instanceof DiscoveryCommentAdapter.LoadingHolder) {
             DiscoveryCommentAdapter.LoadingHolder loadingHolder = (DiscoveryCommentAdapter.LoadingHolder) holder;

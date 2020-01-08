@@ -1180,6 +1180,10 @@
         "source": "D:\\ANDROID\\Redesign1\\app\\src\\main\\res\\drawable\\error_placeholder2.jpg"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_empty_box_120px.png.flat",
+        "source": "D:\\ANDROID\\Redesign1\\app\\src\\main\\res\\drawable\\empty_box_120px.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },

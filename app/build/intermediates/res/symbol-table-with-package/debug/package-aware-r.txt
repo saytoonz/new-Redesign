@@ -1626,6 +1626,7 @@ drawable dislike
 drawable dot_background
 drawable drawable_gradient_animation_list
 drawable edittext_accent
+drawable empty_box_120px
 drawable error_placeholder
 drawable error_placeholder2
 drawable exomedia_default_controls_interactive_background
@@ -2560,6 +2561,7 @@ string admob_appId
 string an_unrecognized_error_occurred
 string app_name
 string appbar_scrolling_view_behavior
+string be_first_create_comment
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
@@ -2573,7 +2575,6 @@ string error
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string feeds
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string image_container
 string like
@@ -2582,6 +2583,7 @@ string long_text
 string maps_api_key
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
+string no_comment_yet
 string no_contact_yet
 string no_followers_yet
 string no_posts_yet
@@ -2593,12 +2595,14 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string server_connection_error
+string sorry_comment_not_sent
 string srn_drawer_close
 string srn_drawer_open
 string srn_ex_bad_content_view
 string srn_ex_no_menu_view
 string status_bar_notification_info_overflow
 string stories
+string there_was_an_error
 string toast_message
 string video
 string view_profile

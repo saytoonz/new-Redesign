@@ -3,11 +3,14 @@ package com.nsromapa.say.frenzapp_redesign.ui.sheets;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +19,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.github.heyalex.bottomdrawer.BottomDrawerDialog;
 import com.github.heyalex.bottomdrawer.BottomDrawerFragment;
@@ -32,21 +38,30 @@ import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
+
+import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
 
 public class ShowDiscoveryComment extends BottomDrawerFragment {
     private DiscoveryCommentAdapter discoveryCommentAdapter;
-
-    private String discoveryComment_jObj;
+    private int loadCount = 0;
+    private String discovery_id;
     private DiscoveryComment description;
     private Context context;
 
-    public ShowDiscoveryComment(Context context, String discoveryComment_jObj, DiscoveryComment description) {
-        this.discoveryComment_jObj = discoveryComment_jObj;
+    private LinearLayout error_view;
+    private LinearLayout default_item;
+
+    public ShowDiscoveryComment(Context context, String discovery_id, DiscoveryComment description) {
+        this.discovery_id = discovery_id;
         this.description = description;
         this.context = context;
     }
@@ -70,6 +85,9 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
         ImageView send_comment = view.findViewById(R.id.send_comment);
         send_comment.setOnClickListener(v -> createComment(create_comment));
 
+        default_item = view.findViewById(R.id.default_item);
+        error_view = view.findViewById(R.id.error_view);
+
         RecyclerView bottom_sheetRecycler = view.findViewById(R.id.bottom_sheetrecycler);
         bottom_sheetRecycler.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
@@ -80,7 +98,7 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
             @Override
             public void onLoadMore(int page, int totalItemsCount, int quantity) {
                 if (!discoveryCommentAdapter.loading)
-                    getCommentsData(String.valueOf(quantity));
+                    showDiscoveryComments(String.valueOf(quantity));
             }
         };
         bottom_sheetRecycler.addOnScrollListener(endlessScrollListener);
@@ -100,43 +118,146 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    private void getCommentsData(String quantity) {
+
+    private void showDiscoveryComments(String quantity) {
+
+        default_item.setVisibility(View.GONE);
+        error_view.setVisibility(View.GONE);
+
         discoveryCommentAdapter.showLoading();
         List<DiscoveryComment> discoveryComments = new ArrayList<>();
-        try {
-            JSONArray jsonArray = new JSONArray(discoveryComment_jObj);
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject commentObj = jsonArray.getJSONObject(i);
-                JSONObject commenterObj = commentObj.getJSONObject("1");
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response -> {
+                    Log.e("Volley Result", "" + response);
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
 
-                discoveryComments.add(new DiscoveryComment(
-                        commenterObj.getString("id"),
-                        commenterObj.getString("username"),
-                        commenterObj.getString("image"),
-                        commenterObj.toString(),
-                        commentObj.getString("id"),
-                        commentObj.getString("0"),
-                        commentObj.getString("comment"),
-                        commentObj.getString("likes"),
-                        commentObj.getString("dislikes"),
-                        "comment"));
+                        if (jsonArray.length() > 0) {
+                            default_item.setVisibility(View.GONE);
+                            error_view.setVisibility(View.GONE);
+
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject commentObj = jsonArray.getJSONObject(i);
+                                JSONObject commenterObj = commentObj.getJSONObject("1");
+
+                                discoveryComments.add(new DiscoveryComment(
+                                        commenterObj.getString("id"),
+                                        commenterObj.getString("username"),
+                                        commenterObj.getString("image"),
+                                        commenterObj.toString(),
+                                        commentObj.getString("id"),
+                                        commentObj.getString("0"),
+                                        commentObj.getString("comment"),
+                                        commentObj.getString("likes"),
+                                        commentObj.getString("dislikes"),
+                                        "comment"));
+                            }
+
+                            loadCount += 16;
+
+                            new Handler().postDelayed(() -> {
+                                //hide loading
+                                discoveryCommentAdapter.hideLoading();
+                                //add products to recyclerView
+                                discoveryCommentAdapter.addProducts(discoveryComments);
+                            }, 1000);
+                        }else{
+                            if (TextUtils.isEmpty(description.getComment()))
+                            default_item.setVisibility(View.VISIBLE);
+                            discoveryCommentAdapter.hideLoading();
+                        }
+
+                    } catch (JSONException e) {
+                        error_view.setVisibility(View.VISIBLE);
+                        discoveryCommentAdapter.hideLoading();
+                    }
+
+                },
+                error -> {
+                    error_view.setVisibility(View.VISIBLE);
+                    discoveryCommentAdapter.hideLoading();
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("discovery_comments", "true");
+                postMap.put("load", String.valueOf(loadCount));
+                postMap.put("discovery_id", discovery_id);
+                postMap.put("quantity", quantity);
+                return postMap;
             }
+        };
 
-            new Handler().postDelayed(() -> {
-                //hide loading
-                discoveryCommentAdapter.hideLoading();
-                //add products to recyclerView
-                discoveryCommentAdapter.addProducts(discoveryComments);
-            }, 1000);
+        Volley.newRequestQueue(context).add(stringRequest);
 
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
     }
 
-
     private void createComment(EditText create_comment) {
+        if (!TextUtils.isEmpty(create_comment.getText().toString())){
+            final  String comment = create_comment.getText().toString();
 
+            List<DiscoveryComment> discoveryComments = new ArrayList<>();
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                    response -> {
+                        Log.e("Volley Result", "" + response);
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray jsonArray = jsonObject.getJSONArray("MyNewComment");
+
+                            if (jsonArray.length() > 0) {
+                                default_item.setVisibility(View.GONE);
+                                error_view.setVisibility(View.GONE);
+
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject commentObj = jsonArray.getJSONObject(i);
+                                    JSONObject commenterObj = commentObj.getJSONObject("1");
+
+                                    discoveryComments.add(new DiscoveryComment(
+                                            commenterObj.getString("id"),
+                                            commenterObj.getString("username"),
+                                            commenterObj.getString("image"),
+                                            commenterObj.toString(),
+                                            commentObj.getString("id"),
+                                            commentObj.getString("0"),
+                                            comment,
+                                            "0",
+                                            "0",
+                                            "comment"));
+                                }
+
+                                new Handler().postDelayed(() -> {
+                                    //hide loading
+                                    discoveryCommentAdapter.hideLoading();
+                                    //add products to recyclerView
+                                    discoveryCommentAdapter.addProducts(discoveryComments);
+                                }, 1000);
+                            }else{
+                                Toasty.error(context, getString(R.string.sorry_comment_not_sent)).show();
+                            }
+
+                        } catch (JSONException e) {
+                            Toasty.error(context, getString(R.string.there_was_an_error)).show();
+                        }
+
+                    },
+                    error -> {
+                        Toasty.error(context, getString(R.string.there_was_an_error)).show();
+                    }) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> postMap = new HashMap<>();
+                    postMap.put("user_id", Utils.getUserUid());
+                    postMap.put("comment_discovery_post", "true");
+                    postMap.put("comment",comment);
+                    postMap.put("discovery_id", discovery_id);
+                    return postMap;
+                }
+            };
+
+            Volley.newRequestQueue(context).add(stringRequest);
+        }
     }
 //
 //    @NotNull
