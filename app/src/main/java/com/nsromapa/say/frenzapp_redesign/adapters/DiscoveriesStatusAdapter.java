@@ -58,8 +58,8 @@ public class DiscoveriesStatusAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Discoveries list = discoveriesList.get(position);
         if (holder instanceof DiscoveriesHolder){
+            Discoveries list = discoveriesList.get(position);
             DiscoveriesHolder discoveriesHolder = (DiscoveriesHolder) holder;
 
             Glide.with(context)

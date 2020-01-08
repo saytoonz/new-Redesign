@@ -29,9 +29,9 @@ import com.bumptech.glide.request.target.Target;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowDiscoveryComments;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment;
+import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowDiscoveryComment;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.otaliastudios.zoom.ZoomImageView;
 
@@ -255,7 +255,7 @@ public class DiscoverActivity extends AppCompatActivity {
                         JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
 
                         this.getSupportFragmentManager().beginTransaction()
-                                .add(new ShowDiscoveryComments(jsonArray.toString(), description), "DicoverActivity")
+                                .add(new ShowDiscoveryComment(getApplicationContext(),jsonArray.toString(), description), "DicoverActivity")
                                 .commit();
 
                         loadCount += 16;

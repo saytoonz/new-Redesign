@@ -1,7 +1,9 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
-public class DiscoveryComment {
+import java.io.Serializable;
 
+public class DiscoveryComment implements Serializable {
+    private boolean isLoading = false;
     private String commenter_id;
     private String commenter_name;
     private String commenter_image;
@@ -13,6 +15,9 @@ public class DiscoveryComment {
     private String comment_dislikes;
     private String comment_or_description;
 
+    public DiscoveryComment(){
+
+    }
 
     public DiscoveryComment(String commenter_id,
                             String commenter_name,
@@ -115,5 +120,13 @@ public class DiscoveryComment {
 
     public void setComment_or_description(String comment_or_description) {
         this.comment_or_description = comment_or_description;
+    }
+
+    public boolean isLoading() {
+        return isLoading;
+    }
+
+    public void setLoading(boolean loading) {
+        isLoading = loading;
     }
 }
