@@ -161,8 +161,8 @@ class ShowDiscoveryComments(private var dicoveryComment_jObj: String,
                     p0.delete_comment.visibility = View.VISIBLE
                     p0.delete_comment.setOnClickListener {
                         deleteComment(commentList[p1].comment_id)
-                        commentList.removeAt(p1-1)
-                        bottom_sheetrecycler.adapter?.notifyItemRemoved(p1-1)
+                        commentList.removeAt(p1)
+                        bottom_sheetrecycler.adapter?.notifyItemRemoved(p1)
                     }
                 }
                 else
