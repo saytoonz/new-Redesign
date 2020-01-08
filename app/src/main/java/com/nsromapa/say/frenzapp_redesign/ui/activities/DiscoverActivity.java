@@ -1,15 +1,12 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.GestureDetector;
-import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,10 +29,9 @@ import com.bumptech.glide.request.target.Target;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.helpers.ShowDiscoveryComments;
+import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowDiscoveryComments;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment;
-import com.nsromapa.say.frenzapp_redesign.models.StoryStatus;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.otaliastudios.zoom.ZoomImageView;
 
@@ -43,11 +39,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;

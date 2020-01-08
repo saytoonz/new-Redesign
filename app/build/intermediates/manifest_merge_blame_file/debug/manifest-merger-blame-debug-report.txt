@@ -6,82 +6,82 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
+8-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
+9-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:6:5-79
-11-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:6:22-76
+11-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:6:5-79
+11-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:6:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:7:5-67
-12-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:7:22-64
+12-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:7:5-67
+12-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:7:22-64
 13    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-13-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:8:5-81
-13-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:8:22-78
+13-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:8:5-81
+13-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:8:22-78
 14
 15    <application
-15-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:10:5-49:19
+15-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:10:5-49:19
 16        android:name="com.nsromapa.say.frenzapp_redesign.App"
-16-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:11:9-28
+16-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:11:9-28
 17        android:allowBackup="true"
-17-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:9-35
+17-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:12:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 18-->[androidx.core:core:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\df2ac4fe6b88cbdd1c862077d2fdf1ec\core-1.1.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:13:9-43
+20-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:13:9-43
 21        android:label="@string/app_name"
-21-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:9-41
+21-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:14:9-41
 22        android:roundIcon="@mipmap/ic_launcher"
-22-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:9-48
+22-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:15:9-48
 23        android:supportsRtl="true"
-23-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:16:9-35
+23-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:16:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme" >
-25-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:17:9-40
+25-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:17:9-40
 26        <activity
-26-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:20:9-22:52
+26-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:20:9-22:52
 27            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity"
-27-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:21:13-60
+27-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:21:13-60
 28            android:theme="@style/StoryViewThem" />
-28-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:22:13-49
+28-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:22:13-49
 29        <activity
-29-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:24:9-26:52
+29-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:24:9-26:52
 30            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity"
-30-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:25:13-59
+30-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:25:13-59
 31            android:theme="@style/StoryViewThem" />
-31-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:13-49
+31-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:26:13-49
 32        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity" >
-32-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:9-34:20
-32-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:19-61
+32-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:28:9-34:20
+32-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:28:19-61
 33            <intent-filter>
-33-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:13-33:29
+33-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:29:13-33:29
 34                <action android:name="android.intent.action.MAIN" />
-34-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:17-69
-34-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:25-66
+34-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:30:17-69
+34-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:30:25-66
 35
 36                <category android:name="android.intent.category.LAUNCHER" />
-36-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:17-77
-36-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:27-74
+36-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:32:17-77
+36-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:32:27-74
 37            </intent-filter>
 38        </activity>
 39
 40        <service
-40-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:37:9-39:38
+40-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:37:9-39:38
 41            android:name="com.nsromapa.say.frenzapp_redesign.services.BootCompleteService"
-41-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:38:13-57
+41-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:38:13-57
 42            android:enabled="true" />
-42-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:13-35
+42-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:39:13-35
 43
 44        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
-44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:9-47:20
-44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:19-67
+44-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:43:9-47:20
+44-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:43:19-67
 45            <intent-filter>
-45-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:13-46:29
+45-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:44:13-46:29
 46                <action android:name="android.intent.action.BOOT_COMPLETED" />
-46-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:17-79
-46-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:25-76
+46-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:45:17-79
+46-->D:\ANDROID\Redesign1\app\src\main\AndroidManifest.xml:45:25-76
 47            </intent-filter>
 48        </receiver>
 49    </application>
