@@ -70,7 +70,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
-import static com.nsromapa.say.frenzapp_redesign.ui.getTextBackground.setmImageHolderBg;
+import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
 
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
 
@@ -222,7 +222,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 holder.mImageholder.setVisibility(View.VISIBLE);
                 holder.pager_layout.setVisibility(View.GONE);
                 holder.post_desc.setVisibility(View.GONE);
-                setmImageHolderBg(postList.get(pos).getColor(), holder.mImageholder);
+                setImageHolderBg(postList.get(pos).getColor(), holder.mImageholder);
                 holder.post_text.setVisibility(View.VISIBLE);
                 holder.post_text.setText(postList.get(pos).getDescription());
                 holder.post_text.setMovementMethod(new ScrollingMovementMethod());

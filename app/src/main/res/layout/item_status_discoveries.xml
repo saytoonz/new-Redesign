@@ -15,5 +15,23 @@
             android:layout_height="100dp"
             android:scaleType="centerCrop" />
 
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/discovery_text"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/discover_play"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:src="@drawable/play_big"
+            android:contentDescription="@string/image_container"
+            android:visibility="gone"/>
+
 
 </androidx.cardview.widget.CardView>

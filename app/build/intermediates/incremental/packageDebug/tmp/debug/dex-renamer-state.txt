@@ -1,7 +1,7 @@
-#Wed Jan 08 15:10:05 GMT 2020
-base.0=D\:\\ANDROID\\Redesign1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Thu Jan 09 15:30:31 GMT 2020
+base.0=D\:\\ANDROID\\Redesign\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\ANDROID\\Redesign1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=D\:\\ANDROID\\Redesign\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex

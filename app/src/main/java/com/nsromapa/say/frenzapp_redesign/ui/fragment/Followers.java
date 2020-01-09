@@ -12,12 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.adapters.ContactListInChatAdapter;
 import com.nsromapa.say.frenzapp_redesign.adapters.FollowersListAdapter;
-import com.nsromapa.say.frenzapp_redesign.models.ChatList;
-import com.nsromapa.say.frenzapp_redesign.models.FollowersList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +26,8 @@ import java.util.List;
 public class Followers extends Fragment {
 
     private FollowersListAdapter myAdapter;
-    private List<FollowersList> followersLists;
+    private List<com.nsromapa.say.frenzapp_redesign.models.Followers> followers;
+    private Button removeBtn;
 
 
 
@@ -43,53 +42,37 @@ public class Followers extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_followers, container, false);
 
-        followersLists = new ArrayList<>();
+        followers = new ArrayList<>();
         RecyclerView followersRecyclerView = view.findViewById(R.id.followers_ryc_id);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        myAdapter = new FollowersListAdapter(getContext(),followersLists,getActivity());
+        myAdapter = new FollowersListAdapter(getContext(), followers,getActivity());
         followersRecyclerView.setLayoutManager(mLayoutManager);
         followersRecyclerView.setHasFixedSize(true);
         followersRecyclerView.setAdapter(myAdapter);
         return view;
+
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         getFollowers();
+
+
+
     }
 
     private void getFollowers() {
-        followersLists.add(new FollowersList(
+        followers.add(new com.nsromapa.say.frenzapp_redesign.models.Followers(
                 "https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg",
                 "@GOAD",
-                "Godson Oheneba Dacosta ",
-                "1577761695"
-        ));
+                "Godson Oheneba  ",
+                "1577761695",
+                "1"));
 
 
-        followersLists.add(new FollowersList(
-                "https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg",
-                "@SAY",
-                "SamuelAnin Yeboah ",
-                "1577761695"
-        ));
-
-
-        followersLists.add(new FollowersList(
-                "https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg",
-                "@POAD",
-                "Godson Oheneba Dacosta ",
-                "1577761695"
-        ));
-
-
-        followersLists.add(new FollowersList(
-                "https://www.gettyimages.com/gi-resources/images/500px/983794168.jpg",
-                "@ARCPOPE",
-                "Nyamekye Boi ",
-                "1577761695"
-        ));
 
 
 

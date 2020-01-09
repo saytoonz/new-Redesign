@@ -75,6 +75,7 @@ public class StoryStatusAdapter extends RecyclerView.Adapter<StoryStatusAdapter.
                 intent.putExtra("storiesList", list.getStories());
                 intent.putExtra("posterName", list.getPosterName());
                 intent.putExtra("posterImage", list.getPosterImage());
+                intent.putExtra("posterId", list.getPosterId());
                 activity.startActivityForResult(intent, 100);
             }
         });
@@ -84,6 +85,7 @@ public class StoryStatusAdapter extends RecyclerView.Adapter<StoryStatusAdapter.
                 intent.putExtra("storiesList", list.getStories());
                 intent.putExtra("posterName", list.getPosterName());
                 intent.putExtra("posterImage", list.getPosterImage());
+                intent.putExtra("posterId", list.getPosterId());
                 activity.startActivityForResult(intent, 100);
             }
         });

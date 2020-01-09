@@ -34,5 +34,11 @@
     <string name="no_comment_yet">No Comment Yet</string>
     <string name="be_first_create_comment">Be the first to comment…</string>
     <string name="sorry_comment_not_sent">Sorry, comment could not send, try again.</string>
+
+    <string name="views">%1$s Views</string>
+    <string name="likes">%1$s Likes</string>
+    <string name="comments">%1$s Comments</string>
+    <string name="delete_status">Delete Status</string>
+    <string name="remove">Remove</string>
 </resources>
 

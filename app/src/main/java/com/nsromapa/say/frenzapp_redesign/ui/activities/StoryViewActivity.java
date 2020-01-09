@@ -3,12 +3,13 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,6 +32,8 @@ import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.StoriesData;
 import com.nsromapa.say.frenzapp_redesign.helpers.StoriesProgressView;
+import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowStoryViewers;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -38,7 +41,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
-import static com.nsromapa.say.frenzapp_redesign.ui.getTextBackground.setmImageHolderBg;
+import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
 
 
 public class StoryViewActivity extends AppCompatActivity implements StoriesProgressView.StoriesListener {
@@ -46,10 +49,11 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
     private StoriesProgressView storiesProgressView;
     private ProgressBar mProgressBar;
     private LinearLayout mViewHolderLayout;
-    private ImageView close_imageView;
+    private ImageView close_imageView, sendReply_viewers_iv;
+    private EditText sendReply_tv;
     private int counter = 0;
     private ArrayList<StoriesData> mStoriesList;
-    private String posterName, posterImage;
+    private String posterName, posterImage, posterId;
     private TextView postedTimeTV;
     private ArrayList<View> mediaPlayerArrayList = new ArrayList<>();
 
@@ -82,6 +86,8 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
         mProgressBar = findViewById(R.id.progressBar);
         mViewHolderLayout = findViewById(R.id.holder_linear_layout);
         close_imageView = findViewById(R.id.close_imageView);
+        sendReply_viewers_iv = findViewById(R.id.sendReply_viewers_iv);
+        sendReply_tv = findViewById(R.id.sendReply_tv);
         CircleImageView posterImageView = findViewById(R.id.poster_image);
         TextView posterNameTV = findViewById(R.id.poster_name);
         postedTimeTV = findViewById(R.id.posted_time);
@@ -95,6 +101,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
 
             posterName = getIntent().getStringExtra("posterName");
             posterImage = getIntent().getStringExtra("posterImage");
+            posterId = getIntent().getStringExtra("posterId");
         } else {
             finish();
         }
@@ -105,6 +112,26 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                 .apply(new RequestOptions().placeholder(R.drawable.contact_placeholder))
                 .into(posterImageView);
         posterNameTV.setText(posterName);
+
+        if (posterId.equals(Utils.getUserUid())) {
+            sendReply_tv.setVisibility(View.INVISIBLE);
+            sendReply_tv.setEnabled(false);
+            sendReply_tv.setFocusable(false);
+            sendReply_tv.setClickable(false);
+            sendReply_viewers_iv.setImageResource(R.drawable.icons8_eye_64);
+            //See Viewers
+            sendReply_viewers_iv.setOnClickListener(v -> this.getSupportFragmentManager().beginTransaction()
+                    .add(new ShowStoryViewers(getApplicationContext(), mStoriesList.get(counter).storyId, "story"), "StoryViewActivity")
+                    .commit());
+        } else {
+            sendReply_tv.setVisibility(View.VISIBLE);
+            sendReply_tv.setEnabled(true);
+            sendReply_tv.setFocusable(true);
+            sendReply_tv.setClickable(true);
+            sendReply_viewers_iv.setImageResource(R.drawable.send);
+            ///Send Post Reply
+            sendReply_viewers_iv.setOnClickListener(v -> sendReply());
+        }
 
 
 //        prepareStoriesList();
@@ -130,6 +157,12 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
         View skip = findViewById(R.id.skip);
         skip.setOnClickListener(v -> storiesProgressView.skip());
         skip.setOnTouchListener(onTouchListener);
+    }
+
+    private void sendReply() {
+        String replyText = sendReply_tv.getText().toString();
+        if (!TextUtils.isEmpty(replyText))
+            Toast.makeText(this, replyText, Toast.LENGTH_SHORT).show();
     }
 
     private void setStoryView(final int counter) {
@@ -193,7 +226,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
             postedTimeTV.setText(mStoriesList.get(counter).postedTime);
 
             textView.setText(mStoriesList.get(counter).description);
-            setmImageHolderBg(mStoriesList.get(counter).background, textView);
+            setImageHolderBg(mStoriesList.get(counter).background, textView);
 
             mProgressBar.setVisibility(View.GONE);
             storiesProgressView.setStoryDuration(5000);

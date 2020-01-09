@@ -1,9 +1,12 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -16,6 +19,7 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -26,12 +30,15 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.bumptech.glide.util.Util;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment;
+import com.nsromapa.say.frenzapp_redesign.models.Viewers;
 import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowDiscoveryComment;
+import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowStoryViewers;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.otaliastudios.zoom.ZoomImageView;
 
@@ -46,8 +53,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
-import static com.nsromapa.say.frenzapp_redesign.ui.getTextBackground.setmImageHolderBg;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
+import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
 import static com.nsromapa.say.frenzapp_redesign.utils.OpenIntents.profileWithUserJson;
 
 public class DiscoverActivity extends AppCompatActivity {
@@ -55,7 +62,9 @@ public class DiscoverActivity extends AppCompatActivity {
     private Discoveries mDiscoveryList;
     private ProgressBar mProgressBar;
     private LinearLayout mViewHolderLayout;
-   private DiscoveryComment description;
+    private DiscoveryComment description;
+    private LinearLayout viewsLinearLayout;
+    private ImageView delete_discovery;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -79,18 +88,25 @@ public class DiscoverActivity extends AppCompatActivity {
         TextView posterNameTV = findViewById(R.id.poster_name);
         TextView postedTimeTV = findViewById(R.id.posted_time);
         ImageView close_imageView = findViewById(R.id.close_imageView);
+        delete_discovery = findViewById(R.id.delete_discovery);
 
-        close_imageView.setOnClickListener(v -> finish());
-        setDiscoveryInfo(posterImageView, posterNameTV, postedTimeTV);
 
 
         //Action Views
         LinearLayout likeLinearLayout = findViewById(R.id.like_linearLayout);
         LinearLayout commentLinearLayout = findViewById(R.id.comment_linearLayout);
-        LinearLayout viewsLinearLayout = findViewById(R.id.views_linearLayout);
+        viewsLinearLayout = findViewById(R.id.views_linearLayout);
         TextView likeTextView = findViewById(R.id.like_textView);
         TextView commentTextView = findViewById(R.id.comment_textView);
         TextView viewsTextView = findViewById(R.id.views_textView);
+
+        close_imageView.setOnClickListener(v -> finish());
+        setDiscoveryInfo(posterImageView, posterNameTV, postedTimeTV);
+
+        Resources res = getResources();
+        commentTextView.setText(String.format(res.getString(R.string.comments), mDiscoveryList.getComments()));
+        likeTextView.setText(String.format(res.getString(R.string.likes), mDiscoveryList.getLikes()));
+        viewsTextView.setText(String.format(res.getString(R.string.views), mDiscoveryList.getWatches()));
 
         VideoView discover_videoView = findViewById(R.id.discover_videoView);
         AutofitTextView discover_text = findViewById(R.id.discover_text);
@@ -139,7 +155,7 @@ public class DiscoverActivity extends AppCompatActivity {
     private void setTextDiscovery(AutofitTextView discover_text) {
         mProgressBar.setVisibility(View.GONE);
         discover_text.setText(mDiscoveryList.getDescription());
-        setmImageHolderBg(mDiscoveryList.getBackground(), mViewHolderLayout);
+        setImageHolderBg(mDiscoveryList.getBackground(), mViewHolderLayout);
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -147,22 +163,23 @@ public class DiscoverActivity extends AppCompatActivity {
         HttpProxyCacheServer proxy = App.getProxy(this);
         String proxyUrl = proxy.getProxyUrl(mDiscoveryList.getMediaUrl());
         video.setVideoPath(proxyUrl);
-        video.setOnPreparedListener(mp -> {mp.setOnInfoListener((mp1, what, extra) -> {
-            switch (what) {
-                case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
-                    mProgressBar.setVisibility(View.GONE);
-                    return true;
+        video.setOnPreparedListener(mp -> {
+            mp.setOnInfoListener((mp1, what, extra) -> {
+                switch (what) {
+                    case MediaPlayer.MEDIA_INFO_VIDEO_RENDERING_START: {
+                        mProgressBar.setVisibility(View.GONE);
+                        return true;
+                    }
+                    case MediaPlayer.MEDIA_INFO_BUFFERING_START:
+                    case MediaPlayer.MEDIA_INFO_BUFFERING_END:
+                    case MediaPlayer.MEDIA_ERROR_TIMED_OUT:
+                    case MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING: {
+                        mProgressBar.setVisibility(View.VISIBLE);
+                        return true;
+                    }
                 }
-                case MediaPlayer.MEDIA_INFO_BUFFERING_START:
-                case MediaPlayer.MEDIA_INFO_BUFFERING_END:
-                case MediaPlayer.MEDIA_ERROR_TIMED_OUT:
-                case MediaPlayer.MEDIA_INFO_AUDIO_NOT_PLAYING: {
-                    mProgressBar.setVisibility(View.VISIBLE);
-                    return true;
-                }
-            }
-            return false;
-        });
+                return false;
+            });
             video.start();
             mProgressBar.setVisibility(View.GONE);
         });
@@ -170,12 +187,12 @@ public class DiscoverActivity extends AppCompatActivity {
         video.setOnCompletionListener(mp12 -> video.start());
 
 
-        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener(){
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
-                if (video.isPlaying()){
+                if (video.isPlaying()) {
                     video.pause();
-                }else{
+                } else {
                     video.start();
                 }
                 return true;
@@ -220,7 +237,7 @@ public class DiscoverActivity extends AppCompatActivity {
             posterNameTV.setText(posterJson.getString("username"));
             postedTimeTV.setText(mDiscoveryList.getTimeAgo());
 
-            description= new DiscoveryComment(
+            description = new DiscoveryComment(
                     posterJson.getString("id"),
                     posterJson.getString("username"),
                     posterJson.getString("image"),
@@ -236,7 +253,14 @@ public class DiscoverActivity extends AppCompatActivity {
 
             posterNameTV.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
             posterImageView.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
-
+            if (posterJson.getString("id").equals(Utils.getUserUid())) {
+                delete_discovery.setVisibility(View.VISIBLE);
+                delete_discovery.setOnClickListener(v -> askToDeleteStory());
+                viewsLinearLayout.setOnClickListener(v ->
+                        this.getSupportFragmentManager().beginTransaction()
+                                .add(new ShowStoryViewers(getApplicationContext(), mDiscoveryList.getId(), "discoveries"), "StoryViewActivity")
+                                .commit());
+            }
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -244,45 +268,39 @@ public class DiscoverActivity extends AppCompatActivity {
 
     }
 
+
+
+    private void askToDeleteStory(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Do you want to Delete this Story?");
+        builder.setPositiveButton("Yes", (dialog, which) -> {
+            deleteStory();
+        }).setNegativeButton("No", (dialog, which) -> {
+        });
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void deleteStory() {
+        Toasty.normal(getApplicationContext(), "Deleting Story").show();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response -> Toasty.success(getApplicationContext(), "Story deleted").show(),
+                error -> Toasty.error(getApplicationContext(), "Couldn't delete Story Please Try again").show()) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("story_delete", "true");
+                postMap.put("story_id", mDiscoveryList.getId());
+                postMap.put("delete_from_status_or_discovery", "discoveries");
+                return postMap;
+            }
+        };
+        Volley.newRequestQueue(this).add(stringRequest);
+        finish();
+    }
+
     private void addToWatchesList() {
 
     }
-
-//    private void showDiscoveryComments(String discovery_id) {
-//        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
-//                response -> {
-//                    Log.e("Volley Result", "" + response);
-//                    try {
-//                        JSONObject jsonObject = new JSONObject(response);
-//                        JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
-//
-//                        this.getSupportFragmentManager().beginTransaction()
-//                                .add(new ShowDiscoveryComment(getApplicationContext(), discovery_id, description), "DicoverActivity")
-//                                .commit();
-//
-//                        loadCount += 16;
-//
-//
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                },
-//                error -> {
-//
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> postMap = new HashMap<>();
-//                postMap.put("user_id", Utils.getUserUid());
-//                postMap.put("discovery_comments", "true");
-//                postMap.put("load", String.valueOf(loadCount));
-//                postMap.put("discovery_id", discovery_id);
-//                return postMap;
-//            }
-//        };
-//
-//        Volley.newRequestQueue(this).add(stringRequest);
-//
-//    }
 }

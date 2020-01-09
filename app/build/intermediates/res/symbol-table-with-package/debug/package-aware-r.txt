@@ -1881,6 +1881,7 @@ drawable icons8_error_96
 drawable icons8_eye_64
 drawable icons8_news_feed_64
 drawable icons8_plus_100
+drawable icons8_slider_80
 drawable icons8_speech_bubble_64
 drawable icons8_video_call_100
 drawable icons8_video_file_64
@@ -2094,6 +2095,9 @@ id default_text
 id default_title
 id delete_button
 id delete_comment
+id delete_discovery
+id delete_status_iv
+id delete_status_tv
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2104,10 +2108,12 @@ id dimensions
 id direct
 id disableHome
 id discover_image
+id discover_play
 id discover_text
 id discover_videoView
 id discovery_photo
 id discovery_recycler
+id discovery_text
 id dislike_comment
 id dislikers
 id dot
@@ -2283,8 +2289,8 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
-id sendReply_iv
 id sendReply_tv
+id sendReply_viewers_iv
 id send_comment
 id share_button
 id shortcut
@@ -2446,6 +2452,7 @@ layout activity_story_view
 layout bottom_drawer_layout
 layout bottom_sheet_discovery
 layout bottom_sheet_profile_content
+layout bottom_sheet_status_views
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2511,6 +2518,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout simple_cardview_header
 layout spring_dot_layout
+layout status_views_header
 layout support_simple_spinner_dropdown_item
 layout toast_layout
 layout worm_dot_layout
@@ -2567,7 +2575,9 @@ string character_counter_content_description
 string character_counter_pattern
 string chat
 string click_marker
+string comments
 string delete
+string delete_status
 string developer_name
 string dislike
 string email
@@ -2578,6 +2588,7 @@ string feeds
 string hide_bottom_view_on_scroll_behavior
 string image_container
 string like
+string likes
 string loading
 string long_text
 string maps_api_key
@@ -2593,6 +2604,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string remove
 string search_menu_title
 string server_connection_error
 string sorry_comment_not_sent
@@ -2606,6 +2618,7 @@ string there_was_an_error
 string toast_message
 string video
 string view_profile
+string views
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

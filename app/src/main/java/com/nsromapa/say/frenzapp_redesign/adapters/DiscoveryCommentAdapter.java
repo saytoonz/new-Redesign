@@ -13,8 +13,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
@@ -23,9 +27,14 @@ import com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import es.dmoral.toasty.Toasty;
+
+import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
 
 public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
     private List<DiscoveryComment> commentList;
@@ -88,13 +97,9 @@ public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
                 p0.dislike_comment.setOnClickListener(v -> dislikeComment(list.getComment_id()));
 
                 if (list.getComment_or_description().equals("comment")
-                        && list.getComment_id().equals(Utils.getUserUid())){
+                        && list.getCommenter_id().equals(Utils.getUserUid())){
                     p0.delete_comment.setVisibility(View.VISIBLE);
-                    p0.delete_comment.setOnClickListener (v -> {
-                        deleteComment(list.getComment_id());
-                        commentList.remove(position);
-                        notifyDataSetChanged();
-                    });
+                    p0.delete_comment.setOnClickListener (v -> askToDeleteComment(list.getComment_id(), position));
                 }
                 else
                     p0.delete_comment.setVisibility(View.GONE);
@@ -175,12 +180,39 @@ public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
     }
 
 
-    private void deleteComment(String commentId) {
 
+
+
+    private void askToDeleteComment(String comment_id, int position){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage("Do you want to delete this Comment?");
+        builder.setPositiveButton("Yes", (dialog, which) -> {
+            deleteComment(comment_id);
+            commentList.remove(position);
+            notifyDataSetChanged();
+
+        }).setNegativeButton("No", (dialog, which) -> {
+        });
+        final AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
-
-
+    private void deleteComment(String comment_id) {
+        Toasty.normal(context, "Deleting Comment").show();
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response -> Toasty.success(context, "Story deleted").show(),
+                error -> Toasty.error(context, "Couldn't delete Story Please Try again").show()) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("comment_discovery_delete", "true");
+                postMap.put("comment_id", comment_id);
+                return postMap;
+            }
+        };
+        Volley.newRequestQueue(context).add(stringRequest);
+    }
 
 
 

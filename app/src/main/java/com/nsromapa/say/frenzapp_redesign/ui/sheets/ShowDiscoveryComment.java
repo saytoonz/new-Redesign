@@ -133,7 +133,6 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
                         JSONObject jsonObject = new JSONObject(response);
                         JSONArray jsonArray = jsonObject.getJSONArray("DiscoveriesComments");
 
-                        if (jsonArray.length() > 0) {
                             default_item.setVisibility(View.GONE);
                             error_view.setVisibility(View.GONE);
 
@@ -162,11 +161,7 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
                                 //add products to recyclerView
                                 discoveryCommentAdapter.addProducts(discoveryComments);
                             }, 1000);
-                        }else{
-                            if (TextUtils.isEmpty(description.getComment()))
-                            default_item.setVisibility(View.VISIBLE);
-                            discoveryCommentAdapter.hideLoading();
-                        }
+
 
                     } catch (JSONException e) {
                         error_view.setVisibility(View.VISIBLE);

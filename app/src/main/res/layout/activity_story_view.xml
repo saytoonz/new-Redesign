@@ -56,7 +56,7 @@
             android:layout_margin="4dp"/>
 
         <ImageView
-            android:id="@+id/sendReply_iv"
+            android:id="@+id/sendReply_viewers_iv"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginTop="4dp"

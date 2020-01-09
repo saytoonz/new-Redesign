@@ -279,6 +279,10 @@ public class Stories extends Fragment {
                                     discoveryPosts.getString("description"),
                                     discoveryPosts.getString("background"),
                                     discoveryPosts.getString("0"),
+                                    discoveryPosts.getString("likes"),
+                                    discoveryPosts.getString("watches"),
+                                    discoveryPosts.getString("comments"),
+                                    discoveryPosts.getString("2"),
                                     poster_info.toString()
                             ));
                         }
