@@ -21,6 +21,9 @@ import android.widget.VideoView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.Request;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
@@ -36,11 +39,14 @@ import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowStoryViewers;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
+import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
 import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
 
 
@@ -195,7 +201,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                 mProgressBar.setVisibility(View.GONE);
                 storiesProgressView.setStoryDuration(mediaPlayer.getDuration());
                 storiesProgressView.startStories(counter);
-                setUserSeenThisStatus();
+                setUserSeenThisStatus(counter);
             });
         } else if (view instanceof ImageView) {
             final ImageView image = (ImageView) view;
@@ -216,7 +222,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                     mProgressBar.setVisibility(View.GONE);
                     storiesProgressView.setStoryDuration(5000);
                     storiesProgressView.startStories(counter);
-                    setUserSeenThisStatus();
+                    setUserSeenThisStatus(counter);
                     return false;
                 }
             }).into(image);
@@ -231,12 +237,24 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
             mProgressBar.setVisibility(View.GONE);
             storiesProgressView.setStoryDuration(5000);
             storiesProgressView.startStories(counter);
-            setUserSeenThisStatus();
+            setUserSeenThisStatus(counter);
         }
     }
 
-    private void setUserSeenThisStatus() {
-        Toast.makeText(this, "Seen", Toast.LENGTH_SHORT).show();
+    private void setUserSeenThisStatus(int counter) {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                    response ->{},
+                    error -> {}) {
+                @Override
+                protected Map<String, String> getParams() {
+                    Map<String, String> postMap = new HashMap<>();
+                    postMap.put("user_id", Utils.getUserUid());
+                    postMap.put("watch_story", "true");
+                    postMap.put("discovery_id", mStoriesList.get(counter).storyId);
+                    return postMap;
+                }
+            };
+            Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
     }
 
 

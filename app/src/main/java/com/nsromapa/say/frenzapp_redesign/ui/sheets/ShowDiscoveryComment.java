@@ -192,6 +192,7 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
     private void createComment(EditText create_comment) {
         if (!TextUtils.isEmpty(create_comment.getText().toString())){
             final  String comment = create_comment.getText().toString();
+            create_comment.setText("");
 
             List<DiscoveryComment> discoveryComments = new ArrayList<>();
             StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,

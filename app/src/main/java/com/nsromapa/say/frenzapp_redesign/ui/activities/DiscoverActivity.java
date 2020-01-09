@@ -3,6 +3,7 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -48,6 +49,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
@@ -65,6 +67,8 @@ public class DiscoverActivity extends AppCompatActivity {
     private DiscoveryComment description;
     private LinearLayout viewsLinearLayout;
     private ImageView delete_discovery;
+
+    private boolean is_liked_by_me = false;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -94,11 +98,22 @@ public class DiscoverActivity extends AppCompatActivity {
 
         //Action Views
         LinearLayout likeLinearLayout = findViewById(R.id.like_linearLayout);
+        ImageView liked_iv = likeLinearLayout.findViewById(R.id.like_dislike_iv);
         LinearLayout commentLinearLayout = findViewById(R.id.comment_linearLayout);
         viewsLinearLayout = findViewById(R.id.views_linearLayout);
         TextView likeTextView = findViewById(R.id.like_textView);
         TextView commentTextView = findViewById(R.id.comment_textView);
         TextView viewsTextView = findViewById(R.id.views_textView);
+
+        if (mDiscoveryList.getI_liked().equals("yes")){
+            is_liked_by_me = true;
+           liked_iv.setColorFilter(Color.RED);
+            likeTextView.setTextColor(Color.RED);
+        }else{
+            is_liked_by_me = false;
+            liked_iv.setColorFilter(Color.WHITE);
+            likeTextView.setTextColor(Color.WHITE);
+        }
 
         close_imageView.setOnClickListener(v -> finish());
         setDiscoveryInfo(posterImageView, posterNameTV, postedTimeTV);
@@ -108,6 +123,24 @@ public class DiscoverActivity extends AppCompatActivity {
         likeTextView.setText(String.format(res.getString(R.string.likes), mDiscoveryList.getLikes()));
         viewsTextView.setText(String.format(res.getString(R.string.views), mDiscoveryList.getWatches()));
 
+
+        likeLinearLayout.setOnClickListener(v -> {
+            if (is_liked_by_me){
+                liked_iv.setColorFilter(Color.WHITE);
+                likeTextView.setTextColor(Color.WHITE);
+                is_liked_by_me = false;
+                int likes = Integer.parseInt(mDiscoveryList.getLikes());
+                likeTextView.setText(String.format(res.getString(R.string.likes), String.valueOf(likes-1)));
+                disLikeDiscovery();
+            }else{
+                liked_iv.setColorFilter(Color.RED);
+                likeTextView.setTextColor(Color.RED);
+                is_liked_by_me = true;
+                int likes = Integer.parseInt(mDiscoveryList.getLikes());
+                likeTextView.setText(String.format(res.getString(R.string.likes), String.valueOf(likes+1)));
+                likeDiscovery();
+            }
+        });
         VideoView discover_videoView = findViewById(R.id.discover_videoView);
         AutofitTextView discover_text = findViewById(R.id.discover_text);
         ZoomImageView discover_image = findViewById(R.id.discover_image);
@@ -300,7 +333,57 @@ public class DiscoverActivity extends AppCompatActivity {
         finish();
     }
 
-    private void addToWatchesList() {
 
+
+    private void disLikeDiscovery() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response ->{},
+                error -> {}) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("unlike_discovery", "true");
+                postMap.put("discovery_id", mDiscoveryList.getId());
+                return postMap;
+            }
+        };
+        Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
+    }
+
+
+    private void likeDiscovery() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response ->{},
+                error -> {}) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("like_discovery", "true");
+                postMap.put("discovery_id", mDiscoveryList.getId());
+                return postMap;
+            }
+        };
+        Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
+    }
+
+
+
+
+    private void addToWatchesList() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, DISCOVER_STORIES,
+                response ->{},
+                error -> {}) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> postMap = new HashMap<>();
+                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("watch_story", "true");
+                postMap.put("discovery_id", mDiscoveryList.getId());
+                return postMap;
+            }
+        };
+        Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
     }
 }
