@@ -2,19 +2,16 @@ package com.nsromapa.say.frenzapp_redesign.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.nsromapa.say.bottomnav.view.CurvedBottomNavigationView;
+import com.nsromapa.say.frenzapp_redesign.ui.view.CurvedBottomNavigationView;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats;
 import com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Feeds;
@@ -30,7 +27,6 @@ import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.tool
 
 public class Home extends Fragment {
 
-    private CurvedBottomNavigationView bottom_navigation_view;
     private FloatingActionButton fab_news_feed;
     private static final String EXTRA_TEXT = "text";
 
@@ -46,7 +42,7 @@ public class Home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_home, container, false);
-        bottom_navigation_view = view.findViewById(R.id.bottom_navigation_view);
+        CurvedBottomNavigationView bottom_navigation_view = view.findViewById(R.id.bottom_navigation_view);
         fab_news_feed = view.findViewById(R.id.fab_news_feed);
         setDash(bottom_navigation_view);
         showFragment(new Feeds(),"Feeds");
@@ -55,15 +51,10 @@ public class Home extends Fragment {
 
     @Override
     public void onViewCreated(@NotNull View view, @Nullable Bundle savedInstanceState) {
-        fab_news_feed.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createNewPost();
-            }
-        });
+        fab_news_feed.setOnClickListener(v -> createNew());
     }
 
-    private void createNewPost() {
+    private void createNew() {
         Toast.makeText(getContext(), "Create NewPost", Toast.LENGTH_SHORT).show();
     }
 
@@ -85,27 +76,24 @@ public class Home extends Fragment {
         }
 
         //Setup the menu icon click listener
-        view.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.nv_explorer:
-                        showFragment(new VideoFeeds(), "Videos");
-                        break;
-                    case R.id.nv_profile:
-                        showFragment(new Stories(), "Stories");
-                        break;
-                    case R.id.nv_production:
-                        showFragment(new Chats(), "Chats");
-                        break;
-                    case R.id.nv_stacks:
-                        showFragment(new Feeds(), "Feeds");
-                        break;
-                    default:
-                        break;
-                }
-                return false;
+        view.setOnNavigationItemSelectedListener(menuItem -> {
+            switch (menuItem.getItemId()) {
+                case R.id.nv_explorer:
+                    showFragment(new VideoFeeds(), "Videos");
+                    break;
+                case R.id.nv_profile:
+                    showFragment(new Stories(), "Stories");
+                    break;
+                case R.id.nv_production:
+                    showFragment(new Chats(getContext()), "Chats");
+                    break;
+                case R.id.nv_stacks:
+                    showFragment(new Feeds(), "Feeds");
+                    break;
+                default:
+                    break;
             }
+            return false;
         });
     }
 

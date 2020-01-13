@@ -1,34 +1,40 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
 public class ChatList {
-    private String from,read, message,userimage,username,timestamp,notification_id,image;
+    private String sender, receiver, message,
+            userImage, username, timestamp, status,
+            message_type, notification_count, friendJson;
 
-    public ChatList(String message, String userimage, String username, String timestamp /*, String notification_id, String image*/) {
-//        this.from = from;
-//        this.read = read;
-//        this.notification_id = notification_id;
-//        this.image = image;
-
+    public ChatList(String sender, String receiver, String message,
+                    String userImage, String username,
+                    String timestamp, String status, String message_type,
+                    String notification_count, String friendJson) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.status = status;
+        this.message_type = message_type;
         this.message = message;
-        this.userimage = userimage;
+        this.userImage = userImage;
         this.username = username;
         this.timestamp = timestamp;
+        this.notification_count = notification_count;
+        this.friendJson = friendJson;
     }
 
-    public String getFrom() {
-        return from;
+    public String getSender() {
+        return sender;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 
-    public String getRead() {
-        return read;
+    public String getReceiver() {
+        return receiver;
     }
 
-    public void setRead(String read) {
-        this.read = read;
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
     }
 
     public String getMessage() {
@@ -39,12 +45,12 @@ public class ChatList {
         this.message = message;
     }
 
-    public String getUserimage() {
-        return userimage;
+    public String getUserImage() {
+        return userImage;
     }
 
-    public void setUserimage(String userimage) {
-        this.userimage = userimage;
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
     }
 
     public String getUsername() {
@@ -63,19 +69,35 @@ public class ChatList {
         this.timestamp = timestamp;
     }
 
-    public String getNotification_id() {
-        return notification_id;
+    public String getStatus() {
+        return status;
     }
 
-    public void setNotification_id(String notification_id) {
-        this.notification_id = notification_id;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getImage() {
-        return image;
+    public String getMessage_type() {
+        return message_type;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setMessage_type(String message_type) {
+        this.message_type = message_type;
+    }
+
+    public String getNotification_count() {
+        return notification_count;
+    }
+
+    public void setNotification_count(String notification_count) {
+        this.notification_count = notification_count;
+    }
+
+    public String getFriendJson() {
+        return friendJson;
+    }
+
+    public void setFriendJson(String friendJson) {
+        this.friendJson = friendJson;
     }
 }

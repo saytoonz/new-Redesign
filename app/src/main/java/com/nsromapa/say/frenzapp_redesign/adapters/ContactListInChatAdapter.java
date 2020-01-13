@@ -5,34 +5,35 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
-import com.github.ivbaranov.mfb.MaterialFavoriteButton;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.util.Util;
+import com.nex3z.notificationbadge.NotificationBadge;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import me.grantland.widget.AutofitTextView;
+
+import static com.nsromapa.say.frenzapp_redesign.utils.Openings.showImageAlertWithJson;
+import static com.nsromapa.say.frenzapp_redesign.utils.Openings.showImageAlertWithUserId;
 
 
 public class ContactListInChatAdapter extends RecyclerView.Adapter<ContactListInChatAdapter.ViewHolder> {
 
     private Context context;
+    private Activity activity;
     private List<ChatList> chatLists;
-    private  Activity activity;
 
-    public ContactListInChatAdapter(Context context, List<ChatList> chatListPost, Activity activity) {
+    public ContactListInChatAdapter(Context context, Activity activity, List<ChatList> chatListPost) {
         this.context = context;
         this.chatLists = chatListPost;
         this.activity = activity;
@@ -50,14 +51,38 @@ public class ContactListInChatAdapter extends RecyclerView.Adapter<ContactListIn
         ChatList list = chatLists.get(position);
 
         Glide.with(context)
-                .load(list.getUserimage())
+                .load(list.getUserImage())
+                .apply(new RequestOptions().placeholder(R.drawable.contact_placeholder))
                 .into(holder.user_image);
+        holder.user_image.setOnClickListener(v -> showImageAlertWithJson(context, list.getUsername(), list.getUserImage(), list.getFriendJson()));
 
-
-        holder.name.setText(list.getUsername());
+        holder.username.setText(list.getUsername());
         holder.message.setText(list.getMessage());
-        holder.timestamp.setText(list.getTimestamp());
+        holder.timestamp.setText(Utils.getTimeAgo(Long.parseLong(list.getTimestamp())));
 
+        if (list.getStatus().equals("1") || list.getStatus().equals("2")) {
+            holder.unreadCount.setVisibility(View.VISIBLE);
+            holder.unreadCount.setText(list.getNotification_count());
+        } else holder.unreadCount.setVisibility(View.GONE);
+
+        if (Utils.isFriendChatNotificationMuted(context, Utils.getUserInfoFromUserJSON(list.getFriendJson(), "id"))){
+            holder.conversation_mute_icon.setVisibility(View.VISIBLE);
+        }else{
+           holder.conversation_mute_icon.setVisibility(View.GONE);
+        }
+
+        if (list.getSender().equals(Utils.getUserUid())){
+            holder.delivery_status_last_msg.setVisibility(View.GONE);
+        }else{
+            holder.delivery_status_last_msg.setVisibility(View.VISIBLE);
+            if (list.getStatus().equals("1")){
+//                holder.delivery_status_last_msg.setImageResource();
+            }else if(list.getStatus().equals("2")){
+
+            }else{
+
+            }
+        }
 
     }
 
@@ -70,16 +95,20 @@ public class ContactListInChatAdapter extends RecyclerView.Adapter<ContactListIn
 
         private View mView;
         private CircleImageView user_image;
-        private TextView name, message, timestamp;
-        private ImageView read;
+        private TextView username, message, timestamp;
+        private NotificationBadge unreadCount;
+        private ImageView conversation_mute_icon, delivery_status_last_msg;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
-            name = mView.findViewById(R.id.Chat_List_name_Id);
-            message = mView.findViewById(R.id.Chat_List_message_Id);
-            timestamp = mView.findViewById(R.id.Chat_List_time_Id);
-            user_image = mView.findViewById(R.id.user_image);
+            username = mView.findViewById(R.id.username);
+            message = mView.findViewById(R.id.message);
+            timestamp = mView.findViewById(R.id.messageTime);
+            user_image = mView.findViewById(R.id.pic);
+            unreadCount = mView.findViewById(R.id.unreadCount);
+            conversation_mute_icon = mView.findViewById(R.id.conversation_mute_icon);
+            delivery_status_last_msg = mView.findViewById(R.id.delivery_status_last_msg);
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.nsromapa.say.bottomnav.view
+package com.nsromapa.say.frenzapp_redesign.ui.view
 
 import android.content.Context
 import android.graphics.Canvas

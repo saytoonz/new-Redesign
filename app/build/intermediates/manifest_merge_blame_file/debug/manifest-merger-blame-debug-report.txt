@@ -21,7 +21,7 @@
 13-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:8:22-78
 14
 15    <application
-15-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:10:5-49:19
+15-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:10:5-51:19
 16        android:name="com.nsromapa.say.frenzapp_redesign.App"
 16-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:11:9-28
 17        android:allowBackup="true"
@@ -73,17 +73,23 @@
 41-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:38:13-57
 42            android:enabled="true" />
 42-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:13-35
-43
-44        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
-44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:9-47:20
-44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:19-67
-45            <intent-filter>
-45-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:13-46:29
-46                <action android:name="android.intent.action.BOOT_COMPLETED" />
-46-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:17-79
-46-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:25-76
-47            </intent-filter>
-48        </receiver>
-49    </application>
-50
-51</manifest>
+43        <service
+43-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:40:9-42:38
+44            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatListService"
+44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:41:13-53
+45            android:enabled="true" />
+45-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:42:13-35
+46
+47        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
+47-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:9-49:20
+47-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:19-67
+48            <intent-filter>
+48-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:46:13-48:29
+49                <action android:name="android.intent.action.BOOT_COMPLETED" />
+49-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:47:17-79
+49-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:47:25-76
+50            </intent-filter>
+51        </receiver>
+52    </application>
+53
+54</manifest>

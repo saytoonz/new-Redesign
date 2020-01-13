@@ -99,20 +99,19 @@ public class DiscoveriesStatusAdapter extends RecyclerView.Adapter {
                     public void run() {
                         int rnd = (int) (Math.random() * 4);
                         if (rnd == 0)
-//                            discoveriesHolder.discovery_play.setBackgroundColor(Color.BLUE);
                             discoveriesHolder.discovery_play.setColorFilter(Color.BLUE);
                         if (rnd == 1)
                             discoveriesHolder.discovery_play.setColorFilter(Color.RED);
                         if (rnd == 2)
-                            discoveriesHolder.discovery_play.setColorFilter(Color.GREEN);
+                            discoveriesHolder.discovery_play.setColorFilter(Color.GRAY);
                         if (rnd == 3)
-                            discoveriesHolder.discovery_play.setColorFilter(Color.YELLOW);
+                            discoveriesHolder.discovery_play.setColorFilter(Color.BLACK);
 
                         discoveriesHolder.discovery_play.invalidate();
-                        handler.postDelayed(this, 3000);
+                        handler.postDelayed(this, 1000);
                     }
                 };
-                handler.postDelayed(runnable, 3000);
+                handler.postDelayed(runnable, 2000);
             }
 
 

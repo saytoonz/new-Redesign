@@ -116,7 +116,7 @@ public class StoryViewersAdapter extends RecyclerView.Adapter {
             user_image = itemView.findViewById(R.id.user_image);
             username_id = itemView.findViewById(R.id.username_id);
             full_name_id = itemView.findViewById(R.id.fullname_id);
-            remove_followers_btn = itemView.findViewById(R.id.remove_followers_btn);
+            remove_followers_btn = itemView.findViewById(R.id.followers_back_btn);
         }
     }
 

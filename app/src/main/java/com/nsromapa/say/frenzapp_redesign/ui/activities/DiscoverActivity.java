@@ -1,15 +1,12 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -31,33 +28,29 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.bumptech.glide.util.Util;
 import com.danikula.videocache.HttpProxyCacheServer;
 import com.nsromapa.say.frenzapp_redesign.App;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 import com.nsromapa.say.frenzapp_redesign.models.DiscoveryComment;
-import com.nsromapa.say.frenzapp_redesign.models.Viewers;
 import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowDiscoveryComment;
 import com.nsromapa.say.frenzapp_redesign.ui.sheets.ShowStoryViewers;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.otaliastudios.zoom.ZoomImageView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
+import static com.nsromapa.say.frenzapp_redesign.utils.Openings.profileWithUserJson;
 import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
-import static com.nsromapa.say.frenzapp_redesign.utils.OpenIntents.profileWithUserJson;
 
 public class DiscoverActivity extends AppCompatActivity {
 
@@ -130,6 +123,7 @@ public class DiscoverActivity extends AppCompatActivity {
                 likeTextView.setTextColor(Color.WHITE);
                 is_liked_by_me = false;
                 int likes = Integer.parseInt(mDiscoveryList.getLikes());
+                mDiscoveryList.setLikes(String.valueOf(likes-1));
                 likeTextView.setText(String.format(res.getString(R.string.likes), String.valueOf(likes-1)));
                 disLikeDiscovery();
             }else{
@@ -137,6 +131,7 @@ public class DiscoverActivity extends AppCompatActivity {
                 likeTextView.setTextColor(Color.RED);
                 is_liked_by_me = true;
                 int likes = Integer.parseInt(mDiscoveryList.getLikes());
+                mDiscoveryList.setLikes(String.valueOf(likes+1));
                 likeTextView.setText(String.format(res.getString(R.string.likes), String.valueOf(likes+1)));
                 likeDiscovery();
             }

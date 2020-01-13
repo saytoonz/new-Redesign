@@ -146,6 +146,7 @@ attr cardUseCompatPadding
 attr cardViewStyle
 attr chainUseRtl
 attr checkboxStyle
+attr checked
 attr checkedChip
 attr checkedIcon
 attr checkedIconEnabled
@@ -169,6 +170,7 @@ attr chipStartPadding
 attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
+attr circle_color
 attr civ_border_color
 attr civ_border_overlay
 attr civ_border_width
@@ -466,6 +468,11 @@ attr navigationContentDescription
 attr navigationIcon
 attr navigationMode
 attr navigationViewStyle
+attr nbAnimationDuration
+attr nbAnimationEnabled
+attr nbBackground
+attr nbEllipsizeText
+attr nbMaxTextLength
 attr numericModifiers
 attr oneFingerScrollEnabled
 attr overPinchable
@@ -549,6 +556,8 @@ attr statusBarScrim
 attr stiffness
 attr strokeColor
 attr strokeWidth
+attr stroke_color
+attr stroke_width
 attr subMenuArrow
 attr submitBackground
 attr subtitle
@@ -1875,12 +1884,15 @@ drawable ic_video_white_24dp
 drawable ic_videocam_black_24dp
 drawable ic_volume
 drawable ic_volume_up_white_24dp
+drawable icons8_cancel_80px
 drawable icons8_chat_80
 drawable icons8_connection_status_on_80
 drawable icons8_error_96
 drawable icons8_eye_64
+drawable icons8_info_80px
 drawable icons8_news_feed_64
 drawable icons8_plus_100
+drawable icons8_remove_administrator_80px
 drawable icons8_slider_80
 drawable icons8_speech_bubble_64
 drawable icons8_video_call_100
@@ -1897,6 +1909,8 @@ drawable mail_box_img
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable nb_badge_bg
+drawable no_followers
 drawable no_result
 drawable notification_action_background
 drawable notification_bg
@@ -1972,9 +1986,6 @@ font segoeui
 fraction icon_viewport_size
 id ALT
 id CTRL
-id Chat_List_message_Id
-id Chat_List_name_Id
-id Chat_List_time_Id
 id FUNCTION
 id META
 id SHIFT
@@ -2054,6 +2065,7 @@ id bottom_sheetrecycler
 id buttonPanel
 id cancel
 id cancel_action
+id cancel_dialog
 id card_content
 id card_header
 id card_image
@@ -2065,7 +2077,7 @@ id centerInside
 id center_horizontal
 id center_vertical
 id chains
-id chats_list_recyclerview_id
+id chats_list_recycler
 id checkbox
 id checked
 id chronometer
@@ -2081,9 +2093,11 @@ id comment_time
 id comment_tv
 id commenter_image
 id commenter_name
+id contact_checkbox
 id container
 id content
 id contentPanel
+id conversation_mute_icon
 id coordinator
 id create_comment
 id custom
@@ -2098,6 +2112,7 @@ id delete_comment
 id delete_discovery
 id delete_status_iv
 id delete_status_tv
+id delivery_status_last_msg
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2157,12 +2172,15 @@ id first_stat
 id fitCenter
 id fitXY
 id fixed
+id fl_container
+id followers_back_btn
 id followers_ryc_id
 id forever
 id front_progress
 id fullname_id
 id ghost_view
 id glide_custom_view_target_tag
+id goProDialogImage
 id gone
 id group_divider
 id groups
@@ -2187,6 +2205,7 @@ id italic
 id item_category_layout
 id item_touch_helper_previous_elevation
 id ivLike
+id iv_badge_bg
 id labeled
 id largeLabel
 id left
@@ -2210,11 +2229,14 @@ id masked
 id max_progress
 id media_actions
 id message
+id messageInfoLayout
+id messageTime
 id middle
 id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id name
 id navigation_header_container
 id never
 id none
@@ -2231,6 +2253,8 @@ id nv_profile
 id nv_stacks
 id off
 id on
+id online_status_imageview
+id open_profile
 id outline
 id packed
 id pager
@@ -2241,6 +2265,7 @@ id parentPanel
 id parent_matrix
 id pauseVideo
 id percent
+id pic
 id pin
 id playVideo
 id post_desc
@@ -2260,10 +2285,8 @@ id progress_horizontal
 id progress_loader
 id radio
 id react_layout
-id read
 id realZoom
 id refreshLayout
-id remove_followers_btn
 id reverse
 id right
 id right_icon
@@ -2361,11 +2384,14 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_badge_text
 id unchecked
 id uniform
 id unlabeled
+id unreadCount
 id up
 id useLogo
+id user_action
 id user_image
 id user_name
 id username
@@ -2486,6 +2512,7 @@ layout fragment_home
 layout fragment_stories
 layout item_chat_list
 layout item_custom_row_loading
+layout item_dialog_imageview
 layout item_discovery_comment
 layout item_feed_post
 layout item_followers_list
@@ -2500,6 +2527,7 @@ layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
 layout notification_action_tombstone
+layout notification_badge
 layout notification_media_action
 layout notification_media_cancel_action
 layout notification_template_big_media
@@ -2536,6 +2564,8 @@ mipmap ic_notification
 mipmap splash
 raw frenzapp_sound
 string No_Contact_List_Available
+string a_hour_ago
+string a_min_ago
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2577,6 +2607,7 @@ string character_counter_pattern
 string chat
 string click_marker
 string comments
+string days_ago
 string delete
 string delete_status
 string developer_name
@@ -2586,13 +2617,17 @@ string error
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string feeds
+string follow
+string follow_back
 string hide_bottom_view_on_scroll_behavior
 string image_container
+string just_now
 string like
 string likes
 string loading
 string long_text
 string maps_api_key
+string mins_ago
 string mtrl_chip_close_icon_content_description
 string nav_header_desc
 string no_comment_yet
@@ -2605,7 +2640,6 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
-string remove
 string search_menu_title
 string server_connection_error
 string sorry_comment_not_sent
@@ -2617,9 +2651,14 @@ string status_bar_notification_info_overflow
 string stories
 string there_was_an_error
 string toast_message
+string unfollow
+string unfriend
 string video
 string view_profile
 string views
+string week_ago
+string weeks_ago
+string yesterday
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -3159,6 +3198,7 @@ styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
+styleable AnimCheckBox checked circle_color stroke_color stroke_width
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
 styleable AnimatedStateListDrawableTransition android_drawable android_toId android_fromId android_reversible
@@ -3217,6 +3257,7 @@ styleable MenuGroup android_enabled android_id android_visible android_menuCateg
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow
 styleable NavigationView android_background android_fitsSystemWindows android_maxWidth elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconTint itemTextAppearance itemTextColor menu
+styleable NotificationBadge android_textSize android_textColor nbAnimationDuration nbAnimationEnabled nbBackground nbEllipsizeText nbMaxTextLength
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle

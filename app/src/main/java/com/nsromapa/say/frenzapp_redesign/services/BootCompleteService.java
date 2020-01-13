@@ -55,10 +55,10 @@ public class BootCompleteService extends Service {
 
     protected void runThisFunction1(){
         if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("isMainActivityActive", false)) {
-            Toast.makeText(this, "Main Activity Active", Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "Main Activity Active", Toast.LENGTH_LONG).show();
             Log.d("BootCompleteService", "onStart");
         }else {
-            Toast.makeText(this, "Main Activity Closed", Toast.LENGTH_LONG).show();
+//            Toast.makeText(this, "Main Activity Closed", Toast.LENGTH_LONG).show();
         }
     }
 

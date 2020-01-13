@@ -16,4 +16,14 @@
 
     <!--    maps api key-->
     <string name="maps_api_key">AIzaSyC9K96W_r1RxI6LQ9VrDRxLPZ0ZycAgojw</string>
+
+    <string name="just_now">now</string>
+    <string name="a_min_ago">1 min</string>
+    <string name="mins_ago">" mins"</string>
+    <string name="a_hour_ago">1 hr</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="days_ago">" days"</string>
+    <string name="week_ago">" wk"</string>
+    <string name="weeks_ago">" wks"</string>
+
 </resources>

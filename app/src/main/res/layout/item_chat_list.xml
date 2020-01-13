@@ -1,61 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimaryy"
-    android:clickable="true"
-    android:focusable="true"
-    android:padding="20dp"
-    android:foreground="?android:attr/selectableItemBackground"
+    android:background="?attr/selectableItemBackground"
     android:orientation="vertical">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/user_image"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_centerVertical="true"
-        android:src="@drawable/contact_placeholder"
-        app:civ_border_width="0dp" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_toEndOf="@+id/user_image"
-        android:layout_toStartOf="@+id/read"
-        android:orientation="vertical">
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-        <TextView
-            android:id="@+id/Chat_List_name_Id"
+
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#212121"
-            android:textSize="16sp" />
+            android:layout_marginLeft="5dp">
 
-        <TextView
-            android:id="@+id/Chat_List_message_Id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/Chat_List_time_Id"
-            android:layout_width="wrap_content"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pic"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/contact_placeholder"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="1dp"
+                app:civ_circle_background_color="@color/colorAccent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/online_status_imageview"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="end|top"
+                android:src="@drawable/shape_bubble_online"
+                android:visibility="visible"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp" />
+
+            <com.nsromapa.say.frenzapp_redesign.ui.view.AnimCheckBox
+                android:id="@+id/contact_checkbox"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="end|bottom"
+                android:visibility="visible"
+                app:checked="false"
+                app:circle_color="@color/color4"
+                app:stroke_color="@color/white"
+                app:stroke_width="2dp" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            />
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="User name"
+                android:textAllCaps="false"
+                android:textColor="@color/text_desc"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/delivery_status_last_msg"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_message_pending_gray_24dp"
+                    android:visibility="visible"
+
+                    />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_light"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="Phone no."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/messageInfoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/messageTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/roboto_thin"
+                android:gravity="center"
+                android:text="@string/just_now"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end|center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/conversation_mute_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_mute_green"
+                    android:tint="@color/colorPrimaryDark"
+                    android:visibility="gone" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/unreadCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:nbAnimationDuration="100"
+                    app:nbAnimationEnabled="true"
+                    app:nbEllipsizeText="99+"
+                    app:nbMaxTextLength="2" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/read"
-        android:visibility="invisible"
-        android:src="@drawable/unread_icon"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.01dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/text_desc" />
+
+</LinearLayout>

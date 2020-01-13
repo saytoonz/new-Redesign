@@ -37,7 +37,9 @@
         <service
             android:name=".services.BootCompleteService"
             android:enabled="true" />
-
+        <service
+            android:name=".services.ChatListService"
+            android:enabled="true" />
 
 
         <receiver android:name=".broadcasts.BootCompleteBroadcast">

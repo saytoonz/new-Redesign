@@ -236,6 +236,10 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xhdpi\\ic_logout_grey600_24dp.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_cancel_80px.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_cancel_80px.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_email_outline_grey600_24dp.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-hdpi\\ic_email_outline_grey600_24dp.png"
     },
@@ -610,6 +614,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mic_black_24dp.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_mic_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_no_followers.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\no_followers.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_swap_vert_grey600_48dp.png.flat",
@@ -1032,6 +1040,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\946093075d78eb9f74f58a48d61f96ab\\material-1.0.0\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_badge.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\d4bc6e3308be5901a2adade43e1f38a4\\notification-badge-1.0.2\\res\\layout\\notification_badge.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\raw_frenzapp_sound.mp3.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\raw\\frenzapp_sound.mp3"
     },
@@ -1096,6 +1108,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nb_badge_bg.xml.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\d4bc6e3308be5901a2adade43e1f38a4\\notification-badge-1.0.2\\res\\drawable\\nb_badge_bg.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_primary_text_material_dark.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\color\\abc_primary_text_material_dark.xml"
     },
@@ -1130,6 +1146,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_add_yellow_24dp.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_person_add_yellow_24dp.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_info_80px.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_info_80px.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1266,6 +1286,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_48dp.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_48dp.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_remove_administrator_80px.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_remove_administrator_80px.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_discover.xml.flat",
@@ -1540,12 +1564,12 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\anim\\btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_toast_frame.9.png.flat",
-        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\3038e8b91908fd78e806947bc9590315\\jetified-Toasty-1.4.2\\res\\drawable-xhdpi-v4\\toast_frame.9.png"
-    },
-    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_status_views_header.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\status_views_header.xml"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_toast_frame.9.png.flat",
+        "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\3038e8b91908fd78e806947bc9590315\\jetified-Toasty-1.4.2\\res\\drawable-xhdpi-v4\\toast_frame.9.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_grid_camera_icon_small.png.flat",
@@ -3482,6 +3506,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_heart_outline_white.png.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable-xxhdpi\\ic_heart_outline_white.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_dialog_imageview.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\item_dialog_imageview.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_bookmark_white_24dp.png.flat",

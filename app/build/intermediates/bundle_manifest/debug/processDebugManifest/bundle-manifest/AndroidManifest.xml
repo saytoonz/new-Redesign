@@ -40,6 +40,9 @@
         <service
             android:name="com.nsromapa.say.frenzapp_redesign.services.BootCompleteService"
             android:enabled="true" />
+        <service
+            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatListService"
+            android:enabled="true" />
 
         <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
             <intent-filter>

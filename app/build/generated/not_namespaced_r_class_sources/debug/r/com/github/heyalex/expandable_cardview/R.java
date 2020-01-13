@@ -21,28 +21,28 @@ public final class R {
         public static final int cardPreventCornerOverlap = 0x7f040066;
         public static final int cardUseCompatPadding = 0x7f040067;
         public static final int cardViewStyle = 0x7f040068;
-        public static final int contentPadding = 0x7f0400a9;
-        public static final int contentPaddingBottom = 0x7f0400aa;
-        public static final int contentPaddingLeft = 0x7f0400ab;
-        public static final int contentPaddingRight = 0x7f0400ac;
-        public static final int contentPaddingTop = 0x7f0400ad;
-        public static final int content_view = 0x7f0400af;
-        public static final int degreeIconAnimation = 0x7f0400bb;
-        public static final int expanded = 0x7f0400e6;
-        public static final int font = 0x7f0400fc;
-        public static final int fontProviderAuthority = 0x7f0400fe;
-        public static final int fontProviderCerts = 0x7f0400ff;
-        public static final int fontProviderFetchStrategy = 0x7f040100;
-        public static final int fontProviderFetchTimeout = 0x7f040101;
-        public static final int fontProviderPackage = 0x7f040102;
-        public static final int fontProviderQuery = 0x7f040103;
-        public static final int fontStyle = 0x7f040104;
-        public static final int fontVariationSettings = 0x7f040105;
-        public static final int fontWeight = 0x7f040106;
-        public static final int header_view = 0x7f04010c;
-        public static final int icon = 0x7f04011b;
-        public static final int title = 0x7f04024a;
-        public static final int ttcIndex = 0x7f040260;
+        public static final int contentPadding = 0x7f0400ab;
+        public static final int contentPaddingBottom = 0x7f0400ac;
+        public static final int contentPaddingLeft = 0x7f0400ad;
+        public static final int contentPaddingRight = 0x7f0400ae;
+        public static final int contentPaddingTop = 0x7f0400af;
+        public static final int content_view = 0x7f0400b1;
+        public static final int degreeIconAnimation = 0x7f0400bd;
+        public static final int expanded = 0x7f0400e8;
+        public static final int font = 0x7f0400fe;
+        public static final int fontProviderAuthority = 0x7f040100;
+        public static final int fontProviderCerts = 0x7f040101;
+        public static final int fontProviderFetchStrategy = 0x7f040102;
+        public static final int fontProviderFetchTimeout = 0x7f040103;
+        public static final int fontProviderPackage = 0x7f040104;
+        public static final int fontProviderQuery = 0x7f040105;
+        public static final int fontStyle = 0x7f040106;
+        public static final int fontVariationSettings = 0x7f040107;
+        public static final int fontWeight = 0x7f040108;
+        public static final int header_view = 0x7f04010e;
+        public static final int icon = 0x7f04011d;
+        public static final int title = 0x7f040253;
+        public static final int ttcIndex = 0x7f040269;
     }
     public static final class color {
         private color() {}
@@ -95,56 +95,56 @@ public final class R {
 
         public static final int ic_expand_more = 0x7f0800f7;
         public static final int ic_local_airport = 0x7f08011d;
-        public static final int notification_action_background = 0x7f080197;
-        public static final int notification_bg = 0x7f080198;
-        public static final int notification_bg_low = 0x7f080199;
-        public static final int notification_bg_low_normal = 0x7f08019a;
-        public static final int notification_bg_low_pressed = 0x7f08019b;
-        public static final int notification_bg_normal = 0x7f08019c;
-        public static final int notification_bg_normal_pressed = 0x7f08019d;
-        public static final int notification_icon_background = 0x7f08019e;
-        public static final int notification_template_icon_bg = 0x7f08019f;
-        public static final int notification_template_icon_low_bg = 0x7f0801a0;
-        public static final int notification_tile_bg = 0x7f0801a1;
-        public static final int notify_panel_notification_icon_bg = 0x7f0801a2;
+        public static final int notification_action_background = 0x7f08019c;
+        public static final int notification_bg = 0x7f08019d;
+        public static final int notification_bg_low = 0x7f08019e;
+        public static final int notification_bg_low_normal = 0x7f08019f;
+        public static final int notification_bg_low_pressed = 0x7f0801a0;
+        public static final int notification_bg_normal = 0x7f0801a1;
+        public static final int notification_bg_normal_pressed = 0x7f0801a2;
+        public static final int notification_icon_background = 0x7f0801a3;
+        public static final int notification_template_icon_bg = 0x7f0801a4;
+        public static final int notification_template_icon_low_bg = 0x7f0801a5;
+        public static final int notification_tile_bg = 0x7f0801a6;
+        public static final int notify_panel_notification_icon_bg = 0x7f0801a7;
     }
     public static final class id {
         private id() {}
 
-        public static final int action_container = 0x7f0b0032;
-        public static final int action_divider = 0x7f0b0034;
-        public static final int action_image = 0x7f0b0035;
-        public static final int action_text = 0x7f0b003b;
-        public static final int actions = 0x7f0b003c;
-        public static final int async = 0x7f0b0045;
-        public static final int blocking = 0x7f0b004b;
-        public static final int card_content = 0x7f0b0054;
-        public static final int card_header = 0x7f0b0055;
-        public static final int card_root = 0x7f0b0057;
-        public static final int chronometer = 0x7f0b0062;
-        public static final int forever = 0x7f0b00bc;
-        public static final int header_expand_icon = 0x7f0b00c5;
-        public static final int header_textview = 0x7f0b00c6;
-        public static final int icon = 0x7f0b00cb;
-        public static final int icon_group = 0x7f0b00cc;
-        public static final int info = 0x7f0b00d3;
-        public static final int italic = 0x7f0b00d5;
-        public static final int line1 = 0x7f0b00e5;
-        public static final int line3 = 0x7f0b00e6;
-        public static final int normal = 0x7f0b00fa;
-        public static final int notification_background = 0x7f0b00fb;
-        public static final int notification_main_column = 0x7f0b00fc;
-        public static final int notification_main_column_container = 0x7f0b00fd;
-        public static final int right_icon = 0x7f0b0128;
-        public static final int right_side = 0x7f0b0129;
-        public static final int simple_header = 0x7f0b0148;
-        public static final int tag_transition_group = 0x7f0b016b;
-        public static final int tag_unhandled_key_event_manager = 0x7f0b016c;
-        public static final int tag_unhandled_key_listeners = 0x7f0b016d;
-        public static final int text = 0x7f0b016e;
-        public static final int text2 = 0x7f0b016f;
-        public static final int time = 0x7f0b0177;
-        public static final int title = 0x7f0b0178;
+        public static final int action_container = 0x7f0b002f;
+        public static final int action_divider = 0x7f0b0031;
+        public static final int action_image = 0x7f0b0032;
+        public static final int action_text = 0x7f0b0038;
+        public static final int actions = 0x7f0b0039;
+        public static final int async = 0x7f0b0042;
+        public static final int blocking = 0x7f0b0048;
+        public static final int card_content = 0x7f0b0052;
+        public static final int card_header = 0x7f0b0053;
+        public static final int card_root = 0x7f0b0055;
+        public static final int chronometer = 0x7f0b0060;
+        public static final int forever = 0x7f0b00bf;
+        public static final int header_expand_icon = 0x7f0b00c9;
+        public static final int header_textview = 0x7f0b00ca;
+        public static final int icon = 0x7f0b00cf;
+        public static final int icon_group = 0x7f0b00d0;
+        public static final int info = 0x7f0b00d7;
+        public static final int italic = 0x7f0b00d9;
+        public static final int line1 = 0x7f0b00ea;
+        public static final int line3 = 0x7f0b00eb;
+        public static final int normal = 0x7f0b0102;
+        public static final int notification_background = 0x7f0b0103;
+        public static final int notification_main_column = 0x7f0b0104;
+        public static final int notification_main_column_container = 0x7f0b0105;
+        public static final int right_icon = 0x7f0b0131;
+        public static final int right_side = 0x7f0b0132;
+        public static final int simple_header = 0x7f0b0151;
+        public static final int tag_transition_group = 0x7f0b0174;
+        public static final int tag_unhandled_key_event_manager = 0x7f0b0175;
+        public static final int tag_unhandled_key_listeners = 0x7f0b0176;
+        public static final int text = 0x7f0b0177;
+        public static final int text2 = 0x7f0b0178;
+        public static final int time = 0x7f0b0180;
+        public static final int title = 0x7f0b0181;
     }
     public static final class integer {
         private integer() {}
@@ -157,19 +157,19 @@ public final class R {
         private layout() {}
 
         public static final int expandable_cardview = 0x7f0e003b;
-        public static final int notification_action = 0x7f0e004f;
-        public static final int notification_action_tombstone = 0x7f0e0050;
-        public static final int notification_template_custom_big = 0x7f0e0057;
-        public static final int notification_template_icon_group = 0x7f0e0058;
-        public static final int notification_template_part_chronometer = 0x7f0e005c;
-        public static final int notification_template_part_time = 0x7f0e005d;
-        public static final int simple_cardview_header = 0x7f0e0062;
+        public static final int notification_action = 0x7f0e0050;
+        public static final int notification_action_tombstone = 0x7f0e0051;
+        public static final int notification_template_custom_big = 0x7f0e0059;
+        public static final int notification_template_icon_group = 0x7f0e005a;
+        public static final int notification_template_part_chronometer = 0x7f0e005e;
+        public static final int notification_template_part_time = 0x7f0e005f;
+        public static final int simple_cardview_header = 0x7f0e0064;
     }
     public static final class string {
         private string() {}
 
-        public static final int click_marker = 0x7f120028;
-        public static final int status_bar_notification_info_overflow = 0x7f12004e;
+        public static final int click_marker = 0x7f12002a;
+        public static final int status_bar_notification_info_overflow = 0x7f120054;
     }
     public static final class style {
         private style() {}
@@ -189,7 +189,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] CardView = { 0x101013f, 0x1010140, 0x7f040062, 0x7f040063, 0x7f040064, 0x7f040065, 0x7f040066, 0x7f040067, 0x7f0400a9, 0x7f0400aa, 0x7f0400ab, 0x7f0400ac, 0x7f0400ad };
+        public static final int[] CardView = { 0x101013f, 0x1010140, 0x7f040062, 0x7f040063, 0x7f040064, 0x7f040065, 0x7f040066, 0x7f040067, 0x7f0400ab, 0x7f0400ac, 0x7f0400ad, 0x7f0400ae, 0x7f0400af };
         public static final int CardView_android_minWidth = 0;
         public static final int CardView_android_minHeight = 1;
         public static final int CardView_cardBackgroundColor = 2;
@@ -207,19 +207,19 @@ public final class R {
         public static final int ColorStateListItem_android_color = 0;
         public static final int ColorStateListItem_android_alpha = 1;
         public static final int ColorStateListItem_alpha = 2;
-        public static final int[] ExpandableCardView = { 0x7f04002c, 0x7f0400af, 0x7f0400e6, 0x7f04010c };
+        public static final int[] ExpandableCardView = { 0x7f04002c, 0x7f0400b1, 0x7f0400e8, 0x7f04010e };
         public static final int ExpandableCardView_animation_duration = 0;
         public static final int ExpandableCardView_content_view = 1;
         public static final int ExpandableCardView_expanded = 2;
         public static final int ExpandableCardView_header_view = 3;
-        public static final int[] FontFamily = { 0x7f0400fe, 0x7f0400ff, 0x7f040100, 0x7f040101, 0x7f040102, 0x7f040103 };
+        public static final int[] FontFamily = { 0x7f040100, 0x7f040101, 0x7f040102, 0x7f040103, 0x7f040104, 0x7f040105 };
         public static final int FontFamily_fontProviderAuthority = 0;
         public static final int FontFamily_fontProviderCerts = 1;
         public static final int FontFamily_fontProviderFetchStrategy = 2;
         public static final int FontFamily_fontProviderFetchTimeout = 3;
         public static final int FontFamily_fontProviderPackage = 4;
         public static final int FontFamily_fontProviderQuery = 5;
-        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f0400fc, 0x7f040104, 0x7f040105, 0x7f040106, 0x7f040260 };
+        public static final int[] FontFamilyFont = { 0x1010532, 0x1010533, 0x101053f, 0x101056f, 0x1010570, 0x7f0400fe, 0x7f040106, 0x7f040107, 0x7f040108, 0x7f040269 };
         public static final int FontFamilyFont_android_font = 0;
         public static final int FontFamilyFont_android_fontWeight = 1;
         public static final int FontFamilyFont_android_fontStyle = 2;
@@ -246,7 +246,7 @@ public final class R {
         public static final int[] GradientColorItem = { 0x10101a5, 0x1010514 };
         public static final int GradientColorItem_android_color = 0;
         public static final int GradientColorItem_android_offset = 1;
-        public static final int[] SimpleExpandableCardView = { 0x7f0400bb, 0x7f04011b, 0x7f04024a };
+        public static final int[] SimpleExpandableCardView = { 0x7f0400bd, 0x7f04011d, 0x7f040253 };
         public static final int SimpleExpandableCardView_degreeIconAnimation = 0;
         public static final int SimpleExpandableCardView_icon = 1;
         public static final int SimpleExpandableCardView_title = 2;

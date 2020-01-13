@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1EFEF">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:elevation="20dp"
+        android:textColor="@color/white"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="6dp"
+        android:textSize="18sp"
+        android:background="@color/transparent_black_7"/>
+
+    <ImageView
+        android:id="@+id/goProDialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-32dp"
+        android:src="@drawable/contact_placeholder"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+           <TextView
+               android:id="@+id/user_action"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:singleLine="true"
+               android:textColor="@color/colorAccent"
+               android:textStyle="bold"
+               android:background="@drawable/comment_items_background"
+               android:backgroundTint="@color/colorAccent"
+               android:padding="6dp"
+               android:text="@string/follow"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/open_profile"
+                android:tint="@color/colorAccent"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:src="@drawable/icons8_info_80px"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/cancel_dialog"
+                android:tint="@color/colorAccent"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:src="@drawable/icons8_cancel_80px"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

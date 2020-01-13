@@ -34,6 +34,8 @@ public class FollowersListAdapter extends RecyclerView.Adapter<FollowersListAdap
         this.activity = activity;
     }
 
+
+
     @NonNull
     @Override
     public FollowersListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -78,7 +80,7 @@ public class FollowersListAdapter extends RecyclerView.Adapter<FollowersListAdap
             username = mView.findViewById(R.id.username_id);
             fullname = mView.findViewById(R.id.fullname_id);
             follower_image = mView.findViewById(R.id.user_image);
-            buttonRemove = mView.findViewById(R.id.remove_followers_btn);
+            buttonRemove = mView.findViewById(R.id.followers_back_btn);
             linearLayout = mView.findViewById(R.id.linearLayout);
 
 

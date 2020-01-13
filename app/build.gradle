@@ -71,6 +71,11 @@ dependencies {
     //Bottom Sheet Drawer
     implementation 'com.github.HeyAlex:BottomDrawer:v1.0.0'
     implementation 'com.github.HeyAlex:ExapandableCardView:-SNAPSHOT'
+    //Notification Badge
+    implementation 'com.nex3z:notification-badge:1.0.2'
+
+    implementation 'com.github.lguipeng:AnimCheckBox:1.0.1'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

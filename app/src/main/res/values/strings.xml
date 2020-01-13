@@ -39,6 +39,9 @@
     <string name="likes">%1$s Likes</string>
     <string name="comments">%1$s Comments</string>
     <string name="delete_status">Delete Status</string>
-    <string name="remove">Remove</string>
+    <string name="follow_back">Follow Back</string>
+    <string name="follow">Follow</string>
+    <string name="unfriend">Unfriend</string>
+    <string name="unfollow">Unfollow</string>
 </resources>
 

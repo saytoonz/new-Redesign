@@ -14,7 +14,8 @@
         android:id="@+id/fab_news_feed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_close_black_24dp"
+        android:src="@drawable/icons8_plus_100"
+        android:tint="@color/black"
         app:backgroundTint="@color/white"
         android:elevation="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +25,7 @@
         app:layout_constraintVertical_bias="0.945"
         app:maxImageSize="36dp" />
 
-    <com.nsromapa.say.bottomnav.view.CurvedBottomNavigationView
+    <com.nsromapa.say.frenzapp_redesign.ui.view.CurvedBottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="0dp"
         android:elevation="15dp"
