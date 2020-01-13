@@ -22,6 +22,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.mCurrentFragmentInHOME;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.toolbar;
 
 
@@ -41,11 +42,11 @@ public class Home extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         CurvedBottomNavigationView bottom_navigation_view = view.findViewById(R.id.bottom_navigation_view);
         fab_news_feed = view.findViewById(R.id.fab_news_feed);
         setDash(bottom_navigation_view);
-        showFragment(new Feeds(),"Feeds");
+        showFragment(new Feeds(), "Feeds");
         return view;
     }
 
@@ -77,18 +78,24 @@ public class Home extends Fragment {
 
         //Setup the menu icon click listener
         view.setOnNavigationItemSelectedListener(menuItem -> {
+            mCurrentFragmentInHOME = menuItem.getTitle().toString();
+
             switch (menuItem.getItemId()) {
-                case R.id.nv_explorer:
-                    showFragment(new VideoFeeds(), "Videos");
+                case R.id.nv_videos:
+//                    if (!mCurrentFragmentInHOME.equals(getResources().getString(R.string.videos)))
+                        showFragment(new VideoFeeds(), getResources().getString(R.string.videos));
                     break;
-                case R.id.nv_profile:
-                    showFragment(new Stories(), "Stories");
+                case R.id.nv_stories:
+//                    if (!mCurrentFragmentInHOME.equals(getResources().getString(R.string.stories)))
+                        showFragment(new Stories(), getResources().getString(R.string.stories));
                     break;
-                case R.id.nv_production:
-                    showFragment(new Chats(getContext()), "Chats");
+                case R.id.nv_chats:
+//                    if (!mCurrentFragmentInHOME.equals(getResources().getString(R.string.chats)))
+                        showFragment(new Chats(getContext()), getResources().getString(R.string.chats));
                     break;
-                case R.id.nv_stacks:
-                    showFragment(new Feeds(), "Feeds");
+                case R.id.nv_feeds:
+//                    if (!mCurrentFragmentInHOME.equals(getResources().getString(R.string.feeds)))
+                        showFragment(new Feeds(), getResources().getString(R.string.feeds));
                     break;
                 default:
                     break;
@@ -97,7 +104,7 @@ public class Home extends Fragment {
         });
     }
 
-    private void showFragment(Fragment fragment, String title){
+    private void showFragment(Fragment fragment, String title) {
         toolbar.setTitle(title);
         Objects.requireNonNull(getActivity())
                 .getSupportFragmentManager().beginTransaction()

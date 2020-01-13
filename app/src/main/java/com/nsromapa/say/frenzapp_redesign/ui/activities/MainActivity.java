@@ -15,6 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 
 import com.nsromapa.say.frenzapp_redesign.R;
@@ -28,10 +29,14 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
     public static MainActivity activity;
     public static Fragment mCurrentFragment;
+    public static String mCurrentFragmentInHOME;
+    public static boolean mState = true;
+
     private static final int POS_HOME = 0;
     private static final int POS_FOLLOWERS = 1;
     private static final int POS_FOLLOWING = 2;
@@ -98,6 +103,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
 
+        mCurrentFragmentInHOME = "Feeds";
         adapter.setSelected(POS_HOME);
 //        setUserProfile();
     }
@@ -105,19 +111,21 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     @Override
     public void onItemSelected(int position) {
         if (position == POS_LOGOUT) {
+            mState = false;
             finish();
         }else if (position == POS_HOME) {
+            mState = true;
             slidingRootNav.closeMenu();
+            mCurrentFragmentInHOME = "Feeds";
             Fragment selectedScreen = new Home();
             showFragment(selectedScreen);
         }else if (position == POS_FOLLOWERS){
-
+            mState = false;
             slidingRootNav.closeMenu();
             Fragment selectedScreen = new Followers();
             showFragment(selectedScreen);
-        }
-
-        else{
+        }else{
+            mState = false;
             Fragment selectedScreen = Home.createFor(screenTitles[position]);
             showFragment(selectedScreen);
         }
@@ -181,6 +189,32 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     public void onResume() {
         super.onResume();
         PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", true).apply();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (slidingRootNav.isMenuOpened()) {
+            slidingRootNav.closeMenu(true);
+
+        } else if (!mState) {
+            toolbar.setTitle("Home");
+            try {
+                Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+            }
+            this.invalidateOptionsMenu();
+            mState = true;
+            showFragment(new Home());
+            if (slidingRootNav.isMenuOpened()) {
+                slidingRootNav.closeMenu(true);
+            }
+            adapter.setSelected(POS_HOME);
+
+        } else {
+            super.onBackPressed();
+        }
     }
 }
 

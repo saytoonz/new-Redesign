@@ -6489,11 +6489,11 @@ public final class R {
     public static final int notification_background=0x7f0b0103;
     public static final int notification_main_column=0x7f0b0104;
     public static final int notification_main_column_container=0x7f0b0105;
-    public static final int nv_explorer=0x7f0b0106;
-    public static final int nv_feeds=0x7f0b0107;
-    public static final int nv_production=0x7f0b0108;
-    public static final int nv_profile=0x7f0b0109;
-    public static final int nv_stacks=0x7f0b010a;
+    public static final int nv_chats=0x7f0b0106;
+    public static final int nv_empty=0x7f0b0107;
+    public static final int nv_feeds=0x7f0b0108;
+    public static final int nv_stories=0x7f0b0109;
+    public static final int nv_videos=0x7f0b010a;
     public static final int off=0x7f0b010b;
     public static final int on=0x7f0b010c;
     public static final int online_status_imageview=0x7f0b010d;
@@ -6861,7 +6861,7 @@ public final class R {
     public static final int bottom_sheet_behavior=0x7f120026;
     public static final int character_counter_content_description=0x7f120027;
     public static final int character_counter_pattern=0x7f120028;
-    public static final int chat=0x7f120029;
+    public static final int chats=0x7f120029;
     public static final int click_marker=0x7f12002a;
     public static final int comments=0x7f12002b;
     public static final int days_ago=0x7f12002c;
@@ -6910,7 +6910,7 @@ public final class R {
     public static final int toast_message=0x7f120057;
     public static final int unfollow=0x7f120058;
     public static final int unfriend=0x7f120059;
-    public static final int video=0x7f12005a;
+    public static final int videos=0x7f12005a;
     public static final int view_profile=0x7f12005b;
     public static final int views=0x7f12005c;
     public static final int week_ago=0x7f12005d;

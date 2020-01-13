@@ -2,9 +2,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="loading">Loading…</string>
     <string name="view_profile">View Profile</string>
-    <string name="video">Video</string>
+    <string name="videos">Videos</string>
     <string name="feeds">Feeds</string>
-    <string name="chat">Chat</string>
+    <string name="chats">Chats</string>
     <string name="stories">Stories</string>
     <string name="an_unrecognized_error_occurred">An Unrecognized Error Occurred</string>
     <string name="error">Error</string>

@@ -2246,11 +2246,11 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id nv_explorer
+id nv_chats
+id nv_empty
 id nv_feeds
-id nv_production
-id nv_profile
-id nv_stacks
+id nv_stories
+id nv_videos
 id off
 id on
 id online_status_imageview
@@ -2604,7 +2604,7 @@ string be_first_create_comment
 string bottom_sheet_behavior
 string character_counter_content_description
 string character_counter_pattern
-string chat
+string chats
 string click_marker
 string comments
 string days_ago
@@ -2653,7 +2653,7 @@ string there_was_an_error
 string toast_message
 string unfollow
 string unfriend
-string video
+string videos
 string view_profile
 string views
 string week_ago

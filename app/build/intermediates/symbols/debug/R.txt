@@ -2245,11 +2245,11 @@ int id normal 0x7f0b0102
 int id notification_background 0x7f0b0103
 int id notification_main_column 0x7f0b0104
 int id notification_main_column_container 0x7f0b0105
-int id nv_explorer 0x7f0b0106
-int id nv_feeds 0x7f0b0107
-int id nv_production 0x7f0b0108
-int id nv_profile 0x7f0b0109
-int id nv_stacks 0x7f0b010a
+int id nv_chats 0x7f0b0106
+int id nv_empty 0x7f0b0107
+int id nv_feeds 0x7f0b0108
+int id nv_stories 0x7f0b0109
+int id nv_videos 0x7f0b010a
 int id off 0x7f0b010b
 int id on 0x7f0b010c
 int id online_status_imageview 0x7f0b010d
@@ -2603,7 +2603,7 @@ int string be_first_create_comment 0x7f120025
 int string bottom_sheet_behavior 0x7f120026
 int string character_counter_content_description 0x7f120027
 int string character_counter_pattern 0x7f120028
-int string chat 0x7f120029
+int string chats 0x7f120029
 int string click_marker 0x7f12002a
 int string comments 0x7f12002b
 int string days_ago 0x7f12002c
@@ -2652,7 +2652,7 @@ int string there_was_an_error 0x7f120056
 int string toast_message 0x7f120057
 int string unfollow 0x7f120058
 int string unfriend 0x7f120059
-int string video 0x7f12005a
+int string videos 0x7f12005a
 int string view_profile 0x7f12005b
 int string views 0x7f12005c
 int string week_ago 0x7f12005d

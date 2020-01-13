@@ -4,25 +4,25 @@
 
     <item
         android:icon="@drawable/icons8_video_call_100"
-        android:id="@+id/nv_explorer"
-        android:title="@string/video" />
+        android:id="@+id/nv_videos"
+        android:title="@string/videos" />
 
     <item
         android:icon="@drawable/icons8_news_feed_64"
-        android:id="@+id/nv_stacks"
+        android:id="@+id/nv_feeds"
         android:title="@string/feeds" />
 
     <item
-        android:id="@+id/nv_feeds"
+        android:id="@+id/nv_empty"
         tools:ignore="@string/feeds" />
 
     <item
         android:icon="@drawable/icons8_chat_80"
-        android:id="@+id/nv_production"
-        android:title="@string/chat" />
+        android:id="@+id/nv_chats"
+        android:title="@string/chats" />
 
     <item
         android:icon="@drawable/icons8_connection_status_on_80"
-        android:id="@+id/nv_profile"
+        android:id="@+id/nv_stories"
         android:title="@string/stories" />
 </menu>
