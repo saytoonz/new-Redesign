@@ -58,6 +58,9 @@
         <service
             android:name=".services.ChatListService"
             android:enabled="true" />
+        <service
+            android:name=".services.OnlineStatusService"
+            android:enabled="true" />
 
 
         <receiver android:name=".broadcasts.BootCompleteBroadcast">

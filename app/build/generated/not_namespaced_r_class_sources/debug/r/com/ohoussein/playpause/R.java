@@ -644,24 +644,24 @@ public final class R {
         public static final int src_atop = 0x7f0b01e3;
         public static final int src_in = 0x7f0b01e4;
         public static final int src_over = 0x7f0b01e5;
-        public static final int status_bar_latest_event_content = 0x7f0b01eb;
-        public static final int submenuarrow = 0x7f0b01f4;
-        public static final int submit_area = 0x7f0b01f5;
-        public static final int tabMode = 0x7f0b01f7;
-        public static final int text = 0x7f0b0201;
-        public static final int text2 = 0x7f0b0202;
-        public static final int textSpacerNoButtons = 0x7f0b0203;
-        public static final int textSpacerNoTitle = 0x7f0b0204;
-        public static final int time = 0x7f0b020c;
-        public static final int title = 0x7f0b020d;
-        public static final int titleDividerNoCustom = 0x7f0b020e;
-        public static final int title_template = 0x7f0b020f;
-        public static final int top = 0x7f0b0214;
-        public static final int topPanel = 0x7f0b0215;
-        public static final int up = 0x7f0b0221;
-        public static final int useLogo = 0x7f0b0223;
-        public static final int withText = 0x7f0b023a;
-        public static final int wrap_content = 0x7f0b023d;
+        public static final int status_bar_latest_event_content = 0x7f0b01ec;
+        public static final int submenuarrow = 0x7f0b01f5;
+        public static final int submit_area = 0x7f0b01f6;
+        public static final int tabMode = 0x7f0b01f8;
+        public static final int text = 0x7f0b0202;
+        public static final int text2 = 0x7f0b0203;
+        public static final int textSpacerNoButtons = 0x7f0b0204;
+        public static final int textSpacerNoTitle = 0x7f0b0205;
+        public static final int time = 0x7f0b020d;
+        public static final int title = 0x7f0b020e;
+        public static final int titleDividerNoCustom = 0x7f0b020f;
+        public static final int title_template = 0x7f0b0210;
+        public static final int top = 0x7f0b0215;
+        public static final int topPanel = 0x7f0b0216;
+        public static final int up = 0x7f0b0222;
+        public static final int useLogo = 0x7f0b0224;
+        public static final int withText = 0x7f0b023b;
+        public static final int wrap_content = 0x7f0b023e;
     }
     public static final class integer {
         private integer() {}

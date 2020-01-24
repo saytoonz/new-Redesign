@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:70:9-78:20
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:73:9-81:20
 	android:grantUriPermissions
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:74:13-47
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:13-47
 	android:authorities
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:72:13-60
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:75:13-60
 	android:exported
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:73:13-37
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:76:13-37
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:71:13-62
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:74:13-62
 manifest
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\8dd353570f8068b1d2c433a0ad51f652\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.ittianyu:BottomNavigationViewEx:2.0.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e6b80cfe3c792190312879cfdb0c7627\jetified-BottomNavigationViewEx-2.0.4\AndroidManifest.xml:2:1-14:12
 MERGED from [com.github.HeyAlex:BottomDrawer:v1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\6274acdf54f9b12f9bbe128c337c549a\BottomDrawer-v1.0.0\AndroidManifest.xml:2:1-11:12
@@ -97,22 +97,22 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Saytoonz\.gradle\ca
 MERGED from [com.jakewharton.timber:timber:4.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\b42c21b9840dc33548cb7869309fa8b9\jetified-timber-4.7.1\AndroidManifest.xml:2:1-9:12
 MERGED from [it.sephiroth.android.library.imagezoom:library:1.0.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\444fe1e436d1e67a30ab9a9bcf826cea\library-1.0.4\AndroidManifest.xml:1:106-7:12
 MERGED from [it.sephiroth.android.library.easing:library:1.0.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\bfa1beec986b581feaa57e72586b6a0d\library-1.0.2\AndroidManifest.xml:1:116-8:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
+INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
 	package
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:4:5-49
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-81:12
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:1-84:12
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:2:11-69
@@ -159,7 +159,7 @@ ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:5-68
 	android:name
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:22-65
 application
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:5-79:19
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:5-82:19
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\8dd353570f8068b1d2c433a0ad51f652\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:11:5-47
 MERGED from [com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\8dd353570f8068b1d2c433a0ad51f652\viewpagerdotsindicator-4.1.2\AndroidManifest.xml:11:5-47
 MERGED from [com.github.ittianyu:BottomNavigationViewEx:2.0.4] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e6b80cfe3c792190312879cfdb0c7627\jetified-BottomNavigationViewEx-2.0.4\AndroidManifest.xml:11:5-12:19
@@ -296,16 +296,22 @@ ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:58:9-60:38
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:60:13-35
 	android:name
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:59:13-53
+service#com.nsromapa.say.frenzapp_redesign.services.OnlineStatusService
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:61:9-63:38
+	android:enabled
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:13-35
+	android:name
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:62:13-57
 receiver#com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:9-67:20
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:9-70:20
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:19-67
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:19-67
 intent-filter#action:name:android.intent.action.BOOT_COMPLETED
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:64:13-66:29
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:67:13-69:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:65:17-79
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:17-79
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:65:25-76
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:25-76
 uses-sdk
 INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
@@ -483,11 +489,11 @@ INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 		INJECTED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:75:13-77:57
+ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:78:13-80:57
 	android:resource
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:17-54
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:80:17-54
 	android:name
-		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:76:17-67
+		ADDED from D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:79:17-67
 activity#com.karumi.dexter.DexterActivity
 ADDED from [com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:27:9-29:72
 	android:theme

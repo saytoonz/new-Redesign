@@ -640,12 +640,12 @@ public final class R {
         public static final int notification_template_icon_low_bg = 0x7f08093b;
         public static final int notification_tile_bg = 0x7f08093c;
         public static final int notify_panel_notification_icon_bg = 0x7f08093d;
-        public static final int spring_dot_background = 0x7f080967;
-        public static final int spring_dot_stroke_background = 0x7f080968;
-        public static final int tooltip_frame_dark = 0x7f080971;
-        public static final int tooltip_frame_light = 0x7f080972;
-        public static final int worm_dot_background = 0x7f080979;
-        public static final int worm_dot_stroke_background = 0x7f08097a;
+        public static final int spring_dot_background = 0x7f080966;
+        public static final int spring_dot_stroke_background = 0x7f080967;
+        public static final int tooltip_frame_dark = 0x7f080970;
+        public static final int tooltip_frame_light = 0x7f080971;
+        public static final int worm_dot_background = 0x7f080978;
+        public static final int worm_dot_stroke_background = 0x7f080979;
     }
     public static final class id {
         private id() {}
@@ -773,31 +773,31 @@ public final class R {
         public static final int src_in = 0x7f0b01e4;
         public static final int src_over = 0x7f0b01e5;
         public static final int start = 0x7f0b01e9;
-        public static final int submenuarrow = 0x7f0b01f4;
-        public static final int submit_area = 0x7f0b01f5;
-        public static final int tabMode = 0x7f0b01f7;
-        public static final int tag_accessibility_actions = 0x7f0b01f8;
-        public static final int tag_accessibility_clickable_spans = 0x7f0b01f9;
-        public static final int tag_accessibility_heading = 0x7f0b01fa;
-        public static final int tag_accessibility_pane_title = 0x7f0b01fb;
-        public static final int tag_screen_reader_focusable = 0x7f0b01fc;
-        public static final int tag_transition_group = 0x7f0b01fd;
-        public static final int tag_unhandled_key_event_manager = 0x7f0b01fe;
-        public static final int tag_unhandled_key_listeners = 0x7f0b01ff;
-        public static final int text = 0x7f0b0201;
-        public static final int text2 = 0x7f0b0202;
-        public static final int textSpacerNoButtons = 0x7f0b0203;
-        public static final int textSpacerNoTitle = 0x7f0b0204;
-        public static final int time = 0x7f0b020c;
-        public static final int title = 0x7f0b020d;
-        public static final int titleDividerNoCustom = 0x7f0b020e;
-        public static final int title_template = 0x7f0b020f;
-        public static final int top = 0x7f0b0214;
-        public static final int topPanel = 0x7f0b0215;
-        public static final int uniform = 0x7f0b021e;
-        public static final int up = 0x7f0b0221;
-        public static final int worm_dot = 0x7f0b023b;
-        public static final int wrap_content = 0x7f0b023d;
+        public static final int submenuarrow = 0x7f0b01f5;
+        public static final int submit_area = 0x7f0b01f6;
+        public static final int tabMode = 0x7f0b01f8;
+        public static final int tag_accessibility_actions = 0x7f0b01f9;
+        public static final int tag_accessibility_clickable_spans = 0x7f0b01fa;
+        public static final int tag_accessibility_heading = 0x7f0b01fb;
+        public static final int tag_accessibility_pane_title = 0x7f0b01fc;
+        public static final int tag_screen_reader_focusable = 0x7f0b01fd;
+        public static final int tag_transition_group = 0x7f0b01fe;
+        public static final int tag_unhandled_key_event_manager = 0x7f0b01ff;
+        public static final int tag_unhandled_key_listeners = 0x7f0b0200;
+        public static final int text = 0x7f0b0202;
+        public static final int text2 = 0x7f0b0203;
+        public static final int textSpacerNoButtons = 0x7f0b0204;
+        public static final int textSpacerNoTitle = 0x7f0b0205;
+        public static final int time = 0x7f0b020d;
+        public static final int title = 0x7f0b020e;
+        public static final int titleDividerNoCustom = 0x7f0b020f;
+        public static final int title_template = 0x7f0b0210;
+        public static final int top = 0x7f0b0215;
+        public static final int topPanel = 0x7f0b0216;
+        public static final int uniform = 0x7f0b021f;
+        public static final int up = 0x7f0b0222;
+        public static final int worm_dot = 0x7f0b023c;
+        public static final int wrap_content = 0x7f0b023e;
     }
     public static final class integer {
         private integer() {}

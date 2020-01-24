@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,9 +19,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.adapters.ContactListInChatAdapter;
+import com.nsromapa.say.frenzapp_redesign.adapters.ChatListAdapter;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
-import com.nsromapa.say.frenzapp_redesign.models.Discoveries;
 import com.nsromapa.say.frenzapp_redesign.services.ChatListService;
 
 import org.json.JSONArray;
@@ -31,10 +29,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Chats extends Fragment {
-    private static ContactListInChatAdapter myAdapter;
+    private static ChatListAdapter myAdapter;
     private static List<ChatList> chatList;
     private Context context;
     private static LinearLayout default_item;
@@ -80,7 +77,7 @@ public class Chats extends Fragment {
         chatList = new ArrayList<>();
         RecyclerView chatRecyclerView = view.findViewById(R.id.chats_list_recycler);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        myAdapter = new ContactListInChatAdapter(getContext(), getActivity(),chatList);
+        myAdapter = new ChatListAdapter(getContext(), getActivity(),chatList);
         chatRecyclerView.setLayoutManager(mLayoutManager);
         chatRecyclerView.setHasFixedSize(true);
         chatRecyclerView.setAdapter(myAdapter);

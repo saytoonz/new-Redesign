@@ -25,7 +25,7 @@ public final class R {
     public static final class drawable {
         private drawable() {}
 
-        public static final int thumb = 0x7f08096f;
+        public static final int thumb = 0x7f08096e;
     }
     public static final class styleable {
         private styleable() {}

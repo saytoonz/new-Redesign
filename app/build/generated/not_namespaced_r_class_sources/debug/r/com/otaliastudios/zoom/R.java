@@ -41,7 +41,7 @@ public final class R {
         public static final int centerInside = 0x7f0b0069;
         public static final int none = 0x7f0b0159;
         public static final int realZoom = 0x7f0b018e;
-        public static final int zoom = 0x7f0b023e;
+        public static final int zoom = 0x7f0b023f;
     }
     public static final class styleable {
         private styleable() {}

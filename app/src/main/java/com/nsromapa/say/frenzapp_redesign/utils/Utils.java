@@ -77,6 +77,7 @@ public class Utils {
     public static boolean isFriendChatNotificationMuted(Context context, String friendId) {
         return PreferenceManager.getDefaultSharedPreferences(context).getBoolean("chatNotification_" + friendId, false);
     }
+
     public static void setFriendChatNotificationMuted(Context context, String friendId) {
         if (isFriendChatNotificationMuted(context, friendId)){
             PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("chatNotification_" + friendId, false).apply();

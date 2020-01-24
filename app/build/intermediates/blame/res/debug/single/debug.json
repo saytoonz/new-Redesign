@@ -9720,10 +9720,6 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\bbeec50c2722296a3462e87b8b6ca67f\\appcompat-1.1.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chat_view_test.xml.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\activity_chat_view_test.xml"
-    },
-    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f6b8.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f6b8.png"
     },
@@ -11956,10 +11952,6 @@
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\ic_mutual.xml"
     },
     {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_bubble_right.xml.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\shape_bubble_right.xml"
-    },
-    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f447.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f447.png"
     },
@@ -12402,6 +12394,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f3cb_1f3fd.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f3cb_1f3fd.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chat_view.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\activity_chat_view.xml"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f468_200d_1f466_200d_1f466.png.flat",

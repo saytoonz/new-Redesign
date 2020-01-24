@@ -42,7 +42,7 @@ import com.nostra13.universalimageloader.utils.DiskCacheUtils;
 import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView;
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.helpers.ChatDownloadTask;
+import com.nsromapa.say.frenzapp_redesign.asyncs.ChatDownloadTask;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.ImageFFActivity;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.VideoFFActivity;

@@ -61,6 +61,9 @@
         <service
             android:name="com.nsromapa.say.frenzapp_redesign.services.ChatListService"
             android:enabled="true" />
+        <service
+            android:name="com.nsromapa.say.frenzapp_redesign.services.OnlineStatusService"
+            android:enabled="true" />
 
         <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
             <intent-filter>
