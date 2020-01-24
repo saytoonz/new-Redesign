@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context="com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity">
+
+    <com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView
+        android:id="@+id/chatView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:leftBubbleLayoutColor="#ff7b7b"
+        app:leftBubbleTextColor="@android:color/white"
+        app:rightBubbleLayoutColor="@color/colorAccent2"
+        app:rightBubbleTextColor="@android:color/black"
+        app:showSenderLayout="true"
+        app:showSenderName="true">
+
+    </com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView>
+
+
+</RelativeLayout>

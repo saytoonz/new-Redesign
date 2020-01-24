@@ -12,47 +12,47 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int mfb_animate_favorite = 0x7f04019a;
-        public static final int mfb_animate_unfavorite = 0x7f04019b;
-        public static final int mfb_bounce_duration = 0x7f04019c;
-        public static final int mfb_color = 0x7f04019d;
-        public static final int mfb_favorite_image = 0x7f04019e;
-        public static final int mfb_not_favorite_image = 0x7f04019f;
-        public static final int mfb_padding = 0x7f0401a0;
-        public static final int mfb_rotation_angle = 0x7f0401a1;
-        public static final int mfb_rotation_duration = 0x7f0401a2;
-        public static final int mfb_size = 0x7f0401a3;
-        public static final int mfb_type = 0x7f0401a4;
+        public static final int mfb_animate_favorite = 0x7f0401d0;
+        public static final int mfb_animate_unfavorite = 0x7f0401d1;
+        public static final int mfb_bounce_duration = 0x7f0401d2;
+        public static final int mfb_color = 0x7f0401d3;
+        public static final int mfb_favorite_image = 0x7f0401d4;
+        public static final int mfb_not_favorite_image = 0x7f0401d5;
+        public static final int mfb_padding = 0x7f0401d6;
+        public static final int mfb_rotation_angle = 0x7f0401d7;
+        public static final int mfb_rotation_duration = 0x7f0401d8;
+        public static final int mfb_size = 0x7f0401d9;
+        public static final int mfb_type = 0x7f0401da;
     }
     public static final class drawable {
         private drawable() {}
 
-        public static final int ic_favorite_black_24dp = 0x7f0800f9;
-        public static final int ic_favorite_border_black_24dp = 0x7f0800fa;
-        public static final int ic_favorite_border_white_24dp = 0x7f0800fb;
-        public static final int ic_favorite_white_24dp = 0x7f0800fd;
-        public static final int ic_star_black_24dp = 0x7f08016b;
-        public static final int ic_star_border_black_24dp = 0x7f08016c;
-        public static final int ic_star_border_white_24dp = 0x7f08016d;
-        public static final int ic_star_white_24dp = 0x7f08016e;
+        public static final int ic_favorite_black_24dp = 0x7f08087f;
+        public static final int ic_favorite_border_black_24dp = 0x7f080880;
+        public static final int ic_favorite_border_white_24dp = 0x7f080881;
+        public static final int ic_favorite_white_24dp = 0x7f080883;
+        public static final int ic_star_black_24dp = 0x7f0808f4;
+        public static final int ic_star_border_black_24dp = 0x7f0808f5;
+        public static final int ic_star_border_white_24dp = 0x7f0808f6;
+        public static final int ic_star_white_24dp = 0x7f0808f7;
     }
     public static final class id {
         private id() {}
 
-        public static final int black = 0x7f0b0047;
-        public static final int heart = 0x7f0b00cb;
-        public static final int star = 0x7f0b0164;
-        public static final int white = 0x7f0b01aa;
+        public static final int black = 0x7f0b004c;
+        public static final int heart = 0x7f0b010a;
+        public static final int star = 0x7f0b01e8;
+        public static final int white = 0x7f0b0239;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f120023;
+        public static final int app_name = 0x7f120024;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] MaterialFavoriteButton = { 0x7f04019a, 0x7f04019b, 0x7f04019c, 0x7f04019d, 0x7f04019e, 0x7f04019f, 0x7f0401a0, 0x7f0401a1, 0x7f0401a2, 0x7f0401a3, 0x7f0401a4 };
+        public static final int[] MaterialFavoriteButton = { 0x7f0401d0, 0x7f0401d1, 0x7f0401d2, 0x7f0401d3, 0x7f0401d4, 0x7f0401d5, 0x7f0401d6, 0x7f0401d7, 0x7f0401d8, 0x7f0401d9, 0x7f0401da };
         public static final int MaterialFavoriteButton_mfb_animate_favorite = 0;
         public static final int MaterialFavoriteButton_mfb_animate_unfavorite = 1;
         public static final int MaterialFavoriteButton_mfb_bounce_duration = 2;

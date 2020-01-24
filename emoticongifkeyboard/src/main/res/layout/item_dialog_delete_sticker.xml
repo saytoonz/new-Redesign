@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1EFEF">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:elevation="20dp"
+        android:textColor="#fff"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:padding="6dp"
+        android:textSize="18sp"
+        android:background="#85000000"/>
+
+    <ImageView
+        android:id="@+id/goProDialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-32dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/delete"
+                android:tint="#0000"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:src="@drawable/delete"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/cancel_dialog"
+                android:tint="@color/icon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:focusable="true"
+                android:clickable="true"
+                android:src="@drawable/ic_close"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

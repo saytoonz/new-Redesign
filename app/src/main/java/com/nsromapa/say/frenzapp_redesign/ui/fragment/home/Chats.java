@@ -66,6 +66,10 @@ public class Chats extends Fragment {
         myAdapter.notifyDataSetChanged();
     }
 
+    public static void  disableSelection(){
+        myAdapter.disableSelection();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -112,9 +116,10 @@ public class Chats extends Fragment {
                            poster_info.getString("image"),
                            poster_info.getString("username"),
                            chatListObj.getString("0"),
-                           chatListObj.getString("status"),
+                           chatListObj.getString("message_status"),
                            chatListObj.getString("message_type"),
                            chatListObj.getString("notification_count"),
+                          getResources().getString(R.string.offline),
                            poster_info.toString()
                    );
 

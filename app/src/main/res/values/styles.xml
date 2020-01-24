@@ -4,7 +4,6 @@
         <item name="colorPrimary">@color/colorPrimaryy</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkk</item>
         <item name="colorAccent">@color/colorAccentt</item>
-        <!--        <item name="dialogSheetAccent">@color/colorAccentt</item>-->
         <item name="android:windowBackground">@color/colorPrimaryy</item>
         <item name="android:textAppearance">@style/TextBaseFontStyle</item>
     </style>
@@ -16,6 +15,37 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+    <!-- Base application theme. -->
+    <style name="chatViewThem" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="MyPopupMenu" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="android:dropDownVerticalOffset">8dp</item>
+    </style>
+
+    <style name="CardViewTheme" parent="CardView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
 
 
 

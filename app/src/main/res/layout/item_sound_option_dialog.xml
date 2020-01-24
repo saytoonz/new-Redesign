@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        app:cardElevation="4dp"
+        android:background="#F1EFEF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:elevation="20dp"
+                android:textColor="#fff"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:padding="6dp"
+                android:textSize="18sp"
+                android:background="#85000000"/>
+
+            <ImageView
+                android:id="@+id/goProDialogImage"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="-32dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <LinearLayout
+                    android:id="@+id/downloadLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone">
+                    <ImageView
+                        android:id="@+id/downloadSound"
+                        android:tint="#0000"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:src="@drawable/icons8_download_200"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/playSoundLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/playSound"
+                        android:tint="#0000"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:src="@drawable/icons8_circled_play_100"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sendLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/sendSound"
+                        android:tint="@color/icon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:src="@drawable/send_icon"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

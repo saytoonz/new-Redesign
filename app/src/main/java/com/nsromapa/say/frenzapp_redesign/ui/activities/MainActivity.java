@@ -1,5 +1,14 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
 import androidx.annotation.Nullable;
@@ -10,31 +19,28 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
-import android.view.View;
-
 import com.nsromapa.say.frenzapp_redesign.R;
-import com.nsromapa.say.frenzapp_redesign.ui.fragment.Followers;
-import com.nsromapa.say.frenzapp_redesign.ui.fragment.Home;
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
 import com.nsromapa.say.frenzapp_redesign.helpers.DrawerItem;
 import com.nsromapa.say.frenzapp_redesign.helpers.SimpleItem;
 import com.nsromapa.say.frenzapp_redesign.helpers.SpaceItem;
+import com.nsromapa.say.frenzapp_redesign.ui.fragment.Followers;
+import com.nsromapa.say.frenzapp_redesign.ui.fragment.Home;
+import com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Feeds;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
 import java.util.Objects;
 
+import static com.nsromapa.say.frenzapp_redesign.ui.fragment.Home.updateFragment;
+import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.disableSelection;
+
 public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
     public static MainActivity activity;
     public static Fragment mCurrentFragment;
     public static String mCurrentFragmentInHOME;
+    public static boolean chatFragment_isSelectionMode = false;
     public static boolean mState = true;
 
     private static final int POS_HOME = 0;
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private Drawable[] screenIcons;
 
     private SlidingRootNav slidingRootNav;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -202,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             try {
                 Objects.requireNonNull(getSupportActionBar()).setTitle("Home");
             } catch (Exception e) {
-                Log.e("Error", e.getMessage());
+                Log.e("Error", Objects.requireNonNull(e.getMessage()));
             }
             this.invalidateOptionsMenu();
             mState = true;
@@ -213,7 +220,14 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             adapter.setSelected(POS_HOME);
 
         } else {
-            super.onBackPressed();
+            if (chatFragment_isSelectionMode && mCurrentFragmentInHOME.equals(getResources().getString(R.string.chats)))
+                disableSelection();
+            else{
+                updateFragment(new Feeds(), getResources().getString(R.string.feeds));
+                mCurrentFragmentInHOME = getResources().getString(R.string.feeds);
+            }
+
+//                super.onBackPressed();
         }
     }
 }

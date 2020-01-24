@@ -43,5 +43,9 @@
     <string name="follow">Follow</string>
     <string name="unfriend">Unfriend</string>
     <string name="unfollow">Unfollow</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="typing">Typing…</string>
+    <string name="slide_to_cancel">"Slide to cancel"</string>
 </resources>
 

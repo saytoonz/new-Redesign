@@ -31,12 +31,12 @@
                 app:civ_circle_background_color="@color/colorAccent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/online_status_imageview"
+                android:id="@+id/online_status_image"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_gravity="end|top"
                 android:src="@drawable/shape_bubble_online"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp" />
 
@@ -47,7 +47,7 @@
                 android:layout_gravity="end|bottom"
                 android:visibility="gone"
                 app:checked="false"
-                app:circle_color="@color/color4"
+                app:circle_color="@color/colorAccent"
                 app:stroke_color="@color/white"
                 app:stroke_width="2dp" />
 

@@ -4,17 +4,24 @@
             "outputFile": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "source": "D:\\ANDROID\\Redesign\\emoticongifkeyboard\\build\\intermediates\\packaged_res\\debug\\values-land\\values-land.xml",
                     "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,117,172,234,291,345,393,455,523,590,653,716,782",
+                        "endColumns": "61,54,61,56,53,47,61,67,66,62,62,65,73",
+                        "endOffsets": "112,167,229,286,340,388,450,518,585,648,711,777,851"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "264,326,381,443,500,554,602,664,732,799,862,925,991",
+                        "endColumns": "61,54,61,56,53,47,61,67,66,62,62,65,73",
+                        "endOffsets": "321,376,438,495,549,597,659,727,794,857,920,986,1060"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\946093075d78eb9f74f58a48d61f96ab\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\efb24ff227664c253d6595a361cd1f41\\material-1.0.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -24,12 +31,22 @@
                         "endOffsets": "222"
                     },
                     "to": {
-                        "startLines": "5",
+                        "startLines": "18",
                         "startColumns": "4",
-                        "startOffsets": "264",
-                        "endLines": "8",
+                        "startOffsets": "1065",
+                        "endLines": "21",
                         "endColumns": "10",
-                        "endOffsets": "431"
+                        "endOffsets": "1232"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\bbeec50c2722296a3462e87b8b6ca67f\\appcompat-1.1.0\\res\\values-land\\values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
                     }
                 }
             ]

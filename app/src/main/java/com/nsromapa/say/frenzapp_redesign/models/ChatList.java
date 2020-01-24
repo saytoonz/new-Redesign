@@ -1,23 +1,24 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
 public class ChatList {
-    private String sender, receiver, message,
-            userImage, username, timestamp, status,
+    private String sender, receiver, message, online_status,
+            userImage, username, timestamp, message_status,
             message_type, notification_count, friendJson;
 
     public ChatList(String sender, String receiver, String message,
                     String userImage, String username,
-                    String timestamp, String status, String message_type,
-                    String notification_count, String friendJson) {
+                    String timestamp, String message_status, String message_type,
+                    String notification_count,String online_status, String friendJson) {
         this.sender = sender;
         this.receiver = receiver;
-        this.status = status;
+        this.message_status = message_status;
         this.message_type = message_type;
         this.message = message;
         this.userImage = userImage;
         this.username = username;
         this.timestamp = timestamp;
         this.notification_count = notification_count;
+        this.online_status = online_status;
         this.friendJson = friendJson;
     }
 
@@ -69,12 +70,12 @@ public class ChatList {
         this.timestamp = timestamp;
     }
 
-    public String getStatus() {
-        return status;
+    public String getMessage_status() {
+        return message_status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setMessage_status(String message_status) {
+        this.message_status = message_status;
     }
 
     public String getMessage_type() {
@@ -99,5 +100,13 @@ public class ChatList {
 
     public void setFriendJson(String friendJson) {
         this.friendJson = friendJson;
+    }
+
+    public String getOnline_status() {
+        return online_status;
+    }
+
+    public void setOnline_status(String online_status) {
+        this.online_status = online_status;
     }
 }

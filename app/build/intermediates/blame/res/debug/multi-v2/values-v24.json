@@ -4,17 +4,7 @@
             "outputFile": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\93bc303e0edf41378a70a682ebb74605\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\2444e4ac8bf5e41fc0222e63298b7bae\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\6f7beb3abe25c3f23c9a272d1d8c1499\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -28,6 +18,16 @@
                         "startOffsets": "347,413,474,540",
                         "endColumns": "65,60,65,66",
                         "endOffsets": "408,469,535,602"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\bbeec50c2722296a3462e87b8b6ca67f\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
                     }
                 }
             ]

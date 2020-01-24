@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:icon="@drawable/icons8_video_call_100"
@@ -19,7 +20,10 @@
     <item
         android:icon="@drawable/icons8_chat_80"
         android:id="@+id/nv_chats"
-        android:title="@string/chats" />
+        android:title="@string/chats"
+        app:showAsAction="always"
+        app:actionLayout="@layout/custom_chat_menu_icon_layout"/>
+
 
     <item
         android:icon="@drawable/icons8_connection_status_on_80"

@@ -1,0 +1,47 @@
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sticker_view_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/emoticon_gif_fragments_height"
+    android:background="@color/background_light"
+    tools:context=".emogifstickerkeyboard.internal.sticker.StickerFragment">
+
+    <!--<ProgressBar-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_gravity="center"/>-->
+
+    <!--0. Loader-->
+    <GridView
+        android:id="@+id/sticker_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:visibility="gone"/>
+
+    <!--1. Sticker grid-->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_gravity="center"
+       android:gravity="center">
+       <TextView
+           android:id="@+id/sticker_error_textview"
+           style="@style/Base.TextAppearance.AppCompat.Small"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:padding="10dp"/>
+       <Button
+           android:id="@+id/goto_sticker_shop"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/go_to_stickers_shop"
+           android:visibility="gone"/>
+   </LinearLayout>
+</ViewFlipper>

@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':emoticonpack-samsung', ':gifpack-giphy', ':emoticongifkeyboard'
 rootProject.name='FrenzApp-Redesign'

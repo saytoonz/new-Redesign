@@ -10,6 +10,7 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
@@ -29,6 +30,7 @@ import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
 
 
 public class ChatListService extends Service {
+    private RequestQueue requestQueue;
     private Handler handler;
     private Runnable runnable;
     @Nullable
@@ -46,11 +48,13 @@ public class ChatListService extends Service {
 
     @Override
     public void onStart(Intent intent, int startId) {
+        getContacts();
         handleStart(intent, startId);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        getContacts();
         handleStart(intent, startId);
         return START_NOT_STICKY;
     }
@@ -62,10 +66,10 @@ public class ChatListService extends Service {
             @Override
             public void run() {
                 runThisFunction1();
-                handler.postDelayed(this, 5000);
+                handler.postDelayed(this, 1000);
             }
         };
-        handler.postDelayed(runnable, 1000);
+        handler.postDelayed(runnable, 3000);
     }
 
 
@@ -100,9 +104,10 @@ public class ChatListService extends Service {
                                 poster_info.getString("image"),
                                 poster_info.getString("username"),
                                 chatListObj.getString("0"),
-                                chatListObj.getString("status"),
+                                chatListObj.getString("message_status"),
                                 chatListObj.getString("message_type"),
                                 chatListObj.getString("notification_count"),
+                                poster_info.getString("online_status"),
                                 poster_info.toString()
                         ));
                     }
@@ -124,8 +129,10 @@ public class ChatListService extends Service {
                 return post;
             }
         };
-
-        Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(getApplicationContext());
+        }
+       requestQueue.add(stringRequest);
     }
 
 }

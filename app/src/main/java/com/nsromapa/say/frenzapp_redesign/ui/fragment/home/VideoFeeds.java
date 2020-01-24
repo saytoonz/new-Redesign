@@ -1,8 +1,12 @@
 package com.nsromapa.say.frenzapp_redesign.ui.fragment.home;
 
-import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,15 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.R;
@@ -38,6 +34,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.mCurrentFragmentInHOME;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.NEWS_FEEDS;
 
 
@@ -46,7 +43,6 @@ public class VideoFeeds extends Fragment {
     private View mView;
     private SwipeRefreshLayout refreshLayout;
     private PostsAdapter mAdapter_v19;
-    private RecyclerView mPostsRecyclerView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,7 +51,7 @@ public class VideoFeeds extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mView  = inflater.inflate(R.layout.fragment_feeds, container, false);
+        mView = inflater.inflate(R.layout.fragment_feeds, container, false);
         return mView;
     }
 
@@ -69,7 +65,7 @@ public class VideoFeeds extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         refreshLayout = view.findViewById(R.id.refreshLayout);
-        mPostsRecyclerView = view.findViewById(R.id.posts_recyclerview);
+        RecyclerView mPostsRecyclerView = view.findViewById(R.id.posts_recyclerview);
 
         mPostsList = new ArrayList<>();
 
@@ -100,14 +96,14 @@ public class VideoFeeds extends Fragment {
                     Log.e("Volley Result", "" + response); //the response contains the result from the server, a json string or any other object returned by your server
 
                     try {
-                        JSONObject jsonObject  = new JSONObject(response);
+                        JSONObject jsonObject = new JSONObject(response);
                         JSONArray jsonArray = jsonObject.getJSONArray("Posts");
 
-                        if (jsonArray.length()>0){
+                        if (jsonArray.length() > 0) {
                             mView.findViewById(R.id.default_item).setVisibility(View.GONE);
                             mView.findViewById(R.id.error_view).setVisibility(View.GONE);
 
-                            for (int i = 0 ; i < jsonArray.length(); i++){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject coming_post = jsonArray.getJSONObject(i);
                                 JSONObject user_info = coming_post.getJSONObject("1");
                                 mPostsList.add(new Post(
@@ -127,23 +123,27 @@ public class VideoFeeds extends Fragment {
                                 mAdapter_v19.notifyDataSetChanged();
                             }
                             refreshLayout.setRefreshing(false);
-                        }else{
+                        } else {
+                            if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.videos)))
                             mView.findViewById(R.id.default_item).setVisibility(View.VISIBLE);
                         }
 
                     } catch (JSONException e) {
                         e.printStackTrace();
+                        if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.videos)))
                         mView.findViewById(R.id.error_view).setVisibility(View.VISIBLE);
                     }
 
 
                 },
                 error -> {
-                    refreshLayout.setRefreshing(false);
-                    mView.findViewById(R.id.default_item).setVisibility(View.GONE);
-                    mView.findViewById(R.id.error_view).setVisibility(View.VISIBLE);
-                    TextView error_textV = mView.findViewById(R.id.error_view).findViewById(R.id.error_text);
-                    error_textV.setText(Objects.requireNonNull(getActivity()).getString(R.string.server_connection_error));
+                    if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.videos))) {
+                        refreshLayout.setRefreshing(false);
+                        mView.findViewById(R.id.default_item).setVisibility(View.GONE);
+                        mView.findViewById(R.id.error_view).setVisibility(View.VISIBLE);
+                        TextView error_textV = mView.findViewById(R.id.error_view).findViewById(R.id.error_text);
+                        error_textV.setText(Objects.requireNonNull(getActivity()).getString(R.string.server_connection_error));
+                    }
                 }) {
             @Override
             protected Map<String, String> getParams() {
@@ -165,9 +165,8 @@ public class VideoFeeds extends Fragment {
 
 
     @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-
+    public void onPause() {
+        super.onPause();
+        Volley.newRequestQueue(Objects.requireNonNull(getActivity())).stop();
     }
-
 }
