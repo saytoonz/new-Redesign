@@ -845,9 +845,9 @@ public final class R {
         public static final int error_over_count_default = 0x7f12003d;
         public static final int error_over_quality = 0x7f12003e;
         public static final int error_under_quality = 0x7f12003f;
-        public static final int photo_grid_capture = 0x7f120063;
-        public static final int search_menu_title = 0x7f120064;
-        public static final int status_bar_notification_info_overflow = 0x7f12006c;
+        public static final int photo_grid_capture = 0x7f12006c;
+        public static final int search_menu_title = 0x7f12006d;
+        public static final int status_bar_notification_info_overflow = 0x7f120075;
     }
     public static final class style {
         private style() {}

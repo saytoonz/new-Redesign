@@ -9,6 +9,7 @@ public class Settings {
     public static boolean autoSaveStickersToGallery(){
         return false;
     }
+
     public static boolean autoSaveGifsToGallery(){
         return false;
     }

@@ -16,16 +16,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Utils {
-    private String myStories;
     private static final Handler HANDLER = new Handler();
 
     public Utils() {
     }
 
-
-    public Utils(String myStories) {
-        this.myStories = myStories;
-    }
 
     public static String getUserUid() {
         return "2";
@@ -47,9 +42,6 @@ public class Utils {
         return "1,3";
     }
 
-    public String getMyStories() {
-        return myStories;
-    }
 
     public static boolean isMeFollowing(String user_id) {
         return true;

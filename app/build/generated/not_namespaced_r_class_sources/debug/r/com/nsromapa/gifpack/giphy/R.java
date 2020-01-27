@@ -934,12 +934,12 @@ public final class R {
         public static final int go_to_sounds_shop = 0x7f120045;
         public static final int go_to_stickers_shop = 0x7f120046;
         public static final int hint_search = 0x7f120048;
-        public static final int network_error = 0x7f120053;
-        public static final int no_result_found = 0x7f120058;
-        public static final int no_sound_found = 0x7f120059;
-        public static final int no_sticker_found = 0x7f12005a;
-        public static final int search_menu_title = 0x7f120064;
-        public static final int status_bar_notification_info_overflow = 0x7f12006c;
+        public static final int network_error = 0x7f12005c;
+        public static final int no_result_found = 0x7f120061;
+        public static final int no_sound_found = 0x7f120062;
+        public static final int no_sticker_found = 0x7f120063;
+        public static final int search_menu_title = 0x7f12006d;
+        public static final int status_bar_notification_info_overflow = 0x7f120075;
     }
     public static final class style {
         private style() {}

@@ -7,4 +7,7 @@ public class Constants {
     public static final String CHATS = "http://192.168.43.22/frenzapp/chats";
     public static final String STATUS = "http://192.168.43.22/frenzapp/users";
 
+//    192.168.43.22
+//    192.168.8.101
+
 }

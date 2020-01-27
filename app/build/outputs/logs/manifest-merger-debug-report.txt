@@ -57,6 +57,8 @@ MERGED from [com.wang.avi:library:2.1.3] C:\Users\Saytoonz\.gradle\caches\transf
 MERGED from [com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ad3e7b9d3d8c1ffe49bb5fe1c6bb1080\FFmpegMediaMetadataRetriever-1.0.14\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.marcinmoskala:ArcSeekBar:0.31] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\868aa1da1d66e48efcc75b7021f2ee5e\ArcSeekBar-0.31\AndroidManifest.xml:2:1-4:66
 MERGED from [com.kailashdabhi:om-recorder:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d77e01e9421f6f158cc36d2f2dc21ff2\om-recorder-1.1.0\AndroidManifest.xml:2:1-19:12
+MERGED from [net.zetetic:android-database-sqlcipher:4.3.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\65d08b7ecf4003f43fc96b19ced5123c\android-database-sqlcipher-4.3.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a120331198e58f10c67214a962c09f\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\b7a9610a1f3eae974d686e09924cebd4\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\cf470dc04cd0524833258dc3036c3d17\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\2852ee0a601182ce781696607da122be\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -398,6 +400,10 @@ MERGED from [com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14] C:\Users\S
 MERGED from [com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ad3e7b9d3d8c1ffe49bb5fe1c6bb1080\FFmpegMediaMetadataRetriever-1.0.14\AndroidManifest.xml:7:5-9:41
 MERGED from [com.kailashdabhi:om-recorder:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d77e01e9421f6f158cc36d2f2dc21ff2\om-recorder-1.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.kailashdabhi:om-recorder:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d77e01e9421f6f158cc36d2f2dc21ff2\om-recorder-1.1.0\AndroidManifest.xml:5:5-7:41
+MERGED from [net.zetetic:android-database-sqlcipher:4.3.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\65d08b7ecf4003f43fc96b19ced5123c\android-database-sqlcipher-4.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [net.zetetic:android-database-sqlcipher:4.3.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\65d08b7ecf4003f43fc96b19ced5123c\android-database-sqlcipher-4.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a120331198e58f10c67214a962c09f\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a120331198e58f10c67214a962c09f\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\b7a9610a1f3eae974d686e09924cebd4\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\b7a9610a1f3eae974d686e09924cebd4\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\cf470dc04cd0524833258dc3036c3d17\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
