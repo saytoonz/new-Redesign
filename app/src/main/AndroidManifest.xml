@@ -15,10 +15,10 @@
         android:name=".App"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -60,6 +60,9 @@
             android:enabled="true" />
         <service
             android:name=".services.OnlineStatusService"
+            android:enabled="true" />
+        <service
+            android:name=".services.FetchMessagesService"
             android:enabled="true" />
 
 

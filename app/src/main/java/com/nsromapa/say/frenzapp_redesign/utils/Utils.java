@@ -16,7 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Utils {
-    private static final Handler HANDLER = new Handler();
 
     public Utils() {
     }
@@ -119,7 +118,7 @@ public class Utils {
 
 
 
-    public static void wait(int millis, Runnable callback){
+    public static void wait(int millis, Runnable callback, Handler HANDLER){
         HANDLER.postDelayed(callback, millis);
     }
 

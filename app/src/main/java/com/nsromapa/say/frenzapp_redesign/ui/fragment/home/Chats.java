@@ -95,16 +95,12 @@ public class Chats extends Fragment {
        if (!TextUtils.isEmpty(response)){
            default_item.setVisibility(View.GONE);
            try {
-
-               Log.e("PreferenceManager", response );
                JSONObject jsonObject = new JSONObject(response);
                JSONArray jsonArray = jsonObject.getJSONArray("chatLists");
 
                for (int i = 0; i < jsonArray.length(); i++) {
                    JSONObject chatListObj = jsonArray.getJSONObject(i);
                    JSONObject poster_info = chatListObj.getJSONObject("1");
-
-                   Log.e("PreferenceManager", chatListObj.toString() );
 
                    ChatList chat =  new ChatList(
                            chatListObj.getString("sender_id"),

@@ -443,7 +443,7 @@ public class ChatView extends RelativeLayout {
             @Override
             public void run() {
                 handler.post(() -> {
-                   // timeText.setText(timeFormatter.format(new Date(audioTotalTime * 1000)));
+                    // timeText.setText(timeFormatter.format(new Date(audioTotalTime * 1000)));
                     audioTotalTime++;
                 });
             }
@@ -563,11 +563,6 @@ public class ChatView extends RelativeLayout {
     }
 
 
-
-
-
-
-
     public MaterialRippleLayout getPauseResumeARL() {
         return pauseResumeARL;
     }
@@ -575,6 +570,7 @@ public class ChatView extends RelativeLayout {
     public TextView getTimeText() {
         return timeText;
     }
+
     public EmoticonEditText getMessageET() {
         return messageET;
     }
@@ -586,11 +582,6 @@ public class ChatView extends RelativeLayout {
     public MaterialRippleLayout getEmojiToggle() {
         return emojiToggle;
     }
-
-
-
-
-
 
 
     protected void init(Context context) {
@@ -761,10 +752,11 @@ public class ChatView extends RelativeLayout {
     }
 
     //Use this method to add a message to chatview
-    public void addMessage(Message message) {
+    public void addMessage(Message message, boolean scrollToBottom) {
         messageList.add(0, message);
         messageAdapter.notifyItemInserted(0);
-        chatRV.smoothScrollToPosition(0);
+        if (scrollToBottom)
+            chatRV.smoothScrollToPosition(0);
         mLayoutRoot.invalidate();
     }
 

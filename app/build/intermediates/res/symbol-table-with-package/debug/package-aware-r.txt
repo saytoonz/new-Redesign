@@ -927,6 +927,7 @@ color green_top
 color highlight_blue_color
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color icon
 color icon_selected
 color infoColor

@@ -41,6 +41,7 @@ import com.nsromapa.say.frenzapp_redesign.models.AudioChannel;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSampleRate;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSource;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
+import com.nsromapa.say.frenzapp_redesign.services.FetchMessagesService;
 import com.nsromapa.say.frenzapp_redesign.services.OnlineStatusService;
 import com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
@@ -80,7 +81,7 @@ public class ChatViewActivity extends AppCompatActivity
     public static int SELECT_VIDEO = 11;
     public static int CAMERA_REQUEST = 12;
     public static int SELECT_AUDIO = 13;
-    private ChatView chatView;
+    private static ChatView chatView;
     private static TextView statusTV;
     boolean switchBool = true;
     List<String> mSelected;
@@ -121,6 +122,10 @@ public class ChatViewActivity extends AppCompatActivity
                 statusTV.setVisibility(View.GONE);
             }
         }
+    }
+
+    public static void addMessage(Message message, boolean scrollToBottom){
+        chatView.addMessage(message, scrollToBottom);
     }
 
 
@@ -497,7 +502,7 @@ public class ChatViewActivity extends AppCompatActivity
             }
             case 13: {
                 if (resultCode == RESULT_OK) {
-                    sendAudio(Objects.requireNonNull(data.getData()).toString(), data.getData().getPath());
+                    sendAudio(Objects.requireNonNull(data.getData()).toString(), getPathAudio(data.getData()));
                 }
                 break;
             }
@@ -676,13 +681,14 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
     public void toggleRecording() {
+        final Handler HANDLER = new Handler();
         Utils.wait(100, () -> {
             if (isRecording) {
                 pauseRecording();
             } else {
                 resumeRecording();
             }
-        });
+        }, HANDLER);
     }
 
 
@@ -835,12 +841,13 @@ public class ChatViewActivity extends AppCompatActivity
 
     @Override
     public void onRecordingCompleted() {
+        final Handler HANDLER = new Handler();
         isStillHold = false;
         isRecordingPaused = false;
         Log.e(TAG, "onRecordingCompleted");
         if (recorderSecondsElapsed > 1) {
             stopRecording();
-            Utils.wait(1000, () -> sendAudio(filePath, filePath));
+            Utils.wait(1000, () -> sendAudio(filePath, filePath), HANDLER);
 
         }
 
@@ -868,6 +875,7 @@ public class ChatViewActivity extends AppCompatActivity
     protected void onPause() {
         stopMediaPlayer();
         super.onPause();
+        stopService(new Intent(this, FetchMessagesService.class));
         stopService(new Intent(this, OnlineStatusService.class));
     }
 
@@ -875,9 +883,13 @@ public class ChatViewActivity extends AppCompatActivity
     @Override
     public void onResume() {
         super.onResume();
-        Intent intent = new Intent(this, OnlineStatusService.class);
+        Intent intent = new Intent(this, FetchMessagesService.class);
         intent.putExtra("thisUserId", thisUserId);
         startService(intent);
+
+        Intent intent1 = new Intent(this, OnlineStatusService.class);
+        intent1.putExtra("thisUserId", thisUserId);
+        startService(intent1);
     }
 
     @Override

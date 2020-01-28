@@ -30,7 +30,9 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        chatView.addMessage(message);
+        chatView.addMessage(message, true);
+       int a =  message.getIndexPosition();
+       message.setStatus("0");
     }
 
     @Override
@@ -41,9 +43,9 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         if (message.getImageList() != null){
             if (message.getImageList().size() > 0){
                 for(int i = 0; i < message.getImageList().size(); i++){
-                    messageImageListsInString.concat(message.getImageList().get(i));
-                    messageImageListNamesInString.concat(message.getImageList().get(i)
-                            .substring(message.getImageList().get(i).lastIndexOf("/") + 1));
+                    messageImageListsInString = messageImageListsInString.concat(message.getImageList().get(i)+",,");
+                    messageImageListNamesInString = messageImageListNamesInString.concat(message.getImageList().get(i)
+                            .substring(message.getImageList().get(i).lastIndexOf("/") + 1)+",,");
                 }
             }
         }
