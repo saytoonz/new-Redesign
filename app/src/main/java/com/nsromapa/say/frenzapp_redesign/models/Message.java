@@ -1,8 +1,6 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
 
-import android.net.Uri;
-
 import java.util.List;
 
 /**
@@ -11,40 +9,18 @@ import java.util.List;
 
 
 public class Message {
-
-
-    protected String LeftSimpleMessage = "LEFT";
-    protected String RightSimpleMessage = "RIGHT";
-    protected String LeftSingleImage = "LeftImage";
-    protected String RightSingleImage = "RightImage";
-
-    //Can hold upto 11 images.
-    protected String LeftMultipleImages = "LeftImages";
-    protected String RightMultipleImages = "RightImages";
-
-    //Single Video
-    protected String LeftVideo = "LeftVideo";
-    protected String RightVideo = "RightVideo";
-
-    protected String LeftAudio = "LeftAudio";
-    protected String RightAudio = "RightAudio";
-
-    protected long id;
+    protected String local_id;
+    protected  String id;
     protected MessageType messageType;
-    protected String type;
     protected String body;
     protected String time;
     protected String status;
-    protected List<Uri> imageList;
+    protected List<String> imageList;
     protected List<String> imageListNames;
     protected String userName;
-    protected Uri userIcon;
-    protected Uri videoUri;
-    protected Uri audioUri;
+    protected String userIcon;
     private String singleUrl;
-    private String audioLocalLocation;
-    private String videoLocalLocation;
-    private String imageLocalLocation;
+    private String localLocation;
     protected int indexPosition;
 
     public String getSingleUrl() {
@@ -57,7 +33,7 @@ public class Message {
 
     public enum MessageType{
         LeftSimpleMessage,
-        RightSimpleImage,
+        RightSimpleMessage,
         LeftSingleImage,
         RightSingleImage,
         LeftMultipleImages,
@@ -77,15 +53,13 @@ public class Message {
     public Message(){
 
     }
-
-    public Uri getAudioUri() {
-        return audioUri;
+    public void setLocal_id(String local_id) {
+        this.local_id = local_id;
     }
 
-    public void setAudioUri(Uri audioUri) {
-        this.audioUri = audioUri;
+    public String getLocal_id() {
+        return local_id;
     }
-
     public MessageType getMessageType() {
         return messageType;
     }
@@ -102,20 +76,12 @@ public class Message {
         this.indexPosition = indexPosition;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String getBody() {
@@ -142,11 +108,11 @@ public class Message {
         this.status = status;
     }
 
-    public List<Uri> getImageList() {
+    public List<String> getImageList() {
         return imageList;
     }
 
-    public void setImageList(List<Uri> imageList) {
+    public void setImageList(List<String> imageList) {
         this.imageList = imageList;
     }
 
@@ -166,44 +132,21 @@ public class Message {
         this.userName = userName;
     }
 
-    public Uri getUserIcon() {
+    public String getUserIcon() {
         return userIcon;
     }
 
-    public void setUserIcon(Uri userIcon) {
+    public void setUserIcon(String userIcon) {
         this.userIcon = userIcon;
     }
 
-    public Uri getVideoUri() {
-        return videoUri;
+
+    public String getLocalLocation() {
+        return localLocation;
     }
 
-    public void setVideoUri(Uri videoUri) {
-        this.videoUri = videoUri;
-    }
-
-    public String getAudioLocalLocation() {
-        return audioLocalLocation;
-    }
-
-    public void setAudioLocalLocation(String audioLocalLocation) {
-        this.audioLocalLocation = audioLocalLocation;
-    }
-
-    public String getVideoLocalLocation() {
-        return videoLocalLocation;
-    }
-
-    public void setVideoLocalLocation(String videoLocalLocation) {
-        this.videoLocalLocation = videoLocalLocation;
-    }
-
-    public String getImageLocalLocation() {
-        return imageLocalLocation;
-    }
-
-    public void setImageLocalLocation(String imageLocalLocation) {
-        this.imageLocalLocation = imageLocalLocation;
+    public void setLocalLocation(String localLocation) {
+        this.localLocation = localLocation;
     }
 }
 

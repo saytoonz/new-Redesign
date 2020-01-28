@@ -157,6 +157,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
             }else{
                 Intent intent = new Intent(context, ChatViewActivity.class);
                 intent.putExtra("thisUserId",  Utils.getUserInfoFromUserJSON(list.getFriendJson(), "id"));
+                intent.putExtra("thisUserJson",  list.getFriendJson());
                 context.startActivity(intent);
 
             }

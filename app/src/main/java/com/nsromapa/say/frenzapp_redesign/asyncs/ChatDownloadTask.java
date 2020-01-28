@@ -144,13 +144,13 @@ public class ChatDownloadTask extends AsyncTask<String, Integer, String> {
         } else {
             if (message != null) {
                 if (result.contains("/FrenzApp/Media/Videos/")) {
-                    message.setVideoLocalLocation(result);
+                    message.setLocalLocation(result);
                 } else if (result.contains("/FrenzApp/Media/Audios/")) {
-                    message.setAudioLocalLocation(result);
+                    message.setLocalLocation(result);
                 } else if (result.contains("/FrenzApp/Media/Images/")
                         || result.contains("/FrenzApp/Media/stickers/")
                         || result.contains("/FrenzApp/Media/gifs/")) {
-                    message.setImageLocalLocation(result);
+                    message.setLocalLocation(result);
                 }
                 updater();
             }

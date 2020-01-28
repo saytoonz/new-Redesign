@@ -35,17 +35,19 @@ import com.nsromapa.say.emogifstickerkeyboard.emoticons.EmoticonSelectListener;
 import com.nsromapa.say.emogifstickerkeyboard.gifs.Gif;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText;
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.asyncs.MessageInsertion;
 import com.nsromapa.say.frenzapp_redesign.helpers.PicassoEngine;
 import com.nsromapa.say.frenzapp_redesign.models.AudioChannel;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSampleRate;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSource;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
-import com.nsromapa.say.frenzapp_redesign.services.ChatListService;
 import com.nsromapa.say.frenzapp_redesign.services.OnlineStatusService;
 import com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
+
+import net.sqlcipher.database.SQLiteDatabase;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -63,9 +65,11 @@ import omrecorder.Recorder;
 import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.pauseMediaPlayer;
 import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.resumeMediaPlayer;
 import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.stopMediaPlayer;
+import static com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper.DATABASE_LOCATION;
 import static com.nsromapa.say.frenzapp_redesign.utils.Utils.downloadSoundAudio;
 
-public class ChatViewActivity extends AppCompatActivity implements ChatView.RecordingListener, PullTransport.OnAudioChunkPulledListener {
+public class ChatViewActivity extends AppCompatActivity
+        implements ChatView.RecordingListener, PullTransport.OnAudioChunkPulledListener {
 
     private static final String TAG = "ChatViewActivity";
     private EmoticonGIFKeyboardFragment mEmoticonGIFKeyboardFragment;
@@ -79,7 +83,7 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     private ChatView chatView;
     private static TextView statusTV;
     boolean switchBool = true;
-    List<Uri> mSelected;
+    List<String> mSelected;
     List<String> mSelectedLocal;
 
     private EmoticonEditText messageEditText;
@@ -96,6 +100,7 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     private boolean isStillHold = false;
     private Timer timer;
     private static  String thisUserId;
+    private static  String thisUserJson;
     private Handler handler;
     private Runnable runnable;
 
@@ -125,10 +130,15 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
         setContentView(R.layout.activity_chat_view);
         if (getIntent() != null){
             thisUserId = getIntent().getStringExtra("thisUserId");
+            thisUserJson = getIntent().getStringExtra("thisUserJson");
         }else{
             finish();
         }
 
+        if (!(new File(DATABASE_LOCATION).exists()))
+            new File(DATABASE_LOCATION).mkdirs();
+
+        SQLiteDatabase.loadLibs(this);
 
         inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         chatView = findViewById(R.id.chatView);
@@ -183,7 +193,8 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             file.delete();
             File file1 = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
 
-            Uri uri = FileProvider.getUriForFile(ChatViewActivity.this, getApplicationContext().getPackageName() + ".provider", file1);
+            Uri uri = FileProvider.getUriForFile(ChatViewActivity.this,
+                    getApplicationContext().getPackageName() + ".provider", file1);
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
             startActivityForResult(cameraIntent, CAMERA_REQUEST);
         });
@@ -196,210 +207,42 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             startActivityForResult(intent_upload, SELECT_AUDIO);
         });
 
-
     }
 
 
+
+
+
+
+
+    private void insertSthToDb(Message message) {
+        new MessageInsertion(this, chatView, message).execute(thisUserJson);
+    }
     private void sendMessageText(String body) {
         if (switchBool) {
             Message message = new Message();
             message.setBody(body);
-            message.setMessageType(Message.MessageType.RightSimpleImage);
+            message.setMessageType(Message.MessageType.RightSimpleMessage);
             message.setTime(getTime());
             message.setUserName("Groot");
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-            chatView.addMessage(message);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
 
             switchBool = false;
         } else {
-            Message message1 = new Message();
-            message1.setBody(body);
-            message1.setMessageType(Message.MessageType.LeftSimpleMessage);
-            message1.setTime(getTime());
-            message1.setUserName("Hodor");
-            message1.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-            chatView.addMessage(message1);
+            Message message = new Message();
+            message.setBody(body);
+            message.setMessageType(Message.MessageType.LeftSimpleMessage);
+            message.setTime(getTime());
+            message.setUserName("Hodor");
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//            chatView.addMessage(message1);
+            insertSthToDb(message);
 
             switchBool = true;
         }
     }
-
-    private void resumeRecording() {
-        if (!isRecordingPaused) {
-            String location = Environment.getExternalStorageDirectory().getPath() + "/FrenzApp/Media/Audios/Sent/Rec/";
-            File dir = new File(location);
-            if (!dir.exists())
-                dir.mkdirs();
-            filePath = location + "/FRZMGS" + System.currentTimeMillis() + ".wav";
-        }
-        isRecording = true;
-        ImageView playPauseIcon = chatView.getPauseResumeARL().findViewById(R.id.pause_resume_imageView);
-        playPauseIcon.setImageResource(R.drawable.pause_microphone_100);
-
-        if (recorder == null) {
-            chatView.getTimeText().setText("00:00");
-
-            recorder = OmRecorder.wav(
-                    new PullTransport.Default(Utils.getMic(source, channel, sampleRate), this),
-                    new File(filePath));
-        }
-        isRecordingPaused = false;
-        recorder.resumeRecording();
-
-        startTimer();
-    }
-
-
-    private void pauseRecording() {
-        isRecording = false;
-        isRecordingPaused = true;
-
-        ImageView playPauseIcon = chatView.getPauseResumeARL().findViewById(R.id.pause_resume_imageView);
-        playPauseIcon.setImageResource(R.drawable.play_microphone_100);
-
-        if (recorder != null) {
-            recorder.pauseRecording();
-        }
-
-        stopTimer();
-    }
-
-    private void stopRecording() {
-        isRecordingPaused = false;
-        recorderSecondsElapsed = 0;
-        if (recorder != null) {
-            recorder.stopRecording();
-            recorder = null;
-        }
-        stopTimer();
-    }
-
-    public void toggleRecording() {
-        Utils.wait(100, () -> {
-            if (isRecording) {
-                pauseRecording();
-            } else {
-                resumeRecording();
-            }
-        });
-    }
-
-
-    private void startTimer() {
-        stopTimer();
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-                updateTimer();
-            }
-        }, 0, 1000);
-    }
-
-    private void stopTimer() {
-        if (timer != null) {
-            timer.cancel();
-            timer.purge();
-            timer = null;
-        }
-    }
-
-    private void updateTimer() {
-        runOnUiThread(() -> {
-            if (isRecording) {
-                recorderSecondsElapsed++;
-                chatView.getTimeText().setText(Utils.formatSeconds(recorderSecondsElapsed));
-            }
-        });
-    }
-
-
-    @SuppressLint("ClickableViewAccessibility")
-    private void initializeEmojiGifStickerKeyBoard() {
-        EmoticonGIFKeyboardFragment.EmoticonConfig emoticonConfig = new EmoticonGIFKeyboardFragment.EmoticonConfig()
-                .setEmoticonProvider(SamsungEmoticonProvider.create())
-                .setEmoticonSelectListener(new EmoticonSelectListener() {
-                    @Override
-                    public void emoticonSelected(Emoticon emoticon) {
-                        Log.d(TAG, "emoticonSelected: " + emoticon.getUnicode());
-                        messageEditText.append(emoticon.getUnicode(),
-                                messageEditText.getSelectionStart(),
-                                messageEditText.getSelectionEnd());
-                    }
-
-                    @Override
-                    public void onBackSpace() {
-                    }
-                });
-
-
-        EmoticonGIFKeyboardFragment.GIFConfig gifConfig = new EmoticonGIFKeyboardFragment
-                .GIFConfig(GiphyGifProvider.create(this, "564ce7370bf347f2b7c0e4746593c179"))
-                .setGifSelectListener(gif -> {
-                    Log.d(TAG, "onGifSelected: " + gif.getGifUrl());
-                    sendNewGIF(gif);
-                });
-
-        EmoticonGIFKeyboardFragment.STICKERConfig stickerConfig = new EmoticonGIFKeyboardFragment.STICKERConfig()
-                .setStickerSelectedListener(sticker -> {
-                    Log.d(TAG, "stickerSelected: " + sticker);
-                    sendNewSticker(sticker);
-                });
-
-
-        EmoticonGIFKeyboardFragment.SoundConfig soundConfig = new EmoticonGIFKeyboardFragment.SoundConfig()
-                .setSoundImageSelectedListener(soundImage -> {
-                    Log.d(TAG, "soundImage Selected: " + soundImage.getName());
-
-                    String soundName = soundImage.getName().replace(".png", ".mp3").replace(".gif", ".mp3");
-                    File file = new File(Environment.getExternalStorageDirectory()
-                            .getAbsolutePath() + "/FrenzApp/Media/sounds/SoundAudios/" + soundName);
-                    if (!(file.exists()) || (!file.isFile())) {
-                        playAndSendAudio(file, true);
-                    } else if (file.exists() && file.isFile()) {
-                        playAndSendAudio(file, false);
-                    } else {
-                        Toast.makeText(ChatViewActivity.this, "Error....", Toast.LENGTH_SHORT).show();
-                    }
-
-                });
-
-        mEmoticonGIFKeyboardFragment = EmoticonGIFKeyboardFragment
-                .getNewInstance(findViewById(R.id.keyboard_container), emoticonConfig, gifConfig, stickerConfig, soundConfig);
-        getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.keyboard_container, mEmoticonGIFKeyboardFragment)
-                .commit();
-        mEmoticonGIFKeyboardFragment.hideKeyboard();
-
-        emojiKeyboardToggler.setOnClickListener(view -> {
-            if (mEmoticonGIFKeyboardFragment.isOpen()) {
-
-                mEmoticonGIFKeyboardFragment.toggle();
-                ImageView imageView = emojiKeyboardToggler.findViewById(R.id.emoji_keyboad_iv);
-                imageView.setImageResource(R.drawable.ic_smiley);
-
-                if (inputMethodManager != null) {
-                    inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-                }
-            } else {
-                //Check if keyboard is open and close it if it is
-                if (inputMethodManager.isAcceptingText()) {
-                    inputMethodManager.hideSoftInputFromWindow(messageEditText.getWindowToken(), 0);
-                }
-
-                ImageView imageView = emojiKeyboardToggler.findViewById(R.id.emoji_keyboad_iv);
-                imageView.setImageResource(R.drawable.sp_ic_keyboard);
-                mEmoticonGIFKeyboardFragment.toggle();
-            }
-        });
-
-        messageEditText.setOnTouchListener((v, event) -> {
-            mEmoticonGIFKeyboardFragment.hideKeyboard();
-            return false;
-        });
-    }
-
     private void sendNewSound(File soundImage) {
         Log.e(TAG, "sendNewSound: " + soundImage);
         String realNameUrl = soundImage.getAbsolutePath().replace(".mp3", ".gif");
@@ -412,10 +255,11 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             message.setMessageType(Message.MessageType.RightSound);
             message.setTime(getTime());
             message.setUserName("Groot");
-            message.setImageLocalLocation(localPath);
+            message.setLocalLocation(localPath);
             message.setSingleUrl("");
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-            chatView.addMessage(message);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = false;
         } else {
             Message message = new Message();
@@ -423,10 +267,11 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             message.setMessageType(Message.MessageType.LeftSound);
             message.setTime(getTime());
             message.setUserName("Hodor");
-            message.setImageLocalLocation(localPath);
+            message.setLocalLocation(localPath);
             message.setSingleUrl("");
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-            chatView.addMessage(message);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = true;
         }
     }
@@ -443,10 +288,11 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             message.setMessageType(Message.MessageType.RightGIF);
             message.setTime(getTime());
             message.setUserName("Groot");
-            message.setImageLocalLocation(localPath);
+            message.setLocalLocation(localPath);
             message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-            chatView.addMessage(message);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = false;
         } else {
             Message message = new Message();
@@ -454,31 +300,28 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             message.setMessageType(Message.MessageType.LeftGIF);
             message.setTime(getTime());
             message.setUserName("Hodor");
-            message.setImageLocalLocation(localPath);
+            message.setLocalLocation(localPath);
             message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-            chatView.addMessage(message);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = true;
         }
     }
 
 
     private void sendNewSticker(File sticker) {
-        Log.e(TAG, "sendNewSticker: " + sticker.getName());
-
-        mSelected.clear();
-        mSelected.add(Uri.parse(sticker.getAbsolutePath()));
-
         if (switchBool) {
             Message message = new Message();
             message.setBody(sticker.getName());
             message.setMessageType(Message.MessageType.RightSticker);
             message.setTime(getTime());
             message.setUserName("Groot");
-            message.setImageLocalLocation(sticker.getAbsolutePath());
-            message.setImageList(mSelected);
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-            chatView.addMessage(message);
+            message.setLocalLocation(sticker.getAbsolutePath());
+            message.setSingleUrl(sticker.getAbsolutePath());
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = false;
         } else {
             Message message = new Message();
@@ -486,10 +329,11 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             message.setMessageType(Message.MessageType.LeftSticker);
             message.setTime(getTime());
             message.setUserName("Hodor");
-            message.setImageLocalLocation(sticker.getAbsolutePath());
-            message.setImageList(mSelected);
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-            chatView.addMessage(message);
+            message.setLocalLocation(sticker.getAbsolutePath());
+            message.setSingleUrl(sticker.getAbsolutePath());
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = true;
         }
     }
@@ -506,30 +350,31 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-
         switch (requestCode) {
             case 10: {
 
                 //Image Selection result
                 if (resultCode == RESULT_OK) {
-                    mSelected = Matisse.obtainResult(data);
+                    List<Uri> list = Matisse.obtainResult(data);
                     mSelectedLocal.clear();
-                    for (int i = 0; i < mSelected.size(); i++) {
+                    mSelected.clear();
+                    for (int i = 0; i < list.size(); i++) {
+                       mSelected.add(list.get(i).toString());
                         mSelectedLocal.add("1579225193965.jpg");
                     }
 
                     if (switchBool) {
                         if (mSelected.size() == 1) {
                             Message message = new Message();
-//                            message.setBody(messageET.getText().toString().trim());
                             message.setBody("");
                             message.setMessageType(Message.MessageType.RightSingleImage);
                             message.setTime(getTime());
                             message.setUserName("Groot");
-                            message.setImageList(mSelected);
-                            message.setImageLocalLocation("");
-                            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-                            chatView.addMessage(message);
+                            message.setSingleUrl(mSelected.get(0));
+                            message.setLocalLocation(mSelected.get(0));
+                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//                            chatView.addMessage(message);
+                            insertSthToDb(message);
                             switchBool = false;
                         } else {
 
@@ -540,35 +385,37 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
                             message.setUserName("Groot");
                             message.setImageList(mSelected);
                             message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-                            chatView.addMessage(message);
+                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//                            chatView.addMessage(message);
+                            insertSthToDb(message);
                             switchBool = false;
                         }
                     } else {
 
                         if (mSelected.size() == 1) {
                             Message message = new Message();
-//                            message.setBody(messageET.getText().toString().trim());
                             message.setBody("");
                             message.setMessageType(Message.MessageType.LeftSingleImage);
                             message.setTime(getTime());
                             message.setUserName("Hodor");
-                            message.setImageList(mSelected);
-                            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-                            chatView.addMessage(message);
+                            message.setSingleUrl(mSelected.get(0));
+                            message.setLocalLocation(mSelected.get(0));
+                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//                            chatView.addMessage(message);
+                            insertSthToDb(message);
                             switchBool = true;
                         } else {
 
                             Message message = new Message();
-//                            message.setBody(messageET.getText().toString().trim());
                             message.setBody("");
                             message.setMessageType(Message.MessageType.LeftMultipleImages);
                             message.setTime(getTime());
                             message.setUserName("Hodor");
                             message.setImageList(mSelected);
                             message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-                            chatView.addMessage(message);
+                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//                            chatView.addMessage(message);
+                            insertSthToDb(message);
                             switchBool = true;
                         }
 
@@ -585,9 +432,10 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
                         message.setMessageType(Message.MessageType.RightVideo);
                         message.setTime(getTime());
                         message.setUserName("Groot");
-                        message.setVideoUri(Uri.parse(getPathVideo(data.getData())));
-                        message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-                        chatView.addMessage(message);
+                        message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
+                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//                        chatView.addMessage(message);
+                        insertSthToDb(message);
                         switchBool = false;
                     } else {
                         Message message = new Message();
@@ -595,9 +443,10 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
                         message.setMessageType(Message.MessageType.LeftVideo);
                         message.setTime(getTime());
                         message.setUserName("Hodor");
-                        message.setVideoUri(Uri.parse(getPathVideo(data.getData())));
-                        message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-                        chatView.addMessage(message);
+                        message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
+                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//                        chatView.addMessage(message);
+                        insertSthToDb(message);
                         switchBool = true;
                     }
                 }
@@ -615,14 +464,15 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
                         message.setMessageType(Message.MessageType.RightSingleImage);
                         message.setTime(getTime());
                         message.setUserName("Groot");
-                        mSelected.clear();
+//                        mSelected.clear();
                         File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
-                        //Uri of camera image
-                        Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
-                        mSelected.add(uri);
-                        message.setImageList(mSelected);
-                        message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-                        chatView.addMessage(message);
+//                        //Uri of camera image
+//                        Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+//                        mSelected.add(uri.toString());
+                        message.setSingleUrl(file.getAbsolutePath());
+                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//                        chatView.addMessage(message);
+                        insertSthToDb(message);
                         switchBool = false;
                     } else {
                         Message message = new Message();
@@ -630,14 +480,16 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
                         message.setMessageType(Message.MessageType.LeftSingleImage);
                         message.setTime(getTime());
                         message.setUserName("Hodor");
-                        mSelected.clear();
+//                        mSelected.clear();
                         File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
-                        //Uri of camera image
-                        Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
-                        mSelected.add(uri);
+//                        //Uri of camera image
+//                        Uri uri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", file);
+//                        mSelected.add(uri.getPath());
                         message.setImageList(mSelected);
-                        message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-                        chatView.addMessage(message);
+                        message.setSingleUrl(file.getAbsolutePath());
+                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//                        chatView.addMessage(message);
+                        insertSthToDb(message);
                         switchBool = true;
                     }
                 }
@@ -645,7 +497,7 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
             }
             case 13: {
                 if (resultCode == RESULT_OK) {
-                    sendAudio(data.getData(), "");
+                    sendAudio(Objects.requireNonNull(data.getData()).toString(), data.getData().getPath());
                 }
                 break;
             }
@@ -654,29 +506,30 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     }
 
 
-    private void sendAudio(Uri uri, String localPath) {
-        if (uri == null) return;
+    private void sendAudio(String urlPath, String localPath) {
+        if (urlPath == null || TextUtils.isEmpty(urlPath)) return;
 
         if (switchBool) {
             Message message = new Message();
             message.setMessageType(Message.MessageType.RightAudio);
             message.setTime(getTime());
             message.setUserName("Groot");
-            message.setAudioUri(uri);
-            message.setAudioLocalLocation(localPath);
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot"));
-            chatView.addMessage(message);
+            message.setSingleUrl(urlPath);
+            message.setLocalLocation(localPath);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = false;
         } else {
             Message message = new Message();
-
             message.setMessageType(Message.MessageType.LeftAudio);
             message.setTime(getTime());
             message.setUserName("Hodor");
-            message.setAudioUri(uri);
-            message.setAudioLocalLocation(localPath);
-            message.setUserIcon(Uri.parse("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor"));
-            chatView.addMessage(message);
+            message.setSingleUrl(urlPath);
+            message.setLocalLocation(localPath);
+            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+//            chatView.addMessage(message);
+            insertSthToDb(message);
             switchBool = true;
         }
     }
@@ -772,32 +625,190 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
 
 
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+    private void resumeRecording() {
+        if (!isRecordingPaused) {
+            String location = Environment.getExternalStorageDirectory().getPath() + "/FrenzApp/Media/Audios/Sent/Rec/";
+            File dir = new File(location);
+            if (!dir.exists())
+                dir.mkdirs();
+            filePath = location + "/FRZMGS" + System.currentTimeMillis() + ".wav";
+        }
+        isRecording = true;
+        ImageView playPauseIcon = chatView.getPauseResumeARL().findViewById(R.id.pause_resume_imageView);
+        playPauseIcon.setImageResource(R.drawable.pause_microphone_100);
+
+        if (recorder == null) {
+            chatView.getTimeText().setText("00:00");
+
+            recorder = OmRecorder.wav(
+                    new PullTransport.Default(Utils.getMic(source, channel, sampleRate), this),
+                    new File(filePath));
+        }
+        isRecordingPaused = false;
+        recorder.resumeRecording();
+
+        startTimer();
+    }
+
+
+    private void pauseRecording() {
+        isRecording = false;
+        isRecordingPaused = true;
+
+        ImageView playPauseIcon = chatView.getPauseResumeARL().findViewById(R.id.pause_resume_imageView);
+        playPauseIcon.setImageResource(R.drawable.play_microphone_100);
+
+        if (recorder != null) {
+            recorder.pauseRecording();
+        }
+
+        stopTimer();
+    }
+
+    private void stopRecording() {
+        isRecordingPaused = false;
+        recorderSecondsElapsed = 0;
+        if (recorder != null) {
+            recorder.stopRecording();
+            recorder = null;
+        }
+        stopTimer();
+    }
+
+    public void toggleRecording() {
+        Utils.wait(100, () -> {
+            if (isRecording) {
+                pauseRecording();
+            } else {
+                resumeRecording();
+            }
+        });
+    }
+
+
+    private void startTimer() {
+        stopTimer();
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                updateTimer();
+            }
+        }, 0, 1000);
+    }
+
+    private void stopTimer() {
+        if (timer != null) {
+            timer.cancel();
+            timer.purge();
+            timer = null;
+        }
+    }
+
+    private void updateTimer() {
+        runOnUiThread(() -> {
+            if (isRecording) {
+                recorderSecondsElapsed++;
+                chatView.getTimeText().setText(Utils.formatSeconds(recorderSecondsElapsed));
+            }
+        });
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void initializeEmojiGifStickerKeyBoard() {
+        EmoticonGIFKeyboardFragment.EmoticonConfig emoticonConfig = new EmoticonGIFKeyboardFragment.EmoticonConfig()
+                .setEmoticonProvider(SamsungEmoticonProvider.create())
+                .setEmoticonSelectListener(new EmoticonSelectListener() {
+                    @Override
+                    public void emoticonSelected(Emoticon emoticon) {
+                        Log.d(TAG, "emoticonSelected: " + emoticon.getUnicode());
+                        messageEditText.append(emoticon.getUnicode(),
+                                messageEditText.getSelectionStart(),
+                                messageEditText.getSelectionEnd());
+                    }
+
+                    @Override
+                    public void onBackSpace() {
+                    }
+                });
+
+
+        EmoticonGIFKeyboardFragment.GIFConfig gifConfig = new EmoticonGIFKeyboardFragment
+                .GIFConfig(GiphyGifProvider.create(this, "564ce7370bf347f2b7c0e4746593c179"))
+                .setGifSelectListener(gif -> {
+                    Log.d(TAG, "onGifSelected: " + gif.getGifUrl());
+                    sendNewGIF(gif);
+                });
+
+        EmoticonGIFKeyboardFragment.STICKERConfig stickerConfig = new EmoticonGIFKeyboardFragment.STICKERConfig()
+                .setStickerSelectedListener(sticker -> {
+                    Log.d(TAG, "stickerSelected: " + sticker);
+                    sendNewSticker(sticker);
+                });
+
+
+        EmoticonGIFKeyboardFragment.SoundConfig soundConfig = new EmoticonGIFKeyboardFragment.SoundConfig()
+                .setSoundImageSelectedListener(soundImage -> {
+                    Log.d(TAG, "soundImage Selected: " + soundImage.getName());
+
+                    String soundName = soundImage.getName().replace(".png", ".mp3").replace(".gif", ".mp3");
+                    File file = new File(Environment.getExternalStorageDirectory()
+                            .getAbsolutePath() + "/FrenzApp/Media/sounds/SoundAudios/" + soundName);
+                    if (!(file.exists()) || (!file.isFile())) {
+                        playAndSendAudio(file, true);
+                    } else if (file.exists() && file.isFile()) {
+                        playAndSendAudio(file, false);
+                    } else {
+                        Toast.makeText(ChatViewActivity.this, "Error....", Toast.LENGTH_SHORT).show();
+                    }
+
+                });
+
+        mEmoticonGIFKeyboardFragment = EmoticonGIFKeyboardFragment
+                .getNewInstance(findViewById(R.id.keyboard_container), emoticonConfig, gifConfig, stickerConfig, soundConfig);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.keyboard_container, mEmoticonGIFKeyboardFragment)
+                .commit();
         mEmoticonGIFKeyboardFragment.hideKeyboard();
+
+        emojiKeyboardToggler.setOnClickListener(view -> {
+            if (mEmoticonGIFKeyboardFragment.isOpen()) {
+
+                mEmoticonGIFKeyboardFragment.toggle();
+                ImageView imageView = emojiKeyboardToggler.findViewById(R.id.emoji_keyboad_iv);
+                imageView.setImageResource(R.drawable.ic_smiley);
+
+                if (inputMethodManager != null) {
+                    inputMethodManager.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
+                }
+            } else {
+                //Check if keyboard is open and close it if it is
+                if (inputMethodManager.isAcceptingText()) {
+                    inputMethodManager.hideSoftInputFromWindow(messageEditText.getWindowToken(), 0);
+                }
+
+                ImageView imageView = emojiKeyboardToggler.findViewById(R.id.emoji_keyboad_iv);
+                imageView.setImageResource(R.drawable.sp_ic_keyboard);
+                mEmoticonGIFKeyboardFragment.toggle();
+            }
+        });
+
+        messageEditText.setOnTouchListener((v, event) -> {
+            mEmoticonGIFKeyboardFragment.hideKeyboard();
+            return false;
+        });
     }
+
 
 
 
 
     @Override
-    protected void onPause() {
-        stopMediaPlayer();
-        super.onPause();
-        stopService(new Intent(this, OnlineStatusService.class));
+    public void onAudioChunkPulled(AudioChunk audioChunk) {
+        float amplitude = isRecording ? (float) audioChunk.maxAmplitude() : 0f;
+//        visualizverHandler.onDataReceived(amplitude);
     }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Intent intent = new Intent(this, OnlineStatusService.class);
-        intent.putExtra("thisUserId", thisUserId);
-        startService(intent);
-    }
-
-
 
 
 
@@ -829,7 +840,7 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
         Log.e(TAG, "onRecordingCompleted");
         if (recorderSecondsElapsed > 1) {
             stopRecording();
-            Utils.wait(2000, () -> sendAudio(Uri.parse(filePath), filePath));
+            Utils.wait(1000, () -> sendAudio(filePath, filePath));
 
         }
 
@@ -845,6 +856,30 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     }
 
 
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mEmoticonGIFKeyboardFragment.hideKeyboard();
+    }
+
+    @Override
+    protected void onPause() {
+        stopMediaPlayer();
+        super.onPause();
+        stopService(new Intent(this, OnlineStatusService.class));
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Intent intent = new Intent(this, OnlineStatusService.class);
+        intent.putExtra("thisUserId", thisUserId);
+        startService(intent);
+    }
+
     @Override
     protected void onDestroy() {
         stopMediaPlayer();
@@ -855,12 +890,6 @@ public class ChatViewActivity extends AppCompatActivity implements ChatView.Reco
     public void onBackPressed() {
         if (mEmoticonGIFKeyboardFragment == null || !mEmoticonGIFKeyboardFragment.handleBackPressed())
             super.onBackPressed();
-    }
-
-    @Override
-    public void onAudioChunkPulled(AudioChunk audioChunk) {
-        float amplitude = isRecording ? (float) audioChunk.maxAmplitude() : 0f;
-//        visualizverHandler.onDataReceived(amplitude);
     }
 }
 

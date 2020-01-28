@@ -60,8 +60,6 @@ public class OnlineStatusService extends Service {
     private void handleStart(Intent intent, int startId) {
         UserId  = Objects.requireNonNull(intent.getExtras()).getString("thisUserId");
 
-        Log.e("UserId", "handleStart: "+UserId);
-
         getContacts();
         handler = new Handler();
 
@@ -91,11 +89,7 @@ public class OnlineStatusService extends Service {
                     for (int i = 0; i < jsonArray.length(); i++) {
 
                         JSONObject chatListObj = jsonArray.getJSONObject(i);
-                        updateUserStatus(chatListObj.getString("online_status"), UserId);
-                        Log.e("PreferenceManager", chatListObj.toString());
-                        Log.e("PreferenceManager", "getContacts: "+chatListObj.getString("online_status") );
-
-                    }
+                        updateUserStatus(chatListObj.getString("online_status"), UserId);                  }
                 }
 
 
