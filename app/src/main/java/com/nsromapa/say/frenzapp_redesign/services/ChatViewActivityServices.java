@@ -107,11 +107,10 @@ public class ChatViewActivityServices extends Service {
 
                 if (jsonArray.length() > 0) {
                     for (int i = 0; i < jsonArray.length(); i++) {
-
-                        JSONObject chatListObj = jsonArray.getJSONObject(i);
-                        updateUserStatus(chatListObj.getString("online_status"), UserId, chatListObj.getString("0"));                  }
+                        JSONObject statusObj = jsonArray.getJSONObject(i);
+                        Log.e("getStatusUpdate", "getStatusUpdate: "+statusObj.toString());
+                        updateUserStatus(statusObj.getString("online_status"), UserId, statusObj.getString("0"));                  }
                 }
-
 
             } catch (JSONException e) {
                 e.printStackTrace();

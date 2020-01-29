@@ -28,6 +28,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
+import com.nsromapa.say.frenzapp_redesign.asyncs.UpdateOnlineStatus;
 import com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast;
 import com.nsromapa.say.frenzapp_redesign.helpers.DrawerItem;
 import com.nsromapa.say.frenzapp_redesign.helpers.SimpleItem;
@@ -72,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     private Drawable[] screenIcons;
 
     private SlidingRootNav slidingRootNav;
-    private static RequestQueue requestQueue;
 
 
     @Override
@@ -130,35 +130,8 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     }
 
 
-    public static void setUserOnlineStatus(Context context, String setMyOnlineStatus, String whoseStatus) {
-        Thread t = new Thread(() -> {
-            try {
-                StringRequest stringRequest1 = new StringRequest(Request.Method.POST, STATUS, response -> {
-
-                }, error -> {
-
-                }) {
-                    @Override
-                    protected Map<String, String> getParams() {
-                        Map<String, String> post = new HashMap<>();
-                        post.put("user_id", Utils.getUserUid());
-                        post.put("setMyOnlineStatus", setMyOnlineStatus);
-                        post.put("whoseStatus", whoseStatus);
-                        return post;
-                    }
-                };
-                if (requestQueue == null) {
-                    requestQueue = Volley.newRequestQueue(context);
-                }
-                requestQueue.add(stringRequest1);
-
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        });
-        t.start();
-
+    public static void setUserOnlineStatus(Context context, String setMyOnlineStatus, String whoseStatus){
+       new UpdateOnlineStatus(context, setMyOnlineStatus, whoseStatus).execute();
     }
 
 
@@ -167,18 +140,18 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         if (position == POS_LOGOUT) {
             mState = false;
             finish();
-        } else if (position == POS_HOME) {
+        }else if (position == POS_HOME) {
             mState = true;
             slidingRootNav.closeMenu();
             mCurrentFragmentInHOME = "Feeds";
             Fragment selectedScreen = new Home();
             showFragment(selectedScreen);
-        } else if (position == POS_FOLLOWERS) {
+        }else if (position == POS_FOLLOWERS){
             mState = false;
             slidingRootNav.closeMenu();
             Fragment selectedScreen = new Followers();
             showFragment(selectedScreen);
-        } else {
+        }else{
             mState = false;
             Fragment selectedScreen = Home.createFor(screenTitles[position]);
             showFragment(selectedScreen);
@@ -231,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     protected void onStart() {
         super.onStart();
         Intent intent = new Intent(getApplicationContext(), BootCompleteService.class);
-        if (startService(intent) != null) {
+        if(startService(intent) != null) {
             Toast.makeText(getBaseContext(), "Service is already running", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getBaseContext(), "There is no service running, starting service..", Toast.LENGTH_SHORT).show();
@@ -241,14 +214,14 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     @Override
     public void onResume() {
         super.onResume();
-        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
         PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", true).apply();
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
         PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivityActive", false).apply();
     }
 
@@ -276,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         } else {
             if (chatFragment_isSelectionMode && mCurrentFragmentInHOME.equals(getResources().getString(R.string.chats)))
                 disableSelection();
-            else {
+            else{
                 updateFragment(new Feeds(), getResources().getString(R.string.feeds));
                 mCurrentFragmentInHOME = getResources().getString(R.string.feeds);
             }

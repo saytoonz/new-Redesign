@@ -134,7 +134,7 @@ public class ChatViewActivity extends AppCompatActivity
     public static void addMessage(Message message, boolean scrollToBottom){
         chatView.addMessage(message, scrollToBottom);
         if (statusTV.getText().equals("Loading…")){
-//            statusTV.setVisibility(View.GONE);
+            statusTV.setVisibility(View.GONE);
         }
     }
 
