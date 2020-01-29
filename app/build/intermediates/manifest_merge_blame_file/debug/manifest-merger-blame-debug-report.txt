@@ -36,7 +36,7 @@
 18-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:25:22-77
 19
 20    <application
-20-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:5-85:19
+20-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:5-82:19
 21        android:name="com.nsromapa.say.frenzapp_redesign.App"
 21-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:9-28
 22        android:allowBackup="true"
@@ -124,69 +124,63 @@
 63-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:60:13-35
 64        <service
 64-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:61:9-63:38
-65            android:name="com.nsromapa.say.frenzapp_redesign.services.OnlineStatusService"
-65-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:62:13-57
+65            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatViewActivityServices"
+65-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:62:13-62
 66            android:enabled="true" />
 66-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:13-35
-67        <service
-67-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:64:9-66:38
-68            android:name="com.nsromapa.say.frenzapp_redesign.services.FetchMessagesService"
-68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:65:13-58
-69            android:enabled="true" />
-69-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:13-35
-70
-71        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
-71-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:69:9-73:20
-71-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:69:19-67
-72            <intent-filter>
-72-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:70:13-72:29
-73                <action android:name="android.intent.action.BOOT_COMPLETED" />
-73-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:71:17-79
-73-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:71:25-76
-74            </intent-filter>
-75        </receiver>
-76
-77        <provider
-78            android:name="androidx.core.content.FileProvider"
-78-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:13-62
-79            android:authorities="com.nsromapa.say.frenzapp_redesign.provider"
-79-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:78:13-60
-80            android:exported="false"
-80-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:79:13-37
-81            android:grantUriPermissions="true" >
-81-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:80:13-47
-82            <meta-data
-82-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:81:13-83:57
-83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:82:17-67
-84                android:resource="@xml/file_provider" />
-84-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:83:17-54
-85        </provider>
-86
-87        <activity
-87-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:27:9-29:72
-88            android:name="com.karumi.dexter.DexterActivity"
-88-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:28:13-60
-89            android:theme="@style/Dexter.Internal.Theme.Transparent" />
-89-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:29:13-69
-90        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
-90-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:9-73
-90-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:19-70
-91        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
-91-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:9-87
-91-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:19-84
-92        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
-92-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:9-90
-92-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:19-87
-93
-94        <provider
-94-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-95            android:name="com.squareup.picasso.PicassoProvider"
-95-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-96            android:authorities="com.nsromapa.say.frenzapp_redesign.com.squareup.picasso"
-96-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-97            android:exported="false" />
-97-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-98    </application>
-99
-100</manifest>
+67
+68        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
+68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:9-70:20
+68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:19-67
+69            <intent-filter>
+69-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:67:13-69:29
+70                <action android:name="android.intent.action.BOOT_COMPLETED" />
+70-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:17-79
+70-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:25-76
+71            </intent-filter>
+72        </receiver>
+73
+74        <provider
+75            android:name="androidx.core.content.FileProvider"
+75-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:74:13-62
+76            android:authorities="com.nsromapa.say.frenzapp_redesign.provider"
+76-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:75:13-60
+77            android:exported="false"
+77-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:76:13-37
+78            android:grantUriPermissions="true" >
+78-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:13-47
+79            <meta-data
+79-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:78:13-80:57
+80                android:name="android.support.FILE_PROVIDER_PATHS"
+80-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:79:17-67
+81                android:resource="@xml/file_provider" />
+81-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:80:17-54
+82        </provider>
+83
+84        <activity
+84-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:27:9-29:72
+85            android:name="com.karumi.dexter.DexterActivity"
+85-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:28:13-60
+86            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+86-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:29:13-69
+87        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+87-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:9-73
+87-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:19-70
+88        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+88-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:9-87
+88-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:19-84
+89        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+89-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:9-90
+89-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:19-87
+90
+91        <provider
+91-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+92            android:name="com.squareup.picasso.PicassoProvider"
+92-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+93            android:authorities="com.nsromapa.say.frenzapp_redesign.com.squareup.picasso"
+93-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+94            android:exported="false" />
+94-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+95    </application>
+96
+97</manifest>

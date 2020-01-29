@@ -48,6 +48,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import es.dmoral.toasty.Toasty;
 import me.grantland.widget.AutofitTextView;
 
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.DISCOVER_STORIES;
 import static com.nsromapa.say.frenzapp_redesign.utils.Openings.profileWithUserJson;
 import static com.nsromapa.say.frenzapp_redesign.utils.getTextBackground.setImageHolderBg;
@@ -380,5 +381,19 @@ public class DiscoverActivity extends AppCompatActivity {
             }
         };
         Volley.newRequestQueue(getApplicationContext()).add(stringRequest);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+
+    }
+
+    @Override
+    protected void onPause() {
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        super.onPause();
     }
 }

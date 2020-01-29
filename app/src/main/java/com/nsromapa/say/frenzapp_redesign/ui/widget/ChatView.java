@@ -753,8 +753,10 @@ public class ChatView extends RelativeLayout {
 
     //Use this method to add a message to chatview
     public void addMessage(Message message, boolean scrollToBottom) {
-        messageList.add(0, message);
+        if (!messageList.contains(message))
+            messageList.add(0, message);
         messageAdapter.notifyItemInserted(0);
+
         if (scrollToBottom)
             chatRV.smoothScrollToPosition(0);
         mLayoutRoot.invalidate();

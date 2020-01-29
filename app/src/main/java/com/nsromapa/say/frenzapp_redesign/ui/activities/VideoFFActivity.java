@@ -19,10 +19,13 @@ import android.widget.LinearLayout;
 import com.marcinmoskala.arcseekbar.ArcSeekBar;
 import com.marcinmoskala.arcseekbar.ProgressListener;
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.ohoussein.playpause.PlayPauseView;
 
 
 import java.io.IOException;
+
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
 
 public class VideoFFActivity extends AppCompatActivity {
 
@@ -164,8 +167,7 @@ public class VideoFFActivity extends AppCompatActivity {
 
 
 
-    public void prepareVideo(SurfaceTexture t)
-    {
+    public void prepareVideo(SurfaceTexture t) {
 
         mediaPlayer.setSurface(new Surface(t));
 
@@ -241,40 +243,6 @@ public class VideoFFActivity extends AppCompatActivity {
         m_TextureView.setTransform(txform);
     }
 
-    @Override
-    public void onBackPressed() {
-        //To support reverse transitions when user clicks the device back button
-
-        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
-        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
-        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
-        supportFinishAfterTransition();
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
-        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
-        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
-        mediaPlayer.reset();
-        //finish();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-
-        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
-        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
-        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
-        //finish();
-
-        mediaPlayer.reset();
-    }
 
     public void showSeekBarLL(){
 
@@ -301,5 +269,51 @@ public class VideoFFActivity extends AppCompatActivity {
         objectAnimator.setDuration(500);
         objectAnimator.start();
 
+    }
+    @Override
+    public void onBackPressed() {
+        //To support reverse transitions when user clicks the device back button
+
+        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
+        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
+        supportFinishAfterTransition();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
+        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
+        mediaPlayer.reset();
+        //finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        AudioManager am = (AudioManager) getSystemService(AUDIO_SERVICE);
+        int volume_level= am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        mediaPlayer.setVolume(volume_level-(volume_level/2),volume_level-(volume_level/2));
+        //finish();
+
+        mediaPlayer.reset();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+    }
+
+    @Override
+    protected void onPause() {
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        super.onPause();
     }
 }

@@ -36,7 +36,6 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@drawable/blurred_header_background"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone"/>
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -59,10 +59,7 @@
             android:name=".services.ChatListService"
             android:enabled="true" />
         <service
-            android:name=".services.OnlineStatusService"
-            android:enabled="true" />
-        <service
-            android:name=".services.FetchMessagesService"
+            android:name=".services.ChatViewActivityServices"
             android:enabled="true" />
 
 

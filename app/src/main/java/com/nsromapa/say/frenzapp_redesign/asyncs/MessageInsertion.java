@@ -69,11 +69,7 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         values.put(MessagesReaderContract.MessageEntry. MESSAGE_FOR, Utils.getUserUid());
         db.insert(MessagesReaderContract.MessageEntry.TABLE_NAME, null, values);
 
-//        Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME + "';", null);
-//        Log.d(MainActivity.class.getSimpleName(), "Rows count: " + cursor.getCount());
-//        cursor.close();
-//        db.close();
-//
+
         Log.e("MessageInsertion", "doInBackground: messageImageListsInString  -------> "+messageImageListsInString );
         Log.e("MessageInsertion", "doInBackground: messageImageListNamesInString ----> "+messageImageListNamesInString );
         return null;

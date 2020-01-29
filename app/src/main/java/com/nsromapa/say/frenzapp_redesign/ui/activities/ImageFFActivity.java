@@ -11,7 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.squareup.picasso.Picasso;
+
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
 
 public class ImageFFActivity extends AppCompatActivity {
 
@@ -56,4 +59,15 @@ public class ImageFFActivity extends AppCompatActivity {
         supportFinishAfterTransition();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+    }
+
+    @Override
+    protected void onPause() {
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        super.onPause();
+    }
 }
