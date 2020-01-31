@@ -114,6 +114,7 @@ public class Chats extends Fragment {
                            chatListObj.getString("notification_count_sender"),
                            chatListObj.getString("notification_count_receiver"),
                           getResources().getString(R.string.offline),
+                           chatListObj.getString("chat_type"),
                            poster_info.toString()
                    );
 

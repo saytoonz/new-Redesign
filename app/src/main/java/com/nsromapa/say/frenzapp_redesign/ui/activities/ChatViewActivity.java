@@ -1,5 +1,6 @@
 package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
@@ -29,6 +30,15 @@ import androidx.core.content.FileProvider;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.bumptech.glide.Glide;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.DexterBuilder;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionDeniedResponse;
+import com.karumi.dexter.listener.PermissionGrantedResponse;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.karumi.dexter.listener.single.PermissionListener;
 import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.gifpack.giphy.GiphyGifProvider;
 import com.nsromapa.say.emogifstickerkeyboard.EmoticonGIFKeyboardFragment;
@@ -59,6 +69,7 @@ import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import es.dmoral.toasty.Toasty;
 import omrecorder.AudioChunk;
 import omrecorder.OmRecorder;
 import omrecorder.PullTransport;
@@ -69,6 +80,7 @@ import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.resumeM
 import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.stopMediaPlayer;
 import static com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper.DATABASE_LOCATION;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
+import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 import static com.nsromapa.say.frenzapp_redesign.utils.Utils.downloadSoundAudio;
 
 public class ChatViewActivity extends AppCompatActivity
@@ -102,10 +114,7 @@ public class ChatViewActivity extends AppCompatActivity
     private boolean isRecordingPaused = false;
     private boolean isStillHold = false;
     private Timer timer;
-    private static String thisUserId;
-    private static String thisUserJson;
-    private Handler handler;
-    private Runnable runnable;
+    private static String thisUserId, thisUserJson, chatType;
 
     public static void updateUserStatus(String grabStatus, String otherUid, String lastSeen) {
         if (otherUid.equals(thisUserId)) {
@@ -142,14 +151,38 @@ public class ChatViewActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_view);
         if (getIntent() != null) {
+            chatType = getIntent().getStringExtra("chatType");
             thisUserId = getIntent().getStringExtra("thisUserId");
             thisUserJson = getIntent().getStringExtra("thisUserJson");
         } else {
             finish();
         }
 
-        if (!(new File(DATABASE_LOCATION).exists()))
-            new File(DATABASE_LOCATION).mkdirs();
+        if (checkStoragePermission(getApplicationContext())) {
+            if (!(new File(DATABASE_LOCATION).exists()))
+                new File(DATABASE_LOCATION).mkdirs();
+        } else {
+            Dexter.withActivity(this)
+                    .withPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    .withListener(new PermissionListener() {
+                        @Override
+                        public void onPermissionGranted(PermissionGrantedResponse response) {
+                        }
+
+                        @Override
+                        public void onPermissionDenied(PermissionDeniedResponse response) {
+                            Toasty.error(getApplicationContext(), "Storage Permission needed!", Toasty.LENGTH_LONG).show();
+                            finish();
+
+                        }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                            token.continuePermissionRequest();
+                        }
+                    })
+                    .check();
+        }
 
         SQLiteDatabase.loadLibs(this);
 
@@ -224,7 +257,7 @@ public class ChatViewActivity extends AppCompatActivity
 
 
     private void insertSthToDb(Message message) {
-        new MessageInsertion(this, chatView, message).execute(thisUserJson);
+        new MessageInsertion(this, chatView, message, chatType).execute(thisUserJson);
     }
 
     private void sendMessageText(String body) {
@@ -880,6 +913,9 @@ public class ChatViewActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         mEmoticonGIFKeyboardFragment.hideKeyboard();
+        Intent intent1 = new Intent(this, ChatViewActivityServices.class);
+        intent1.putExtra("thisUserId", thisUserId);
+        startService(intent1);
     }
 
 
@@ -887,16 +923,12 @@ public class ChatViewActivity extends AppCompatActivity
     public void onResume() {
         super.onResume();
         setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid());
-        Intent intent1 = new Intent(this, ChatViewActivityServices.class);
-        intent1.putExtra("thisUserId", thisUserId);
-        startService(intent1);
     }
 
     @Override
     protected void onPause() {
         stopMediaPlayer();
         setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
-        stopService(new Intent(this, ChatViewActivityServices.class));
         super.onPause();
     }
 
@@ -904,6 +936,7 @@ public class ChatViewActivity extends AppCompatActivity
     @Override
     protected void onDestroy() {
         stopMediaPlayer();
+        stopService(new Intent(this, ChatViewActivityServices.class));
         super.onDestroy();
     }
 

@@ -111,6 +111,7 @@ public class ChatListService extends Service {
                                 chatListObj.getString("notification_count_sender"),
                                 chatListObj.getString("notification_count_receiver"),
                                 poster_info.getString("online_status"),
+                                chatListObj.getString("chat_type"),
                                 poster_info.toString()
                         ));
                     }

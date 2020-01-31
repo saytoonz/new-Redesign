@@ -15,18 +15,20 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper;
 import com.nsromapa.say.frenzapp_redesign.databases.MessagesReaderContract;
-import com.nsromapa.say.frenzapp_redesign.models.Message;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import net.sqlcipher.Cursor;
 import net.sqlcipher.database.SQLiteDatabase;
 
-import java.util.ArrayList;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
+import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 
 public class BootCompleteService extends Service {
     private Handler handler;
@@ -66,8 +68,9 @@ public class BootCompleteService extends Service {
     }
 
     private void handleStart(Intent intent, int startId) {
-        db = MessageReaderDbHelper.getInstance(getApplicationContext())
-                .getReadableDatabase("somePass");
+        if (checkStoragePermission(getApplicationContext()))
+            db = MessageReaderDbHelper.getInstance(getApplicationContext())
+                    .getReadableDatabase("somePass");
 
         handler = new Handler();
         runnable = new Runnable() {
@@ -81,86 +84,101 @@ public class BootCompleteService extends Service {
     }
 
 
-
-
-
-
-
-    protected void runThisFunction1(){
-          SendMessage();
+    protected void runThisFunction1() {
+        SendMessage();
         //GetMessages
         //getCalls
         //  setNotifications
     }
 
     private void SendMessage() {
-        Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                "' WHERE "+MessagesReaderContract.MessageEntry.MESSAGE_FOR+"='"+ Utils.getUserUid() +
-                "' AND "+MessagesReaderContract.MessageEntry.MESSAGE_ID +" IS NULL ORDER BY "+
-                MessagesReaderContract.MessageEntry._ID+" ASC", null);
+        if (db != null) {
+            Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
+                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
+                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + Utils.getUserUid() +
+                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '' ORDER BY " +
+                    MessagesReaderContract.MessageEntry._ID + " ASC", null);
 
-        while (cursor.moveToNext()) {
-            Message message = new Message();
-            final  Map<String, String> post = new HashMap<>();
+            while (cursor.moveToNext()) {
+                final Map<String, String> post = new HashMap<>();
 
-            String imagesString = cursor.getString(12);
-            List<String> imageList = new ArrayList<>();
-            if (imagesString != null && !TextUtils.isEmpty(imagesString)){
-                String[] images = imagesString.split(",,");
-                for (String image : images) {
-                    if (!image.isEmpty())
-                        imageList.add(image);
-                }
+                post.put("local_id", String.valueOf(cursor.getString(1)));
+                post.put("message_type", String.valueOf(cursor.getString(3)));
+                post.put("from_id", String.valueOf(cursor.getString(4)));
+                post.put("to_id", String.valueOf(cursor.getString(7)));
+                post.put("chat_type", String.valueOf(cursor.getString(18)));
+                post.put("body", String.valueOf(cursor.getString(12)));
+                post.put("image_list", String.valueOf(cursor.getString(13)));
+                post.put("image_list_names", String.valueOf(cursor.getString(14)));
+                post.put("single_url", String.valueOf(cursor.getString(15)));
+                post.put("reply_to_messageid", cursor.getString(19));
+                post.put("createNewMessaged", "true");
+                pushMessage(post, String.valueOf(cursor.getString(1)));
             }
 
-            String nameString = cursor.getString(13);
-            List<String> imageNamesList = new ArrayList<>();
-            if (nameString != null && !TextUtils.isEmpty(nameString)){
-                String[] names = nameString.split(",,");
-                for (String name : names) {
-                    if (!name.isEmpty())
-                        imageNamesList.add(name);
-                }
-            }
+            cursor.close();
 
-
-
-            post.put("local_id",String.valueOf(cursor.getInt(0)));
-            message.setMessageType(Message.MessageType.valueOf(cursor.getString(2)));
-            message.setUserName(cursor.getString(4));
-            message.setUserIcon(cursor.getString(5));
-            message.setTime(cursor.getString(9));
-            message.setStatus(cursor.getString(10));
-            message.setBody(cursor.getString(11));
-            message.setImageList(imageList);
-            message.setImageListNames(imageNamesList);
-            message.setSingleUrl(cursor.getString(14));
-            message.setLocalLocation(cursor.getString(15));
-
-//            SendMessage();
-            Log.e("BootCompleteService", "SendMessage: "+ message.getTime() );
-
+        } else {
+            if (checkStoragePermission(getApplicationContext()))
+                db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
         }
 
-        cursor.close();
     }
-    private void pushMessage(Map<String, String> post) {
+
+    private void pushMessage(Map<String, String> post, String loc_id) {
+
+        Log.e("pushMessage", "SendMessage: "+ post );
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
 
-        }, error -> {
+            if (response != null && !response.isEmpty()) {
 
-        }){
+                try {
+                    JSONObject object = new JSONObject(response);
+                    JSONArray jsonArray = object.getJSONArray("MessageResponse");
+
+                    if (jsonArray.length() > 0) {
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject messageObj = jsonArray.getJSONObject(i);
+                            String local_id = messageObj.getString("local_id");
+                            String messageId = messageObj.getString("messageId");
+
+                            if (local_id.equals(loc_id) && TextUtils.isDigitsOnly(messageId)) {
+                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
+                                if (db != null) {
+                                    db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
+                                            "SET " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '" + messageId + "' \n" +
+                                            "WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + " = '" + local_id + "' ;");
+
+                                    db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
+                                            "SET " + MessagesReaderContract.MessageEntry.MESSAGE_STATUS + " = '1' \n" +
+                                            "WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + " = '" + local_id + "' " +
+                                            "AND " + MessagesReaderContract.MessageEntry.MESSAGE_STATUS + " < '1' ;");
+                                } else {
+                                    if (checkStoragePermission(getApplicationContext()))
+                                        db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
+                                }
+                            }
+                        }
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }, error -> {
+        }) {
             @Override
-            protected Map<String, String> getParams(){
-               return post;
+            protected Map<String, String> getParams() {
+                return post;
             }
         };
-
-
         if (requestQueue == null) {
             requestQueue = Volley.newRequestQueue(getApplicationContext());
         }
         requestQueue.add(stringRequest);
+
     }
 
 }

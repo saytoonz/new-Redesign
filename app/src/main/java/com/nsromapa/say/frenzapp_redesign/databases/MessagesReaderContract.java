@@ -6,7 +6,8 @@ public class MessagesReaderContract {
 
     public static abstract class MessageEntry {
         public static final String TABLE_NAME = "single_messages";
-        public static final String _ID = "local_id";
+        public static final String _ID = "id";
+        public static final String LOCAL_ID = "local_id";
         public static final String MESSAGE_ID = "message_id";
         public static final String MESSAGE_TYPE = "message_type";
         public static final String MESSAGE_SENDER_ID = "from_id";
@@ -23,5 +24,7 @@ public class MessagesReaderContract {
         public static final String SINGLE_URL = "single_url";
         public static final String LOCAL_LOCATION = "local_location";
         public static final String MESSAGE_FOR = "owner_id";
+        public static final String CHAT_TYPE = "chat_type";
+        public static final String REPLY_TO = "reply_to";
     }
 }

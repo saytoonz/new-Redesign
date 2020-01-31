@@ -22,6 +22,7 @@ public class MessageReaderDbHelper extends SQLiteOpenHelper {
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + MessagesReaderContract.MessageEntry.TABLE_NAME + " (" +
                     MessagesReaderContract.MessageEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    MessagesReaderContract.MessageEntry.LOCAL_ID + TEXT_TYPE + "," +
                     MessagesReaderContract.MessageEntry.MESSAGE_ID + TEXT_TYPE + "," +
                     MessagesReaderContract.MessageEntry.MESSAGE_TYPE + TEXT_TYPE + "," +
                     MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + TEXT_TYPE + "," +
@@ -37,7 +38,9 @@ public class MessageReaderDbHelper extends SQLiteOpenHelper {
                     MessagesReaderContract.MessageEntry.IMAGE_NAME_LIST   + TEXT_TYPE + "," +
                     MessagesReaderContract.MessageEntry.SINGLE_URL   + TEXT_TYPE + "," +
                     MessagesReaderContract.MessageEntry.LOCAL_LOCATION   + TEXT_TYPE + "," +
-                    MessagesReaderContract.MessageEntry.MESSAGE_FOR + TEXT_TYPE +
+                    MessagesReaderContract.MessageEntry.MESSAGE_FOR   + TEXT_TYPE + "," +
+                    MessagesReaderContract.MessageEntry.CHAT_TYPE   + TEXT_TYPE + "," +
+                    MessagesReaderContract.MessageEntry.REPLY_TO + TEXT_TYPE +
                     " )";
 
     private static final String SQL_DELETE_ENTRIES =

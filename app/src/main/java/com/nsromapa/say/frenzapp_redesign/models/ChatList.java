@@ -2,14 +2,14 @@ package com.nsromapa.say.frenzapp_redesign.models;
 
 public class ChatList {
     private String sender, receiver, message, online_status,
-            userImage, username, timestamp, message_status,
+            userImage, username, timestamp, message_status, chat_type,
             message_type, notification_count_sender, notification_count_receiver, friendJson;
 
     public ChatList(String sender, String receiver, String message,
                     String userImage, String username,
                     String timestamp, String message_status, String message_type,
                     String notification_count_sender, String notification_count_receiver,
-                    String online_status, String friendJson) {
+                    String online_status, String chat_type,String friendJson) {
         this.sender = sender;
         this.receiver = receiver;
         this.message_status = message_status;
@@ -21,6 +21,7 @@ public class ChatList {
         this.notification_count_sender  = notification_count_sender ;
         this.notification_count_receiver = notification_count_receiver;
         this.online_status = online_status;
+        this.chat_type = chat_type;
         this.friendJson = friendJson;
     }
 
@@ -118,5 +119,13 @@ public class ChatList {
 
     public void setOnline_status(String online_status) {
         this.online_status = online_status;
+    }
+
+    public String getChat_type() {
+        return chat_type;
+    }
+
+    public void setChat_type(String chat_type) {
+        this.chat_type = chat_type;
     }
 }

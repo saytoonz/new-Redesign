@@ -16,6 +16,7 @@ import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper;
 import com.nsromapa.say.frenzapp_redesign.databases.MessagesReaderContract;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
+import com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import net.sqlcipher.Cursor;
@@ -37,6 +38,7 @@ import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.
 import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.updateChatList;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.STATUS;
+import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 
 
 public class ChatViewActivityServices extends Service {
@@ -79,8 +81,9 @@ public class ChatViewActivityServices extends Service {
 
     private void handleStart(Intent intent, int startId) {
         UserId = Objects.requireNonNull(intent.getExtras()).getString("thisUserId");
-        db = MessageReaderDbHelper.getInstance(getApplicationContext())
-                .getReadableDatabase("somePass");
+        if (checkStoragePermission(getApplicationContext()))
+            db = MessageReaderDbHelper.getInstance(getApplicationContext())
+                    .getReadableDatabase("somePass");
 //        getContacts();
 //        getMessages();
         handler = new Handler();
@@ -140,53 +143,59 @@ public class ChatViewActivityServices extends Service {
     }
 
     private void getMessages() {
-        Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
-                "' AND ((" + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + "='" + UserId +
-                "') OR (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + UserId +
-                "')) ORDER BY " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " ASC LIMIT " + offset + ",~0;", null);
+        if (db != null){
+            Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
+                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
+                    "' AND ((" + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + "='" + UserId +
+                    "') OR (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + UserId +
+                    "')) ORDER BY " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " ASC LIMIT " + offset + ",~0;", null);
 
-        while (cursor.moveToNext()) {
-            Message message = new Message();
+            while (cursor.moveToNext()) {
+                Message message = new Message();
 
-            String imagesString = cursor.getString(12);
-            List<String> imageList = new ArrayList<>();
-            if (imagesString != null && !TextUtils.isEmpty(imagesString)) {
-                String[] images = imagesString.split(",,");
-                for (String image : images) {
-                    if (!image.isEmpty())
-                        imageList.add(image);
+                String imagesString = cursor.getString(13);
+                List<String> imageList = new ArrayList<>();
+                if (imagesString != null && !TextUtils.isEmpty(imagesString)) {
+                    String[] images = imagesString.split(",,");
+                    for (String image : images) {
+                        if (!image.isEmpty())
+                            imageList.add(image);
+                    }
                 }
-            }
 
-            String nameString = cursor.getString(13);
-            List<String> imageNamesList = new ArrayList<>();
-            if (nameString != null && !TextUtils.isEmpty(nameString)) {
-                String[] names = nameString.split(",,");
-                for (String name : names) {
-                    if (!name.isEmpty())
-                        imageNamesList.add(name);
+                String nameString = cursor.getString(14);
+                List<String> imageNamesList = new ArrayList<>();
+                if (nameString != null && !TextUtils.isEmpty(nameString)) {
+                    String[] names = nameString.split(",,");
+                    for (String name : names) {
+                        if (!name.isEmpty())
+                            imageNamesList.add(name);
+                    }
                 }
+
+
+                message.setLocal_id(String.valueOf(cursor.getInt(1)));
+                message.setId(cursor.getString(2));
+                message.setMessageType(Message.MessageType.valueOf(cursor.getString(3)));
+                message.setUserName(cursor.getString(5));
+                message.setUserIcon(cursor.getString(6));
+                message.setTime(cursor.getString(10));
+                message.setStatus(cursor.getString(11));
+                message.setBody(cursor.getString(12));
+                message.setImageList(imageList);
+                message.setImageListNames(imageNamesList);
+                message.setSingleUrl(cursor.getString(15));
+                message.setLocalLocation(cursor.getString(16));
+
+                addMessage(message, true);
+                offset++;
             }
+            cursor.close();
 
-
-            message.setLocal_id(String.valueOf(cursor.getInt(0)));
-            message.setId(cursor.getString(1));
-            message.setMessageType(Message.MessageType.valueOf(cursor.getString(2)));
-            message.setUserName(cursor.getString(4));
-            message.setUserIcon(cursor.getString(5));
-            message.setTime(cursor.getString(9));
-            message.setStatus(cursor.getString(10));
-            message.setBody(cursor.getString(11));
-            message.setImageList(imageList);
-            message.setImageListNames(imageNamesList);
-            message.setSingleUrl(cursor.getString(14));
-            message.setLocalLocation(cursor.getString(15));
-
-            addMessage(message, true);
-            offset++;
+        }else{
+            if (checkStoragePermission(getApplicationContext()))
+                db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
         }
-        cursor.close();
 
     }
 

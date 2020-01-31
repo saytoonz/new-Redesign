@@ -1,6 +1,7 @@
 package com.nsromapa.say.frenzapp_redesign.models;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,18 +10,18 @@ import java.util.List;
 
 
 public class Message {
-    protected String local_id;
-    protected  String id;
-    protected MessageType messageType;
-    protected String body;
-    protected String time;
-    protected String status;
-    protected List<String> imageList;
-    protected List<String> imageListNames;
-    protected String userName;
-    protected String userIcon;
-    private String singleUrl;
-    private String localLocation;
+    protected String local_id="";
+    protected  String id="";
+    protected MessageType messageType = MessageType.RightSimpleMessage;
+    protected String body="";
+    protected String time ="";
+    protected String status="";
+    protected List<String> imageList = new ArrayList<>();
+    protected List<String> imageListNames = new ArrayList<>();
+    protected String userName = "";
+    protected String userIcon = "";
+    private String singleUrl = "";
+    private String localLocation = "";
     protected int indexPosition;
 
     public String getSingleUrl() {
