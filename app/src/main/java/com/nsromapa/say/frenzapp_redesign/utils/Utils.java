@@ -22,7 +22,7 @@ public class Utils {
 
 
     public static String getUserUid() {
-        return "2";
+        return "1";
     }
 
     public static String getUserImage() {

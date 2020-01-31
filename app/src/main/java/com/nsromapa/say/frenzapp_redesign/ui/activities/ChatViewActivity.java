@@ -115,6 +115,7 @@ public class ChatViewActivity extends AppCompatActivity
     private boolean isStillHold = false;
     private Timer timer;
     private static String thisUserId, thisUserJson, chatType;
+    
 
     public static void updateUserStatus(String grabStatus, String otherUid, String lastSeen) {
         if (otherUid.equals(thisUserId)) {

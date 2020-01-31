@@ -35,7 +35,6 @@ import java.util.Objects;
 
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.addMessage;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.updateUserStatus;
-import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.updateChatList;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.STATUS;
 import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
