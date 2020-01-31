@@ -27,7 +27,6 @@ class EmoticonList {
         EMOTICONS.put("😂", R.drawable.emoji_samsung_1f602);
         EMOTICONS.put("🤣", R.drawable.emoji_samsung_1f923);
         EMOTICONS.put("😃", R.drawable.emoji_samsung_1f603);
-        EMOTICONS.put("😄", R.drawable.emoji_samsung_1f604);
         EMOTICONS.put("😅", R.drawable.emoji_samsung_1f605);
         EMOTICONS.put("😆", R.drawable.emoji_samsung_1f606);
         EMOTICONS.put("😉", R.drawable.emoji_samsung_1f609);

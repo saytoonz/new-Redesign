@@ -3,12 +3,13 @@ package com.nsromapa.say.frenzapp_redesign.models;
 public class ChatList {
     private String sender, receiver, message, online_status,
             userImage, username, timestamp, message_status,
-            message_type, notification_count, friendJson;
+            message_type, notification_count_sender, notification_count_receiver, friendJson;
 
     public ChatList(String sender, String receiver, String message,
                     String userImage, String username,
                     String timestamp, String message_status, String message_type,
-                    String notification_count,String online_status, String friendJson) {
+                    String notification_count_sender, String notification_count_receiver,
+                    String online_status, String friendJson) {
         this.sender = sender;
         this.receiver = receiver;
         this.message_status = message_status;
@@ -17,7 +18,8 @@ public class ChatList {
         this.userImage = userImage;
         this.username = username;
         this.timestamp = timestamp;
-        this.notification_count = notification_count;
+        this.notification_count_sender  = notification_count_sender ;
+        this.notification_count_receiver = notification_count_receiver;
         this.online_status = online_status;
         this.friendJson = friendJson;
     }
@@ -86,12 +88,20 @@ public class ChatList {
         this.message_type = message_type;
     }
 
-    public String getNotification_count() {
-        return notification_count;
+    public String getNotification_count_sender() {
+        return notification_count_sender;
     }
 
-    public void setNotification_count(String notification_count) {
-        this.notification_count = notification_count;
+    public void setNotification_count_sender(String notification_count_sender) {
+        this.notification_count_sender = notification_count_sender;
+    }
+
+    public String getNotification_count_receiver() {
+        return notification_count_receiver;
+    }
+
+    public void setNotification_count_receiver(String notification_count_receiver) {
+        this.notification_count_receiver = notification_count_receiver;
     }
 
     public String getFriendJson() {

@@ -13,9 +13,11 @@ public class BootCompleteBroadcast extends BroadcastReceiver {
     public void onReceive(Context context, Intent arg1) {
         Intent intent = new Intent(context, BootCompleteService.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            context.startForegroundService(intent);
+            if (context.startForegroundService(intent)== null)
+                context.startForegroundService(intent);
         } else {
-            context.startService(intent);
+            if (context.startService(intent)== null)
+                context.startService(intent);
         }
         Log.i("BootCompleteBroadcast", "started");
     }

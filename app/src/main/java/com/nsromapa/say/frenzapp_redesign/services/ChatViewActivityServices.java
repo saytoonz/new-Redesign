@@ -35,6 +35,7 @@ import java.util.Objects;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.addMessage;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.updateUserStatus;
 import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.updateChatList;
+import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.STATUS;
 
 
@@ -46,7 +47,7 @@ public class ChatViewActivityServices extends Service {
     private String UserId;
     private int offset = 0;
     private SQLiteDatabase db;
-    private int delayTime = 50;
+    private int delayTime = 0;
 
     @Nullable
     @Override
@@ -56,6 +57,10 @@ public class ChatViewActivityServices extends Service {
 
     @Override
     public void onDestroy() {
+        if (requestQueue != null)
+            requestQueue.cancelAll(this);
+        if (requestQueue1 != null)
+            requestQueue1.cancelAll(this);
         handler.removeCallbacks(runnable);
         super.onDestroy();
     }
@@ -73,7 +78,7 @@ public class ChatViewActivityServices extends Service {
     }
 
     private void handleStart(Intent intent, int startId) {
-        UserId  = Objects.requireNonNull(intent.getExtras()).getString("thisUserId");
+        UserId = Objects.requireNonNull(intent.getExtras()).getString("thisUserId");
         db = MessageReaderDbHelper.getInstance(getApplicationContext())
                 .getReadableDatabase("somePass");
 //        getContacts();
@@ -88,7 +93,7 @@ public class ChatViewActivityServices extends Service {
             }
         };
         handler.postDelayed(runnable, delayTime);
-        delayTime = 4000;
+        delayTime = 6000;
     }
 
 
@@ -108,8 +113,9 @@ public class ChatViewActivityServices extends Service {
                 if (jsonArray.length() > 0) {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject statusObj = jsonArray.getJSONObject(i);
-                        Log.e("getStatusUpdate", "getStatusUpdate: "+statusObj.toString());
-                        updateUserStatus(statusObj.getString("online_status"), UserId, statusObj.getString("0"));                  }
+                        Log.e("getStatusUpdate", "getStatusUpdate: " + statusObj.toString());
+                        updateUserStatus(statusObj.getString("online_status"), UserId, statusObj.getString("0"));
+                    }
                 }
 
             } catch (JSONException e) {
@@ -132,19 +138,20 @@ public class ChatViewActivityServices extends Service {
         }
         requestQueue.add(stringRequest);
     }
+
     private void getMessages() {
         Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                "' WHERE "+MessagesReaderContract.MessageEntry.MESSAGE_FOR+"='"+ Utils.getUserUid() +
-                "' AND (("+MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID+"='"+ UserId +
-                "') OR ("+MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID+"='"+ UserId +
-                "')) ORDER BY "+MessagesReaderContract.MessageEntry.MESSAGE_ID+" ASC LIMIT "+offset+",~0;", null);
+                "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
+                "' AND ((" + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + "='" + UserId +
+                "') OR (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + UserId +
+                "')) ORDER BY " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " ASC LIMIT " + offset + ",~0;", null);
 
         while (cursor.moveToNext()) {
             Message message = new Message();
 
             String imagesString = cursor.getString(12);
             List<String> imageList = new ArrayList<>();
-            if (imagesString != null && !TextUtils.isEmpty(imagesString)){
+            if (imagesString != null && !TextUtils.isEmpty(imagesString)) {
                 String[] images = imagesString.split(",,");
                 for (String image : images) {
                     if (!image.isEmpty())
@@ -154,7 +161,7 @@ public class ChatViewActivityServices extends Service {
 
             String nameString = cursor.getString(13);
             List<String> imageNamesList = new ArrayList<>();
-            if (nameString != null && !TextUtils.isEmpty(nameString)){
+            if (nameString != null && !TextUtils.isEmpty(nameString)) {
                 String[] names = nameString.split(",,");
                 for (String name : names) {
                     if (!name.isEmpty())
@@ -179,10 +186,12 @@ public class ChatViewActivityServices extends Service {
             addMessage(message, true);
             offset++;
         }
+        cursor.close();
 
     }
-    private void setAllMessagesSeen(){
-        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, STATUS, response -> {
+
+    private void setAllMessagesSeen() {
+        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, CHATS, response -> {
 
         }, error -> {
 
@@ -191,7 +200,7 @@ public class ChatViewActivityServices extends Service {
             protected Map<String, String> getParams() {
                 Map<String, String> post = new HashMap<>();
                 post.put("user_id", Utils.getUserUid());
-                post.put("thatUser", UserId);
+                post.put("other_user", UserId);
                 post.put("setAllMessagesSeen", "");
                 return post;
             }

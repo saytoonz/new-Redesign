@@ -52,8 +52,6 @@ import com.zhihu.matisse.MimeType;
 import net.sqlcipher.database.SQLiteDatabase;
 
 import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -104,36 +102,36 @@ public class ChatViewActivity extends AppCompatActivity
     private boolean isRecordingPaused = false;
     private boolean isStillHold = false;
     private Timer timer;
-    private static  String thisUserId;
-    private static  String thisUserJson;
+    private static String thisUserId;
+    private static String thisUserJson;
     private Handler handler;
     private Runnable runnable;
 
-    public static  void  updateUserStatus(String grabStatus, String otherUid, String lastSeen ){
-        if (otherUid.equals(thisUserId)){
+    public static void updateUserStatus(String grabStatus, String otherUid, String lastSeen) {
+        if (otherUid.equals(thisUserId)) {
             statusTV.setVisibility(View.VISIBLE);
             if (!grabStatus.isEmpty()) {
                 if (grabStatus.equals("Online"))
                     statusTV.setText("Online");
-                else if(grabStatus.equals("typing_" + Utils.getUserUid())) {
+                else if (grabStatus.equals("typing_" + Utils.getUserUid())) {
                     statusTV.setText("Typing…");
                 } else if (grabStatus.contains("typing_")) {
                     statusTV.setText("online");
                 } else {
-                   if (!TextUtils.isEmpty(lastSeen))
-                       statusTV.setText(lastSeen.trim());
-                   else
-                       statusTV.setText("Offline");
+                    if (!TextUtils.isEmpty(lastSeen))
+                        statusTV.setText(lastSeen.trim());
+                    else
+                        statusTV.setText("Offline");
                 }
-            }else{
+            } else {
                 statusTV.setVisibility(View.GONE);
             }
         }
     }
 
-    public static void addMessage(Message message, boolean scrollToBottom){
+    public static void addMessage(Message message, boolean scrollToBottom) {
         chatView.addMessage(message, scrollToBottom);
-        if (statusTV.getText().equals("Loading…")){
+        if (statusTV.getText().equals("Loading…")) {
             statusTV.setVisibility(View.GONE);
         }
     }
@@ -143,10 +141,10 @@ public class ChatViewActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_view);
-        if (getIntent() != null){
+        if (getIntent() != null) {
             thisUserId = getIntent().getStringExtra("thisUserId");
             thisUserJson = getIntent().getStringExtra("thisUserJson");
-        }else{
+        } else {
             finish();
         }
 
@@ -225,22 +223,18 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
 
-
-
-
-
-
     private void insertSthToDb(Message message) {
         new MessageInsertion(this, chatView, message).execute(thisUserJson);
     }
+
     private void sendMessageText(String body) {
         if (switchBool) {
             Message message = new Message();
             message.setBody(body);
             message.setMessageType(Message.MessageType.RightSimpleMessage);
             message.setTime(getTime());
-            message.setUserName("Groot");
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+            message.setUserName(Utils.getUserName());
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
 
@@ -250,14 +244,15 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(body);
             message.setMessageType(Message.MessageType.LeftSimpleMessage);
             message.setTime(getTime());
-            message.setUserName("Hodor");
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+            message.setUserName(Utils.getUserName());
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message1);
             insertSthToDb(message);
 
             switchBool = true;
         }
     }
+
     private void sendNewSound(File soundImage) {
         Log.e(TAG, "sendNewSound: " + soundImage);
         String realNameUrl = soundImage.getAbsolutePath().replace(".mp3", ".gif");
@@ -269,10 +264,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(filename);
             message.setMessageType(Message.MessageType.RightSound);
             message.setTime(getTime());
-            message.setUserName("Groot");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(localPath);
             message.setSingleUrl("");
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = false;
@@ -281,10 +276,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(filename);
             message.setMessageType(Message.MessageType.LeftSound);
             message.setTime(getTime());
-            message.setUserName("Hodor");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(localPath);
             message.setSingleUrl("");
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = true;
@@ -302,10 +297,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(filename);
             message.setMessageType(Message.MessageType.RightGIF);
             message.setTime(getTime());
-            message.setUserName("Groot");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(localPath);
             message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = false;
@@ -314,10 +309,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(filename);
             message.setMessageType(Message.MessageType.LeftGIF);
             message.setTime(getTime());
-            message.setUserName("Hodor");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(localPath);
             message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = true;
@@ -331,10 +326,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(sticker.getName());
             message.setMessageType(Message.MessageType.RightSticker);
             message.setTime(getTime());
-            message.setUserName("Groot");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(sticker.getAbsolutePath());
             message.setSingleUrl(sticker.getAbsolutePath());
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = false;
@@ -343,10 +338,10 @@ public class ChatViewActivity extends AppCompatActivity
             message.setBody(sticker.getName());
             message.setMessageType(Message.MessageType.LeftSticker);
             message.setTime(getTime());
-            message.setUserName("Hodor");
+            message.setUserName(Utils.getUserName());
             message.setLocalLocation(sticker.getAbsolutePath());
             message.setSingleUrl(sticker.getAbsolutePath());
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = true;
@@ -385,10 +380,10 @@ public class ChatViewActivity extends AppCompatActivity
                             message.setBody("");
                             message.setMessageType(Message.MessageType.RightSingleImage);
                             message.setTime(getTime());
-                            message.setUserName("Groot");
+                            message.setUserName(Utils.getUserName());
                             message.setSingleUrl(mSelected.get(0));
                             message.setLocalLocation(mSelected.get(0));
-                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+                            message.setUserIcon(Utils.getUserImage());
 //                            chatView.addMessage(message);
                             insertSthToDb(message);
                             switchBool = false;
@@ -398,10 +393,10 @@ public class ChatViewActivity extends AppCompatActivity
                             message.setBody("");
                             message.setMessageType(Message.MessageType.RightMultipleImages);
                             message.setTime(getTime());
-                            message.setUserName("Groot");
+                            message.setUserName(Utils.getUserName());
                             message.setImageList(mSelected);
                             message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+                            message.setUserIcon(Utils.getUserImage());
 //                            chatView.addMessage(message);
                             insertSthToDb(message);
                             switchBool = false;
@@ -413,10 +408,10 @@ public class ChatViewActivity extends AppCompatActivity
                             message.setBody("");
                             message.setMessageType(Message.MessageType.LeftSingleImage);
                             message.setTime(getTime());
-                            message.setUserName("Hodor");
+                            message.setUserName(Utils.getUserName());
                             message.setSingleUrl(mSelected.get(0));
                             message.setLocalLocation(mSelected.get(0));
-                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+                            message.setUserIcon(Utils.getUserImage());
 //                            chatView.addMessage(message);
                             insertSthToDb(message);
                             switchBool = true;
@@ -426,10 +421,10 @@ public class ChatViewActivity extends AppCompatActivity
                             message.setBody("");
                             message.setMessageType(Message.MessageType.LeftMultipleImages);
                             message.setTime(getTime());
-                            message.setUserName("Hodor");
+                            message.setUserName(Utils.getUserName());
                             message.setImageList(mSelected);
                             message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+                            message.setUserIcon(Utils.getUserImage());
 //                            chatView.addMessage(message);
                             insertSthToDb(message);
                             switchBool = true;
@@ -447,9 +442,9 @@ public class ChatViewActivity extends AppCompatActivity
                         Message message = new Message();
                         message.setMessageType(Message.MessageType.RightVideo);
                         message.setTime(getTime());
-                        message.setUserName("Groot");
+                        message.setUserName(Utils.getUserName());
                         message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
-                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+                        message.setUserIcon(Utils.getUserImage());
                         insertSthToDb(message);
                         switchBool = false;
                     } else {
@@ -457,9 +452,9 @@ public class ChatViewActivity extends AppCompatActivity
 
                         message.setMessageType(Message.MessageType.LeftVideo);
                         message.setTime(getTime());
-                        message.setUserName("Hodor");
+                        message.setUserName(Utils.getUserName());
                         message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
-                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+                        message.setUserIcon(Utils.getUserImage());
                         insertSthToDb(message);
                         switchBool = true;
                     }
@@ -477,21 +472,21 @@ public class ChatViewActivity extends AppCompatActivity
                         Message message = new Message();
                         message.setMessageType(Message.MessageType.RightSingleImage);
                         message.setTime(getTime());
-                        message.setUserName("Groot");
+                        message.setUserName(Utils.getUserName());
                         File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
                         message.setSingleUrl(file.getAbsolutePath());
-                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+                        message.setUserIcon(Utils.getUserImage());
                         insertSthToDb(message);
                         switchBool = false;
                     } else {
                         Message message = new Message();
                         message.setMessageType(Message.MessageType.LeftSingleImage);
                         message.setTime(getTime());
-                        message.setUserName("Hodor");
+                        message.setUserName(Utils.getUserName());
                         File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
                         message.setImageList(mSelected);
                         message.setSingleUrl(file.getAbsolutePath());
-                        message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+                        message.setUserIcon(Utils.getUserImage());
                         insertSthToDb(message);
                         switchBool = true;
                     }
@@ -516,10 +511,10 @@ public class ChatViewActivity extends AppCompatActivity
             Message message = new Message();
             message.setMessageType(Message.MessageType.RightAudio);
             message.setTime(getTime());
-            message.setUserName("Groot");
+            message.setUserName(Utils.getUserName());
             message.setSingleUrl(urlPath);
             message.setLocalLocation(localPath);
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/groot");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = false;
@@ -527,10 +522,10 @@ public class ChatViewActivity extends AppCompatActivity
             Message message = new Message();
             message.setMessageType(Message.MessageType.LeftAudio);
             message.setTime(getTime());
-            message.setUserName("Hodor");
+            message.setUserName(Utils.getUserName());
             message.setSingleUrl(urlPath);
             message.setLocalLocation(localPath);
-            message.setUserIcon("android.resource://com.nsromapa.say.frenzapp_redesign/drawable/hodor");
+            message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
             insertSthToDb(message);
             switchBool = true;
@@ -595,21 +590,20 @@ public class ChatViewActivity extends AppCompatActivity
                 "                                                              ");
 
 
-
         dialog.setOnCancelListener(dialog1 -> {
-           if (mMediaPlayer != null){
-               mMediaPlayer.setOnCompletionListener(null);
-               mMediaPlayer.stop();
-               mMediaPlayer.release();
-           }
+            if (mMediaPlayer != null) {
+                mMediaPlayer.setOnCompletionListener(null);
+                mMediaPlayer.stop();
+                mMediaPlayer.release();
+            }
         });
 
         sendSound.setOnClickListener(v -> {
-           if (mMediaPlayer != null){
-               mMediaPlayer.setOnCompletionListener(null);
-               mMediaPlayer.stop();
-               mMediaPlayer.release();
-           }
+            if (mMediaPlayer != null) {
+                mMediaPlayer.setOnCompletionListener(null);
+                mMediaPlayer.stop();
+                mMediaPlayer.release();
+            }
             dialog.dismiss();
             sendNewSound(file);
         });
@@ -626,7 +620,7 @@ public class ChatViewActivity extends AppCompatActivity
             playSound.setVisibility(View.GONE);
             downloadLayout.setVisibility(View.VISIBLE);
             download.setOnClickListener(v -> downloadSoundAudio(ChatViewActivity.this, file.getName()));
-        }else{
+        } else {
             downloadLayout.setVisibility(View.GONE);
             playSound.setVisibility(View.VISIBLE);
             playSound.setOnClickListener(v -> mMediaPlayer.start());
@@ -636,8 +630,6 @@ public class ChatViewActivity extends AppCompatActivity
             mMediaPlayer.start();
         }
     }
-
-
 
 
     private void resumeRecording() {
@@ -824,7 +816,7 @@ public class ChatViewActivity extends AppCompatActivity
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                setUserOnlineStatus(getApplicationContext(), "typing_"+thisUserId, Utils.getUserUid());
+                setUserOnlineStatus(getApplicationContext(), "typing_" + thisUserId, Utils.getUserUid());
             }
 
             @Override
@@ -835,18 +827,11 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
 
-
-
-
     @Override
     public void onAudioChunkPulled(AudioChunk audioChunk) {
         float amplitude = isRecording ? (float) audioChunk.maxAmplitude() : 0f;
 //        visualizverHandler.onDataReceived(amplitude);
     }
-
-
-
-
 
 
     @Override
@@ -891,28 +876,27 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
 
-
-
     @Override
     protected void onStart() {
         super.onStart();
         mEmoticonGIFKeyboardFragment.hideKeyboard();
-        Intent intent1 = new Intent(this, ChatViewActivityServices.class);
-        intent1.putExtra("thisUserId", thisUserId);
-        startService(intent1);
     }
 
 
     @Override
     public void onResume() {
         super.onResume();
-        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid());
+        Intent intent1 = new Intent(this, ChatViewActivityServices.class);
+        intent1.putExtra("thisUserId", thisUserId);
+        startService(intent1);
     }
 
     @Override
     protected void onPause() {
         stopMediaPlayer();
-        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
+        stopService(new Intent(this, ChatViewActivityServices.class));
         super.onPause();
     }
 
@@ -920,7 +904,6 @@ public class ChatViewActivity extends AppCompatActivity
     @Override
     protected void onDestroy() {
         stopMediaPlayer();
-        stopService(new Intent(this, ChatViewActivityServices.class));
         super.onDestroy();
     }
 

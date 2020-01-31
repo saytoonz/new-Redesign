@@ -41,6 +41,8 @@ public class ChatListService extends Service {
 
     @Override
     public void onDestroy() {
+        if (requestQueue != null)
+            requestQueue.cancelAll(this);
         handler.removeCallbacks(runnable);
         super.onDestroy();
     }
@@ -66,10 +68,10 @@ public class ChatListService extends Service {
             @Override
             public void run() {
                 runThisFunction1();
-                handler.postDelayed(this, 1000);
+                handler.postDelayed(this, 4000);
             }
         };
-        handler.postDelayed(runnable, 3000);
+        handler.postDelayed(runnable, 4000);
     }
 
 
@@ -106,7 +108,8 @@ public class ChatListService extends Service {
                                 chatListObj.getString("0"),
                                 chatListObj.getString("message_status"),
                                 chatListObj.getString("message_type"),
-                                chatListObj.getString("notification_count"),
+                                chatListObj.getString("notification_count_sender"),
+                                chatListObj.getString("notification_count_receiver"),
                                 poster_info.getString("online_status"),
                                 poster_info.toString()
                         ));

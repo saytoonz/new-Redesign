@@ -72,11 +72,18 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         holder.timestamp.setText(Utils.getTimeAgo(Long.parseLong(list.getTimestamp())));
 
         //Notification badge SetUp with number of unread messages
-        if ((list.getMessage_status().equals("1") || list.getMessage_status().equals("2"))
-                && !list.getSender().equals(Utils.getUserUid())
-                && Integer.parseInt(list.getNotification_count()) > 0) {
-            holder.unreadCount.setVisibility(View.VISIBLE);
-            holder.unreadCount.setText(list.getNotification_count());
+        if ((list.getMessage_status().equals("1") || list.getMessage_status().equals("2"))) {
+            if (list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_sender()) > 0) {
+                holder.unreadCount.setVisibility(View.VISIBLE);
+                holder.unreadCount.setText(list.getNotification_count_sender());
+
+            }else if (!list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_receiver()) > 0){
+                holder.unreadCount.setVisibility(View.VISIBLE);
+                holder.unreadCount.setText(list.getNotification_count_receiver());
+            }else{
+                holder.unreadCount.setVisibility(View.GONE);
+            }
+
         } else holder.unreadCount.setVisibility(View.GONE);
 
         //Is Notification muted setUp
@@ -154,10 +161,10 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
                     holder.contact_checkbox.setChecked(true, true);
                 }
 
-            }else{
+            } else {
                 Intent intent = new Intent(context, ChatViewActivity.class);
-                intent.putExtra("thisUserId",  Utils.getUserInfoFromUserJSON(list.getFriendJson(), "id"));
-                intent.putExtra("thisUserJson",  list.getFriendJson());
+                intent.putExtra("thisUserId", Utils.getUserInfoFromUserJSON(list.getFriendJson(), "id"));
+                intent.putExtra("thisUserJson", list.getFriendJson());
                 context.startActivity(intent);
 
             }
@@ -175,24 +182,20 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         });
 
 
-
-        if(list.getOnline_status().equals(activity.getResources().getString(R.string.online)))
+        if (list.getOnline_status().equals(activity.getResources().getString(R.string.online)))
             holder.online_status_image.setVisibility(View.VISIBLE);
-        else if (list.getOnline_status().equals("typing_"+Utils.getUserUid())){
+        else if (list.getOnline_status().equals("typing_" + Utils.getUserUid())) {
             holder.online_status_image.setVisibility(View.VISIBLE);
             holder.message.setText(activity.getResources().getString(R.string.typing));
-        }else if (list.getOnline_status().contains("typing_")){
+        } else if (list.getOnline_status().contains("typing_")) {
             holder.online_status_image.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             holder.message.setText(list.getMessage());
             holder.online_status_image.setVisibility(View.GONE);
         }
 
 
     }
-
-
-
 
 
     @Override

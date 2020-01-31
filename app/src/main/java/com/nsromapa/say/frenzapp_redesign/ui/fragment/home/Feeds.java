@@ -19,12 +19,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.PostsAdapter;
 import com.nsromapa.say.frenzapp_redesign.models.Post;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,6 +46,7 @@ public class Feeds extends Fragment {
     private View mView;
     private SwipeRefreshLayout refreshLayout;
     private PostsAdapter mAdapter_v19;
+    private RequestQueue requestQueue;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -138,13 +141,14 @@ public class Feeds extends Fragment {
 
                 },
                 error -> {
-                    if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.feeds))) {
-                        refreshLayout.setRefreshing(false);
-                        mView.findViewById(R.id.default_item).setVisibility(View.GONE);
-                        mView.findViewById(R.id.error_view).setVisibility(View.VISIBLE);
-                        TextView error_textV = mView.findViewById(R.id.error_view).findViewById(R.id.error_text);
-                        error_textV.setText(Objects.requireNonNull(getActivity()).getString(R.string.server_connection_error));
-                    }
+                    if (requireContext() != null)
+                        if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.feeds))) {
+                            refreshLayout.setRefreshing(false);
+                            mView.findViewById(R.id.default_item).setVisibility(View.GONE);
+                            mView.findViewById(R.id.error_view).setVisibility(View.VISIBLE);
+                            TextView error_textV = mView.findViewById(R.id.error_view).findViewById(R.id.error_text);
+                            error_textV.setText(Objects.requireNonNull(getActivity()).getString(R.string.server_connection_error));
+                        }
                 }) {
             @Override
             protected Map<String, String> getParams() {
@@ -156,16 +160,38 @@ public class Feeds extends Fragment {
         };
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(stringRequest);
-        else
-            Volley.newRequestQueue(Objects.requireNonNull(getActivity())).add(stringRequest);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (requestQueue == null)
+                requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        } else {
+            if (requestQueue == null)
+                requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
+        }
 
+        requestQueue.add(stringRequest);
     }
+
+
+//    @Override
+//    @NotNull
+//    public final Context requireContext() {
+//        Context context = getContext();
+//        if (context == null) {
+//            throw new IllegalStateException("Fragment " + this + " not attached to a context.");
+//        }
+//        return context;
+//    }
 
 
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (requestQueue != null)
+            requestQueue.cancelAll(this);
     }
 }

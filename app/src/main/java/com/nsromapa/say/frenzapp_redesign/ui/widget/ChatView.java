@@ -644,15 +644,15 @@ public class ChatView extends RelativeLayout {
 
         messageET.setEmoticonProvider(SamsungEmoticonProvider.create());
 
-        expandIconView.setState(1, false);
+        expandIconView.setState(ExpandIconView.LESS, false);
 
         expandIconView.setOnClickListener(view -> {
             if (more) {
-                expandIconView.setState(1, true);
+                expandIconView.setState(ExpandIconView.LESS, true);
                 moreHSV.setVisibility(View.GONE);
                 more = false;
             } else {
-                expandIconView.setState(0, true);
+                expandIconView.setState(ExpandIconView.MORE, true);
                 moreHSV.setVisibility(View.VISIBLE);
                 more = true;
             }
@@ -756,6 +756,17 @@ public class ChatView extends RelativeLayout {
         if (!messageList.contains(message))
             messageList.add(0, message);
         messageAdapter.notifyItemInserted(0);
+
+        if (scrollToBottom)
+            chatRV.smoothScrollToPosition(0);
+        mLayoutRoot.invalidate();
+    }
+
+    //Use this method to add a message to chatview
+    public void addMessages(List<Message> messages, boolean scrollToBottom) {
+        if (!messageList.containsAll(messages))
+            messageList.addAll(0, messages);
+        messageAdapter.notifyDataSetChanged();
 
         if (scrollToBottom)
             chatRV.smoothScrollToPosition(0);

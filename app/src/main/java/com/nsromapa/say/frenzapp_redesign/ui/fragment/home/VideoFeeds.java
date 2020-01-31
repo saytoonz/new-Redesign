@@ -137,6 +137,8 @@ public class VideoFeeds extends Fragment {
 
                 },
                 error -> {
+
+                    if (requireContext() != null)
                     if (mCurrentFragmentInHOME.equals(getResources().getString(R.string.videos))) {
                         refreshLayout.setRefreshing(false);
                         mView.findViewById(R.id.default_item).setVisibility(View.GONE);

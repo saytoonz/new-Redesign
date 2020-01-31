@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
@@ -49,6 +50,9 @@ public class Stories extends Fragment {
     private List<StoryStatus> statusList;
     private StoryStatusAdapter statusAdapter;
     private DiscoveriesStatusAdapter discoveriesStatusAdapter;
+    private RequestQueue requestQueue;
+    private RequestQueue requestQueue1;
+    private RequestQueue requestQueue2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -154,13 +158,13 @@ public class Stories extends Fragment {
 
                 },
                 error -> {
-
-                    statusList.add(new StoryStatus(
-                            Utils.getUserUid(),
-                            "Your Stories",
-                            Utils.getUserImage(),
-                            Utils.getUserImage(),
-                            prepareStoriesList("")));
+                    if (requireContext() != null)
+                        statusList.add(new StoryStatus(
+                                Utils.getUserUid(),
+                                "Your Stories",
+                                Utils.getUserImage(),
+                                Utils.getUserImage(),
+                                prepareStoriesList("")));
                 }) {
             @Override
             protected Map<String, String> getParams() {
@@ -172,11 +176,15 @@ public class Stories extends Fragment {
         };
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(stringRequest);
-        else
-            Volley.newRequestQueue(Objects.requireNonNull(getActivity())).add(stringRequest);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (requestQueue2 == null)
+                requestQueue2 = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        } else {
+            if (requestQueue2 == null)
+                requestQueue2 = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
+        }
 
+        requestQueue2.add(stringRequest);
     }
 
     private void getFollowingsStories() {
@@ -194,7 +202,7 @@ public class Stories extends Fragment {
 
 //                            for (int j = 0; j < singlePosterPosts.length(); j++) {
                             JSONObject poster_info = theStories.getJSONObject("1");
-                            if (!poster_info.getString("id").equals(Utils.getUserUid()))
+                            if (!poster_info.getString("id").equals(Utils.getUserUid()) && requireContext()!= null){
                                 statusList.add(new StoryStatus(
                                         poster_info.getString("id"),
                                         poster_info.getString("username"),
@@ -202,7 +210,9 @@ public class Stories extends Fragment {
                                         singlePosterPosts.getJSONObject(0).getString("media_url"),
                                         prepareStoriesList(singlePosterPosts.toString())));
 
-                            statusAdapter.notifyDataSetChanged();
+                                statusAdapter.notifyDataSetChanged();
+
+                            }
 //                            }
                         }
 
@@ -225,11 +235,15 @@ public class Stories extends Fragment {
         };
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(stringRequest);
-        else
-            Volley.newRequestQueue(Objects.requireNonNull(getActivity())).add(stringRequest);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (requestQueue == null)
+                requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        } else {
+            if (requestQueue == null)
+                requestQueue = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
+        }
 
+        requestQueue.add(stringRequest);
     }
 
 
@@ -318,15 +332,28 @@ public class Stories extends Fragment {
         };
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            Volley.newRequestQueue(Objects.requireNonNull(getContext())).add(stringRequest);
-        else
-            Volley.newRequestQueue(Objects.requireNonNull(getActivity())).add(stringRequest);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (requestQueue1 == null)
+                requestQueue1 = Volley.newRequestQueue(Objects.requireNonNull(getContext()));
+        } else {
+            if (requestQueue1 == null)
+                requestQueue1 = Volley.newRequestQueue(Objects.requireNonNull(getActivity()));
+        }
 
+        requestQueue1.add(stringRequest);
     }
 
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (requestQueue != null)
+            requestQueue.cancelAll(this);
+        if (requestQueue1 != null)
+            requestQueue1.cancelAll(this);
+        if (requestQueue2 != null)
+            requestQueue2.cancelAll(this);
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
