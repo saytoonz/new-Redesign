@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
@@ -22,15 +20,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.DrawerAdapter;
 import com.nsromapa.say.frenzapp_redesign.asyncs.CheckAndStartBootService;
 import com.nsromapa.say.frenzapp_redesign.asyncs.UpdateOnlineStatus;
-import com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast;
 import com.nsromapa.say.frenzapp_redesign.helpers.DrawerItem;
 import com.nsromapa.say.frenzapp_redesign.helpers.SimpleItem;
 import com.nsromapa.say.frenzapp_redesign.helpers.SpaceItem;
@@ -43,13 +36,10 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 import static com.nsromapa.say.frenzapp_redesign.ui.fragment.Home.updateFragment;
 import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.disableSelection;
-import static com.nsromapa.say.frenzapp_redesign.utils.Constants.STATUS;
 
 public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener {
     public static MainActivity activity;
@@ -128,8 +118,6 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         mCurrentFragmentInHOME = "Feeds";
         adapter.setSelected(POS_HOME);
 //        setUserProfile();
-
-        new CheckAndStartBootService(this).execute();
     }
 
 
@@ -163,13 +151,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
 
 
     public void showFragment(Fragment fragment) {
-        if (requireContext() != null){
+        if (requireContext() != null) {
             activity.getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container, fragment)
                     .commit();
             mCurrentFragment = fragment;
-        }else{
+        } else {
             this.recreate();
         }
     }
@@ -217,6 +205,11 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     @Override
     protected void onStart() {
         super.onStart();
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivity", true).apply();
+        Intent intent = new Intent(this, BootCompleteService.class);
+        if (startService(intent) == null) {
+            startService(intent);
+        }
     }
 
     @Override
@@ -231,6 +224,11 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
         setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
     }
 
+    @Override
+    protected void onDestroy() {
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("isMainActivity", false).apply();
+        super.onDestroy();
+    }
 
     @Override
     public void onBackPressed() {

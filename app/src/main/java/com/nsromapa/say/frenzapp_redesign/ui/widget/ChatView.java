@@ -38,6 +38,8 @@ import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
+import com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,6 +50,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import jp.wasabeef.recyclerview.animators.ScaleInBottomAnimator;
+
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.updateUserOnlineStatus;
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
 
 /**
  * * Created by say on 16/01/20.
@@ -76,6 +81,7 @@ public class ChatView extends RelativeLayout {
     private View layoutDustin;
     private View layoutSlideCancel;
     private TextView timeText;
+    private List<String> trackingLocalIds = new ArrayList<>();
 
     protected List<Message> messageList;
     protected static MessageAdapter messageAdapter;
@@ -184,6 +190,7 @@ public class ChatView extends RelativeLayout {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
+                updateUserOnlineStatus(1);
             }
 
             @Override
@@ -196,6 +203,8 @@ public class ChatView extends RelativeLayout {
                         recordARL.animate().scaleX(1f).scaleY(1f).setDuration(100).setInterpolator(new LinearInterpolator()).start();
                     }
                 } else {
+
+                    updateUserOnlineStatus(2);
                     if (sendMRL.getVisibility() != View.VISIBLE && !isLocked) {
                         recordARL.setVisibility(View.GONE);
                         sendMRL.animate().scaleX(0f).scaleY(0f).setDuration(100).setInterpolator(new LinearInterpolator()).start();
@@ -634,7 +643,7 @@ public class ChatView extends RelativeLayout {
 
 
         messageList = new ArrayList<>();
-        messageAdapter = new MessageAdapter(messageList, context);
+        messageAdapter = new MessageAdapter(chatRV, messageList, context);
         WrapContentLinearLayoutManager layoutManager =
                 new WrapContentLinearLayoutManager(context, LinearLayoutManager.VERTICAL, true);
         layoutManager.setStackFromEnd(true);
@@ -753,24 +762,16 @@ public class ChatView extends RelativeLayout {
 
     //Use this method to add a message to chatview
     public void addMessage(Message message, boolean scrollToBottom) {
-        if (!messageList.contains(message))
+        if (!trackingLocalIds.contains(message.getLocal_id())) {
             messageList.add(0, message);
-        messageAdapter.notifyItemInserted(0);
+            messageAdapter.notifyItemInserted(0);
+            trackingLocalIds.add(message.getLocal_id());
 
-        if (scrollToBottom)
-            chatRV.smoothScrollToPosition(0);
-        mLayoutRoot.invalidate();
-    }
-
-    //Use this method to add a message to chatview
-    public void addMessages(List<Message> messages, boolean scrollToBottom) {
-        if (!messageList.containsAll(messages))
-            messageList.addAll(0, messages);
-        messageAdapter.notifyDataSetChanged();
-
-        if (scrollToBottom)
-            chatRV.smoothScrollToPosition(0);
-        mLayoutRoot.invalidate();
+//        messageAdapter.notifyDataSetChanged();
+            if (scrollToBottom)
+                chatRV.smoothScrollToPosition(0);
+            mLayoutRoot.invalidate();
+        }
     }
 
     //Use this method to remove a message from chatview
@@ -783,6 +784,25 @@ public class ChatView extends RelativeLayout {
     public void clearMessages() {
         messageList.clear();
         messageAdapter.notifyDataSetChanged();
+    }
+
+    public void updateMessageStatus(Message message) {
+        for (int i = 0; i < messageList.size(); i++) {
+            if (messageList.get(i).getLocal_id().equals(message.getLocal_id())) {
+                messageList.get(i).setStatus(message.getStatus());
+                messageAdapter.notifyDataSetChanged();
+            }
+        }
+    }
+
+
+    public void replaceMessage(Message message) {
+        for (int i = 0; i < messageList.size(); i++) {
+            if (messageList.get(i).getLocal_id().equals(message.getLocal_id())) {
+                messageList.set(i, message);
+                messageAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
 
@@ -855,7 +875,7 @@ public class ChatView extends RelativeLayout {
         messageAdapter.setTextSize(size);
     }
 
-    private class WrapContentLinearLayoutManager extends LinearLayoutManager {
+    public class WrapContentLinearLayoutManager extends LinearLayoutManager {
         public WrapContentLinearLayoutManager(Context context, int orientation, boolean reverseLayout) {
             super(context, orientation, reverseLayout);
         }

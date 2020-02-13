@@ -36,6 +36,10 @@ public class Home extends Fragment {
     TextView textCartItemCount;
     int mCartItemCount = 10;
 
+    public Home(){
+
+    }
+
 
     public static Home createFor(String text) {
         Home fragment = new Home();

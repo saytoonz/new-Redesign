@@ -31,156 +31,212 @@
 17    <uses-permission android:name="android.permission.WAKE_LOCK" />
 17-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:5-68
 17-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:12:22-65
-18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-18-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:25:5-80
-18-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:25:22-77
-19
-20    <application
-20-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:14:5-82:19
-21        android:name="com.nsromapa.say.frenzapp_redesign.App"
-21-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:9-28
-22        android:allowBackup="true"
-22-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:16:9-35
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\83be8507d1de186a3ea2e0dbc2db13f9\core-1.1.0\AndroidManifest.xml:24:18-86
-24        android:debuggable="true"
-25        android:hardwareAccelerated="true"
-25-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:17:9-43
-26        android:icon="@mipmap/ic_launcher_foreground"
-26-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:18:9-54
-27        android:label="@string/app_name"
-27-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:19:9-41
-28        android:largeHeap="true"
-28-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:20:9-33
-29        android:roundIcon="@mipmap/ic_launcher_foreground"
-29-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:21:9-59
-30        android:supportsRtl="true"
-30-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:22:9-35
-31        android:testOnly="true"
-32        android:theme="@style/AppTheme" >
-32-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:23:9-40
-33        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ShopActivity" />
-33-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:25:9-64
-33-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:25:19-61
-34        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ImageFFActivity" />
-34-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:9-67
-34-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:19-64
-35        <activity
-35-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:27:9-29:62
-36            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.VideoFFActivity"
-36-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:13-58
-37            android:configChanges="orientation|screenSize" />
-37-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:13-59
-38        <activity
-38-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:9-35:51
-39            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity"
-39-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:31:13-59
-40            android:configChanges="orientation|screenSize"
-40-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:13-59
-41            android:hardwareAccelerated="true"
-41-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:33:13-47
-42            android:screenOrientation="portrait"
-42-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:34:13-49
-43            android:theme="@style/chatViewThem" />
-43-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:35:13-48
-44        <activity
-44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:38:9-40:52
-45            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity"
-45-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:13-60
-46            android:theme="@style/StoryViewThem" />
-46-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:40:13-49
-47        <activity
-47-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:42:9-44:52
-48            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity"
-48-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:13-59
-49            android:theme="@style/StoryViewThem" />
-49-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:13-49
-50        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity" >
-50-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:46:9-52:20
-50-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:46:19-61
-51            <intent-filter>
-51-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:47:13-51:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:48:17-69
-52-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:48:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:50:17-77
-54-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:50:27-74
-55            </intent-filter>
-56        </activity>
-57
-58        <service
-58-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:55:9-57:38
-59            android:name="com.nsromapa.say.frenzapp_redesign.services.BootCompleteService"
-59-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:56:13-57
-60            android:enabled="true" />
-60-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:57:13-35
-61        <service
-61-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:58:9-60:38
-62            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatListService"
-62-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:59:13-53
-63            android:enabled="true" />
-63-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:60:13-35
-64        <service
-64-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:61:9-63:38
-65            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatViewActivityServices"
-65-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:62:13-62
-66            android:enabled="true" />
-66-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:13-35
-67
-68        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
-68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:9-70:20
-68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:66:19-67
-69            <intent-filter>
-69-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:67:13-69:29
-70                <action android:name="android.intent.action.BOOT_COMPLETED" />
-70-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:17-79
-70-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:25-76
-71            </intent-filter>
-72        </receiver>
-73
-74        <provider
-75            android:name="androidx.core.content.FileProvider"
-75-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:74:13-62
-76            android:authorities="com.nsromapa.say.frenzapp_redesign.provider"
-76-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:75:13-60
-77            android:exported="false"
-77-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:76:13-37
-78            android:grantUriPermissions="true" >
-78-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:13-47
-79            <meta-data
-79-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:78:13-80:57
-80                android:name="android.support.FILE_PROVIDER_PATHS"
-80-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:79:17-67
-81                android:resource="@xml/file_provider" />
-81-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:80:17-54
-82        </provider>
-83
-84        <activity
-84-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:27:9-29:72
-85            android:name="com.karumi.dexter.DexterActivity"
-85-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:28:13-60
-86            android:theme="@style/Dexter.Internal.Theme.Transparent" />
-86-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:29:13-69
-87        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
-87-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:9-73
-87-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:19-70
-88        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
-88-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:9-87
-88-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:19-84
-89        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
-89-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:9-90
-89-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:19-87
-90
-91        <provider
-91-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-92            android:name="com.squareup.picasso.PicassoProvider"
-92-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-93            android:authorities="com.nsromapa.say.frenzapp_redesign.com.squareup.picasso"
-93-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-94            android:exported="false" />
-94-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-95    </application>
-96
-97</manifest>
+18    <uses-permission android:name="android.permission.VIBRATE" />
+18-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:13:5-65
+18-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:13:22-63
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- for android -->
+19-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:25:5-80
+19-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:25:22-77
+20    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+21    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+22    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+23    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+24    <!-- for Samsung -->
+25    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+25-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+25-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+26    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+26-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+26-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+27    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+27-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+27-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+28    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+28-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+28-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+29    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+29-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+29-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+30    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+30-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+30-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+31    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+31-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+31-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+32    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+32-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+32-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+33    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+33-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+33-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+34    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+34-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+34-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+35    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+35-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+35-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+36    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+36-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+36-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+37    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+37-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+37-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+38    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+38-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+38-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+39    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+39-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+39-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+40    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+40-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+40-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\676e32266a2d63b1d3b616b08d92b243\ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86
+41
+42    <application
+42-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:15:5-83:19
+43        android:name="com.nsromapa.say.frenzapp_redesign.App"
+43-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:16:9-28
+44        android:allowBackup="true"
+44-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:17:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\83be8507d1de186a3ea2e0dbc2db13f9\core-1.1.0\AndroidManifest.xml:24:18-86
+46        android:debuggable="true"
+47        android:hardwareAccelerated="true"
+47-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:18:9-43
+48        android:icon="@mipmap/ic_launcher_foreground"
+48-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:19:9-54
+49        android:label="@string/app_name"
+49-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:20:9-41
+50        android:largeHeap="true"
+50-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:21:9-33
+51        android:roundIcon="@mipmap/ic_launcher_foreground"
+51-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:22:9-59
+52        android:supportsRtl="true"
+52-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:23:9-35
+53        android:testOnly="true"
+54        android:theme="@style/AppTheme" >
+54-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:24:9-40
+55        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ShopActivity" />
+55-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:9-64
+55-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:26:19-61
+56        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ImageFFActivity" />
+56-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:27:9-67
+56-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:27:19-64
+57        <activity
+57-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:28:9-30:62
+58            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.VideoFFActivity"
+58-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:29:13-58
+59            android:configChanges="orientation|screenSize" />
+59-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:30:13-59
+60        <activity
+60-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:31:9-36:51
+61            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity"
+61-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:32:13-59
+62            android:configChanges="orientation|screenSize"
+62-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:33:13-59
+63            android:hardwareAccelerated="true"
+63-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:34:13-47
+64            android:screenOrientation="portrait"
+64-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:35:13-49
+65            android:theme="@style/chatViewThem" />
+65-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:36:13-48
+66        <activity
+66-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:39:9-41:52
+67            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.StoryViewActivity"
+67-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:40:13-60
+68            android:theme="@style/StoryViewThem" />
+68-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:41:13-49
+69        <activity
+69-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:43:9-45:52
+70            android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.DiscoverActivity"
+70-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:44:13-59
+71            android:theme="@style/StoryViewThem" />
+71-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:45:13-49
+72        <activity android:name="com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity" >
+72-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:47:9-53:20
+72-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:47:19-61
+73            <intent-filter>
+73-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:48:13-52:29
+74                <action android:name="android.intent.action.MAIN" />
+74-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:49:17-69
+74-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:49:25-66
+75
+76                <category android:name="android.intent.category.LAUNCHER" />
+76-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:51:17-77
+76-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:51:27-74
+77            </intent-filter>
+78        </activity>
+79
+80        <service
+80-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:56:9-58:38
+81            android:name="com.nsromapa.say.frenzapp_redesign.services.BootCompleteService"
+81-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:57:13-57
+82            android:enabled="true" />
+82-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:58:13-35
+83        <service
+83-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:59:9-61:38
+84            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatListService"
+84-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:60:13-53
+85            android:enabled="true" />
+85-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:61:13-35
+86        <service
+86-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:62:9-64:38
+87            android:name="com.nsromapa.say.frenzapp_redesign.services.ChatViewActivityServices"
+87-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:63:13-62
+88            android:enabled="true" />
+88-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:64:13-35
+89
+90        <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
+90-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:67:9-71:20
+90-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:67:19-67
+91            <intent-filter>
+91-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:68:13-70:29
+92                <action android:name="android.intent.action.BOOT_COMPLETED" />
+92-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:69:17-79
+92-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:69:25-76
+93            </intent-filter>
+94        </receiver>
+95
+96        <provider
+97            android:name="androidx.core.content.FileProvider"
+97-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:75:13-62
+98            android:authorities="com.nsromapa.say.frenzapp_redesign.provider"
+98-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:76:13-60
+99            android:exported="false"
+99-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:77:13-37
+100            android:grantUriPermissions="true" >
+100-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:78:13-47
+101            <meta-data
+101-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:79:13-81:57
+102                android:name="android.support.FILE_PROVIDER_PATHS"
+102-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:80:17-67
+103                android:resource="@xml/file_provider" />
+103-->D:\ANDROID\Redesign\app\src\main\AndroidManifest.xml:81:17-54
+104        </provider>
+105
+106        <activity
+106-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:27:9-29:72
+107            android:name="com.karumi.dexter.DexterActivity"
+107-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:28:13-60
+108            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+108-->[com.karumi:dexter:6.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\ba82989c2d08319820eafc1d5e54874b\dexter-6.0.1\AndroidManifest.xml:29:13-69
+109        <activity android:name="com.zhihu.matisse.ui.MatisseActivity" />
+109-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:9-73
+109-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:28:19-70
+110        <activity android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity" />
+110-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:9-87
+110-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:29:19-84
+111        <activity android:name="com.zhihu.matisse.internal.ui.SelectedPreviewActivity" />
+111-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:9-90
+111-->[com.zhihu.android:matisse:0.4.3] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\e9a8c896a6988a6f38feb61d62338c78\jetified-matisse-0.4.3\AndroidManifest.xml:30:19-87
+112
+113        <provider
+113-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+114            android:name="com.squareup.picasso.PicassoProvider"
+114-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+115            android:authorities="com.nsromapa.say.frenzapp_redesign.com.squareup.picasso"
+115-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+116            android:exported="false" />
+116-->[com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+117    </application>
+118
+119</manifest>

@@ -22,11 +22,12 @@ public class Utils {
 
 
     public static String getUserUid() {
-        return "1";
+        return "2";
     }
 
     public static String getUserImage() {
         return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAyxdUJ8KLw1V8EHfAcSi6X94x13WHxQrgSIlve16-SFeVZYIGg&s";
+//        return "https://static-cdn.123rf.com/images/v5/index-thumbnail/84170952-b.jpg";
     }
 
     public static String getUserName() {
@@ -116,8 +117,6 @@ public class Utils {
     }
 
 
-
-
     public static void wait(int millis, Runnable callback, Handler HANDLER){
         HANDLER.postDelayed(callback, millis);
     }
@@ -175,4 +174,10 @@ public class Utils {
         Toast.makeText(context, "Download: " + soundName, Toast.LENGTH_SHORT).show();
     }
 
+    public static String getChatNotificationName() {
+        return "chatNotificationCount";
+    }
+    public static String getUserChatNotificationName() {
+        return "chatNotificationCount_";
+    }
 }

@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.nex3z.notificationbadge.NotificationBadge;
+import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
+import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
@@ -166,6 +168,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
                 intent.putExtra("chatType", list.getChat_type());
                 intent.putExtra("thisUserId", Utils.getUserInfoFromUserJSON(list.getFriendJson(), "id"));
                 intent.putExtra("thisUserJson", list.getFriendJson());
+                intent.putExtra("backToMain", false);
                 context.startActivity(intent);
 
             }
@@ -209,7 +212,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         private View mView;
         private AnimCheckBox contact_checkbox;
         private CircleImageView user_image, online_status_image;
-        private TextView name, message, timestamp;
+        private TextView name, timestamp;
+        private EmoticonTextView message;
         private NotificationBadge unreadCount;
         private ImageView conversation_mute_icon, delivery_status_last_msg;
 
@@ -225,6 +229,8 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
             delivery_status_last_msg = mView.findViewById(R.id.delivery_status_last_msg);
             contact_checkbox = mView.findViewById(R.id.contact_checkbox);
             online_status_image = mView.findViewById(R.id.online_status_image);
+
+            message.setEmoticonProvider(SamsungEmoticonProvider.create());
         }
     }
 

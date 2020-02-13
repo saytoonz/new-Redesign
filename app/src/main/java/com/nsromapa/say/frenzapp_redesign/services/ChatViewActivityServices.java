@@ -1,9 +1,11 @@
 package com.nsromapa.say.frenzapp_redesign.services;
 
+import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -16,7 +18,6 @@ import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper;
 import com.nsromapa.say.frenzapp_redesign.databases.MessagesReaderContract;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
-import com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import net.sqlcipher.Cursor;
@@ -27,7 +28,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -103,6 +103,26 @@ public class ChatViewActivityServices extends Service {
         getMessages();
         getStatusUpdate();
         setAllMessagesSeen();
+        updateNotification();
+    }
+
+    private void updateNotification() {
+        int thisUserChatCount = PreferenceManager.getDefaultSharedPreferences(getApplicationContext())
+                .getInt(Utils.getUserChatNotificationName() + "_" + UserId, 0);
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext())
+                .edit().putInt(Utils.getUserChatNotificationName() + "_" + UserId, 0).apply();
+
+        int count = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(Utils.getChatNotificationName(), 0);
+
+        int newCount = 0;
+        if ((count-thisUserChatCount)>0){
+            newCount = count - thisUserChatCount;
+        }
+
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(Utils.getChatNotificationName(), newCount).apply();
+        NotificationManager notificationManager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        assert notificationManager != null;
+        notificationManager.cancel(Integer.parseInt(UserId));
     }
 
 
@@ -147,7 +167,7 @@ public class ChatViewActivityServices extends Service {
                     "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
                     "' AND ((" + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + "='" + UserId +
                     "') OR (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + UserId +
-                    "')) ORDER BY " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " ASC LIMIT " + offset + ",~0;", null);
+                    "')) ORDER BY " + MessagesReaderContract.MessageEntry._ID + " ASC LIMIT " + offset + ",~0;", null);
 
             while (cursor.moveToNext()) {
                 Message message = new Message();
@@ -172,8 +192,7 @@ public class ChatViewActivityServices extends Service {
                     }
                 }
 
-
-                message.setLocal_id(String.valueOf(cursor.getInt(1)));
+                message.setLocal_id(String.valueOf(cursor.getString(1)));
                 message.setId(cursor.getString(2));
                 message.setMessageType(Message.MessageType.valueOf(cursor.getString(3)));
                 message.setUserName(cursor.getString(5));

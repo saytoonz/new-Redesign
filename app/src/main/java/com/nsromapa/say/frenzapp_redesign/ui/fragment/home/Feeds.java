@@ -48,6 +48,9 @@ public class Feeds extends Fragment {
     private PostsAdapter mAdapter_v19;
     private RequestQueue requestQueue;
 
+    public Feeds() {
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

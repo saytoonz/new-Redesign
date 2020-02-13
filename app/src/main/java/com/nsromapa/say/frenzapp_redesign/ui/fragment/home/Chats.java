@@ -36,6 +36,9 @@ public class Chats extends Fragment {
     private Context context;
     private static LinearLayout default_item;
 
+    public Chats() {
+    }
+
     public Chats(Context context) {
     this.context = context;
     }

@@ -2,7 +2,9 @@ package com.nsromapa.say.frenzapp_redesign.ui.activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Application;
 import android.app.Dialog;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -12,6 +14,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -48,6 +51,7 @@ import com.nsromapa.say.emogifstickerkeyboard.gifs.Gif;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.asyncs.MessageInsertion;
+import com.nsromapa.say.frenzapp_redesign.asyncs.UpdateOnlineStatus;
 import com.nsromapa.say.frenzapp_redesign.helpers.PicassoEngine;
 import com.nsromapa.say.frenzapp_redesign.models.AudioChannel;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSampleRate;
@@ -97,7 +101,6 @@ public class ChatViewActivity extends AppCompatActivity
     public static int SELECT_AUDIO = 13;
     private static ChatView chatView;
     private static TextView statusTV;
-    boolean switchBool = true;
     List<String> mSelected;
     List<String> mSelectedLocal;
 
@@ -115,7 +118,10 @@ public class ChatViewActivity extends AppCompatActivity
     private boolean isStillHold = false;
     private Timer timer;
     private static String thisUserId, thisUserJson, chatType;
-    
+    private boolean backToMain;
+    View view;
+    Application application;
+    private static Context context;
 
     public static void updateUserStatus(String grabStatus, String otherUid, String lastSeen) {
         if (otherUid.equals(thisUserId)) {
@@ -146,15 +152,36 @@ public class ChatViewActivity extends AppCompatActivity
         }
     }
 
+    public static void updateMessageStatus(Message message) {
+        if (chatView != null)
+            chatView.updateMessageStatus(message);
+    }
+
+
+    public static void updateUserOnlineStatus(int what){
+        if(what == 1){
+            new UpdateOnlineStatus(context, "typing_" + thisUserId,  Utils.getUserUid()).execute();
+        }else{
+            new UpdateOnlineStatus(context, "Online",  Utils.getUserUid()).execute();
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_view);
         if (getIntent() != null) {
-            chatType = getIntent().getStringExtra("chatType");
-            thisUserId = getIntent().getStringExtra("thisUserId");
-            thisUserJson = getIntent().getStringExtra("thisUserJson");
+
+            if (getIntent().hasExtra("chatType") &&
+                    getIntent().hasExtra("thisUserId") && getIntent().hasExtra("thisUserJson")) {
+                chatType = getIntent().getStringExtra("chatType");
+                thisUserId = getIntent().getStringExtra("thisUserId");
+                thisUserJson = getIntent().getStringExtra("thisUserJson");
+                backToMain = getIntent().getBooleanExtra("backToMain", false);
+            } else {
+                finish();
+            }
         } else {
             finish();
         }
@@ -183,6 +210,7 @@ public class ChatViewActivity extends AppCompatActivity
                         }
                     })
                     .check();
+
         }
 
         SQLiteDatabase.loadLibs(this);
@@ -197,7 +225,7 @@ public class ChatViewActivity extends AppCompatActivity
         messageEditText = chatView.getMessageET();
         emojiKeyboardToggler = chatView.getEmojiToggle();
 
-
+        context = this;
         chatView.setRecordingListener(this);
         initializeEmojiGifStickerKeyBoard();
         chatView.getPauseResumeARL().setOnClickListener(v -> toggleRecording());
@@ -262,29 +290,14 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
     private void sendMessageText(String body) {
-        if (switchBool) {
-            Message message = new Message();
-            message.setBody(body);
-            message.setMessageType(Message.MessageType.RightSimpleMessage);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
+        Message message = new Message();
+        message.setBody(body);
+        message.setMessageType(Message.MessageType.RightSimpleMessage);
+        message.setTime(getTime());
+        message.setUserName(Utils.getUserName());
+        message.setUserIcon(Utils.getUserImage());
+        insertSthToDb(message);
 
-            switchBool = false;
-        } else {
-            Message message = new Message();
-            message.setBody(body);
-            message.setMessageType(Message.MessageType.LeftSimpleMessage);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message1);
-            insertSthToDb(message);
-
-            switchBool = true;
-        }
     }
 
     private void sendNewSound(File soundImage) {
@@ -293,31 +306,16 @@ public class ChatViewActivity extends AppCompatActivity
         String filename = realNameUrl.substring(realNameUrl.lastIndexOf("/") + 1);
         Log.e(TAG, "sendNewSound: " + filename);
         String localPath = Environment.getExternalStorageDirectory().getPath() + "/FrenzApp/Media/sounds/SoundImages/" + filename;
-        if (switchBool) {
-            Message message = new Message();
-            message.setBody(filename);
-            message.setMessageType(Message.MessageType.RightSound);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(localPath);
-            message.setSingleUrl("");
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = false;
-        } else {
-            Message message = new Message();
-            message.setBody(filename);
-            message.setMessageType(Message.MessageType.LeftSound);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(localPath);
-            message.setSingleUrl("");
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = true;
-        }
+
+        Message message = new Message();
+        message.setBody(filename);
+        message.setMessageType(Message.MessageType.RightSound);
+        message.setTime(getTime());
+        message.setUserName(Utils.getUserName());
+        message.setLocalLocation(localPath);
+        message.setSingleUrl("");
+        message.setUserIcon(Utils.getUserImage());
+        insertSthToDb(message);
     }
 
 
@@ -326,60 +324,30 @@ public class ChatViewActivity extends AppCompatActivity
         String filename = realNameUrl.substring(realNameUrl.lastIndexOf("/") + 1);
         Log.e(TAG, "sendNewGIF: " + filename);
         String localPath = Environment.getExternalStorageDirectory().getPath() + "/FrenzApp/Media/gifs/" + filename;
-        if (switchBool) {
-            Message message = new Message();
-            message.setBody(filename);
-            message.setMessageType(Message.MessageType.RightGIF);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(localPath);
-            message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon(Utils.getUserImage());
+
+        Message message = new Message();
+        message.setBody(filename);
+        message.setMessageType(Message.MessageType.RightGIF);
+        message.setTime(getTime());
+        message.setUserName(Utils.getUserName());
+        message.setLocalLocation(localPath);
+        message.setSingleUrl(gif.getGifUrl());
+        message.setUserIcon(Utils.getUserImage());
 //            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = false;
-        } else {
-            Message message = new Message();
-            message.setBody(filename);
-            message.setMessageType(Message.MessageType.LeftGIF);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(localPath);
-            message.setSingleUrl(gif.getGifUrl());
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = true;
-        }
+        insertSthToDb(message);
     }
 
 
     private void sendNewSticker(File sticker) {
-        if (switchBool) {
-            Message message = new Message();
-            message.setBody(sticker.getName());
-            message.setMessageType(Message.MessageType.RightSticker);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(sticker.getAbsolutePath());
-            message.setSingleUrl(sticker.getAbsolutePath());
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = false;
-        } else {
-            Message message = new Message();
-            message.setBody(sticker.getName());
-            message.setMessageType(Message.MessageType.LeftSticker);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setLocalLocation(sticker.getAbsolutePath());
-            message.setSingleUrl(sticker.getAbsolutePath());
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = true;
-        }
+        Message message = new Message();
+        message.setBody(sticker.getName());
+        message.setMessageType(Message.MessageType.RightSticker);
+        message.setTime(getTime());
+        message.setUserName(Utils.getUserName());
+        message.setLocalLocation(sticker.getAbsolutePath());
+        message.setSingleUrl(sticker.getAbsolutePath());
+        message.setUserIcon(Utils.getUserImage());
+        insertSthToDb(message);
     }
 
     public String getTime() {
@@ -408,63 +376,29 @@ public class ChatViewActivity extends AppCompatActivity
                         mSelectedLocal.add(file.getName());
                     }
 
-                    if (switchBool) {
-                        if (mSelected.size() == 1) {
-                            Message message = new Message();
-                            message.setBody("");
-                            message.setMessageType(Message.MessageType.RightSingleImage);
-                            message.setTime(getTime());
-                            message.setUserName(Utils.getUserName());
-                            message.setSingleUrl(mSelected.get(0));
-                            message.setLocalLocation(mSelected.get(0));
-                            message.setUserIcon(Utils.getUserImage());
-//                            chatView.addMessage(message);
-                            insertSthToDb(message);
-                            switchBool = false;
-                        } else {
-
-                            Message message = new Message();
-                            message.setBody("");
-                            message.setMessageType(Message.MessageType.RightMultipleImages);
-                            message.setTime(getTime());
-                            message.setUserName(Utils.getUserName());
-                            message.setImageList(mSelected);
-                            message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon(Utils.getUserImage());
-//                            chatView.addMessage(message);
-                            insertSthToDb(message);
-                            switchBool = false;
-                        }
+                    if (mSelected.size() == 1) {
+                        Message message = new Message();
+                        message.setBody("");
+                        message.setMessageType(Message.MessageType.RightSingleImage);
+                        message.setTime(getTime());
+                        message.setUserName(Utils.getUserName());
+                        message.setSingleUrl(mSelected.get(0));
+                        message.setLocalLocation(mSelected.get(0));
+                        message.setUserIcon(Utils.getUserImage());
+                        insertSthToDb(message);
                     } else {
 
-                        if (mSelected.size() == 1) {
-                            Message message = new Message();
-                            message.setBody("");
-                            message.setMessageType(Message.MessageType.LeftSingleImage);
-                            message.setTime(getTime());
-                            message.setUserName(Utils.getUserName());
-                            message.setSingleUrl(mSelected.get(0));
-                            message.setLocalLocation(mSelected.get(0));
-                            message.setUserIcon(Utils.getUserImage());
-//                            chatView.addMessage(message);
-                            insertSthToDb(message);
-                            switchBool = true;
-                        } else {
-
-                            Message message = new Message();
-                            message.setBody("");
-                            message.setMessageType(Message.MessageType.LeftMultipleImages);
-                            message.setTime(getTime());
-                            message.setUserName(Utils.getUserName());
-                            message.setImageList(mSelected);
-                            message.setImageListNames(mSelectedLocal);
-                            message.setUserIcon(Utils.getUserImage());
-//                            chatView.addMessage(message);
-                            insertSthToDb(message);
-                            switchBool = true;
-                        }
-
+                        Message message = new Message();
+                        message.setBody("");
+                        message.setMessageType(Message.MessageType.RightMultipleImages);
+                        message.setTime(getTime());
+                        message.setUserName(Utils.getUserName());
+                        message.setImageList(mSelected);
+                        message.setImageListNames(mSelectedLocal);
+                        message.setUserIcon(Utils.getUserImage());
+                        insertSthToDb(message);
                     }
+
                 }
                 break;
             }
@@ -472,26 +406,13 @@ public class ChatViewActivity extends AppCompatActivity
 
                 //Video Selection Result
                 if (resultCode == RESULT_OK) {
-                    if (switchBool) {
-                        Message message = new Message();
-                        message.setMessageType(Message.MessageType.RightVideo);
-                        message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
-                        message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
-                        message.setUserIcon(Utils.getUserImage());
-                        insertSthToDb(message);
-                        switchBool = false;
-                    } else {
-                        Message message = new Message();
-
-                        message.setMessageType(Message.MessageType.LeftVideo);
-                        message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
-                        message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
-                        message.setUserIcon(Utils.getUserImage());
-                        insertSthToDb(message);
-                        switchBool = true;
-                    }
+                    Message message = new Message();
+                    message.setMessageType(Message.MessageType.RightVideo);
+                    message.setTime(getTime());
+                    message.setUserName(Utils.getUserName());
+                    message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
+                    message.setUserIcon(Utils.getUserImage());
+                    insertSthToDb(message);
                 }
                 break;
             }
@@ -500,30 +421,14 @@ public class ChatViewActivity extends AppCompatActivity
                 //Image Capture result
 
                 if (resultCode == RESULT_OK) {
-
-
-                    if (switchBool) {
-                        Message message = new Message();
-                        message.setMessageType(Message.MessageType.RightSingleImage);
-                        message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
-                        File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
-                        message.setSingleUrl(file.getAbsolutePath());
-                        message.setUserIcon(Utils.getUserImage());
-                        insertSthToDb(message);
-                        switchBool = false;
-                    } else {
-                        Message message = new Message();
-                        message.setMessageType(Message.MessageType.LeftSingleImage);
-                        message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
-                        File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
-                        message.setImageList(mSelected);
-                        message.setSingleUrl(file.getAbsolutePath());
-                        message.setUserIcon(Utils.getUserImage());
-                        insertSthToDb(message);
-                        switchBool = true;
-                    }
+                    Message message = new Message();
+                    message.setMessageType(Message.MessageType.RightSingleImage);
+                    message.setTime(getTime());
+                    message.setUserName(Utils.getUserName());
+                    File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
+                    message.setSingleUrl(file.getAbsolutePath());
+                    message.setUserIcon(Utils.getUserImage());
+                    insertSthToDb(message);
                 }
                 break;
             }
@@ -541,7 +446,6 @@ public class ChatViewActivity extends AppCompatActivity
     private void sendAudio(String urlPath, String localPath) {
         if (urlPath == null || TextUtils.isEmpty(urlPath)) return;
 
-        if (switchBool) {
             Message message = new Message();
             message.setMessageType(Message.MessageType.RightAudio);
             message.setTime(getTime());
@@ -549,21 +453,7 @@ public class ChatViewActivity extends AppCompatActivity
             message.setSingleUrl(urlPath);
             message.setLocalLocation(localPath);
             message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
             insertSthToDb(message);
-            switchBool = false;
-        } else {
-            Message message = new Message();
-            message.setMessageType(Message.MessageType.LeftAudio);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setSingleUrl(urlPath);
-            message.setLocalLocation(localPath);
-            message.setUserIcon(Utils.getUserImage());
-//            chatView.addMessage(message);
-            insertSthToDb(message);
-            switchBool = true;
-        }
     }
 
 
@@ -850,16 +740,13 @@ public class ChatViewActivity extends AppCompatActivity
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                setUserOnlineStatus(getApplicationContext(), "typing_" + thisUserId, Utils.getUserUid());
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-                setUserOnlineStatus(getApplicationContext(), getResources().getString(R.string.online), Utils.getUserUid());
             }
         });
     }
-
 
     @Override
     public void onAudioChunkPulled(AudioChunk audioChunk) {
@@ -943,8 +830,15 @@ public class ChatViewActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        if (mEmoticonGIFKeyboardFragment == null || !mEmoticonGIFKeyboardFragment.handleBackPressed())
-            super.onBackPressed();
+        if (mEmoticonGIFKeyboardFragment == null || !mEmoticonGIFKeyboardFragment.handleBackPressed()) {
+            if (backToMain && !PreferenceManager.getDefaultSharedPreferences(this).getBoolean("isMainActivity", false)) {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+            } else {
+                super.onBackPressed();
+            }
+        }
+
     }
 }
 

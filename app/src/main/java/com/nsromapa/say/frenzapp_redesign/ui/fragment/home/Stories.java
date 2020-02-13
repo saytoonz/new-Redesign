@@ -54,6 +54,10 @@ public class Stories extends Fragment {
     private RequestQueue requestQueue1;
     private RequestQueue requestQueue2;
 
+
+    public Stories() {
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -44,6 +44,9 @@ public class VideoFeeds extends Fragment {
     private SwipeRefreshLayout refreshLayout;
     private PostsAdapter mAdapter_v19;
 
+    public VideoFeeds() {
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

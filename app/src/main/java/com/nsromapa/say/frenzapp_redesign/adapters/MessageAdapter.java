@@ -30,6 +30,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.adprogressbarlib.AdCircleProgress;
@@ -43,11 +44,13 @@ import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.asyncs.ChatDownloadTask;
+import com.nsromapa.say.frenzapp_redesign.interfaces.ILoadMore;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.ImageFFActivity;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.VideoFFActivity;
 import com.nsromapa.say.frenzapp_redesign.ui.view.CollageView;
 import com.nsromapa.say.frenzapp_redesign.ui.view.VideoPlayer;
+import com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView;
 import com.nsromapa.say.frenzapp_redesign.utils.FontChanger;
 import com.nsromapa.say.frenzapp_redesign.utils.Settings;
 import com.ohoussein.playpause.PlayPauseView;
@@ -90,13 +93,36 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private int senderNameTextColor = android.R.color.tab_indicator_text;
     private float textSize = 14;
 
+    private int totalItemCount, lastVisibleItem;
+    private int visibleThreshHold = 5;
+    private boolean isLoading;
+    private ILoadMore loadMore;
 
-    public MessageAdapter(List<Message> verticalList, Context context) {
+    public MessageAdapter(RecyclerView chatRV, List<Message> verticalList, Context context) {
         this.messageList = verticalList;
         this.context = context;
         this.filterList = verticalList;
         imageLoader = ImageLoader.getInstance();
         typeface = Typeface.createFromAsset(context.getAssets(), "fonts/product_san_regular.ttf");
+
+
+//        LinearLayoutManager linearLayoutManager = (LinearLayoutManager) chatRV.getLayoutManager();
+//        chatRV.addOnScrollListener(new RecyclerView.OnScrollListener() {
+//            @Override
+//            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+//                super.onScrolled(recyclerView, dx, dy);
+//                totalItemCount = linearLayoutManager.getItemCount();
+//                lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
+//
+//                if (!isLoading && totalItemCount <= (lastVisibleItem + visibleThreshHold)){
+//                    if (loadMore != null){
+//                        loadMore.onLoadMore();
+//                    }
+//                }
+//
+//                isLoading = true;
+//            }
+//        });
 
     }
 
@@ -1013,16 +1039,18 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
                 @Override
                 public void onStartTrackingTouch(SeekBar seekBar) {
-                    if (playingPosition == message.getLocalLocation()) {
-                        mediaPlayer.seekTo(seekBar.getProgress());
-                    }
+                    if (mediaPlayer != null)
+                        if (playingPosition == message.getLocalLocation()) {
+                            mediaPlayer.seekTo(seekBar.getProgress());
+                        }
                 }
 
                 @Override
                 public void onStopTrackingTouch(SeekBar seekBar) {
-                    if (playingPosition == message.getLocalLocation()) {
-                        mediaPlayer.seekTo(seekBar.getProgress());
-                    }
+                    if (mediaPlayer != null)
+                        if (playingPosition == message.getLocalLocation()) {
+                            mediaPlayer.seekTo(seekBar.getProgress());
+                        }
                 }
             });
             ((Activity) context).runOnUiThread(new Runnable() {
