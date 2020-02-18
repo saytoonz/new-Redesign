@@ -6,6 +6,14 @@
     <color name="transparent">#00000000</color>
     <color name="off_white">#DDD8D8</color>
 
+
+
+<!--    <color name="button_focused">#60ffffff</color>-->
+    <color name="button_focused">#605093FF</color>
+
+
+
+
     <color name="colorPrimary">#212121</color>
     <color name="colorPrimaryDark">#1a1a1a</color>
     <color name="colorAccent">#5093FF</color>

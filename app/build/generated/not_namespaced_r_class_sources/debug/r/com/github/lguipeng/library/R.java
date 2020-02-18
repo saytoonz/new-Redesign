@@ -14,8 +14,8 @@ public final class R {
 
         public static final int checked = 0x7f04008b;
         public static final int circle_color = 0x7f0400a3;
-        public static final int stroke_color = 0x7f040261;
-        public static final int stroke_width = 0x7f040262;
+        public static final int stroke_color = 0x7f040281;
+        public static final int stroke_width = 0x7f040282;
     }
     public static final class string {
         private string() {}
@@ -25,7 +25,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] AnimCheckBox = { 0x7f04008b, 0x7f0400a3, 0x7f040261, 0x7f040262 };
+        public static final int[] AnimCheckBox = { 0x7f04008b, 0x7f0400a3, 0x7f040281, 0x7f040282 };
         public static final int AnimCheckBox_checked = 0;
         public static final int AnimCheckBox_circle_color = 1;
         public static final int AnimCheckBox_stroke_color = 2;

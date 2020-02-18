@@ -203,7 +203,6 @@ public class ChatView extends RelativeLayout {
                         recordARL.animate().scaleX(1f).scaleY(1f).setDuration(100).setInterpolator(new LinearInterpolator()).start();
                     }
                 } else {
-
                     updateUserOnlineStatus(2);
                     if (sendMRL.getVisibility() != View.VISIBLE && !isLocked) {
                         recordARL.setVisibility(View.GONE);

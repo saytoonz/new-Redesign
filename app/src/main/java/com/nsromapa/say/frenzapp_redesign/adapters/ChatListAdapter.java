@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,9 @@ import java.util.List;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.chatFragment_isSelectionMode;
+import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.checkSelectIcon;
+import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.setSelectionCount;
+import static com.nsromapa.say.frenzapp_redesign.ui.fragment.home.Chats.showMenuSelectionView;
 import static com.nsromapa.say.frenzapp_redesign.utils.Openings.showImageAlertWithJson;
 
 
@@ -56,6 +60,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ChatListAdapter.ViewHolder holder, int position) {
         ChatList list = chatLists.get(position);
+        list.setItemPosition(position);
 
         //UserImage SetUP
         // with its onclick function
@@ -79,19 +84,17 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
                 holder.unreadCount.setVisibility(View.VISIBLE);
                 holder.unreadCount.setText(list.getNotification_count_sender());
 
-            }else if (!list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_receiver()) > 0){
+            } else if (!list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_receiver()) > 0) {
                 holder.unreadCount.setVisibility(View.VISIBLE);
                 holder.unreadCount.setText(list.getNotification_count_receiver());
-            }else{
+            } else {
                 holder.unreadCount.setVisibility(View.GONE);
             }
 
         } else holder.unreadCount.setVisibility(View.GONE);
 
         //Is Notification muted setUp
-        if (Utils.isFriendChatNotificationMuted(context,
-                Utils.getUserInfoFromUserJSON(list.getFriendJson(),
-                        "id"))) {
+        if (Utils.isFriendChatNotificationMuted(context, Utils.getUserInfoFromUserJSON(list.getFriendJson(),"id"))) {
             holder.conversation_mute_icon.setVisibility(View.VISIBLE);
         } else {
             holder.conversation_mute_icon.setVisibility(View.GONE);
@@ -124,11 +127,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         //Set up selection Icon Visibility
         if (chatFragment_isSelectionMode) {
             holder.contact_checkbox.setVisibility(View.VISIBLE);
-            if (selectedList.contains(String.valueOf(position)))
+            if (selectedList.contains(String.valueOf(position))) {
+                setSelectionCount(String.valueOf(selectedList.size()));
+                holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
                 holder.contact_checkbox.setChecked(true, true);
-            else
+                checkSelectIcon();
+            } else {
+                setSelectionCount(String.valueOf(selectedList.size()));
+                holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.white));
                 holder.contact_checkbox.setChecked(false, true);
+                checkSelectIcon();
+            }
         } else {
+            holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.white));
             holder.contact_checkbox.setChecked(false, true);
             holder.contact_checkbox.setVisibility(View.GONE);
         }
@@ -138,13 +149,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         holder.contact_checkbox.setOnClickListener(v -> {
             if (chatFragment_isSelectionMode) {
                 if (holder.contact_checkbox.isChecked()) {
+                    holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.white));
                     holder.contact_checkbox.setChecked(false, true);
                     selectedList.remove(String.valueOf(position));
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                    checkSelectIcon();
                 } else {
+                    holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
                     if (!selectedList.contains(String.valueOf(position))) {
                         selectedList.add(String.valueOf(position));
                     }
                     holder.contact_checkbox.setChecked(true, true);
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                    checkSelectIcon();
                 }
 
             }
@@ -154,13 +171,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         holder.mView.setOnClickListener(v -> {
             if (chatFragment_isSelectionMode) {
                 if (holder.contact_checkbox.isChecked()) {
+                    holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.white));
                     holder.contact_checkbox.setChecked(false, true);
                     selectedList.remove(String.valueOf(position));
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                    checkSelectIcon();
                 } else {
+                    holder.chatlist_item_laytout.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
                     if (!selectedList.contains(String.valueOf(position))) {
                         selectedList.add(String.valueOf(position));
                     }
                     holder.contact_checkbox.setChecked(true, true);
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                    checkSelectIcon();
                 }
 
             } else {
@@ -181,6 +204,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
                 enableSelection();
                 selectedList.clear();
                 selectedList.add(String.valueOf(position));
+                setSelectionCount(String.valueOf(selectedList.size()));
             }
             return true;
         });
@@ -215,12 +239,14 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         private TextView name, timestamp;
         private EmoticonTextView message;
         private NotificationBadge unreadCount;
+        private LinearLayout chatlist_item_laytout;
         private ImageView conversation_mute_icon, delivery_status_last_msg;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mView = itemView;
             name = mView.findViewById(R.id.name);
+            chatlist_item_laytout = mView.findViewById(R.id.chatlist_item_laytout);
             message = mView.findViewById(R.id.message);
             timestamp = mView.findViewById(R.id.messageTime);
             user_image = mView.findViewById(R.id.pic);
@@ -229,7 +255,6 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
             delivery_status_last_msg = mView.findViewById(R.id.delivery_status_last_msg);
             contact_checkbox = mView.findViewById(R.id.contact_checkbox);
             online_status_image = mView.findViewById(R.id.online_status_image);
-
             message.setEmoticonProvider(SamsungEmoticonProvider.create());
         }
     }
@@ -238,12 +263,43 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     private void enableSelection() {
         chatFragment_isSelectionMode = true;
         notifyDataSetChanged();
+        showMenuSelectionView();
     }
 
     public void disableSelection() {
         chatFragment_isSelectionMode = false;
         selectedList.clear();
         notifyDataSetChanged();
+        checkSelectIcon();
     }
+
+    public List<String> getSelectedList() {
+        return selectedList;
+    }
+
+    public void MuteUnMute(int position) {
+        ChatList user = chatLists.get(position);
+        String uid = Utils.getUserInfoFromUserJSON(user.getFriendJson(), "id");
+        Utils.setFriendChatNotificationMuted(context, uid);
+        notifyDataSetChanged();
+    }
+
+    public void SelectAll(){
+        if (selectedList.size()>0){
+            selectedList.clear();
+            setSelectionCount("0");
+            notifyDataSetChanged();
+            checkSelectIcon();
+        }else {
+            for (int i = 0; i < chatLists.size(); i++){
+                selectedList.add(String.valueOf(chatLists.get(i).getItemPosition()));
+                setSelectionCount(String.valueOf(selectedList.size()));
+                notifyDataSetChanged();
+                checkSelectIcon();
+            }
+        }
+    }
+
+
 
 }

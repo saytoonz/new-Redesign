@@ -12,12 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.ChatListAdapter;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
@@ -30,44 +30,65 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import mehdi.sakout.fancybuttons.FancyButton;
+
 public class Chats extends Fragment {
     private static ChatListAdapter myAdapter;
     private static List<ChatList> chatList;
     private Context context;
-    private static LinearLayout default_item;
+    private static LinearLayout default_item, selectionMenuHolder;
+    private static FancyButton selectionCounter;
+    private static FloatingActionButton closeSelection, muteSelected, deleteSelected, setReadSelected, selectAll;
 
     public Chats() {
     }
 
     public Chats(Context context) {
-    this.context = context;
+        this.context = context;
     }
 
 
-
-    public static void updateChatList(List<ChatList> chatLists){
-        if (chatLists.isEmpty()){
-            if (chatList.isEmpty()){
+    public static void updateChatList(List<ChatList> chatLists) {
+        if (chatLists.isEmpty()) {
+            if (chatList.isEmpty()) {
                 default_item.setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 default_item.setVisibility(View.GONE);
             }
-        }else{
-           if (!chatList.isEmpty())
-               chatList.clear();
+        } else {
+            if (!chatList.isEmpty())
+                chatList.clear();
             default_item.setVisibility(View.GONE);
             chatList.addAll(chatLists);
             myAdapter.notifyDataSetChanged();
         }
     }
 
-    public static void updateChatList(ChatList chatLists){
+    public static void updateChatList(ChatList chatLists) {
         chatList.add(chatLists);
         myAdapter.notifyDataSetChanged();
     }
 
-    public static void  disableSelection(){
+    public static void disableSelection() {
         myAdapter.disableSelection();
+        setSelectionCount("0");
+        selectionMenuHolder.setVisibility(View.GONE);
+    }
+
+    public static void setSelectionCount(String count) {
+        selectionCounter.setText(count);
+    }
+
+    public static void showMenuSelectionView() {
+        selectionMenuHolder.setVisibility(View.VISIBLE);
+    }
+
+    public static void checkSelectIcon(){
+        if(myAdapter.getSelectedList().size() > 0){
+            selectAll.setImageResource(R.drawable.icons8_uncheck_all_100);
+        }else{
+            selectAll.setImageResource(R.drawable.icons8_check_all_100);
+        }
     }
 
 
@@ -77,13 +98,22 @@ public class Chats extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
         default_item = view.findViewById(R.id.default_item);
+        selectionMenuHolder = view.findViewById(R.id.selectionMenuHolder);
+        selectionCounter = view.findViewById(R.id.selectionCounter);
+        closeSelection = view.findViewById(R.id.closeSelection);
+        muteSelected = view.findViewById(R.id.muteSelected);
+        deleteSelected = view.findViewById(R.id.deleteSelected);
+        setReadSelected = view.findViewById(R.id.setReadSelected);
+        selectAll = view.findViewById(R.id.selectAll);
+
         chatList = new ArrayList<>();
         RecyclerView chatRecyclerView = view.findViewById(R.id.chats_list_recycler);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
-        myAdapter = new ChatListAdapter(getContext(), getActivity(),chatList);
+        myAdapter = new ChatListAdapter(getContext(), getActivity(), chatList);
         chatRecyclerView.setLayoutManager(mLayoutManager);
         chatRecyclerView.setHasFixedSize(true);
         chatRecyclerView.setAdapter(myAdapter);
+
         return view;
     }
 
@@ -91,49 +121,57 @@ public class Chats extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         getContacts();
+        closeSelection.setOnClickListener(v -> disableSelection());
+        muteSelected.setOnClickListener(v -> {
+            List<String> selectedList = myAdapter.getSelectedList();
+            for (int i = 0; i < selectedList.size(); i++) {
+                myAdapter.MuteUnMute(Integer.parseInt(selectedList.get(i)));
+            }
+        });
+
+        selectAll.setOnClickListener(v -> {
+            myAdapter.SelectAll();
+        });
     }
 
     private void getContacts() {
-       String response =  PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("chatList","");
-       if (!TextUtils.isEmpty(response)){
-           default_item.setVisibility(View.GONE);
-           try {
-               JSONObject jsonObject = new JSONObject(response);
-               JSONArray jsonArray = jsonObject.getJSONArray("chatLists");
+        String response = PreferenceManager.getDefaultSharedPreferences(getActivity()).getString("chatList", "");
+        if (!TextUtils.isEmpty(response)) {
+            default_item.setVisibility(View.GONE);
+            try {
+                JSONObject jsonObject = new JSONObject(response);
+                JSONArray jsonArray = jsonObject.getJSONArray("chatLists");
 
-               for (int i = 0; i < jsonArray.length(); i++) {
-                   JSONObject chatListObj = jsonArray.getJSONObject(i);
-                   JSONObject poster_info = chatListObj.getJSONObject("1");
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject chatListObj = jsonArray.getJSONObject(i);
+                    JSONObject poster_info = chatListObj.getJSONObject("1");
 
-                   ChatList chat =  new ChatList(
-                           chatListObj.getString("sender_id"),
-                           chatListObj.getString("receiver_id"),
-                           chatListObj.getString("last_message"),
-                           poster_info.getString("image"),
-                           poster_info.getString("username"),
-                           chatListObj.getString("0"),
-                           chatListObj.getString("message_status"),
-                           chatListObj.getString("message_type"),
-                           chatListObj.getString("notification_count_sender"),
-                           chatListObj.getString("notification_count_receiver"),
-                          getResources().getString(R.string.offline),
-                           chatListObj.getString("chat_type"),
-                           poster_info.toString()
-                   );
+                    ChatList chat = new ChatList(
+                            chatListObj.getString("sender_id"),
+                            chatListObj.getString("receiver_id"),
+                            chatListObj.getString("last_message"),
+                            poster_info.getString("image"),
+                            poster_info.getString("username"),
+                            chatListObj.getString("0"),
+                            chatListObj.getString("message_status"),
+                            chatListObj.getString("message_type"),
+                            chatListObj.getString("notification_count_sender"),
+                            chatListObj.getString("notification_count_receiver"),
+                            getResources().getString(R.string.offline),
+                            chatListObj.getString("chat_type"),
+                            poster_info.toString()
+                    );
 
-                       updateChatList(chat);
-               }
-
-
+                    updateChatList(chat);
+                }
 
 
-
-           } catch (JSONException e) {
-               e.printStackTrace();
-           }
-       }else{
-           default_item.setVisibility(View.VISIBLE);
-       }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        } else {
+            default_item.setVisibility(View.VISIBLE);
+        }
 
 
     }

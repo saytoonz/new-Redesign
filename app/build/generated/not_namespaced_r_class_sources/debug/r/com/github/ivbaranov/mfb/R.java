@@ -12,17 +12,17 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int mfb_animate_favorite = 0x7f0401d0;
-        public static final int mfb_animate_unfavorite = 0x7f0401d1;
-        public static final int mfb_bounce_duration = 0x7f0401d2;
-        public static final int mfb_color = 0x7f0401d3;
-        public static final int mfb_favorite_image = 0x7f0401d4;
-        public static final int mfb_not_favorite_image = 0x7f0401d5;
-        public static final int mfb_padding = 0x7f0401d6;
-        public static final int mfb_rotation_angle = 0x7f0401d7;
-        public static final int mfb_rotation_duration = 0x7f0401d8;
-        public static final int mfb_size = 0x7f0401d9;
-        public static final int mfb_type = 0x7f0401da;
+        public static final int mfb_animate_favorite = 0x7f0401f0;
+        public static final int mfb_animate_unfavorite = 0x7f0401f1;
+        public static final int mfb_bounce_duration = 0x7f0401f2;
+        public static final int mfb_color = 0x7f0401f3;
+        public static final int mfb_favorite_image = 0x7f0401f4;
+        public static final int mfb_not_favorite_image = 0x7f0401f5;
+        public static final int mfb_padding = 0x7f0401f6;
+        public static final int mfb_rotation_angle = 0x7f0401f7;
+        public static final int mfb_rotation_duration = 0x7f0401f8;
+        public static final int mfb_size = 0x7f0401f9;
+        public static final int mfb_type = 0x7f0401fa;
     }
     public static final class drawable {
         private drawable() {}
@@ -40,9 +40,9 @@ public final class R {
         private id() {}
 
         public static final int black = 0x7f0b004c;
-        public static final int heart = 0x7f0b010a;
-        public static final int star = 0x7f0b01e8;
-        public static final int white = 0x7f0b023a;
+        public static final int heart = 0x7f0b010d;
+        public static final int star = 0x7f0b01f0;
+        public static final int white = 0x7f0b0242;
     }
     public static final class string {
         private string() {}
@@ -52,7 +52,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] MaterialFavoriteButton = { 0x7f0401d0, 0x7f0401d1, 0x7f0401d2, 0x7f0401d3, 0x7f0401d4, 0x7f0401d5, 0x7f0401d6, 0x7f0401d7, 0x7f0401d8, 0x7f0401d9, 0x7f0401da };
+        public static final int[] MaterialFavoriteButton = { 0x7f0401f0, 0x7f0401f1, 0x7f0401f2, 0x7f0401f3, 0x7f0401f4, 0x7f0401f5, 0x7f0401f6, 0x7f0401f7, 0x7f0401f8, 0x7f0401f9, 0x7f0401fa };
         public static final int MaterialFavoriteButton_mfb_animate_favorite = 0;
         public static final int MaterialFavoriteButton_mfb_animate_unfavorite = 1;
         public static final int MaterialFavoriteButton_mfb_bounce_duration = 2;

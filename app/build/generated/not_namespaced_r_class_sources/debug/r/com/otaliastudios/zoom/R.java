@@ -15,38 +15,38 @@ public final class R {
         public static final int alignment = 0x7f040040;
         public static final int allowFlingInOverscroll = 0x7f040041;
         public static final int animationDuration = 0x7f040045;
-        public static final int flingEnabled = 0x7f04012a;
-        public static final int hasClickableChildren = 0x7f04013a;
-        public static final int horizontalPanEnabled = 0x7f040149;
-        public static final int maxZoom = 0x7f0401cb;
-        public static final int maxZoomType = 0x7f0401cc;
-        public static final int minZoom = 0x7f0401de;
-        public static final int minZoomType = 0x7f0401df;
-        public static final int oneFingerScrollEnabled = 0x7f0401f8;
-        public static final int overPinchable = 0x7f0401f9;
-        public static final int overScrollHorizontal = 0x7f0401fa;
-        public static final int overScrollVertical = 0x7f0401fb;
-        public static final int scrollEnabled = 0x7f04022f;
-        public static final int threeFingersScrollEnabled = 0x7f0402a7;
-        public static final int transformation = 0x7f0402c7;
-        public static final int transformationGravity = 0x7f0402c8;
-        public static final int twoFingersScrollEnabled = 0x7f0402ca;
-        public static final int verticalPanEnabled = 0x7f0402ce;
-        public static final int zoomEnabled = 0x7f0402de;
+        public static final int flingEnabled = 0x7f04014a;
+        public static final int hasClickableChildren = 0x7f04015a;
+        public static final int horizontalPanEnabled = 0x7f040169;
+        public static final int maxZoom = 0x7f0401eb;
+        public static final int maxZoomType = 0x7f0401ec;
+        public static final int minZoom = 0x7f0401fe;
+        public static final int minZoomType = 0x7f0401ff;
+        public static final int oneFingerScrollEnabled = 0x7f040218;
+        public static final int overPinchable = 0x7f040219;
+        public static final int overScrollHorizontal = 0x7f04021a;
+        public static final int overScrollVertical = 0x7f04021b;
+        public static final int scrollEnabled = 0x7f04024f;
+        public static final int threeFingersScrollEnabled = 0x7f0402c7;
+        public static final int transformation = 0x7f0402e7;
+        public static final int transformationGravity = 0x7f0402e8;
+        public static final int twoFingersScrollEnabled = 0x7f0402ea;
+        public static final int verticalPanEnabled = 0x7f0402ee;
+        public static final int zoomEnabled = 0x7f0402fe;
     }
     public static final class id {
         private id() {}
 
         public static final int centerCrop = 0x7f0b0068;
         public static final int centerInside = 0x7f0b0069;
-        public static final int none = 0x7f0b0159;
-        public static final int realZoom = 0x7f0b018e;
-        public static final int zoom = 0x7f0b023f;
+        public static final int none = 0x7f0b015d;
+        public static final int realZoom = 0x7f0b0192;
+        public static final int zoom = 0x7f0b0247;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] ZoomEngine = { 0x7f040040, 0x7f040041, 0x7f040045, 0x7f04012a, 0x7f04013a, 0x7f040149, 0x7f0401cb, 0x7f0401cc, 0x7f0401de, 0x7f0401df, 0x7f0401f8, 0x7f0401f9, 0x7f0401fa, 0x7f0401fb, 0x7f04022f, 0x7f0402a7, 0x7f0402c7, 0x7f0402c8, 0x7f0402ca, 0x7f0402ce, 0x7f0402de };
+        public static final int[] ZoomEngine = { 0x7f040040, 0x7f040041, 0x7f040045, 0x7f04014a, 0x7f04015a, 0x7f040169, 0x7f0401eb, 0x7f0401ec, 0x7f0401fe, 0x7f0401ff, 0x7f040218, 0x7f040219, 0x7f04021a, 0x7f04021b, 0x7f04024f, 0x7f0402c7, 0x7f0402e7, 0x7f0402e8, 0x7f0402ea, 0x7f0402ee, 0x7f0402fe };
         public static final int ZoomEngine_alignment = 0;
         public static final int ZoomEngine_allowFlingInOverscroll = 1;
         public static final int ZoomEngine_animationDuration = 2;

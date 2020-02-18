@@ -4,6 +4,7 @@ public class ChatList {
     private String sender, receiver, message, online_status,
             userImage, username, timestamp, message_status, chat_type,
             message_type, notification_count_sender, notification_count_receiver, friendJson;
+    private int itemPosition;
 
     public ChatList(String sender, String receiver, String message,
                     String userImage, String username,
@@ -23,6 +24,15 @@ public class ChatList {
         this.online_status = online_status;
         this.chat_type = chat_type;
         this.friendJson = friendJson;
+    }
+
+
+    public int getItemPosition() {
+        return itemPosition;
+    }
+
+    public void setItemPosition(int itemPosition) {
+        this.itemPosition = itemPosition;
     }
 
     public String getSender() {

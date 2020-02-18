@@ -338,6 +338,38 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr fb_borderColor
+attr fb_borderWidth
+attr fb_defaultColor
+attr fb_disabledBorderColor
+attr fb_disabledColor
+attr fb_disabledTextColor
+attr fb_focusColor
+attr fb_fontIconResource
+attr fb_fontIconSize
+attr fb_ghost
+attr fb_iconColor
+attr fb_iconFont
+attr fb_iconPaddingBottom
+attr fb_iconPaddingLeft
+attr fb_iconPaddingRight
+attr fb_iconPaddingTop
+attr fb_iconPosition
+attr fb_iconResource
+attr fb_radius
+attr fb_radiusBottomLeft
+attr fb_radiusBottomRight
+attr fb_radiusTopLeft
+attr fb_radiusTopRight
+attr fb_text
+attr fb_textAllCaps
+attr fb_textColor
+attr fb_textFont
+attr fb_textFontRes
+attr fb_textGravity
+attr fb_textPosition
+attr fb_textSize
+attr fb_useSystemFont
 attr fill_color
 attr firstBaselineToTopHeight
 attr flingEnabled
@@ -831,6 +863,7 @@ color brown
 color bubble_right_bottom
 color bubble_right_center
 color bubble_right_top
+color button_focused
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -4039,17 +4072,22 @@ drawable ic_volume
 drawable ic_volume_up_white_24dp
 drawable icons8_cancel_80px
 drawable icons8_chat_80
+drawable icons8_check_all_100
 drawable icons8_circled_play_100
 drawable icons8_connection_status_on_80
 drawable icons8_download_200
 drawable icons8_error_96
 drawable icons8_eye_64
 drawable icons8_info_80px
+drawable icons8_mute_100
 drawable icons8_news_feed_64
 drawable icons8_plus_100
+drawable icons8_read_message_100
 drawable icons8_remove_administrator_80px
 drawable icons8_slider_80
 drawable icons8_speech_bubble_64
+drawable icons8_uncheck_all_100
+drawable icons8_unmute_100
 drawable icons8_video_call_100
 drawable icons8_video_file_64
 drawable image_placeholder
@@ -4061,6 +4099,7 @@ drawable input_light_white
 drawable instagram
 drawable left_iv_bg
 drawable left_tv_bg
+drawable list_selector_background
 drawable location_icon
 drawable lock_ic
 drawable logo_gradient
@@ -4274,6 +4313,7 @@ id center_vertical
 id chains
 id chatRV
 id chatView
+id chatlist_item_laytout
 id chats_list_recycler
 id check_view
 id checkbox
@@ -4282,6 +4322,7 @@ id chronometer
 id circular_status_view
 id clip_horizontal
 id clip_vertical
+id closeSelection
 id close_imageView
 id collapseActionView
 id comment_button
@@ -4306,6 +4347,7 @@ id default_item
 id default_text
 id default_title
 id delete
+id deleteSelected
 id delete_button
 id delete_comment
 id delete_discovery
@@ -4505,6 +4547,7 @@ id moreLL
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
+id muteSelected
 id name
 id navigation_header_container
 id never
@@ -4612,9 +4655,12 @@ id search_src_text
 id search_voice_btn
 id seekArc
 id seekbarLL
+id selectAll
 id select_dialog_listview
 id selected
 id selected_album
+id selectionCounter
+id selectionMenuHolder
 id sendLL
 id sendLayout
 id sendMRL
@@ -4623,6 +4669,7 @@ id sendReply_viewers_iv
 id sendSound
 id send_comment
 id senderNameTV
+id setReadSelected
 id share_button
 id shortcut
 id showCustom
@@ -5663,6 +5710,7 @@ styleable Emoticon emojiconSize
 styleable ExpandIconView eiv_animationDuration eiv_color eiv_colorIntermediate eiv_colorLess eiv_colorMore eiv_padding eiv_roundedCorners eiv_switchColor
 styleable ExpandableCardView animation_duration content_view expanded header_view
 styleable ExpandableLayout expDuration expExpandScrollTogether expWithParentScroll
+styleable FancyButtonsAttrs android_enabled android_textSize android_textStyle android_text android_textAllCaps android_fontFamily fb_borderColor fb_borderWidth fb_defaultColor fb_disabledBorderColor fb_disabledColor fb_disabledTextColor fb_focusColor fb_fontIconResource fb_fontIconSize fb_ghost fb_iconColor fb_iconFont fb_iconPaddingBottom fb_iconPaddingLeft fb_iconPaddingRight fb_iconPaddingTop fb_iconPosition fb_iconResource fb_radius fb_radiusBottomLeft fb_radiusBottomRight fb_radiusTopLeft fb_radiusTopRight fb_text fb_textAllCaps fb_textColor fb_textFont fb_textFontRes fb_textGravity fb_textPosition fb_textSize fb_useSystemFont
 styleable FloatingActionButton backgroundTint backgroundTintMode borderWidth elevation fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing

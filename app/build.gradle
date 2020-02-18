@@ -76,6 +76,9 @@ dependencies {
     //Notification Badge
     implementation 'com.nex3z:notification-badge:1.0.2'
 
+    implementation 'com.github.medyo:fancybuttons:1.9.1'
+
+
     implementation 'com.github.lguipeng:AnimCheckBox:1.0.1'
 
     implementation 'com.github.zagum:Android-ExpandIcon:1.2.1'

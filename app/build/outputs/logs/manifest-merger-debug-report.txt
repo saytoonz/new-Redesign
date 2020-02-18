@@ -50,6 +50,7 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Saytoonz\.gradle\
 MERGED from [id.zelory:compressor:2.1.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a34cdec101612f6e43baa561f9b5079e\compressor-2.1.0\AndroidManifest.xml:2:1-12:12
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d5d4faad8dd6653d0501f884184e24ad\videocache-2.7.1\AndroidManifest.xml:2:1-14:12
 MERGED from [com.otaliastudios:zoomlayout:1.7.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d4f7ba2feaf5f3cc1d167d4b7ac47792\zoomlayout-1.7.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.medyo:fancybuttons:1.9.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\4e2e1d09d9c2d25d52576418436d49ac\jetified-fancybuttons-1.9.1\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.lguipeng:AnimCheckBox:1.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\addb9ad07b49d38d74a6387e4c2f082c\AnimCheckBox-1.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9959b5a09d89ce1d2fd2721862f78472\material-ripple-1.0.2\AndroidManifest.xml:2:1-14:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\a1f9de3af0f52d09b9465b6883ab7185\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
@@ -195,6 +196,8 @@ MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\Saytoonz\.gradle\c
 MERGED from [com.github.bumptech.glide:glide:4.10.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\bdd1061c749eb15976ba880d82b1a0ed\glide-4.10.0\AndroidManifest.xml:10:5-20
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d5d4faad8dd6653d0501f884184e24ad\videocache-2.7.1\AndroidManifest.xml:12:5-20
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d5d4faad8dd6653d0501f884184e24ad\videocache-2.7.1\AndroidManifest.xml:12:5-20
+MERGED from [com.github.medyo:fancybuttons:1.9.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\4e2e1d09d9c2d25d52576418436d49ac\jetified-fancybuttons-1.9.1\AndroidManifest.xml:11:5-20
+MERGED from [com.github.medyo:fancybuttons:1.9.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\4e2e1d09d9c2d25d52576418436d49ac\jetified-fancybuttons-1.9.1\AndroidManifest.xml:11:5-20
 MERGED from [com.github.lguipeng:AnimCheckBox:1.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\addb9ad07b49d38d74a6387e4c2f082c\AnimCheckBox-1.0.1\AndroidManifest.xml:11:5-15:19
 MERGED from [com.github.lguipeng:AnimCheckBox:1.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\addb9ad07b49d38d74a6387e4c2f082c\AnimCheckBox-1.0.1\AndroidManifest.xml:11:5-15:19
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9959b5a09d89ce1d2fd2721862f78472\material-ripple-1.0.2\AndroidManifest.xml:12:5-20
@@ -393,6 +396,8 @@ MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\tra
 MERGED from [com.danikula:videocache:2.7.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d5d4faad8dd6653d0501f884184e24ad\videocache-2.7.1\AndroidManifest.xml:8:5-10:41
 MERGED from [com.otaliastudios:zoomlayout:1.7.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d4f7ba2feaf5f3cc1d167d4b7ac47792\zoomlayout-1.7.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.otaliastudios:zoomlayout:1.7.0] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\d4f7ba2feaf5f3cc1d167d4b7ac47792\zoomlayout-1.7.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.medyo:fancybuttons:1.9.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\4e2e1d09d9c2d25d52576418436d49ac\jetified-fancybuttons-1.9.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.medyo:fancybuttons:1.9.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\4e2e1d09d9c2d25d52576418436d49ac\jetified-fancybuttons-1.9.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.lguipeng:AnimCheckBox:1.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\addb9ad07b49d38d74a6387e4c2f082c\AnimCheckBox-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.lguipeng:AnimCheckBox:1.0.1] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\addb9ad07b49d38d74a6387e4c2f082c\AnimCheckBox-1.0.1\AndroidManifest.xml:7:5-9:41
 MERGED from [com.balysv:material-ripple:1.0.2] C:\Users\Saytoonz\.gradle\caches\transforms-2\files-2.1\9959b5a09d89ce1d2fd2721862f78472\material-ripple-1.0.2\AndroidManifest.xml:8:5-10:41
