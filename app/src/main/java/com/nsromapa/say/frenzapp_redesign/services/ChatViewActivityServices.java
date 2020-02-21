@@ -135,7 +135,7 @@ public class ChatViewActivityServices extends Service {
                 if (jsonArray.length() > 0) {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject statusObj = jsonArray.getJSONObject(i);
-                        Log.e("getStatusUpdate", "getStatusUpdate: " + statusObj.toString());
+//                        Log.e("getStatusUpdate", "getStatusUpdate: " + statusObj.toString());
                         updateUserStatus(statusObj.getString("online_status"), UserId, statusObj.getString("0"));
                     }
                 }
@@ -149,7 +149,7 @@ public class ChatViewActivityServices extends Service {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
                 post.put("other_user", UserId);
                 post.put("grabStatusList", "");
                 return post;
@@ -164,7 +164,7 @@ public class ChatViewActivityServices extends Service {
     private void getMessages() {
         if (db != null){
             Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
+                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid(getApplicationContext()) +
                     "' AND ((" + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + "='" + UserId +
                     "') OR (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + UserId +
                     "')) ORDER BY " + MessagesReaderContract.MessageEntry._ID + " ASC LIMIT " + offset + ",~0;", null);
@@ -226,7 +226,7 @@ public class ChatViewActivityServices extends Service {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
                 post.put("other_user", UserId);
                 post.put("setAllMessagesSeen", "");
                 return post;

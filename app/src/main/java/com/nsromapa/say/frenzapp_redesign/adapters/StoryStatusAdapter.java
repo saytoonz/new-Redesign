@@ -59,7 +59,7 @@ public class StoryStatusAdapter extends RecyclerView.Adapter<StoryStatusAdapter.
 
         holder.poster_info.setText(list.getPosterName());
 
-        if (list.getPosterId().equals(Utils.getUserUid())) {
+        if (list.getPosterId().equals(Utils.getUserUid(context))) {
             holder.add_new_story.show();
             holder.add_new_story.setOnClickListener(v -> Toasty.success(context, "Create new Story").show());
         } else {

@@ -97,7 +97,7 @@ public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
                 p0.dislike_comment.setOnClickListener(v -> dislikeComment(list.getComment_id()));
 
                 if (list.getComment_or_description().equals("comment")
-                        && list.getCommenter_id().equals(Utils.getUserUid())){
+                        && list.getCommenter_id().equals(Utils.getUserUid(context))){
                     p0.delete_comment.setVisibility(View.VISIBLE);
                     p0.delete_comment.setOnClickListener (v -> askToDeleteComment(list.getComment_id(), position));
                 }
@@ -205,7 +205,7 @@ public class DiscoveryCommentAdapter extends RecyclerView.Adapter {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(context));
                 postMap.put("comment_discovery_delete", "true");
                 postMap.put("comment_id", comment_id);
                 return postMap;

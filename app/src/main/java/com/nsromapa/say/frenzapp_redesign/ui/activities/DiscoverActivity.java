@@ -282,7 +282,7 @@ public class DiscoverActivity extends AppCompatActivity {
 
             posterNameTV.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
             posterImageView.setOnClickListener(v -> profileWithUserJson(this, mDiscoveryList.getPosterJson()));
-            if (posterJson.getString("id").equals(Utils.getUserUid())) {
+            if (posterJson.getString("id").equals(Utils.getUserUid(getApplicationContext()))) {
                 delete_discovery.setVisibility(View.VISIBLE);
                 delete_discovery.setOnClickListener(v -> askToDeleteStory());
                 viewsLinearLayout.setOnClickListener(v ->
@@ -318,7 +318,7 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getApplicationContext()));
                 postMap.put("story_delete", "true");
                 postMap.put("story_id", mDiscoveryList.getId());
                 postMap.put("delete_from_status_or_discovery", "discoveries");
@@ -338,7 +338,7 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getApplicationContext()));
                 postMap.put("unlike_discovery", "true");
                 postMap.put("discovery_id", mDiscoveryList.getId());
                 return postMap;
@@ -355,7 +355,7 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getApplicationContext()));
                 postMap.put("like_discovery", "true");
                 postMap.put("discovery_id", mDiscoveryList.getId());
                 return postMap;
@@ -374,7 +374,7 @@ public class DiscoverActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getApplicationContext()));
                 postMap.put("watch_story", "true");
                 postMap.put("discovery_id", mDiscoveryList.getId());
                 return postMap;
@@ -387,13 +387,13 @@ public class DiscoverActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid(getApplicationContext()));
 
     }
 
     @Override
     protected void onPause() {
-        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid(getApplicationContext()));
         super.onPause();
     }
 }

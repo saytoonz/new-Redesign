@@ -84,7 +84,7 @@ public class ChatView extends RelativeLayout {
     private List<String> trackingLocalIds = new ArrayList<>();
 
     protected List<Message> messageList;
-    protected static MessageAdapter messageAdapter;
+    public static MessageAdapter messageAdapter;
     protected boolean showSenderLL = false;
     protected boolean showLeftBubbleIcon = true;
     protected boolean showRightBubbleIcon = true;
@@ -171,8 +171,11 @@ public class ChatView extends RelativeLayout {
     }
 
 
-    public RecordingListener getRecordingListener() {
-        return recordingListener;
+    public MaterialRippleLayout getRecordARL(){
+        return recordARL;
+    }
+    public LinearLayout getSendLL() {
+        return sendLL;
     }
 
     public void setRecordingListener(RecordingListener recordingListener) {

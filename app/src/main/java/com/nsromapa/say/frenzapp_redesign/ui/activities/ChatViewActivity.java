@@ -4,7 +4,8 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Application;
 import android.app.Dialog;
-import android.app.NotificationManager;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -23,6 +24,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,14 +35,12 @@ import androidx.core.content.FileProvider;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.bumptech.glide.Glide;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.karumi.dexter.Dexter;
-import com.karumi.dexter.DexterBuilder;
-import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
 import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.karumi.dexter.listener.single.PermissionListener;
 import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.gifpack.giphy.GiphyGifProvider;
@@ -65,6 +65,8 @@ import com.zhihu.matisse.MimeType;
 
 import net.sqlcipher.database.SQLiteDatabase;
 
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,6 +76,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import es.dmoral.toasty.Toasty;
+import mehdi.sakout.fancybuttons.FancyButton;
 import omrecorder.AudioChunk;
 import omrecorder.OmRecorder;
 import omrecorder.PullTransport;
@@ -84,6 +87,7 @@ import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.resumeM
 import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.stopMediaPlayer;
 import static com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper.DATABASE_LOCATION;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
+import static com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView.messageAdapter;
 import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 import static com.nsromapa.say.frenzapp_redesign.utils.Utils.downloadSoundAudio;
 
@@ -91,6 +95,8 @@ public class ChatViewActivity extends AppCompatActivity
         implements ChatView.RecordingListener, PullTransport.OnAudioChunkPulledListener {
 
     private static final String TAG = "ChatViewActivity";
+    public static boolean message_isSelectionMode = false;
+
     private EmoticonGIFKeyboardFragment mEmoticonGIFKeyboardFragment;
     private static InputMethodManager inputMethodManager;
     private MediaPlayer mMediaPlayer;
@@ -103,6 +109,7 @@ public class ChatViewActivity extends AppCompatActivity
     private static TextView statusTV;
     List<String> mSelected;
     List<String> mSelectedLocal;
+    private Message replyMessage;
 
     private EmoticonEditText messageEditText;
     private MaterialRippleLayout emojiKeyboardToggler;
@@ -122,6 +129,9 @@ public class ChatViewActivity extends AppCompatActivity
     View view;
     Application application;
     private static Context context;
+    private static HorizontalScrollView selectionMenuHolder;
+    private static FancyButton selectionCounter;
+    private static FloatingActionButton replySelected, forwardSelected, copySelected, deleteSelected, translateSelections, closeSelection;
 
     public static void updateUserStatus(String grabStatus, String otherUid, String lastSeen) {
         if (otherUid.equals(thisUserId)) {
@@ -129,7 +139,7 @@ public class ChatViewActivity extends AppCompatActivity
             if (!grabStatus.isEmpty()) {
                 if (grabStatus.equals("Online"))
                     statusTV.setText("Online");
-                else if (grabStatus.equals("typing_" + Utils.getUserUid())) {
+                else if (grabStatus.equals("typing_" + Utils.getUserUid(context))) {
                     statusTV.setText("Typing…");
                 } else if (grabStatus.contains("typing_")) {
                     statusTV.setText("online");
@@ -158,21 +168,52 @@ public class ChatViewActivity extends AppCompatActivity
     }
 
 
-    public static void updateUserOnlineStatus(int what){
-        if(what == 1){
-            new UpdateOnlineStatus(context, "typing_" + thisUserId,  Utils.getUserUid()).execute();
-        }else{
-            new UpdateOnlineStatus(context, "Online",  Utils.getUserUid()).execute();
+    public static void updateUserOnlineStatus(int what) {
+        if (what == 1) {
+            new UpdateOnlineStatus(context, "typing_" + thisUserId, Utils.getUserUid(context)).execute();
+        } else {
+            new UpdateOnlineStatus(context, "Online", Utils.getUserUid(context)).execute();
         }
     }
 
+
+    public static void disableSelectionMode() {
+        messageAdapter.disableSelection();
+        setSelectionCount("0");
+        chatView.getSendLL().setVisibility(View.VISIBLE);
+        chatView.getRecordARL().setVisibility(View.VISIBLE);
+        selectionMenuHolder.setVisibility(View.GONE);
+    }
+
+
+    public static void showMenuSelectionView() {
+        selectionMenuHolder.setVisibility(View.VISIBLE);
+        chatView.getSendLL().setVisibility(View.GONE);
+        chatView.getRecordARL().setVisibility(View.GONE);
+    }
+
+
+    public static void showHideMenusOnSelection(){
+        if (messageAdapter.getSelectedList().size() > 1){
+            replySelected.hide();
+        }else{
+            replySelected.show();
+        }
+    }
+
+
+
+
+
+    public static void setSelectionCount(String count) {
+        selectionCounter.setText(count);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_view);
         if (getIntent() != null) {
-
             if (getIntent().hasExtra("chatType") &&
                     getIntent().hasExtra("thisUserId") && getIntent().hasExtra("thisUserJson")) {
                 chatType = getIntent().getStringExtra("chatType");
@@ -218,6 +259,16 @@ public class ChatViewActivity extends AppCompatActivity
         inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         chatView = findViewById(R.id.chatView);
         statusTV = findViewById(R.id.statusTV);
+
+        selectionMenuHolder = findViewById(R.id.selectionMenuHolder);
+        selectionCounter = findViewById(R.id.selectionCounter);
+        replySelected = findViewById(R.id.replySelected);
+        deleteSelected = findViewById(R.id.deleteSelected);
+        forwardSelected = findViewById(R.id.forwardSelected);
+        copySelected = findViewById(R.id.copySelected);
+        translateSelections = findViewById(R.id.translateSelections);
+        closeSelection = findViewById(R.id.closeSelection);
+
         chatView.requestFocus();
         mSelected = new ArrayList<>();
         mSelectedLocal = new ArrayList<>();
@@ -234,6 +285,43 @@ public class ChatViewActivity extends AppCompatActivity
         sampleRate = AudioSampleRate.HZ_16000;
 
 
+        closeSelection.setOnClickListener(v -> disableSelectionMode());
+        copySelected.setOnClickListener(v -> {
+            StringBuilder textToCopy = new StringBuilder();
+            List<String> selectedList = messageAdapter.getSelectedList();
+            for (int i = 0; i < selectedList.size(); i++) {
+               String messageText =  messageAdapter.getMessageText(Integer.parseInt(selectedList.get(i)));
+               if (!TextUtils.isEmpty(messageText)){
+                   textToCopy.append("\n").append(messageText);
+               }
+            }
+            disableSelectionMode();
+            if (!TextUtils.isEmpty(textToCopy)){
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("FrenzApp", textToCopy);
+                assert clipboard != null;
+                clipboard.setPrimaryClip(clip);
+            }else{
+                Toasty.warning(this, "No text found....").show();
+            }
+        });
+
+
+
+        replySelected.setOnClickListener(v -> {
+            List<String> selectedList = messageAdapter.getSelectedList();
+            for (int i  = 0; i < selectedList.size(); i++){
+                Message message = messageAdapter.getMessageItem(Integer.parseInt(selectedList.get(i)));
+                if (message != null){
+                    setReplyWithMessage(message);
+                }
+            }
+            disableSelectionMode();
+        });
+
+
+
+
         sendBtn.setOnClickListener(v -> {
             if (!TextUtils.isEmpty(Objects.requireNonNull(messageEditText.getText()).toString().trim())) {
                 String message = messageEditText.getText().toString().trim();
@@ -241,7 +329,6 @@ public class ChatViewActivity extends AppCompatActivity
                 sendMessageText(message);
             }
         });
-
 
         //Gallery button click listener
         chatView.setOnClickGalleryButtonListener(() -> Matisse.from(ChatViewActivity.this)
@@ -284,6 +371,11 @@ public class ChatViewActivity extends AppCompatActivity
 
     }
 
+    private void setReplyWithMessage(Message message) {
+        replyMessage = message;
+
+    }
+
 
     private void insertSthToDb(Message message) {
         new MessageInsertion(this, chatView, message, chatType).execute(thisUserJson);
@@ -294,8 +386,8 @@ public class ChatViewActivity extends AppCompatActivity
         message.setBody(body);
         message.setMessageType(Message.MessageType.RightSimpleMessage);
         message.setTime(getTime());
-        message.setUserName(Utils.getUserName());
-        message.setUserIcon(Utils.getUserImage());
+        message.setUserName(Utils.getUserName(context));
+        message.setUserIcon(Utils.getUserImage(context));
         insertSthToDb(message);
 
     }
@@ -311,10 +403,10 @@ public class ChatViewActivity extends AppCompatActivity
         message.setBody(filename);
         message.setMessageType(Message.MessageType.RightSound);
         message.setTime(getTime());
-        message.setUserName(Utils.getUserName());
+        message.setUserName(Utils.getUserName(context));
         message.setLocalLocation(localPath);
         message.setSingleUrl("");
-        message.setUserIcon(Utils.getUserImage());
+        message.setUserIcon(Utils.getUserImage(context));
         insertSthToDb(message);
     }
 
@@ -329,10 +421,10 @@ public class ChatViewActivity extends AppCompatActivity
         message.setBody(filename);
         message.setMessageType(Message.MessageType.RightGIF);
         message.setTime(getTime());
-        message.setUserName(Utils.getUserName());
+        message.setUserName(Utils.getUserName(context));
         message.setLocalLocation(localPath);
         message.setSingleUrl(gif.getGifUrl());
-        message.setUserIcon(Utils.getUserImage());
+        message.setUserIcon(Utils.getUserImage(context));
 //            chatView.addMessage(message);
         insertSthToDb(message);
     }
@@ -343,10 +435,10 @@ public class ChatViewActivity extends AppCompatActivity
         message.setBody(sticker.getName());
         message.setMessageType(Message.MessageType.RightSticker);
         message.setTime(getTime());
-        message.setUserName(Utils.getUserName());
+        message.setUserName(Utils.getUserName(context));
         message.setLocalLocation(sticker.getAbsolutePath());
         message.setSingleUrl(sticker.getAbsolutePath());
-        message.setUserIcon(Utils.getUserImage());
+        message.setUserIcon(Utils.getUserImage(context));
         insertSthToDb(message);
     }
 
@@ -381,10 +473,10 @@ public class ChatViewActivity extends AppCompatActivity
                         message.setBody("");
                         message.setMessageType(Message.MessageType.RightSingleImage);
                         message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
+                        message.setUserName(Utils.getUserName(context));
                         message.setSingleUrl(mSelected.get(0));
                         message.setLocalLocation(mSelected.get(0));
-                        message.setUserIcon(Utils.getUserImage());
+                        message.setUserIcon(Utils.getUserImage(context));
                         insertSthToDb(message);
                     } else {
 
@@ -392,10 +484,10 @@ public class ChatViewActivity extends AppCompatActivity
                         message.setBody("");
                         message.setMessageType(Message.MessageType.RightMultipleImages);
                         message.setTime(getTime());
-                        message.setUserName(Utils.getUserName());
+                        message.setUserName(Utils.getUserName(context));
                         message.setImageList(mSelected);
                         message.setImageListNames(mSelectedLocal);
-                        message.setUserIcon(Utils.getUserImage());
+                        message.setUserIcon(Utils.getUserImage(context));
                         insertSthToDb(message);
                     }
 
@@ -409,9 +501,9 @@ public class ChatViewActivity extends AppCompatActivity
                     Message message = new Message();
                     message.setMessageType(Message.MessageType.RightVideo);
                     message.setTime(getTime());
-                    message.setUserName(Utils.getUserName());
+                    message.setUserName(Utils.getUserName(context));
                     message.setSingleUrl(getPathVideo(Objects.requireNonNull(data.getData())));
-                    message.setUserIcon(Utils.getUserImage());
+                    message.setUserIcon(Utils.getUserImage(context));
                     insertSthToDb(message);
                 }
                 break;
@@ -424,10 +516,10 @@ public class ChatViewActivity extends AppCompatActivity
                     Message message = new Message();
                     message.setMessageType(Message.MessageType.RightSingleImage);
                     message.setTime(getTime());
-                    message.setUserName(Utils.getUserName());
+                    message.setUserName(Utils.getUserName(context));
                     File file = new File(Environment.getExternalStorageDirectory(), "MyPhoto.jpg");
                     message.setSingleUrl(file.getAbsolutePath());
-                    message.setUserIcon(Utils.getUserImage());
+                    message.setUserIcon(Utils.getUserImage(context));
                     insertSthToDb(message);
                 }
                 break;
@@ -446,14 +538,14 @@ public class ChatViewActivity extends AppCompatActivity
     private void sendAudio(String urlPath, String localPath) {
         if (urlPath == null || TextUtils.isEmpty(urlPath)) return;
 
-            Message message = new Message();
-            message.setMessageType(Message.MessageType.RightAudio);
-            message.setTime(getTime());
-            message.setUserName(Utils.getUserName());
-            message.setSingleUrl(urlPath);
-            message.setLocalLocation(localPath);
-            message.setUserIcon(Utils.getUserImage());
-            insertSthToDb(message);
+        Message message = new Message();
+        message.setMessageType(Message.MessageType.RightAudio);
+        message.setTime(getTime());
+        message.setUserName(Utils.getUserName(context));
+        message.setSingleUrl(urlPath);
+        message.setLocalLocation(localPath);
+        message.setUserIcon(Utils.getUserImage(context));
+        insertSthToDb(message);
     }
 
 
@@ -810,13 +902,13 @@ public class ChatViewActivity extends AppCompatActivity
     @Override
     public void onResume() {
         super.onResume();
-        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid(context));
     }
 
     @Override
     protected void onPause() {
         stopMediaPlayer();
-        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid(context));
         super.onPause();
     }
 
@@ -834,6 +926,8 @@ public class ChatViewActivity extends AppCompatActivity
             if (backToMain && !PreferenceManager.getDefaultSharedPreferences(this).getBoolean("isMainActivity", false)) {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+            } else if (message_isSelectionMode) {
+                disableSelectionMode();
             } else {
                 super.onBackPressed();
             }

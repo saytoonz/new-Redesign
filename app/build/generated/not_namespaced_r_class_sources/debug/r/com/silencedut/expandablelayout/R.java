@@ -12,13 +12,13 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int expDuration = 0x7f040111;
-        public static final int expExpandScrollTogether = 0x7f040112;
-        public static final int expWithParentScroll = 0x7f040113;
-        public static final int layoutManager = 0x7f040190;
-        public static final int reverseLayout = 0x7f040247;
-        public static final int spanCount = 0x7f040270;
-        public static final int stackFromEnd = 0x7f040276;
+        public static final int expDuration = 0x7f040112;
+        public static final int expExpandScrollTogether = 0x7f040113;
+        public static final int expWithParentScroll = 0x7f040114;
+        public static final int layoutManager = 0x7f040192;
+        public static final int reverseLayout = 0x7f04024b;
+        public static final int spanCount = 0x7f040274;
+        public static final int stackFromEnd = 0x7f04027a;
     }
     public static final class dimen {
         private dimen() {}
@@ -30,7 +30,7 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int item_touch_helper_previous_elevation = 0x7f0b0125;
+        public static final int item_touch_helper_previous_elevation = 0x7f0b0127;
     }
     public static final class string {
         private string() {}
@@ -40,11 +40,11 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] ExpandableLayout = { 0x7f040111, 0x7f040112, 0x7f040113 };
+        public static final int[] ExpandableLayout = { 0x7f040112, 0x7f040113, 0x7f040114 };
         public static final int ExpandableLayout_expDuration = 0;
         public static final int ExpandableLayout_expExpandScrollTogether = 1;
         public static final int ExpandableLayout_expWithParentScroll = 2;
-        public static final int[] RecyclerView = { 0x10100c4, 0x10100eb, 0x10100f1, 0x7f040123, 0x7f040124, 0x7f040125, 0x7f040126, 0x7f040127, 0x7f040190, 0x7f040247, 0x7f040270, 0x7f040276 };
+        public static final int[] RecyclerView = { 0x10100c4, 0x10100eb, 0x10100f1, 0x7f040124, 0x7f040125, 0x7f040126, 0x7f040127, 0x7f040128, 0x7f040192, 0x7f04024b, 0x7f040274, 0x7f04027a };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_android_clipToPadding = 1;
         public static final int RecyclerView_android_descendantFocusability = 2;

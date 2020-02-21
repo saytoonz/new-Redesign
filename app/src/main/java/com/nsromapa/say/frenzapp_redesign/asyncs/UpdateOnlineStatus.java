@@ -33,7 +33,7 @@ public class UpdateOnlineStatus extends AsyncTask<Void, Void, Void> {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
+                post.put("user_id", Utils.getUserUid(context));
                 post.put("setMyOnlineStatus", setMyOnlineStatus);
                 post.put("whoseStatus", whoseStatus);
                 return post;

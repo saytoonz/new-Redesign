@@ -1,37 +1,132 @@
 package com.nsromapa.say.frenzapp_redesign.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.media.AudioFormat;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.models.AudioChannel;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSampleRate;
 import com.nsromapa.say.frenzapp_redesign.models.AudioSource;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import es.dmoral.toasty.Toasty;
+
 public class Utils {
+
+    private static RequestQueue requestQueue;
 
     public Utils() {
     }
 
 
-    public static String getUserUid() {
+    public static void checkUserExistence(Context context) {
+        if (TextUtils.isEmpty(getUserUid(context))) {
+            LogOut(context);
+        } else {
+            findUserInfoOnline(getUserUid(context), context);
+        }
+    }
+
+
+    private static void findUserInfoOnline(String userUid, Context context) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Constants.STATUS,
+                response -> {
+                    if (response != null && !response.isEmpty()) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray jsonArray = jsonObject.getJSONArray("User");
+                            JSONObject rResponse = jsonArray.getJSONObject(0);
+
+                            if (rResponse.getString("response").equals("success")) {
+                                JSONObject user = jsonArray.getJSONObject(1);
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("id", user.getString("id")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("username", user.getString("username")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("full_name", user.getString("full_name")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("image", user.getString("image")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("phone", user.getString("phone")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("email", user.getString("email")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("bio", user.getString("bio")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("country", user.getString("country")).apply();
+                                PreferenceManager.getDefaultSharedPreferences(context).edit().putString("country_code", user.getString("country_code")).apply();
+
+                            } else {
+                                LogOut(context);
+                                Toasty.error(context, "Re-login required.", Toasty.LENGTH_LONG, true).show();
+                            }
+                        } catch (JSONException e) {
+                            LogOut(context);
+                            Toasty.error(context, "Re-login required.", Toasty.LENGTH_LONG, true).show();
+                        }
+                    } else {
+                        LogOut(context);
+                        Toasty.error(context, "Re-login required.", Toasty.LENGTH_LONG, true).show();
+                    }
+                },
+                error -> {
+//                    LogOut();
+//                    Toasty.error(context, "Re-login required.", Toasty.LENGTH_LONG, true).show();
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> post = new HashMap<>();
+                post.put("user_id", userUid);
+                post.put("checkOnUser", "");
+                return post;
+            }
+        };
+
+        if (requestQueue == null) {
+            requestQueue = Volley.newRequestQueue(context);
+        }
+        requestQueue.add(stringRequest);
+    }
+
+
+    public static void LogOut(Context context) {
+        Log.e("Utils", "LogOut: ======> Logging You out now..............");
+    }
+
+    public static String getUserUid(Context context) {
+        String Uid = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString("id", "0");
         return "2";
     }
 
-    public static String getUserImage() {
+    public static String getUserImage(Context context) {
+        String image = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString("image", "android.resource://com.nsromapa.say.frenzapp_redesign/drawable/contact_placeholder");
         return "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAyxdUJ8KLw1V8EHfAcSi6X94x13WHxQrgSIlve16-SFeVZYIGg&s";
-//        return "https://static-cdn.123rf.com/images/v5/index-thumbnail/84170952-b.jpg";
     }
 
-    public static String getUserName() {
+    public static String getUserName(Context context) {
+        String username = PreferenceManager.getDefaultSharedPreferences(context)
+                .getString("username", "");
         return "Saytoonz";
+    }
+
+    public static String getUserPhone(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString("phone", "");
+    }
+
+    public static String getUserBio(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString("bio", "");
     }
 
     public static String getMyFollowings() {
@@ -55,7 +150,6 @@ public class Utils {
         return isFollowingMe(user_id) && isMeFollowing(user_id);
     }
 
-
     public static String getUserInfoFromUserJSON(String userJson, String index) {
         try {
             JSONObject userObject = new JSONObject(userJson);
@@ -71,9 +165,9 @@ public class Utils {
     }
 
     public static void setFriendChatNotificationMuted(Context context, String friendId) {
-        if (isFriendChatNotificationMuted(context, friendId)){
+        if (isFriendChatNotificationMuted(context, friendId)) {
             PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("chatNotification_" + friendId, false).apply();
-        }else{
+        } else {
             PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean("chatNotification_" + friendId, true).apply();
         }
     }
@@ -117,7 +211,7 @@ public class Utils {
     }
 
 
-    public static void wait(int millis, Runnable callback, Handler HANDLER){
+    public static void wait(int millis, Runnable callback, Handler HANDLER) {
         HANDLER.postDelayed(callback, millis);
     }
 
@@ -132,10 +226,10 @@ public class Utils {
     }
 
     public static boolean isBrightColor(int color) {
-        if(android.R.color.transparent == color) {
+        if (android.R.color.transparent == color) {
             return true;
         }
-        int [] rgb = {Color.red(color), Color.green(color), Color.blue(color)};
+        int[] rgb = {Color.red(color), Color.green(color), Color.blue(color)};
         int brightness = (int) Math.sqrt(
                 rgb[0] * rgb[0] * 0.241 +
                         rgb[1] * rgb[1] * 0.691 +
@@ -177,7 +271,9 @@ public class Utils {
     public static String getChatNotificationName() {
         return "chatNotificationCount";
     }
+
     public static String getUserChatNotificationName() {
         return "chatNotificationCount_";
     }
+
 }

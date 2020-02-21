@@ -75,11 +75,11 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
 
         CircleImageView user_image = view.findViewById(R.id.user_image);
         Glide.with(context)
-                .load(Utils.getUserImage())
+                .load(Utils.getUserImage(context))
                 .into(user_image);
 
         TextView user_name = view.findViewById(R.id.user_name);
-        user_name.setText(Utils.getUserName());
+        user_name.setText(Utils.getUserName(context));
         EditText create_comment = view.findViewById(R.id.create_comment);
 
         ImageView send_comment = view.findViewById(R.id.send_comment);
@@ -176,7 +176,7 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(context));
                 postMap.put("discovery_comments", "true");
                 postMap.put("load", String.valueOf(loadCount));
                 postMap.put("discovery_id", discovery_id);
@@ -244,7 +244,7 @@ public class ShowDiscoveryComment extends BottomDrawerFragment {
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> postMap = new HashMap<>();
-                    postMap.put("user_id", Utils.getUserUid());
+                    postMap.put("user_id", Utils.getUserUid(context));
                     postMap.put("comment_discovery_post", "true");
                     postMap.put("comment",comment);
                     postMap.put("discovery_id", discovery_id);

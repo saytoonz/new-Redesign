@@ -12,12 +12,12 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int indicatorColor = 0x7f040176;
-        public static final int indicatorName = 0x7f040177;
-        public static final int maxHeight = 0x7f0401e7;
-        public static final int maxWidth = 0x7f0401ea;
-        public static final int minHeight = 0x7f0401fb;
-        public static final int minWidth = 0x7f0401fd;
+        public static final int indicatorColor = 0x7f040178;
+        public static final int indicatorName = 0x7f040179;
+        public static final int maxHeight = 0x7f0401e9;
+        public static final int maxWidth = 0x7f0401ec;
+        public static final int minHeight = 0x7f0401fe;
+        public static final int minWidth = 0x7f040200;
     }
     public static final class string {
         private string() {}
@@ -34,7 +34,7 @@ public final class R {
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] AVLoadingIndicatorView = { 0x7f040176, 0x7f040177, 0x7f0401e7, 0x7f0401ea, 0x7f0401fb, 0x7f0401fd };
+        public static final int[] AVLoadingIndicatorView = { 0x7f040178, 0x7f040179, 0x7f0401e9, 0x7f0401ec, 0x7f0401fe, 0x7f040200 };
         public static final int AVLoadingIndicatorView_indicatorColor = 0;
         public static final int AVLoadingIndicatorView_indicatorName = 1;
         public static final int AVLoadingIndicatorView_maxHeight = 2;

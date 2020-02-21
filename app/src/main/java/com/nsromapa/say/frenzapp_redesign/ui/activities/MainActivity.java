@@ -215,13 +215,13 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
     @Override
     public void onResume() {
         super.onResume();
-        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.online), Utils.getUserUid(getApplicationContext()));
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this, getResources().getString(R.string.offline), Utils.getUserUid(getApplicationContext()));
     }
 
     @Override

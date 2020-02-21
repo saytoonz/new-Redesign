@@ -146,7 +146,7 @@ public class BootCompleteService extends Service {
 
 
             // ICONS
-            mBuilder.setSmallIcon(R.mipmap.ic_launcher_foreground);
+            mBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
 
             Bitmap large_icon_bmp = ((BitmapDrawable) getApplicationContext().getResources()
                     .getDrawable(R.mipmap.ic_launcher_round)).getBitmap();
@@ -178,8 +178,8 @@ public class BootCompleteService extends Service {
     private void SendMessage() {
         if (db != null) {
             Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
-                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + Utils.getUserUid() +
+                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid(getApplicationContext()) +
+                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + Utils.getUserUid(getApplicationContext()) +
                     "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '' ORDER BY " +
                     MessagesReaderContract.MessageEntry._ID + " ASC", null);
 
@@ -211,7 +211,7 @@ public class BootCompleteService extends Service {
 
     private void pushMessage(Map<String, String> post, String loc_id) {
 
-        Log.e("pushMessage", "SendMessage: " + post);
+//        Log.e("pushMessage", "SendMessage: " + post);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
 
@@ -229,7 +229,7 @@ public class BootCompleteService extends Service {
                             Message message = new Message();
 
                             if (local_id.equals(loc_id) && TextUtils.isDigitsOnly(messageId)) {
-                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
+//                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
                                 if (db != null) {
                                     db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
                                             "SET " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '" + messageId + "' \n" +
@@ -288,7 +288,7 @@ public class BootCompleteService extends Service {
 
             if (TextUtils.isEmpty(messageId))
                 messageId = "0";
-            Log.e("getMessageLastId", "getMessageLastId: " + messageId);
+           // Log.e("getMessageLastId", "getMessageLastId: " + messageId);
 
             cursor.close();
             return messageId;
@@ -304,7 +304,6 @@ public class BootCompleteService extends Service {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
 
             if (response != null && !response.isEmpty()) {
-
                 try {
                     JSONObject object = new JSONObject(response);
                     JSONArray jsonArray = object.getJSONArray("Messages");
@@ -324,7 +323,7 @@ public class BootCompleteService extends Service {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
                 post.put("lastgrabed_message", getMessageLastId());
                 post.put("getMessages", "");
                 return post;
@@ -352,9 +351,9 @@ public class BootCompleteService extends Service {
                 values.put(MessagesReaderContract.MessageEntry.MESSAGE_TYPE, messageObj.getString("0"));
 
                 if (messageObj.getString("1").equals("yes")) {
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, Utils.getUserUid());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, Utils.getUserName());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, Utils.getUserImage());
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, Utils.getUserUid(getApplicationContext()));
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, Utils.getUserName(getApplicationContext()));
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, Utils.getUserImage(getApplicationContext()));
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, friendObj.getString("id"));
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, friendObj.getString("username"));
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, friendObj.getString("image"));
@@ -366,9 +365,9 @@ public class BootCompleteService extends Service {
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, friendObj.getString("id"));
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, friendObj.getString("username"));
                     values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, friendObj.getString("image"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, Utils.getUserUid());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, Utils.getUserName());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, Utils.getUserImage());
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, Utils.getUserUid(getApplicationContext()));
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, Utils.getUserName(getApplicationContext()));
+                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, Utils.getUserImage(getApplicationContext()));
                 }
 
                 values.put(MessagesReaderContract.MessageEntry.MESSAGE_TIME, messageObj.getString("date_added"));
@@ -378,7 +377,7 @@ public class BootCompleteService extends Service {
                 values.put(MessagesReaderContract.MessageEntry.IMAGE_NAME_LIST, messageObj.getString("image_list_names"));
                 values.put(MessagesReaderContract.MessageEntry.SINGLE_URL, messageObj.getString("single_url"));
                 values.put(MessagesReaderContract.MessageEntry.LOCAL_LOCATION, "");
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid());
+                values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid(getApplicationContext()));
                 values.put(MessagesReaderContract.MessageEntry.CHAT_TYPE, messageObj.getString("chat_type"));
                 values.put(MessagesReaderContract.MessageEntry.REPLY_TO, messageObj.getString("reply_to_messageid"));
                 db.insert(MessagesReaderContract.MessageEntry.TABLE_NAME, null, values);

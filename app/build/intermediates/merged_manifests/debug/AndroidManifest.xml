@@ -86,6 +86,9 @@
         <service
             android:name="com.nsromapa.say.frenzapp_redesign.services.ChatViewActivityServices"
             android:enabled="true" />
+        <service
+            android:name="com.nsromapa.say.frenzapp_redesign.services.BackServices"
+            android:enabled="true" />
 
         <receiver android:name="com.nsromapa.say.frenzapp_redesign.broadcasts.BootCompleteBroadcast" >
             <intent-filter>

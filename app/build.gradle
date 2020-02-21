@@ -75,45 +75,52 @@ dependencies {
     implementation 'com.github.HeyAlex:ExapandableCardView:-SNAPSHOT'
     //Notification Badge
     implementation 'com.nex3z:notification-badge:1.0.2'
-
+    //FancyButton
     implementation 'com.github.medyo:fancybuttons:1.9.1'
-
-
+    //Swipe to refresh
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    //Selection Checkbox
     implementation 'com.github.lguipeng:AnimCheckBox:1.0.1'
-
+    //Expand icon
     implementation 'com.github.zagum:Android-ExpandIcon:1.2.1'
-    implementation 'com.balysv:material-ripple:1.0.2'
+    //Expand layout View
     implementation 'com.github.SilenceDut:ExpandableLayout:1.1.0'
+    //Material icon nice view(material ripple library)
+    implementation 'com.balysv:material-ripple:1.0.2'
     implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+    //Image Picker Library
     implementation 'com.zhihu.android:matisse:0.4.3'
+    //Picasso Image processor (for matisse image picker library)
     implementation 'com.squareup.picasso:picasso:2.71828'
+    //Zoomable image library
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //Image loader library
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.wang.avi:library:2.1.3'
     implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
 
 
-
+    //Half Circle seek bar
     implementation 'com.github.marcinmoskala:ArcSeekBar:0.31'
+    //Pause and play button
     implementation 'com.github.ohoussein.playpauseview:playpauseview:1.0.2'
+    //Circle Progress library
     implementation 'com.github.Adilhusen:circle-progress-ad-android-:1.0'
-
-
+    //Image Glide Library
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
-
+    //Dexter Permission Library
     implementation 'com.karumi:dexter:6.0.1'
     //Recorder... Don't update
     implementation 'com.kailashdabhi:om-recorder:1.1.0'
-
+    //Emoji, gif, sound, sticker libraies
     implementation project(path: ':emoticongifkeyboard')
     implementation project(path: ':emoticonpack-samsung')
     implementation project(path: ':gifpack-giphy')
-
-
+    //Sqlite cypher
     implementation 'net.zetetic:android-database-sqlcipher:4.3.0'
     implementation "androidx.sqlite:sqlite:2.1.0"
-
+    //Home Icon notification Badge
     implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 
     testImplementation 'junit:junit:4.12'

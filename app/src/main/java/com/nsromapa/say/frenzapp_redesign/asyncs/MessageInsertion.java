@@ -20,6 +20,7 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
     private Message message;
     private String chatType;
     private String local_id;
+    private  Context context;
 
 
 
@@ -27,13 +28,13 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         this.db = MessageReaderDbHelper.getInstance(context).getWritableDatabase("somePass");
         this.chatView = chatView;
         this.message = message;
-        this.chatType = chatType;
+        this.context = context;
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        this.local_id = System.currentTimeMillis()+"_"+Utils.getUserUid();
+        this.local_id = System.currentTimeMillis()+"_"+Utils.getUserUid(context);
         message.setStatus("0");
         message.setLocal_id(local_id);
         chatView.addMessage(message, true);
@@ -59,9 +60,9 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         values.put(MessagesReaderContract.MessageEntry.LOCAL_ID, local_id);
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_ID, "");
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_TYPE, message.getMessageType().toString());
-        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, Utils.getUserUid());
-        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, Utils.getUserName());
-        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, Utils.getUserImage());
+        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, Utils.getUserUid(context));
+        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, Utils.getUserName(context));
+        values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, Utils.getUserImage(context));
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, Utils.getUserInfoFromUserJSON(thisUserJson, "id"));
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, Utils.getUserInfoFromUserJSON(thisUserJson, "username"));
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, Utils.getUserInfoFromUserJSON(thisUserJson, "image"));
@@ -72,7 +73,7 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         values.put(MessagesReaderContract.MessageEntry.IMAGE_NAME_LIST, messageImageListNamesInString);
         values.put(MessagesReaderContract.MessageEntry.SINGLE_URL, String.valueOf(message.getSingleUrl()));
         values.put(MessagesReaderContract.MessageEntry.LOCAL_LOCATION, String.valueOf(message.getLocalLocation()));
-        values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid());
+        values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid(context));
         values.put(MessagesReaderContract.MessageEntry.CHAT_TYPE, String.valueOf(chatType));
         values.put(MessagesReaderContract.MessageEntry.REPLY_TO, String.valueOf(0));
         db.insert(MessagesReaderContract.MessageEntry.TABLE_NAME, null, values);

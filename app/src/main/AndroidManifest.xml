@@ -62,6 +62,9 @@
         <service
             android:name=".services.ChatViewActivityServices"
             android:enabled="true" />
+        <service
+            android:name=".services.BackServices"
+            android:enabled="true" />
 
 
         <receiver android:name=".broadcasts.BootCompleteBroadcast">

@@ -128,7 +128,7 @@ public class ChatListService extends Service {
             @Override
             protected Map<String, String> getParams(){
                 Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
                 post.put("grabChatList","");
                 return post;
             }

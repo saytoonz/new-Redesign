@@ -21,12 +21,12 @@ public class ShopActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid(getApplicationContext()));
     }
 
     @Override
     protected void onPause() {
-        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid(getApplicationContext()));
         super.onPause();
     }
 }

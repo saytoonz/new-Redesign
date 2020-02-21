@@ -282,6 +282,7 @@ attr dotsSpacing
 attr dotsStrokeColor
 attr dotsStrokeWidth
 attr dotsWidthFactor
+attr dragEdge
 attr drawableBottomCompat
 attr drawableEndCompat
 attr drawableLeftCompat
@@ -373,6 +374,7 @@ attr fb_useSystemFont
 attr fill_color
 attr firstBaselineToTopHeight
 attr flingEnabled
+attr flingVelocity
 attr floatingActionButtonStyle
 attr font
 attr fontFamily
@@ -549,11 +551,13 @@ attr mfb_rotation_angle
 attr mfb_rotation_duration
 attr mfb_size
 attr mfb_type
+attr minDistRequestDisallowParent
 attr minHeight
 attr minTextSize
 attr minWidth
 attr minZoom
 attr minZoomType
+attr mode
 attr mrl_rippleAlpha
 attr mrl_rippleBackground
 attr mrl_rippleColor
@@ -3842,8 +3846,6 @@ drawable gradient_8
 drawable gradient_9
 drawable gradient_green
 drawable grid_camera_icon_small
-drawable groot
-drawable hodor
 drawable ic__down_white_24dp
 drawable ic_about
 drawable ic_accept_24dp
@@ -4075,15 +4077,19 @@ drawable icons8_chat_80
 drawable icons8_check_all_100
 drawable icons8_circled_play_100
 drawable icons8_connection_status_on_80
+drawable icons8_copy_100
 drawable icons8_download_200
 drawable icons8_error_96
 drawable icons8_eye_64
+drawable icons8_forward_message_100
+drawable icons8_google_translate_100
 drawable icons8_info_80px
 drawable icons8_mute_100
 drawable icons8_news_feed_64
 drawable icons8_plus_100
 drawable icons8_read_message_100
 drawable icons8_remove_administrator_80px
+drawable icons8_reply_arrow_100
 drawable icons8_slider_80
 drawable icons8_speech_bubble_64
 drawable icons8_uncheck_all_100
@@ -4338,6 +4344,7 @@ id content
 id contentPanel
 id conversation_mute_icon
 id coordinator
+id copySelected
 id create_comment
 id custom
 id customPanel
@@ -4451,6 +4458,7 @@ id fl_container
 id followers_back_btn
 id followers_ryc_id
 id forever
+id forwardSelected
 id front_progress
 id fullname_id
 id galleryMRL
@@ -4611,6 +4619,7 @@ id recording
 id recordingLayout
 id recyclerview
 id refreshLayout
+id replySelected
 id reverse
 id right
 id rightBubbleIconCV
@@ -4630,6 +4639,7 @@ id roadmap
 id root
 id rootRL
 id root_view
+id same_level
 id satellite
 id save_button
 id save_image_matrix
@@ -4751,6 +4761,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id translateSelections
 id tv_badge_text
 id unchecked
 id uniform
@@ -5752,6 +5763,7 @@ styleable SpringDotsIndicator dampingRatio dotsColor dotsCornerRadius dotsSize d
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StoriesProgressView progressCount
+styleable SwipeRevealLayout dragEdge flingVelocity minDistRequestDisallowParent mode
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchImageButton drawable_res_off drawable_res_on
 styleable TabItem android_icon android_layout android_text

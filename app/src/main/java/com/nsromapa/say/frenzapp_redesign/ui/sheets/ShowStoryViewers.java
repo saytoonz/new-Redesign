@@ -137,7 +137,7 @@ public class ShowStoryViewers extends BottomDrawerFragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getActivity()));
                 postMap.put("story_viewers", "true");
                 postMap.put("story_id", story_id);
                 return postMap;
@@ -169,7 +169,7 @@ public class ShowStoryViewers extends BottomDrawerFragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getActivity()));
                 postMap.put("story_delete", "true");
                 postMap.put("story_id", story_id);
                 postMap.put("delete_from_status_or_discovery", from);

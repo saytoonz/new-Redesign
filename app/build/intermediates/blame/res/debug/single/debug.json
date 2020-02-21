@@ -780,6 +780,10 @@
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f449_1f3fd.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_forward_message_100.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_forward_message_100.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f470_1f3fe.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f470_1f3fe.png"
     },
@@ -1634,6 +1638,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f474_1f3fb.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f474_1f3fb.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_google_translate_100.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_google_translate_100.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_arrow.png.flat",
@@ -2892,6 +2900,10 @@
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\bbeec50c2722296a3462e87b8b6ca67f\\appcompat-1.1.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_copy_100.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_copy_100.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_emoji_x.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticongifkeyboard\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\emoji_x.png"
     },
@@ -3870,10 +3882,6 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_top_round_drawable.xml.flat",
         "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\top_round_drawable.xml"
-    },
-    {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_groot.jpg.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\groot.jpg"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -7668,6 +7676,10 @@
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_2199.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_reply_arrow_100.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_reply_arrow_100.png"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f47c.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f47c.png"
     },
@@ -9986,10 +9998,6 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_chronometer.xml.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\83be8507d1de186a3ea2e0dbc2db13f9\\core-1.1.0\\res\\layout\\notification_template_part_chronometer.xml"
-    },
-    {
-        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hodor.jpeg.flat",
-        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\hodor.jpeg"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f37b.png.flat",

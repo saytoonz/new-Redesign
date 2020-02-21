@@ -120,7 +120,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                 .into(posterImageView);
         posterNameTV.setText(posterName);
 
-        if (posterId.equals(Utils.getUserUid())) {
+        if (posterId.equals(Utils.getUserUid(getApplicationContext()))) {
             sendReply_tv.setVisibility(View.INVISIBLE);
             sendReply_tv.setEnabled(false);
             sendReply_tv.setFocusable(false);
@@ -249,7 +249,7 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
                 @Override
                 protected Map<String, String> getParams() {
                     Map<String, String> postMap = new HashMap<>();
-                    postMap.put("user_id", Utils.getUserUid());
+                    postMap.put("user_id", Utils.getUserUid(getApplicationContext()));
                     postMap.put("watch_story", "true");
                     postMap.put("discovery_id", mStoriesList.get(counter).storyId);
                     return postMap;
@@ -321,12 +321,12 @@ public class StoryViewActivity extends AppCompatActivity implements StoriesProgr
     @Override
     protected void onResume() {
         super.onResume();
-        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.online), Utils.getUserUid(getApplicationContext()));
     }
 
     @Override
     protected void onPause() {
-        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid());
+        setUserOnlineStatus(this,getResources().getString(R.string.offline), Utils.getUserUid(getApplicationContext()));
         super.onPause();
     }
 }

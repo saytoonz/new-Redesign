@@ -1,16 +1,10 @@
 package com.nsromapa.say.frenzapp_redesign.services;
 
-import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.app.Service;
-import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Handler;
 import android.os.IBinder;
-import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -24,8 +18,6 @@ import com.android.volley.toolbox.Volley;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper;
 import com.nsromapa.say.frenzapp_redesign.databases.MessagesReaderContract;
-import com.nsromapa.say.frenzapp_redesign.models.Message;
-import com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity;
 import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 
 import net.sqlcipher.Cursor;
@@ -37,22 +29,20 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
+import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicBoolean;
 
-import me.leolin.shortcutbadger.ShortcutBadger;
+import es.dmoral.toasty.Toasty;
 
-import static androidx.core.app.NotificationCompat.BADGE_ICON_SMALL;
-import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.updateMessageStatus;
 import static com.nsromapa.say.frenzapp_redesign.utils.Constants.CHATS;
 import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 
 public class BackServices extends Service {
-    private Handler handler;
-    private Runnable runnable;
     private RequestQueue requestQueue;
     private RequestQueue requestQueue1;
     private SQLiteDatabase db;
-    public static final String NOTIFICATION_CHANNEL_ID = "10001";
-    private final static String default_notification_channel_id = "default";
+    private String TAG = "BackServices";
 
     @Nullable
     @Override
@@ -73,191 +63,190 @@ public class BackServices extends Service {
             requestQueue.cancelAll(this);
         if (requestQueue1 != null)
             requestQueue1.cancelAll(this);
-        handler.removeCallbacks(runnable);
         super.onDestroy();
     }
 
-     @Override
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         handleStart(intent, startId);
         return START_STICKY;
     }
 
     private void handleStart(Intent intent, int startId) {
-        if (checkStoragePermission(getApplicationContext()))
-            db = MessageReaderDbHelper.getInstance(getApplicationContext())
-                    .getWritableDatabase("somePass");
+        Log.e(TAG, "handleStart: " + TAG);
+        String doWhat = Objects.requireNonNull(intent.getExtras()).getString("doWhat");
+        String friendId = Objects.requireNonNull(intent.getExtras()).getString("friendId");
+        assert doWhat != null;
+        if (doWhat.equals("mark_all_as_read")) {
 
-        handler = new Handler();
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                runThisFunction1();
-                handler.postDelayed(this, 2000);
+            Log.e(TAG, "handleStart: mark_all_as_read");
+            if (!TextUtils.isEmpty(friendId)) {
+                setAllMessagesSeen(friendId);
+                Log.e(TAG, "handleStart: friendId " + friendId);
+
             }
-        };
-        handler.postDelayed(runnable, 8000);
-    }
-
-
-    protected void runThisFunction1() {
-        SendMessage();
-        GetMessages();
-        SetNotificationBadges();
-        //getCalls
-    }
-    private void SetNotificationBadges() {
-        ShortcutBadger.applyCount(getApplicationContext(),
-                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(Utils.getChatNotificationName(), 0));
-    }
-
-
-    private void setNotifications(JSONObject messageObj) throws JSONException {
-        if (messageObj.getString("message_status").equals("1") ||
-                messageObj.getString("message_status").equals("2")){
-
-            JSONObject friendObj = messageObj.getJSONObject("2");
-            int count = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(Utils.getChatNotificationName(), 0);
-            count++;
-            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(Utils.getChatNotificationName(), count).apply();
-
-            int thisUserChatCount = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(Utils.getUserChatNotificationName()+"_"+friendObj.getString("id"), 0);
-
-            thisUserChatCount++;
-            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(Utils.getUserChatNotificationName()+"_"+friendObj.getString("id"),thisUserChatCount).apply();
-
-            Intent notificationIntent = new Intent(getApplicationContext(), ChatViewActivity.class);
-            notificationIntent.putExtra("chatType", messageObj.getString("chat_type"));
-            notificationIntent.putExtra("thisUserId", friendObj.getString("id"));
-            notificationIntent.putExtra("thisUserJson", friendObj.toString());
-            notificationIntent.putExtra("backToMain", true);
-
-            notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-            NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), default_notification_channel_id);
-
-            mBuilder.setContentTitle(friendObj.getString("username"));
-            mBuilder.setContentIntent(pendingIntent);
-            mBuilder.setContentText(messageObj.getString("body"));
-
-
-            // ICONS
-            mBuilder.setSmallIcon(R.mipmap.ic_launcher_foreground);
-
-            Bitmap large_icon_bmp = ((BitmapDrawable) getApplicationContext().getResources()
-                    .getDrawable(R.mipmap.ic_launcher_round)).getBitmap();
-            mBuilder.setLargeIcon(large_icon_bmp);
-
-            mBuilder.setAutoCancel(true);
-            mBuilder.setBadgeIconType(BADGE_ICON_SMALL);
-            mBuilder.setVibrate(new long[]{500, 1500});
-            mBuilder.setNumber(thisUserChatCount);
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                int importance = NotificationManager.IMPORTANCE_HIGH;
-                NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "NOTIFICATION_CHANNEL_NAME", importance);
-                mBuilder.setChannelId(NOTIFICATION_CHANNEL_ID);
-                assert mNotificationManager != null;
-                mNotificationManager.createNotificationChannel(notificationChannel);
+        } else if (doWhat.equals("delete_chat")) {
+            if (checkStoragePermission(getApplicationContext())) {
+                db = MessageReaderDbHelper.getInstance(getApplicationContext())
+                        .getWritableDatabase("somePass");
             }
-            assert mNotificationManager != null;
-            mNotificationManager.notify(Integer.parseInt(messageObj.getString("from_id")), mBuilder.build());
-
-            updateReceivedMessageStatusOnline(messageObj.getString("id"), "2");
+            String deleteType = Objects.requireNonNull(intent.getExtras()).getString("deleteType");
+            String friendName = Objects.requireNonNull(intent.getExtras()).getString("friendName");
+            String friendImage = Objects.requireNonNull(intent.getExtras()).getString("friendImage");
+            deleteChat(friendId, deleteType, friendName);
         }
 
-    }
-
-    private void updateReceivedMessageStatusOnline(String messageId, String settingStatus) {
 
     }
 
-    private void SendMessage() {
-        if (db != null) {
-            Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                    "' WHERE " + MessagesReaderContract.MessageEntry.MESSAGE_FOR + "='" + Utils.getUserUid() +
-                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + "='" + Utils.getUserUid() +
-                    "' AND " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '' ORDER BY " +
-                    MessagesReaderContract.MessageEntry._ID + " ASC", null);
 
-            while (cursor.moveToNext()) {
-                final Map<String, String> post = new HashMap<>();
+    private void deleteChat(String UserId, String deleteType, String friendName) {
+        NotificationManager mNotifyManager;
+        NotificationCompat.Builder mBuilder;
+        mNotifyManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        mBuilder = new NotificationCompat.Builder(getApplicationContext());
+        mBuilder.setContentTitle(friendName)
+                .setContentText("Deleting chat...")
+                .setSmallIcon(R.mipmap.ic_launcher_round);
 
-                post.put("local_id", String.valueOf(cursor.getString(1)));
-                post.put("message_type", String.valueOf(cursor.getString(3)));
-                post.put("from_id", String.valueOf(cursor.getString(4)));
-                post.put("to_id", String.valueOf(cursor.getString(7)));
-                post.put("chat_type", String.valueOf(cursor.getString(18)));
-                post.put("body", String.valueOf(cursor.getString(12)));
-                post.put("image_list", String.valueOf(cursor.getString(13)));
-                post.put("image_list_names", String.valueOf(cursor.getString(14)));
-                post.put("single_url", String.valueOf(cursor.getString(15)));
-                post.put("reply_to_messageid", cursor.getString(19));
-                post.put("createNewMessaged", "true");
-                pushMessage(post, String.valueOf(cursor.getString(1)));
+        // Sets the progress indicator to a max value, the current completion percentage and "determinate" state
+        mBuilder.setProgress(100, 30, true);
+        // Displays the progress bar for the first time.
+        assert mNotifyManager != null;
+        mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+        // Sleeps the thread, simulating an operation
+        switch (deleteType) {
+            case "both":
+                deleteMessagesFromLocalDb(UserId);
+                deleteChatList(UserId);
+                break;
+            case "messages_only":
+                deleteMessagesFromLocalDb(UserId);
+                break;
+            case "chatList_only":
+                deleteChatList(UserId);
+                break;
+            default:
+                mBuilder.setContentText("Failed to delete chat...")
+                        .setProgress(0, 0, false);
+                mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+                break;
+        }
+
+        StringRequest stringRequest1 = new StringRequest(Request.Method.POST, CHATS,
+                response -> {
+                    Log.e(TAG, "deleteChat: " + response);
+//                    if (response != null && !response.isEmpty()) {
+//                        try {
+//                            JSONObject object = new JSONObject(response);
+//                            JSONArray jsonArray = object.getJSONArray("DeleteResponse");
+//                            JSONObject deleteResponse = jsonArray.getJSONObject(0);
+//
+//                            if (deleteResponse.getString("response").equals("success")) {
+//                                String message = deleteResponse.getString("message");
+//
+//
+//                            } else if (deleteResponse.getString("response").equals("error")) {
+//                                String message = deleteResponse.getString("message");
+//                                if (message.equals("Unknown User")) {
+//                                    Utils.checkUserExistence(getApplicationContext());
+//                                }
+//                                mBuilder.setContentText("Failed to delete chat...")
+//                                        .setProgress(0, 0, false);
+//                                mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+//                            }
+//
+//
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+                    getApplicationContext().stopService(new Intent(getApplicationContext(), BackServices.class));
+                },
+                error -> {
+//                    Log.e(TAG, "deleteChat: " + error);
+//                    mBuilder.setContentText("Failed to delete chat...")
+//                            .setProgress(0, 0, false);
+//                    mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+                    getApplicationContext().stopService(new Intent(getApplicationContext(), BackServices.class));
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> post = new HashMap<>();
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
+                post.put("other_user", UserId);
+                post.put("delete_chat", "");
+                post.put("deleteType", deleteType);
+                return post;
             }
+        };
+        if (requestQueue1 == null) {
+            requestQueue1 = Volley.newRequestQueue(getApplicationContext());
+        }
+        requestQueue1.add(stringRequest1);
 
+
+//        // Start a the operation in a background thread
+//        new Thread(() -> {
+//            int incr;
+//            // Do the "lengthy" operation 20 times
+//            for (incr = 0; incr <= 100; incr += 5) {
+//                // Sets the progress indicator to a max value, the current completion percentage and "determinate" state
+//                mBuilder.setProgress(100, 30, true);
+//                // Displays the progress bar for the first time.
+//                mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+//                // Sleeps the thread, simulating an operation
+//                try {
+//                    // Sleep for 1 second
+//                    Thread.sleep(1 * 1000);
+//                } catch (InterruptedException e) {
+//                    Log.d("TAG", "sleep failure");
+//                }
+//            }
+//            // When the loop is finished, updates the notification
+//            mBuilder.setContentText("Download completed")
+//                    // Removes the progress bar
+//                    .setProgress(0, 0, false);
+//            mNotifyManager.notify(Integer.parseInt(UserId), mBuilder.build());
+//        }
+//                // Starts the thread by calling the run() method in its Runnable
+//        ).start();
+
+    }
+
+    private void deleteChatList(String userId) {
+    }
+
+    private void deleteMessagesFromLocalDb(String userId) {
+        if (db != null) {
+            Cursor cursor = db.rawQuery("DELETE FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
+                    "' WHERE (" + MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID + " = '" + userId
+                    + "' OR  " + MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID + " = '" + userId + "' )", null);
+            while (cursor.moveToNext()) {}
             cursor.close();
 
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            assert notificationManager != null;
+            notificationManager.cancel(Integer.parseInt(userId));
         } else {
             if (checkStoragePermission(getApplicationContext()))
                 db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
+            else
+                Toasty.error(getApplicationContext(), "Enable your storage permission to continue...", Toasty.LENGTH_LONG, true).show();
         }
-
     }
 
-    private void pushMessage(Map<String, String> post, String loc_id) {
 
-        Log.e("pushMessage", "SendMessage: " + post);
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
-
-            if (response != null && !response.isEmpty()) {
-
-                try {
-                    JSONObject object = new JSONObject(response);
-                    JSONArray jsonArray = object.getJSONArray("MessageResponse");
-
-                    if (jsonArray.length() > 0) {
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            JSONObject messageObj = jsonArray.getJSONObject(i);
-                            String local_id = messageObj.getString("local_id");
-                            String messageId = messageObj.getString("messageId");
-                            Message message = new Message();
-
-                            if (local_id.equals(loc_id) && TextUtils.isDigitsOnly(messageId)) {
-                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
-                                if (db != null) {
-                                    db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
-                                            "SET " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '" + messageId + "' \n" +
-                                            "WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + " = '" + local_id + "' ;");
-
-                                    db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
-                                            "SET " + MessagesReaderContract.MessageEntry.MESSAGE_STATUS + " = '1' \n" +
-                                            "WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + " = '" + local_id + "' " +
-                                            "AND " + MessagesReaderContract.MessageEntry.MESSAGE_STATUS + " < '1' ;");
-
-                                } else {
-                                    if (checkStoragePermission(getApplicationContext()))
-                                        db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
-                                }
-                                message.setLocal_id(local_id);
-                                message.setId(messageId);
-                                message.setStatus("1");
-                                updateMessageStatus(message);
-                            }
-                        }
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }, error -> {
-        }) {
+    private void setAllMessagesSeen(String UserId) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS,
+                response -> getApplicationContext().stopService(new Intent(getApplicationContext(), BackServices.class)),
+                error -> setAllMessagesSeen(UserId)) {
             @Override
             protected Map<String, String> getParams() {
+                Map<String, String> post = new HashMap<>();
+                post.put("user_id", Utils.getUserUid(getApplicationContext()));
+                post.put("other_user", UserId);
+                post.put("setAllMessagesSeen", "");
                 return post;
             }
         };
@@ -265,125 +254,5 @@ public class BackServices extends Service {
             requestQueue = Volley.newRequestQueue(getApplicationContext());
         }
         requestQueue.add(stringRequest);
-
-    }
-
-
-    private String getMessageLastId() {
-        if (db != null) {
-            String messageId;
-            Cursor cursor = db.rawQuery("SELECT " + MessagesReaderContract.MessageEntry.MESSAGE_ID +
-                    "  FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                    "' ORDER BY " + MessagesReaderContract.MessageEntry._ID + " DESC", null);
-
-            cursor.moveToFirst();
-            if (!(cursor.moveToFirst()) || cursor.getCount() == 0) {
-                messageId = "0";
-            } else {
-                messageId = String.valueOf(cursor.getString(cursor.getColumnIndex(MessagesReaderContract.MessageEntry.MESSAGE_ID)));
-            }
-
-            if (TextUtils.isEmpty(messageId))
-                messageId = "0";
-            Log.e("getMessageLastId", "getMessageLastId: " + messageId);
-
-            cursor.close();
-            return messageId;
-        } else {
-            if (checkStoragePermission(getApplicationContext()))
-                db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
-            return "0";
-        }
-
-    }
-
-    private void GetMessages() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
-
-            if (response != null && !response.isEmpty()) {
-
-                try {
-                    JSONObject object = new JSONObject(response);
-                    JSONArray jsonArray = object.getJSONArray("Messages");
-
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        JSONObject messageObj = jsonArray.getJSONObject(i);
-                        insertIntoDB(messageObj, messageObj.getString("local_id"));
-
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, error -> {
-        }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> post = new HashMap<>();
-                post.put("user_id", Utils.getUserUid());
-                post.put("lastgrabed_message", getMessageLastId());
-                post.put("getMessages", "");
-                return post;
-            }
-        };
-        if (requestQueue1 == null) {
-            requestQueue1 = Volley.newRequestQueue(getApplicationContext());
-        }
-        requestQueue1.add(stringRequest);
-    }
-
-    private void insertIntoDB(JSONObject messageObj, String local_id) throws JSONException {
-        if (db != null) {
-            Cursor cursor = db.rawQuery("SELECT " + MessagesReaderContract.MessageEntry.LOCAL_ID +
-                    "  FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
-                    "' WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + " = '" + local_id + "' LIMIT 1", null);
-
-            JSONObject friendObj = messageObj.getJSONObject("2");
-
-            if (!(cursor.moveToFirst()) || cursor.getCount() == 0) {
-
-                ContentValues values = new ContentValues();
-                values.put(MessagesReaderContract.MessageEntry.LOCAL_ID, local_id);
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_ID, messageObj.getString("id"));
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_TYPE, messageObj.getString("0"));
-
-                if (messageObj.getString("1").equals("yes")) {
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, Utils.getUserUid());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, Utils.getUserName());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, Utils.getUserImage());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, friendObj.getString("id"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, friendObj.getString("username"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, friendObj.getString("image"));
-                } else {
-                    //If I am receiving message check if not received before
-                    // and create notification if not seen
-                    setNotifications(messageObj);
-
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_ID, friendObj.getString("id"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_NAME, friendObj.getString("username"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_SENDER_IMAGE, friendObj.getString("image"));
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_ID, Utils.getUserUid());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_NAME, Utils.getUserName());
-                    values.put(MessagesReaderContract.MessageEntry.MESSAGE_RECEIVER_IMAGE, Utils.getUserImage());
-                }
-
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_TIME, messageObj.getString("date_added"));
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_STATUS, messageObj.getString("message_status"));
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_BODY, messageObj.getString("body"));
-                values.put(MessagesReaderContract.MessageEntry.IMAGE_LIST, messageObj.getString("image_list"));
-                values.put(MessagesReaderContract.MessageEntry.IMAGE_NAME_LIST, messageObj.getString("image_list_names"));
-                values.put(MessagesReaderContract.MessageEntry.SINGLE_URL, messageObj.getString("single_url"));
-                values.put(MessagesReaderContract.MessageEntry.LOCAL_LOCATION, "");
-                values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid());
-                values.put(MessagesReaderContract.MessageEntry.CHAT_TYPE, messageObj.getString("chat_type"));
-                values.put(MessagesReaderContract.MessageEntry.REPLY_TO, messageObj.getString("reply_to_messageid"));
-                db.insert(MessagesReaderContract.MessageEntry.TABLE_NAME, null, values);
-            }
-            cursor.close();
-        } else {
-            if (checkStoragePermission(getApplicationContext()))
-                db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
-        }
     }
 }

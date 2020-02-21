@@ -30,7 +30,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.adprogressbarlib.AdCircleProgress;
@@ -62,6 +61,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.content.ContentValues.TAG;
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.message_isSelectionMode;
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.setSelectionCount;
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.showHideMenusOnSelection;
+import static com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity.showMenuSelectionView;
 import static com.nsromapa.say.frenzapp_redesign.utils.Utils.downloadSoundAudio;
 
 /**
@@ -76,6 +79,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private Context context;
     private ImageLoader imageLoader;
     private Typeface typeface;
+    private List<String> selectedList = new ArrayList<>();
 
     private static MediaPlayer mediaPlayer;
     private static MediaPlayer mMediaPlayer;
@@ -354,9 +358,18 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return viewHolder;
     }
 
+    public String getMessageText(int position) {
+        Message message = messageList.get(position);
+        return message.getBody();
+    }
+
+    public Message getMessageItem(int position) {
+        Message message = messageList.get(position);
+        return message;
+    }
 
     protected class LeftTextViewHolder extends RecyclerView.ViewHolder {
-
+       
         public EmoticonTextView leftTV;
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
@@ -365,7 +378,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftTextViewHolder(View view) {
             super(view);
-
+           
             leftTV = view.findViewById(R.id.leftTV);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
@@ -433,7 +446,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightTextViewHolder extends RecyclerView.ViewHolder {
-
+       
         public EmoticonTextView rightTV;
         public TextView rightTimeTV, senderNameTV;
         public ImageView rightMessageStatusIV, rightBubbleIconIV;
@@ -442,7 +455,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightTextViewHolder(View view) {
             super(view);
-
+           
             rightTV = view.findViewById(R.id.rightTV);
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
@@ -511,7 +524,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftImageViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -522,7 +535,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftImageViewHolder(View view) {
             super(view);
-
+           
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -574,7 +587,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightImageViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -585,8 +598,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightImageViewHolder(View view) {
             super(view);
-
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -640,7 +652,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftGIFViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -651,7 +663,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftGIFViewHolder(View view) {
             super(view);
-
+           
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -702,7 +714,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightGIFViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -713,8 +725,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightGIFViewHolder(View view) {
             super(view);
-
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -766,7 +777,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class LeftImagesViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV;
@@ -775,7 +786,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftImagesViewHolder(View view) {
             super(view);
-
+           
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftCollageView = view.findViewById(R.id.leftCollageView);
@@ -815,7 +826,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightImagesViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV;
@@ -824,7 +835,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightImagesViewHolder(View view) {
             super(view);
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightCollageView = view.findViewById(R.id.rightCollageView);
@@ -868,7 +879,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftVideoViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftVideo;
@@ -880,8 +891,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftVideoViewHolder(View view) {
             super(view);
-
-
+           
             leftIVCV = view.findViewById(R.id.leftIVCV);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
@@ -933,7 +943,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightVideoViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightVideo;
@@ -944,7 +954,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightVideoViewHolder(View view) {
             super(view);
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIVCV = view.findViewById(R.id.rightIVCV);
@@ -996,7 +1006,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftAudioViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView leftBubbleIconIV, downloadLeftAudio;
@@ -1009,7 +1019,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftAudioViewHolder(View view) {
             super(view);
-
+           
             audioSeekbar = view.findViewById(R.id.audioSeekbar);
             playPauseView = view.findViewById(R.id.play_pause_view);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
@@ -1186,7 +1196,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightAudioViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTimeTV, senderNameTV;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightAudio;
         public ExpandableLayout rightEL;
@@ -1199,8 +1209,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightAudioViewHolder(View view) {
             super(view);
-
-
+           
             audioSeekbar = view.findViewById(R.id.audioSeekbar);
             playPauseView = view.findViewById(R.id.play_pause_view);
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
@@ -1378,12 +1387,9 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftTypingViewHolder extends RecyclerView.ViewHolder {
-
-
+       
         LeftTypingViewHolder(View view) {
             super(view);
-
-
             FontChanger fontChanger = new FontChanger(typeface);
             fontChanger.replaceFonts((ViewGroup) view);
             view.setOnLongClickListener(v -> {
@@ -1395,7 +1401,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftStickerViewHolder extends RecyclerView.ViewHolder {
-
+       
         TextView leftTimeTV, senderNameTV;
         ExpandableLayout leftEL;
         ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -1406,7 +1412,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         LeftStickerViewHolder(View view) {
             super(view);
-
+           
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -1457,7 +1463,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightStickerViewHolder extends RecyclerView.ViewHolder {
-
+       
         TextView rightTV, rightTimeTV, senderNameTV;
         ExpandableLayout rightEL;
         ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -1468,8 +1474,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         RightStickerViewHolder(View view) {
             super(view);
-
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -1522,7 +1527,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftSoundViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -1533,7 +1538,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public LeftSoundViewHolder(View view) {
             super(view);
-
+           
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -1584,7 +1589,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightSoundViewHolder extends RecyclerView.ViewHolder {
-
+       
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -1595,8 +1600,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         public RightSoundViewHolder(View view) {
             super(view);
-
-
+           
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -1650,11 +1654,8 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
-
-
         final Message message = messageList.get(position);
         messageList.get(position).setIndexPosition(position);
-
 
         if (holder instanceof LeftTextViewHolder) {
             final LeftTextViewHolder holder1 = (LeftTextViewHolder) holder;
@@ -3594,6 +3595,53 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 }
             }
         }
+
+
+
+
+
+//Set up selection Icon Visibility
+        if (message_isSelectionMode) {
+            if (selectedList.contains(String.valueOf(position))) {
+                setSelectionCount(String.valueOf(selectedList.size()));
+                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
+            } else {
+                setSelectionCount(String.valueOf(selectedList.size()));
+                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.white));
+            }
+            showHideMenusOnSelection();
+        } else {
+            holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.white));
+        }
+
+        //Set up selection by clicking on the whole View
+        holder.itemView.setOnClickListener(v -> {
+            if (message_isSelectionMode) {
+                if (selectedList.contains(String.valueOf(position))) {
+                    holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.white));
+                    selectedList.remove(String.valueOf(position));
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                } else {
+                    holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
+                    selectedList.add(String.valueOf(position));
+                    setSelectionCount(String.valueOf(selectedList.size()));
+                }
+                showHideMenusOnSelection();
+            }
+        });
+
+
+        holder.itemView.setOnLongClickListener(v -> {
+            if (!message_isSelectionMode) {
+                enableSelection();
+                selectedList.clear();
+                selectedList.add(String.valueOf(position));
+                setSelectionCount(String.valueOf(selectedList.size()));
+                holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.button_focused));
+                showHideMenusOnSelection();
+            }
+            return true;
+        });
     }
 
 
@@ -3616,6 +3664,39 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public int getItemCount() {
         return filterList.size();
     }
+
+
+
+
+
+
+
+
+
+    private void enableSelection() {
+        message_isSelectionMode = true;
+        notifyDataSetChanged();
+        showMenuSelectionView();
+    }
+
+    public void disableSelection() {
+        message_isSelectionMode = false;
+        selectedList.clear();
+        notifyDataSetChanged();
+    }
+
+    public List<String> getSelectedList() {
+        return selectedList;
+    }
+
+
+
+
+
+
+
+
+
 
 
     @SuppressLint("SetTextI18n")
@@ -3707,6 +3788,5 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void setTextSize(float size) {
         this.textSize = size;
     }
-
 
 }

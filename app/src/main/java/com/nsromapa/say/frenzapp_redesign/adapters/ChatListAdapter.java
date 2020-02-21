@@ -19,6 +19,8 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView;
 import com.nsromapa.say.frenzapp_redesign.R;
+import com.nsromapa.say.frenzapp_redesign.services.BackServices;
+import com.nsromapa.say.frenzapp_redesign.services.ChatViewActivityServices;
 import com.nsromapa.say.frenzapp_redesign.ui.activities.ChatViewActivity;
 import com.nsromapa.say.frenzapp_redesign.models.ChatList;
 import com.nsromapa.say.frenzapp_redesign.ui.view.AnimCheckBox;
@@ -80,11 +82,11 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         //Notification badge SetUp with number of unread messages
         if ((list.getMessage_status().equals("1") || list.getMessage_status().equals("2"))) {
-            if (list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_sender()) > 0) {
+            if (list.getSender().equals(Utils.getUserUid(context)) && Integer.parseInt(list.getNotification_count_sender()) > 0) {
                 holder.unreadCount.setVisibility(View.VISIBLE);
                 holder.unreadCount.setText(list.getNotification_count_sender());
 
-            } else if (!list.getSender().equals(Utils.getUserUid()) && Integer.parseInt(list.getNotification_count_receiver()) > 0) {
+            } else if (!list.getSender().equals(Utils.getUserUid(context)) && Integer.parseInt(list.getNotification_count_receiver()) > 0) {
                 holder.unreadCount.setVisibility(View.VISIBLE);
                 holder.unreadCount.setText(list.getNotification_count_receiver());
             } else {
@@ -103,7 +105,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         //Message Status setup
         // with images to show for each status
-        if (list.getSender().equals(Utils.getUserUid())) {
+        if (list.getSender().equals(Utils.getUserUid(context))) {
             holder.delivery_status_last_msg.setVisibility(View.VISIBLE);
             switch (list.getMessage_status()) {
                 case "1":
@@ -212,7 +214,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
 
         if (list.getOnline_status().equals(activity.getResources().getString(R.string.online)))
             holder.online_status_image.setVisibility(View.VISIBLE);
-        else if (list.getOnline_status().equals("typing_" + Utils.getUserUid())) {
+        else if (list.getOnline_status().equals("typing_" + Utils.getUserUid(context))) {
             holder.online_status_image.setVisibility(View.VISIBLE);
             holder.message.setText(activity.getResources().getString(R.string.typing));
         } else if (list.getOnline_status().contains("typing_")) {
@@ -284,6 +286,17 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         notifyDataSetChanged();
     }
 
+
+    public void setAllMessageRed(int position) {
+        ChatList user = chatLists.get(position);
+        String uid = Utils.getUserInfoFromUserJSON(user.getFriendJson(), "id");
+        Intent intent = new Intent(context, BackServices.class);
+        intent.putExtra("doWhat", "mark_all_as_read");
+        intent.putExtra("friendId", uid);
+        context.startService(intent);
+    }
+
+
     public void SelectAll(){
         if (selectedList.size()>0){
             selectedList.clear();
@@ -300,6 +313,21 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         }
     }
 
+
+
+    public void deleteChat(int position, String deleteType) {
+        ChatList user = chatLists.get(position);
+        String uid = Utils.getUserInfoFromUserJSON(user.getFriendJson(), "id");
+        String friendName = Utils.getUserInfoFromUserJSON(user.getFriendJson(), "username");
+        String friendImage = Utils.getUserInfoFromUserJSON(user.getFriendJson(), "image");
+        Intent intent = new Intent(context, BackServices.class);
+        intent.putExtra("doWhat", "delete_chat");
+        intent.putExtra("deleteType", deleteType);
+        intent.putExtra("friendId", uid);
+        intent.putExtra("friendName", friendName);
+        intent.putExtra("friendImage", friendImage);
+        context.startService(intent);
+    }
 
 
 }

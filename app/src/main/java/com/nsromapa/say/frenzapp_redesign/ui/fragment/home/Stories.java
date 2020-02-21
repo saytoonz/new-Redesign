@@ -126,9 +126,9 @@ public class Stories extends Fragment {
                         if (jsonArray.length() > 0) {
                             JSONObject theStories = jsonArray.getJSONObject(0);
                             statusList.add(new StoryStatus(
-                                    Utils.getUserUid(),
+                                    Utils.getUserUid(getActivity()),
                                     "Your Stories",
-                                    Utils.getUserImage(),
+                                    Utils.getUserImage(getActivity()),
                                     theStories.getString("media_url"),
                                     prepareStoriesList(jsonArray.toString())));
 
@@ -136,10 +136,10 @@ public class Stories extends Fragment {
 
                         } else {
                             statusList.add(new StoryStatus(
-                                    Utils.getUserUid(),
+                                    Utils.getUserUid(getActivity()),
                                     "Your Stories",
-                                    Utils.getUserImage(),
-                                    Utils.getUserImage(),
+                                    Utils.getUserImage(getActivity()),
+                                    Utils.getUserImage(getActivity()),
                                     prepareStoriesList("")));
 
                             statusAdapter.notifyDataSetChanged();
@@ -149,10 +149,10 @@ public class Stories extends Fragment {
                         e.printStackTrace();
 
                         statusList.add(new StoryStatus(
-                                Utils.getUserUid(),
+                                Utils.getUserUid(getActivity()),
                                 "Your Stories",
-                                Utils.getUserImage(),
-                                Utils.getUserImage(),
+                                Utils.getUserImage(getActivity()),
+                                Utils.getUserImage(getActivity()),
                                 prepareStoriesList("")));
                     }
 
@@ -164,16 +164,16 @@ public class Stories extends Fragment {
                 error -> {
                     if (requireContext() != null)
                         statusList.add(new StoryStatus(
-                                Utils.getUserUid(),
+                                Utils.getUserUid(getActivity()),
                                 "Your Stories",
-                                Utils.getUserImage(),
-                                Utils.getUserImage(),
+                                Utils.getUserImage(getActivity()),
+                                Utils.getUserImage(getActivity()),
                                 prepareStoriesList("")));
                 }) {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getActivity()));
                 postMap.put("my_own", "true");
                 return postMap;
             }
@@ -206,7 +206,7 @@ public class Stories extends Fragment {
 
 //                            for (int j = 0; j < singlePosterPosts.length(); j++) {
                             JSONObject poster_info = theStories.getJSONObject("1");
-                            if (!poster_info.getString("id").equals(Utils.getUserUid()) && requireContext()!= null){
+                            if (!poster_info.getString("id").equals(Utils.getUserUid(getActivity())) && requireContext()!= null){
                                 statusList.add(new StoryStatus(
                                         poster_info.getString("id"),
                                         poster_info.getString("username"),
@@ -231,7 +231,7 @@ public class Stories extends Fragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getActivity()));
                 postMap.put("following", Utils.getMyFollowings());
 //                postMap.put("load", String.valueOf(loadCount));
                 return postMap;
@@ -328,7 +328,7 @@ public class Stories extends Fragment {
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> postMap = new HashMap<>();
-                postMap.put("user_id", Utils.getUserUid());
+                postMap.put("user_id", Utils.getUserUid(getActivity()));
                 postMap.put("discoveries", "true");
                 postMap.put("limit", quantity);
                 return postMap;
