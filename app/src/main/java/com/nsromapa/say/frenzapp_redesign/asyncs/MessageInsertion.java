@@ -43,6 +43,7 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
 
     @Override
     protected String doInBackground(String... strings) {
+        String replyTo = "";
         String thisUserJson = strings[0];
         String messageImageListsInString = "";
         String messageImageListNamesInString = "";
@@ -55,6 +56,9 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
                 }
             }
         }
+
+        if (message.getReplyMessage() != null)
+            replyTo = message.getReplyMessage().getLocal_id();
 
         ContentValues values = new ContentValues();
         values.put(MessagesReaderContract.MessageEntry.LOCAL_ID, local_id);
@@ -75,7 +79,7 @@ public class MessageInsertion extends AsyncTask<String, String, String> {
         values.put(MessagesReaderContract.MessageEntry.LOCAL_LOCATION, String.valueOf(message.getLocalLocation()));
         values.put(MessagesReaderContract.MessageEntry.MESSAGE_FOR, Utils.getUserUid(context));
         values.put(MessagesReaderContract.MessageEntry.CHAT_TYPE, String.valueOf(chatType));
-        values.put(MessagesReaderContract.MessageEntry.REPLY_TO, String.valueOf(0));
+        values.put(MessagesReaderContract.MessageEntry.REPLY_TO, String.valueOf(replyTo));
         db.insert(MessagesReaderContract.MessageEntry.TABLE_NAME, null, values);
 
 

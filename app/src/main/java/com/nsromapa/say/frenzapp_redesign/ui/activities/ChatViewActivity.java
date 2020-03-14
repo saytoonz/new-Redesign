@@ -88,6 +88,7 @@ import static com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter.stopMed
 import static com.nsromapa.say.frenzapp_redesign.databases.MessageReaderDbHelper.DATABASE_LOCATION;
 import static com.nsromapa.say.frenzapp_redesign.ui.activities.MainActivity.setUserOnlineStatus;
 import static com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView.messageAdapter;
+import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkMicrophonePermission;
 import static com.nsromapa.say.frenzapp_redesign.utils.PermissionUtils.checkStoragePermission;
 import static com.nsromapa.say.frenzapp_redesign.utils.Utils.downloadSoundAudio;
 
@@ -188,13 +189,13 @@ public class ChatViewActivity extends AppCompatActivity
 
     public static void showMenuSelectionView() {
         selectionMenuHolder.setVisibility(View.VISIBLE);
-        chatView.getSendLL().setVisibility(View.GONE);
+        chatView.getSendLL().setVisibility(View.INVISIBLE);
         chatView.getRecordARL().setVisibility(View.GONE);
     }
 
 
     public static void showHideMenusOnSelection(){
-        if (messageAdapter.getSelectedList().size() > 1){
+        if (messageAdapter.getSelectedList().size() != 1){
             replySelected.hide();
         }else{
             replySelected.show();
@@ -204,6 +205,144 @@ public class ChatViewActivity extends AppCompatActivity
 
 
 
+    private void setReplyWithMessage(Message message) {
+        replyMessage = message;
+        chatView.getReplyView().setVisibility(View.VISIBLE);
+        chatView.getReplyCloseImageView().setOnClickListener(v -> {
+            replyMessage = null;
+            chatView.getReplyView().setVisibility(View.GONE);
+        });
+
+        if (message.getUserName().equals(Utils.getUserName(context))){
+            chatView.getReplySenderName().setText("You");
+        }else{
+            chatView.getReplySenderName().setText(message.getUserName());
+        }
+
+        if (message.getMessageType().equals(Message.MessageType.RightSimpleMessage) ||
+                message.getMessageType().equals(Message.MessageType.LeftSimpleMessage)){
+            chatView.getReplyImageView().setVisibility(View.GONE);
+            chatView.getReplyText().setText(message.getBody());
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftSingleImage) ||
+                message.getMessageType().equals(Message.MessageType.RightSingleImage)){
+            chatView.getReplyImageView().setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83D\uDDBC️ Image");
+            }else{
+                chatView.getReplyText().setText("\uD83D\uDDBC️ "+replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(message.getLocalLocation())){
+                Glide.with(context)
+                        .load(message.getLocalLocation())
+                        .into(chatView.getReplyImageView());
+            }
+            Glide.with(context)
+                    .load(message.getSingleUrl())
+                    .into(chatView.getReplyImageView());
+
+
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftGIF) ||
+                message.getMessageType().equals(Message.MessageType.RightGIF)){
+            chatView.getReplyImageView().setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83D\uDDBC️ Gif");
+            }else{
+                chatView.getReplyText().setText("\uD83D\uDDBC️ "+replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(message.getLocalLocation())){
+                Glide.with(context)
+                        .load(message.getLocalLocation())
+                        .into(chatView.getReplyImageView());
+            }
+            Glide.with(context)
+                    .load(message.getSingleUrl())
+                    .into(chatView.getReplyImageView());
+
+
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftSound) ||
+                message.getMessageType().equals(Message.MessageType.RightSound)){
+            chatView.getReplyImageView().setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83D\uDD09Sound");
+            }else{
+                chatView.getReplyText().setText("\uD83D\uDD09️ "+replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(message.getLocalLocation())){
+                Glide.with(context)
+                        .load(message.getLocalLocation())
+                        .into(chatView.getReplyImageView());
+            }
+            Glide.with(context)
+                    .load(message.getSingleUrl())
+                    .into(chatView.getReplyImageView());
+
+
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftSticker) ||
+                message.getMessageType().equals(Message.MessageType.RightSticker)){
+            chatView.getReplyImageView().setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83D\uDDBC️ Sticker");
+            }else{
+                chatView.getReplyText().setText("\uD83D\uDDBC️ "+replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(message.getLocalLocation())){
+                Glide.with(context)
+                        .load(message.getLocalLocation())
+                        .into(chatView.getReplyImageView());
+            }
+            Glide.with(context)
+                    .load(message.getSingleUrl())
+                    .into(chatView.getReplyImageView());
+
+
+
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftVideo) ||
+                message.getMessageType().equals(Message.MessageType.RightVideo)){
+            chatView.getReplyImageView().setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83C\uDF9E️️ Video");
+            }else{
+                chatView.getReplyText().setText("\uD83C\uDF9E️ "+replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(message.getLocalLocation())){
+                Glide.with(context)
+                        .load(message.getLocalLocation())
+                        .into(chatView.getReplyImageView());
+            }
+            Glide.with(context)
+                    .load(message.getSingleUrl())
+                    .into(chatView.getReplyImageView());
+
+
+
+
+
+        }else  if (message.getMessageType().equals(Message.MessageType.LeftAudio) ||
+                message.getMessageType().equals(Message.MessageType.RightAudio)){
+            chatView.getReplyImageView().setVisibility(View.GONE);
+            if (TextUtils.isEmpty(replyMessage.getBody())){
+                chatView.getReplyText().setText("\uD83C\uDFA7 Audio");
+            }else{
+                chatView.getReplyText().setText("\uD83C\uDFA7️ "+replyMessage.getBody());
+            }
+
+        }
+    }
 
     public static void setSelectionCount(String count) {
         selectionCounter.setText(count);
@@ -371,13 +510,13 @@ public class ChatViewActivity extends AppCompatActivity
 
     }
 
-    private void setReplyWithMessage(Message message) {
-        replyMessage = message;
-
-    }
-
 
     private void insertSthToDb(Message message) {
+        if (replyMessage != null){
+            message.setReplyMessage(message);
+            replyMessage = null;
+        }
+        chatView.getReplyView().setVisibility(View.GONE);
         new MessageInsertion(this, chatView, message, chatType).execute(thisUserJson);
     }
 
@@ -537,7 +676,6 @@ public class ChatViewActivity extends AppCompatActivity
 
     private void sendAudio(String urlPath, String localPath) {
         if (urlPath == null || TextUtils.isEmpty(urlPath)) return;
-
         Message message = new Message();
         message.setMessageType(Message.MessageType.RightAudio);
         message.setTime(getTime());
@@ -649,6 +787,29 @@ public class ChatViewActivity extends AppCompatActivity
 
 
     private void resumeRecording() {
+        if (!checkMicrophonePermission(getApplicationContext())) {
+            Dexter.withActivity(this)
+                    .withPermission(Manifest.permission.RECORD_AUDIO)
+                    .withListener(new PermissionListener() {
+                        @Override
+                        public void onPermissionGranted(PermissionGrantedResponse response) {
+                        }
+
+                        @Override
+                        public void onPermissionDenied(PermissionDeniedResponse response) {
+                            Toasty.error(getApplicationContext(), "Microphone Permission needed!", Toasty.LENGTH_LONG).show();
+
+                        }
+
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
+                            token.continuePermissionRequest();
+                        }
+                    })
+                    .check();
+            return;
+        }
+
         if (!isRecordingPaused) {
             String location = Environment.getExternalStorageDirectory().getPath() + "/FrenzApp/Media/Audios/Sent/Rec/";
             File dir = new File(location);

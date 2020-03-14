@@ -4076,6 +4076,7 @@ drawable icons8_cancel_80px
 drawable icons8_chat_80
 drawable icons8_check_all_100
 drawable icons8_circled_play_100
+drawable icons8_close_window_100
 drawable icons8_connection_status_on_80
 drawable icons8_copy_100
 drawable icons8_download_200
@@ -4282,6 +4283,7 @@ id audioMRL
 id audioSeekbar
 id auto
 id back_progress
+id backgroundHolder
 id barrier
 id beginning
 id black
@@ -4619,7 +4621,12 @@ id recording
 id recordingLayout
 id recyclerview
 id refreshLayout
+id replyCloseImageView
+id replyImageView
 id replySelected
+id replySenderName
+id replyText
+id replyView
 id reverse
 id right
 id rightBubbleIconCV
@@ -4921,6 +4928,7 @@ layout item_feed_post
 layout item_followers_list
 layout item_gif
 layout item_gif_search
+layout item_message_reply
 layout item_option
 layout item_sound_option_dialog
 layout item_status_discoveries

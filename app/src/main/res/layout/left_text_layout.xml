@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.silencedut.expandablelayout.ExpandableLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
@@ -18,7 +18,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -32,8 +32,9 @@
                 android:textSize="12sp"
                 android:textColor="@android:color/tab_indicator_text"
                 android:text=""/>
+
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <androidx.cardview.widget.CardView
@@ -52,18 +53,27 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/profile_icon"/>
                 </androidx.cardview.widget.CardView>
-                <com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView
+                <LinearLayout
+                    android:id="@+id/backgroundHolder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:layout_gravity="start"
-                    android:id="@+id/leftTV"
-                    android:paddingLeft="15dp"
-                    android:textSize="17sp"
-                    android:paddingRight="15dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:background="@drawable/left_tv_bg" />
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_message_reply"/>
+
+                    <com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:layout_gravity="start"
+                        android:id="@+id/leftTV"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/left_tv_bg" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

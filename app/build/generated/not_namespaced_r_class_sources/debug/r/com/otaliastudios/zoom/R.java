@@ -37,11 +37,11 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int centerCrop = 0x7f0b0068;
-        public static final int centerInside = 0x7f0b0069;
-        public static final int none = 0x7f0b015f;
-        public static final int realZoom = 0x7f0b0194;
-        public static final int zoom = 0x7f0b024c;
+        public static final int centerCrop = 0x7f0b0069;
+        public static final int centerInside = 0x7f0b006a;
+        public static final int none = 0x7f0b0160;
+        public static final int realZoom = 0x7f0b0195;
+        public static final int zoom = 0x7f0b0252;
     }
     public static final class styleable {
         private styleable() {}

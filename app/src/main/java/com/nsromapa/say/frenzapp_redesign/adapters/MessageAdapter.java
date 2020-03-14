@@ -30,6 +30,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.adprogressbarlib.AdCircleProgress;
@@ -52,6 +53,7 @@ import com.nsromapa.say.frenzapp_redesign.ui.view.VideoPlayer;
 import com.nsromapa.say.frenzapp_redesign.ui.widget.ChatView;
 import com.nsromapa.say.frenzapp_redesign.utils.FontChanger;
 import com.nsromapa.say.frenzapp_redesign.utils.Settings;
+import com.nsromapa.say.frenzapp_redesign.utils.Utils;
 import com.ohoussein.playpause.PlayPauseView;
 import com.silencedut.expandablelayout.ExpandableLayout;
 import com.squareup.picasso.Picasso;
@@ -364,27 +366,37 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public Message getMessageItem(int position) {
-        Message message = messageList.get(position);
-        return message;
+        return messageList.get(position);
     }
 
     protected class LeftTextViewHolder extends RecyclerView.ViewHolder {
-       
         public EmoticonTextView leftTV;
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
-        public ImageView lefttMessageStatusIV, leftBubbleIconIV;
+        public ImageView leftBubbleIconIV;
         public CardView leftBubbleIconCV;
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
 
         public LeftTextViewHolder(View view) {
             super(view);
-           
             leftTV = view.findViewById(R.id.leftTV);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             senderNameTV = view.findViewById(R.id.senderNameTV);
             leftBubbleIconIV = view.findViewById(R.id.leftBubbleIconIV);
             leftBubbleIconCV = view.findViewById(R.id.leftBubbleIconCV);
+
+            backgroundHolder = view.findViewById(R.id.backgroundHolder);
+            replyView = view.findViewById(R.id.replyView);
+            ImageView replyCloseImageView = view.findViewById(R.id.replyCloseImageView);
+            replyImageView = view.findViewById(R.id.replyImageView);
+            replySenderName = view.findViewById(R.id.replySenderName);
+            replyText = view.findViewById(R.id.replyText);
+            replyCloseImageView.setVisibility(View.GONE);
+
             setBackgroundColor(leftBubbleLayoutColor);
             setTextColor(leftBubbleTextColor);
             setTimeTextColor(timeTextColor);
@@ -393,8 +405,10 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             showLeftBubbleIcon(showLeftBubbleIcon);
             setTextSize(textSize);
 
+            replySenderName.setEmoticonProvider(SamsungEmoticonProvider.create());
+            replyText.setEmoticonProvider(SamsungEmoticonProvider.create());
             leftTV.setEmoticonProvider(SamsungEmoticonProvider.create());
-            leftTV.setEmoticonSize(60);
+            leftTV.setEmoticonSize(40);
             FontChanger fontChanger = new FontChanger(typeface);
             fontChanger.replaceFonts((ViewGroup) view);
             view.setOnLongClickListener(v -> {
@@ -446,22 +460,38 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightTextViewHolder extends RecyclerView.ViewHolder {
-       
+
         public EmoticonTextView rightTV;
         public TextView rightTimeTV, senderNameTV;
         public ImageView rightMessageStatusIV, rightBubbleIconIV;
         public ExpandableLayout rightEL;
         public CardView rightBubbleIconCV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightTextViewHolder(View view) {
             super(view);
-           
+
             rightTV = view.findViewById(R.id.rightTV);
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             senderNameTV = view.findViewById(R.id.senderNameTV);
             rightBubbleIconCV = view.findViewById(R.id.rightBubbleIconCV);
             rightBubbleIconIV = view.findViewById(R.id.rightBubbleIconIV);
+
+
+            backgroundHolder = view.findViewById(R.id.backgroundHolder);
+            replyView = view.findViewById(R.id.replyView);
+            ImageView replyCloseImageView = view.findViewById(R.id.replyCloseImageView);
+            replyImageView = view.findViewById(R.id.replyImageView);
+            replySenderName = view.findViewById(R.id.replySenderName);
+            replyText = view.findViewById(R.id.replyText);
+            replyCloseImageView.setVisibility(View.GONE);
+
+
             setBackgroundColor(rightBubbleLayoutColor);
             setTextColor(rightBubbleTextColor);
             setTimeTextColor(timeTextColor);
@@ -471,6 +501,8 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             setTextSize(textSize);
 
 
+            replySenderName.setEmoticonProvider(SamsungEmoticonProvider.create());
+            replyText.setEmoticonProvider(SamsungEmoticonProvider.create());
             rightTV.setEmoticonProvider(SamsungEmoticonProvider.create());
             rightTV.setEmoticonSize(60);
             FontChanger fontChanger = new FontChanger(typeface);
@@ -524,7 +556,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftImageViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -533,9 +565,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView leftIV;
         private AdCircleProgress adCircleProgressLeftIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftImageViewHolder(View view) {
             super(view);
-           
+
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -587,7 +624,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightImageViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -596,9 +633,15 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView rightIV;
         public AdCircleProgress adCircleProgressRightIV;
 
+
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightImageViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -652,7 +695,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftGIFViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -661,9 +704,15 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView leftIV;
         private AdCircleProgress adCircleProgressLeftIV;
 
+
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftGIFViewHolder(View view) {
             super(view);
-           
+
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -714,7 +763,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightGIFViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -723,9 +772,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView rightIV;
         public AdCircleProgress adCircleProgressRightIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightGIFViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -777,16 +831,21 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class LeftImagesViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV;
         public CardView leftBubbleIconCV;
         public CollageView leftCollageView;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftImagesViewHolder(View view) {
             super(view);
-           
+
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftCollageView = view.findViewById(R.id.leftCollageView);
@@ -826,16 +885,21 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightImagesViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV;
         public CardView rightBubbleIconCV;
         public CollageView rightCollageView, leftCollageView;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightImagesViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightCollageView = view.findViewById(R.id.rightCollageView);
@@ -879,7 +943,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftVideoViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftVideo;
@@ -889,9 +953,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public LinearLayout videoLL;
         AdCircleProgress adCircleProgressLV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftVideoViewHolder(View view) {
             super(view);
-           
+
             leftIVCV = view.findViewById(R.id.leftIVCV);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
@@ -943,7 +1012,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightVideoViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightVideo;
@@ -951,10 +1020,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public LinearLayout videoLL;
         AdCircleProgress adCircleProgressRV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
 
         public RightVideoViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIVCV = view.findViewById(R.id.rightIVCV);
@@ -1006,7 +1079,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftAudioViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView leftBubbleIconIV, downloadLeftAudio;
@@ -1017,9 +1090,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public Message message;
         public android.os.Handler handler;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftAudioViewHolder(View view) {
             super(view);
-           
+
             audioSeekbar = view.findViewById(R.id.audioSeekbar);
             playPauseView = view.findViewById(R.id.play_pause_view);
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
@@ -1196,7 +1274,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightAudioViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTimeTV, senderNameTV;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightAudio;
         public ExpandableLayout rightEL;
@@ -1207,9 +1285,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public AdCircleProgress adCircleProgressAudioRV;
         public android.os.Handler handler;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightAudioViewHolder(View view) {
             super(view);
-           
+
             audioSeekbar = view.findViewById(R.id.audioSeekbar);
             playPauseView = view.findViewById(R.id.play_pause_view);
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
@@ -1387,7 +1470,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftTypingViewHolder extends RecyclerView.ViewHolder {
-       
+
         LeftTypingViewHolder(View view) {
             super(view);
             FontChanger fontChanger = new FontChanger(typeface);
@@ -1401,7 +1484,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftStickerViewHolder extends RecyclerView.ViewHolder {
-       
+
         TextView leftTimeTV, senderNameTV;
         ExpandableLayout leftEL;
         ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -1410,9 +1493,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         ImageView leftIV;
         private AdCircleProgress adCircleProgressLeftIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         LeftStickerViewHolder(View view) {
             super(view);
-           
+
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -1463,7 +1551,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightStickerViewHolder extends RecyclerView.ViewHolder {
-       
+
         TextView rightTV, rightTimeTV, senderNameTV;
         ExpandableLayout rightEL;
         ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -1472,9 +1560,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         ImageView rightIV;
         AdCircleProgress adCircleProgressRightIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         RightStickerViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -1527,7 +1620,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
 
     protected class LeftSoundViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView leftTimeTV, senderNameTV;
         public ExpandableLayout leftEL;
         public ImageView lefttMessageStatusIV, leftBubbleIconIV, downloadLeftImage;
@@ -1536,9 +1629,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView leftIV;
         private AdCircleProgress adCircleProgressLeftIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public LeftSoundViewHolder(View view) {
             super(view);
-           
+
             leftTimeTV = view.findViewById(R.id.leftTimeTV);
             leftEL = view.findViewById(R.id.leftEL);
             leftIV = view.findViewById(R.id.leftIV);
@@ -1589,7 +1687,7 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     protected class RightSoundViewHolder extends RecyclerView.ViewHolder {
-       
+
         public TextView rightTV, rightTimeTV, senderNameTV;
         public ExpandableLayout rightEL;
         public ImageView rightMessageStatusIV, rightBubbleIconIV, downloadRightImage;
@@ -1598,9 +1696,14 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         public ImageView rightIV;
         public AdCircleProgress adCircleProgressRightIV;
 
+        private RelativeLayout replyView;
+        private ImageView replyImageView;
+        private EmoticonTextView replySenderName, replyText;
+        private LinearLayout backgroundHolder;
+
         public RightSoundViewHolder(View view) {
             super(view);
-           
+
             rightTimeTV = view.findViewById(R.id.rightTimeTV);
             rightEL = view.findViewById(R.id.rightEL);
             rightIV = view.findViewById(R.id.rightIV);
@@ -1659,10 +1762,135 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         if (holder instanceof LeftTextViewHolder) {
             final LeftTextViewHolder holder1 = (LeftTextViewHolder) holder;
-            holder1.leftTV.setText(message.getBody());
-            holder1.leftTimeTV.setText(message.getTime());
+            if (message.getReplyMessage() != null) {
+                Message replyMessage = message.getReplyMessage();
+                holder1.backgroundHolder.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT));
+                holder1.replyView.setVisibility(View.VISIBLE);
+                if (replyMessage.getUserName().equals(Utils.getUserName(context))) {
+                    holder1.replySenderName.setText("You");
+                } else {
+                    holder1.replySenderName.setText(replyMessage.getUserName());
+                }
 
-            if (message.getUserIcon() != null) {
+                if (replyMessage.getMessageType().equals(Message.MessageType.RightSimpleMessage) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.LeftSimpleMessage)) {
+                    holder1.replyImageView.setVisibility(View.GONE);
+                    holder1.replyText.setText(replyMessage.getBody());
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSingleImage) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightSingleImage)) {
+                    holder1.replyImageView.setVisibility(View.VISIBLE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83D\uDDBC️ Image");
+                    } else {
+                        holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                    }
+
+                    if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                        Glide.with(context)
+                                .load(replyMessage.getLocalLocation())
+                                .into(holder1.replyImageView);
+                    }
+                    Glide.with(context)
+                            .load(replyMessage.getSingleUrl())
+                            .into(holder1.replyImageView);
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftGIF) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightGIF)) {
+                    holder1.replyImageView.setVisibility(View.VISIBLE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83D\uDDBC️ Gif");
+                    } else {
+                        holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                    }
+
+                    if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                        Glide.with(context)
+                                .load(replyMessage.getLocalLocation())
+                                .into(holder1.replyImageView);
+                    }
+                    Glide.with(context)
+                            .load(replyMessage.getSingleUrl())
+                            .into(holder1.replyImageView);
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSound) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightSound)) {
+                    holder1.replyImageView.setVisibility(View.VISIBLE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83D\uDD09Sound");
+                    } else {
+                        holder1.replyText.setText("\uD83D\uDD09️ " + replyMessage.getBody());
+                    }
+
+                    if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                        Glide.with(context)
+                                .load(replyMessage.getLocalLocation())
+                                .into(holder1.replyImageView);
+                    }
+                    Glide.with(context)
+                            .load(replyMessage.getSingleUrl())
+                            .into(holder1.replyImageView);
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSticker) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightSticker)) {
+                    holder1.replyImageView.setVisibility(View.VISIBLE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83D\uDDBC️ Sticker");
+                    } else {
+                        holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                    }
+
+                    if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                        Glide.with(context)
+                                .load(replyMessage.getLocalLocation())
+                                .into(holder1.replyImageView);
+                    }
+                    Glide.with(context)
+                            .load(replyMessage.getSingleUrl())
+                            .into(holder1.replyImageView);
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftVideo) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightVideo)) {
+                    holder1.replyImageView.setVisibility(View.VISIBLE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83C\uDF9E️️ Video");
+                    } else {
+                        holder1.replyText.setText("\uD83C\uDF9E️ " + replyMessage.getBody());
+                    }
+
+                    if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                        Glide.with(context)
+                                .load(replyMessage.getLocalLocation())
+                                .into(holder1.replyImageView);
+                    }
+                    Glide.with(context)
+                            .load(replyMessage.getSingleUrl())
+                            .into(holder1.replyImageView);
+
+
+                } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftAudio) ||
+                        replyMessage.getMessageType().equals(Message.MessageType.RightAudio)) {
+                    holder1.replyImageView.setVisibility(View.GONE);
+                    if (TextUtils.isEmpty(replyMessage.getBody())) {
+                        holder1.replyText.setText("\uD83C\uDFA7 Audio");
+                    } else {
+                        holder1.replyText.setText("\uD83C\uDFA7️ " + replyMessage.getBody());
+                    }
+
+                }
+            }else{
+                holder1.replyView.setVisibility(View.GONE);
+            }
+
+
+            holder1.leftTV.setText(message.getBody());
+            holder1.leftTimeTV.setText(message.getTime());if (message.getUserIcon() != null) {
                 Picasso.get().load(message.getUserIcon()).into(holder1.leftBubbleIconIV);
             }
             holder1.senderNameTV.setText(message.getUserName());
@@ -1671,6 +1899,134 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
             if (holder instanceof RightTextViewHolder) {
                 final RightTextViewHolder holder1 = (RightTextViewHolder) holder;
+
+                if (message.getReplyMessage() != null) {
+                    Message replyMessage = message.getReplyMessage();
+                    holder1.backgroundHolder.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT));
+                    holder1.replyView.setVisibility(View.VISIBLE);
+                    if (replyMessage.getUserName().equals(Utils.getUserName(context))) {
+                        holder1.replySenderName.setText("You");
+                    } else {
+                        holder1.replySenderName.setText(replyMessage.getUserName());
+                    }
+
+                    if (replyMessage.getMessageType().equals(Message.MessageType.RightSimpleMessage) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.LeftSimpleMessage)) {
+                        holder1.replyImageView.setVisibility(View.GONE);
+                        holder1.replyText.setText(replyMessage.getBody());
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSingleImage) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightSingleImage)) {
+                        holder1.replyImageView.setVisibility(View.VISIBLE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83D\uDDBC️ Image");
+                        } else {
+                            holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                        }
+
+                        if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                            Glide.with(context)
+                                    .load(replyMessage.getLocalLocation())
+                                    .into(holder1.replyImageView);
+                        }
+                        Glide.with(context)
+                                .load(replyMessage.getSingleUrl())
+                                .into(holder1.replyImageView);
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftGIF) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightGIF)) {
+                        holder1.replyImageView.setVisibility(View.VISIBLE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83D\uDDBC️ Gif");
+                        } else {
+                            holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                        }
+
+                        if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                            Glide.with(context)
+                                    .load(replyMessage.getLocalLocation())
+                                    .into(holder1.replyImageView);
+                        }
+                        Glide.with(context)
+                                .load(replyMessage.getSingleUrl())
+                                .into(holder1.replyImageView);
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSound) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightSound)) {
+                        holder1.replyImageView.setVisibility(View.VISIBLE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83D\uDD09Sound");
+                        } else {
+                            holder1.replyText.setText("\uD83D\uDD09️ " + replyMessage.getBody());
+                        }
+
+                        if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                            Glide.with(context)
+                                    .load(replyMessage.getLocalLocation())
+                                    .into(holder1.replyImageView);
+                        }
+                        Glide.with(context)
+                                .load(replyMessage.getSingleUrl())
+                                .into(holder1.replyImageView);
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSticker) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightSticker)) {
+                        holder1.replyImageView.setVisibility(View.VISIBLE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83D\uDDBC️ Sticker");
+                        } else {
+                            holder1.replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+                        }
+
+                        if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                            Glide.with(context)
+                                    .load(replyMessage.getLocalLocation())
+                                    .into(holder1.replyImageView);
+                        }
+                        Glide.with(context)
+                                .load(replyMessage.getSingleUrl())
+                                .into(holder1.replyImageView);
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftVideo) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightVideo)) {
+                        holder1.replyImageView.setVisibility(View.VISIBLE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83C\uDF9E️️ Video");
+                        } else {
+                            holder1.replyText.setText("\uD83C\uDF9E️ " + replyMessage.getBody());
+                        }
+
+                        if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                            Glide.with(context)
+                                    .load(replyMessage.getLocalLocation())
+                                    .into(holder1.replyImageView);
+                        }
+                        Glide.with(context)
+                                .load(replyMessage.getSingleUrl())
+                                .into(holder1.replyImageView);
+
+
+                    } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftAudio) ||
+                            replyMessage.getMessageType().equals(Message.MessageType.RightAudio)) {
+                        holder1.replyImageView.setVisibility(View.GONE);
+                        if (TextUtils.isEmpty(replyMessage.getBody())) {
+                            holder1.replyText.setText("\uD83C\uDFA7 Audio");
+                        } else {
+                            holder1.replyText.setText("\uD83C\uDFA7️ " + replyMessage.getBody());
+                        }
+
+                    }
+                }else{
+                    holder1.replyView.setVisibility(View.GONE);
+                }
+
+
                 holder1.rightTV.setText(message.getBody());
                 holder1.rightTimeTV.setText(message.getTime());
                 if (message.getUserIcon() != null) {
@@ -3597,9 +3953,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
 
 
-
-
-
 //Set up selection Icon Visibility
         if (message_isSelectionMode) {
             if (selectedList.contains(String.valueOf(position))) {
@@ -3644,6 +3997,137 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         });
     }
 
+    private void displayReply(Message replyMessage,
+                              RelativeLayout replyView,
+                              EmoticonTextView replySenderName,
+                              EmoticonTextView replyText,
+                              ImageView replyImageView,
+                              LinearLayout backgroundHolder) {
+
+        backgroundHolder.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        replyView.setVisibility(View.VISIBLE);
+
+
+        if (replyMessage.getUserName().equals(Utils.getUserName(context))) {
+            replySenderName.setText("You");
+        } else {
+            replySenderName.setText(replyMessage.getUserName());
+        }
+
+        if (replyMessage.getMessageType().equals(Message.MessageType.RightSimpleMessage) ||
+                replyMessage.getMessageType().equals(Message.MessageType.LeftSimpleMessage)) {
+            replyImageView.setVisibility(View.GONE);
+            replyText.setText(replyMessage.getBody());
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSingleImage) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightSingleImage)) {
+            replyImageView.setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83D\uDDBC️ Image");
+            } else {
+                replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                Glide.with(context)
+                        .load(replyMessage.getLocalLocation())
+                        .into(replyImageView);
+            }
+            Glide.with(context)
+                    .load(replyMessage.getSingleUrl())
+                    .into(replyImageView);
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftGIF) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightGIF)) {
+            replyImageView.setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83D\uDDBC️ Gif");
+            } else {
+                replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                Glide.with(context)
+                        .load(replyMessage.getLocalLocation())
+                        .into(replyImageView);
+            }
+            Glide.with(context)
+                    .load(replyMessage.getSingleUrl())
+                    .into(replyImageView);
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSound) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightSound)) {
+            replyImageView.setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83D\uDD09Sound");
+            } else {
+                replyText.setText("\uD83D\uDD09️ " + replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                Glide.with(context)
+                        .load(replyMessage.getLocalLocation())
+                        .into(replyImageView);
+            }
+            Glide.with(context)
+                    .load(replyMessage.getSingleUrl())
+                    .into(replyImageView);
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftSticker) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightSticker)) {
+            replyImageView.setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83D\uDDBC️ Sticker");
+            } else {
+                replyText.setText("\uD83D\uDDBC️ " + replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                Glide.with(context)
+                        .load(replyMessage.getLocalLocation())
+                        .into(replyImageView);
+            }
+            Glide.with(context)
+                    .load(replyMessage.getSingleUrl())
+                    .into(replyImageView);
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftVideo) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightVideo)) {
+            replyImageView.setVisibility(View.VISIBLE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83C\uDF9E️️ Video");
+            } else {
+                replyText.setText("\uD83C\uDF9E️ " + replyMessage.getBody());
+            }
+
+            if (!TextUtils.isEmpty(replyMessage.getLocalLocation())) {
+                Glide.with(context)
+                        .load(replyMessage.getLocalLocation())
+                        .into(replyImageView);
+            }
+            Glide.with(context)
+                    .load(replyMessage.getSingleUrl())
+                    .into(replyImageView);
+
+
+        } else if (replyMessage.getMessageType().equals(Message.MessageType.LeftAudio) ||
+                replyMessage.getMessageType().equals(Message.MessageType.RightAudio)) {
+            replyImageView.setVisibility(View.GONE);
+            if (TextUtils.isEmpty(replyMessage.getBody())) {
+                replyText.setText("\uD83C\uDFA7 Audio");
+            } else {
+                replyText.setText("\uD83C\uDFA7️ " + replyMessage.getBody());
+            }
+
+        }
+    }
+
 
     @Override
     public void onViewRecycled(RecyclerView.ViewHolder holder) {
@@ -3666,13 +4150,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
 
-
-
-
-
-
-
-
     private void enableSelection() {
         message_isSelectionMode = true;
         notifyDataSetChanged();
@@ -3688,15 +4165,6 @@ public class MessageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public List<String> getSelectedList() {
         return selectedList;
     }
-
-
-
-
-
-
-
-
-
 
 
     @SuppressLint("SetTextI18n")

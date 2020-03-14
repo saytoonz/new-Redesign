@@ -23,6 +23,7 @@ public class Message {
     private String singleUrl = "";
     private String localLocation = "";
     protected int indexPosition;
+    protected Message replyMessage = null;
 
     public String getSingleUrl() {
         return singleUrl;
@@ -54,6 +55,15 @@ public class Message {
     public Message(){
 
     }
+
+    public Message getReplyMessage() {
+        return replyMessage;
+    }
+
+    public void setReplyMessage(Message replyMessage) {
+        this.replyMessage = replyMessage;
+    }
+
     public void setLocal_id(String local_id) {
         this.local_id = local_id;
     }

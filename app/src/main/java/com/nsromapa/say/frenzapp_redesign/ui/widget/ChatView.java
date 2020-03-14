@@ -35,6 +35,7 @@ import com.balysv.materialripple.MaterialRippleLayout;
 import com.github.zagum.expandicon.ExpandIconView;
 import com.nsromapa.emoticompack.samsung.SamsungEmoticonProvider;
 import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText;
+import com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonTextView;
 import com.nsromapa.say.frenzapp_redesign.R;
 import com.nsromapa.say.frenzapp_redesign.adapters.MessageAdapter;
 import com.nsromapa.say.frenzapp_redesign.models.Message;
@@ -81,6 +82,11 @@ public class ChatView extends RelativeLayout {
     private View layoutDustin;
     private View layoutSlideCancel;
     private TextView timeText;
+
+    private RelativeLayout replyView;
+    private ImageView replyCloseImageView, replyImageView;
+    private EmoticonTextView replySenderName, replyText;
+
     private List<String> trackingLocalIds = new ArrayList<>();
 
     protected List<Message> messageList;
@@ -171,12 +177,34 @@ public class ChatView extends RelativeLayout {
     }
 
 
-    public MaterialRippleLayout getRecordARL(){
+    public MaterialRippleLayout getRecordARL() {
         return recordARL;
     }
+
     public LinearLayout getSendLL() {
         return sendLL;
     }
+
+    public RelativeLayout getReplyView() {
+        return replyView;
+    }
+
+    public ImageView getReplyCloseImageView() {
+        return replyCloseImageView;
+    }
+
+    public ImageView getReplyImageView() {
+        return replyImageView;
+    }
+
+    public EmoticonTextView getReplySenderName() {
+        return replySenderName;
+    }
+
+    public EmoticonTextView getReplyText() {
+        return replyText;
+    }
+
 
     public void setRecordingListener(RecordingListener recordingListener) {
         this.recordingListener = recordingListener;
@@ -631,6 +659,12 @@ public class ChatView extends RelativeLayout {
         dustin = rootView.findViewById(R.id.dustin);
         dustin_cover = rootView.findViewById(R.id.dustin_cover);
         imageViewLock = rootView.findViewById(R.id.imageViewLock);
+
+        replyView = rootView.findViewById(R.id.replyView);
+        replyCloseImageView = rootView.findViewById(R.id.replyCloseImageView);
+        replyImageView = rootView.findViewById(R.id.replyImageView);
+        replySenderName = rootView.findViewById(R.id.replySenderName);
+        replyText = rootView.findViewById(R.id.replyText);
 
         handler = new Handler(Looper.getMainLooper());
 

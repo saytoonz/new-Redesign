@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FrenzApp-Redesign.iml" filepath="$PROJECT_DIR$/FrenzApp-Redesign.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/emoticongifkeyboard/emoticongifkeyboard.iml" filepath="$PROJECT_DIR$/emoticongifkeyboard/emoticongifkeyboard.iml" />
-      <module fileurl="file://$PROJECT_DIR$/emoticonpack-samsung/emoticonpack-samsung.iml" filepath="$PROJECT_DIR$/emoticonpack-samsung/emoticonpack-samsung.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gifpack-giphy/gifpack-giphy.iml" filepath="$PROJECT_DIR$/gifpack-giphy/gifpack-giphy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FrenzApp-Redesign.iml" filepath="$PROJECT_DIR$/FrenzApp-Redesign.iml" group="FrenzApp-Redesign" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="FrenzApp-Redesign/app" />
+      <module fileurl="file://$PROJECT_DIR$/emoticongifkeyboard/emoticongifkeyboard.iml" filepath="$PROJECT_DIR$/emoticongifkeyboard/emoticongifkeyboard.iml" group="FrenzApp-Redesign/emoticongifkeyboard" />
+      <module fileurl="file://$PROJECT_DIR$/emoticonpack-samsung/emoticonpack-samsung.iml" filepath="$PROJECT_DIR$/emoticonpack-samsung/emoticonpack-samsung.iml" group="FrenzApp-Redesign/emoticonpack-samsung" />
+      <module fileurl="file://$PROJECT_DIR$/gifpack-giphy/gifpack-giphy.iml" filepath="$PROJECT_DIR$/gifpack-giphy/gifpack-giphy.iml" group="FrenzApp-Redesign/gifpack-giphy" />
     </modules>
   </component>
 </project>

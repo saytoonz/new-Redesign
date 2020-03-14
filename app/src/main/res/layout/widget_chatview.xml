@@ -91,7 +91,7 @@
                     android:layout_height="36dp"
                     android:layout_gravity="bottom"
                     android:layout_marginStart="90dp"
-      android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/shadow" />
 
                 <ImageView
@@ -196,225 +196,232 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" />
 
-
     <LinearLayout
         android:id="@+id/sendLL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/keyboard_container"
         android:background="@drawable/gradient1"
-        android:elevation="4dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:focusable="true"
         android:descendantFocusability="beforeDescendants"
-        android:focusableInTouchMode="true">
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <include layout="@layout/item_message_reply"/>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@android:color/white"
-            app:cardCornerRadius="24dp"
-            app:cardElevation="10dp">
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:animateLayoutChanges="true"
-                android:orientation="vertical">
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="10dp">
 
-                <HorizontalScrollView
-                    android:id="@+id/moreLL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#f2f2f2"
-                    android:minHeight="45dp"
-                    android:orientation="vertical"
-                    android:visibility="gone">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp">
-
-                        <com.balysv.materialripple.MaterialRippleLayout
-                            android:id="@+id/cameraMRL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minWidth="40dp"
-                            android:minHeight="40dp"
-                            android:visibility="visible"
-                            app:mrl_rippleOverlay="true"
-                            app:mrl_rippleRoundedCorners="30dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:src="@drawable/camera_icon"
-                                android:tint="@color/colorAccent" />
-                        </com.balysv.materialripple.MaterialRippleLayout>
-
-                        <com.balysv.materialripple.MaterialRippleLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minWidth="40dp"
-                            android:minHeight="40dp"
-                            android:visibility="gone"
-                            app:mrl_rippleOverlay="true"
-                            app:mrl_rippleRoundedCorners="30dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:src="@drawable/location_icon"
-                                android:tint="@color/colorAccent" />
-                        </com.balysv.materialripple.MaterialRippleLayout>
-
-                        <com.balysv.materialripple.MaterialRippleLayout
-                            android:id="@+id/galleryMRL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minWidth="40dp"
-                            android:minHeight="40dp"
-                            app:mrl_rippleOverlay="true"
-                            app:mrl_rippleRoundedCorners="30dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:src="@drawable/gallery_icon"
-                                android:tint="@color/colorAccent" />
-                        </com.balysv.materialripple.MaterialRippleLayout>
-
-                        <com.balysv.materialripple.MaterialRippleLayout
-                            android:id="@+id/videoMRL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minWidth="40dp"
-                            android:minHeight="40dp"
-                            app:mrl_rippleOverlay="true"
-                            app:mrl_rippleRoundedCorners="30dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:src="@drawable/video_icon"
-                                android:tint="@color/colorAccent" />
-                        </com.balysv.materialripple.MaterialRippleLayout>
-
-                        <com.balysv.materialripple.MaterialRippleLayout
-                            android:id="@+id/audioMRL"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:minWidth="40dp"
-                            android:minHeight="40dp"
-                            app:mrl_rippleOverlay="true"
-                            app:mrl_rippleRoundedCorners="30dp">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginTop="4dp"
-                                android:layout_marginBottom="4dp"
-                                android:src="@drawable/audio_icon"
-                                android:tint="@color/colorAccent" />
-                        </com.balysv.materialripple.MaterialRippleLayout>
-
-
-                    </LinearLayout>
-                </HorizontalScrollView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_gravity="bottom"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
 
-                    <com.balysv.materialripple.MaterialRippleLayout
-                        android:id="@+id/expandMRL"
-                        android:layout_width="wrap_content"
+                    <HorizontalScrollView
+                        android:id="@+id/moreLL"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginEnd="2dp"
-                        android:layout_marginBottom="2dp"
-                        app:mrl_rippleOverlay="true"
-                        app:mrl_rippleRoundedCorners="30dp">
-
-                        <com.github.zagum.expandicon.ExpandIconView
-                            android:id="@+id/expandIconView"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center" />
-                    </com.balysv.materialripple.MaterialRippleLayout>
-
-                    <com.balysv.materialripple.MaterialRippleLayout
-                        android:id="@+id/emojiToggle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:minWidth="28dp"
-                        android:minHeight="40dp"
-                        app:mrl_rippleOverlay="true"
-                        app:mrl_rippleRoundedCorners="30dp">
-
-                        <ImageView
-                            android:id="@+id/emoji_keyboad_iv"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_emoticon"
-                            android:tint="@android:color/black" />
-
-                    </com.balysv.materialripple.MaterialRippleLayout>
-
-                    <com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText
-                        android:id="@+id/messageET"
-                        style="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="42dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/et_bg"
-                        android:hint="Say something..."
-                        android:maxHeight="115dp"
+                        android:background="#f2f2f2"
                         android:minHeight="45dp"
-                        android:paddingStart="5dp"
-                        android:paddingTop="4dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="4dp"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        app:emojiconSize="30sp" />
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/cameraMRL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                android:visibility="visible"
+                                app:mrl_rippleOverlay="true"
+                                app:mrl_rippleRoundedCorners="30dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:src="@drawable/camera_icon"
+                                    android:tint="@color/colorAccent" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                android:visibility="gone"
+                                app:mrl_rippleOverlay="true"
+                                app:mrl_rippleRoundedCorners="30dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/location_icon"
+                                    android:tint="@color/colorAccent" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/galleryMRL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                app:mrl_rippleOverlay="true"
+                                app:mrl_rippleRoundedCorners="30dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/gallery_icon"
+                                    android:tint="@color/colorAccent" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/videoMRL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                app:mrl_rippleOverlay="true"
+                                app:mrl_rippleRoundedCorners="30dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/video_icon"
+                                    android:tint="@color/colorAccent" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
+
+                            <com.balysv.materialripple.MaterialRippleLayout
+                                android:id="@+id/audioMRL"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                app:mrl_rippleOverlay="true"
+                                app:mrl_rippleRoundedCorners="30dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/audio_icon"
+                                    android:tint="@color/colorAccent" />
+                            </com.balysv.materialripple.MaterialRippleLayout>
 
 
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/expandMRL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="2dp"
+                            app:mrl_rippleOverlay="true"
+                            app:mrl_rippleRoundedCorners="30dp">
+
+                            <com.github.zagum.expandicon.ExpandIconView
+                                android:id="@+id/expandIconView"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:id="@+id/emojiToggle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:minWidth="28dp"
+                            android:minHeight="40dp"
+                            app:mrl_rippleOverlay="true"
+                            app:mrl_rippleRoundedCorners="30dp">
+
+                            <ImageView
+                                android:id="@+id/emoji_keyboad_iv"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_emoticon"
+                                android:tint="@android:color/black" />
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <com.nsromapa.say.emogifstickerkeyboard.widget.EmoticonEditText
+                            android:id="@+id/messageET"
+                            style="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="42dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/et_bg"
+                            android:hint="Say something..."
+                            android:maxHeight="115dp"
+                            android:minHeight="45dp"
+                            android:paddingStart="5dp"
+                            android:paddingTop="4dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="4dp"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            app:emojiconSize="30sp" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView

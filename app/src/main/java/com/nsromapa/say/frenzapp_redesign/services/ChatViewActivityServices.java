@@ -171,6 +171,8 @@ public class ChatViewActivityServices extends Service {
 
             while (cursor.moveToNext()) {
                 Message message = new Message();
+                
+                message.setReplyMessage(getReplyMessageObject(cursor.getString(cursor.getColumnIndex(MessagesReaderContract.MessageEntry.REPLY_TO))));
 
                 String imagesString = cursor.getString(13);
                 List<String> imageList = new ArrayList<>();
@@ -215,6 +217,66 @@ public class ChatViewActivityServices extends Service {
                 db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
         }
 
+    }
+
+    private Message getReplyMessageObject(String messageLocalId) {
+        if (TextUtils.isDigitsOnly(messageLocalId)){
+            if (db != null){
+                Cursor cursor = db.rawQuery("SELECT * FROM '" + MessagesReaderContract.MessageEntry.TABLE_NAME +
+                        "' WHERE " + MessagesReaderContract.MessageEntry.LOCAL_ID + "='" + messageLocalId + "'", null);
+
+                cursor.moveToFirst();
+                if (!(cursor.moveToFirst()) || cursor.getCount() == 0) {
+                    cursor.close();
+                    return null;
+                } else {
+                    Message message = new Message();
+
+                    String imagesString = cursor.getString(13);
+                    List<String> imageList = new ArrayList<>();
+                    if (imagesString != null && !TextUtils.isEmpty(imagesString)) {
+                        String[] images = imagesString.split(",,");
+                        for (String image : images) {
+                            if (!image.isEmpty())
+                                imageList.add(image);
+                        }
+                    }
+
+                    String nameString = cursor.getString(14);
+                    List<String> imageNamesList = new ArrayList<>();
+                    if (nameString != null && !TextUtils.isEmpty(nameString)) {
+                        String[] names = nameString.split(",,");
+                        for (String name : names) {
+                            if (!name.isEmpty())
+                                imageNamesList.add(name);
+                        }
+                    }
+
+                    message.setLocal_id(String.valueOf(cursor.getString(1)));
+                    message.setId(cursor.getString(2));
+                    message.setMessageType(Message.MessageType.valueOf(cursor.getString(3)));
+                    message.setUserName(cursor.getString(5));
+                    message.setUserIcon(cursor.getString(6));
+                    message.setTime(cursor.getString(10));
+                    message.setStatus(cursor.getString(11));
+                    message.setBody(cursor.getString(12));
+                    message.setImageList(imageList);
+                    message.setImageListNames(imageNamesList);
+                    message.setSingleUrl(cursor.getString(15));
+                    message.setLocalLocation(cursor.getString(16));
+
+                    cursor.close();
+                    return message;
+                }
+
+            }else{
+                if (checkStoragePermission(getApplicationContext()))
+                    db = MessageReaderDbHelper.getInstance(getApplicationContext()).getReadableDatabase("somePass");
+                return null;
+            }
+        }else{
+            return null;
+        }
     }
 
     private void setAllMessagesSeen() {

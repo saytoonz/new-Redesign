@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.zagum:Android-ExpandIcon:1.2.1@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b6fdef8996eac45aeccf1a7266a713a/jetified-Android-ExpandIcon-1.2.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad6ef243fab33832acfa57f6e6cd9206/jetified-Android-ExpandIcon-1.2.1/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b6fdef8996eac45aeccf1a7266a713a/jetified-Android-ExpandIcon-1.2.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4b6fdef8996eac45aeccf1a7266a713a/jetified-Android-ExpandIcon-1.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad6ef243fab33832acfa57f6e6cd9206/jetified-Android-ExpandIcon-1.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ad6ef243fab33832acfa57f6e6cd9206/jetified-Android-ExpandIcon-1.2.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

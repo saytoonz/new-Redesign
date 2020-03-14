@@ -211,7 +211,7 @@ public class BootCompleteService extends Service {
 
     private void pushMessage(Map<String, String> post, String loc_id) {
 
-//        Log.e("pushMessage", "SendMessage: " + post);
+        Log.e("pushMessage", "SendMessage: " + post);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, CHATS, response -> {
 
@@ -229,7 +229,7 @@ public class BootCompleteService extends Service {
                             Message message = new Message();
 
                             if (local_id.equals(loc_id) && TextUtils.isDigitsOnly(messageId)) {
-//                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
+                                Log.e("PushMessage", "======================>     local_id: " + local_id + "&& messageId " + messageId);
                                 if (db != null) {
                                     db.execSQL("UPDATE " + MessagesReaderContract.MessageEntry.TABLE_NAME + "\n" +
                                             "SET " + MessagesReaderContract.MessageEntry.MESSAGE_ID + " = '" + messageId + "' \n" +
@@ -288,7 +288,7 @@ public class BootCompleteService extends Service {
 
             if (TextUtils.isEmpty(messageId))
                 messageId = "0";
-           // Log.e("getMessageLastId", "getMessageLastId: " + messageId);
+            Log.e("getMessageLastId", "getMessageLastId: " + messageId);
 
             cursor.close();
             return messageId;

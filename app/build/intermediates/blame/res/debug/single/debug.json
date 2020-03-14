@@ -3568,6 +3568,10 @@
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f1ee_1f1f7.png"
     },
     {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_message_reply.xml.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\layout\\item_message_reply.xml"
+    },
+    {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\Saytoonz\\.gradle\\caches\\transforms-2\\files-2.1\\bbeec50c2722296a3462e87b8b6ca67f\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
@@ -7150,6 +7154,10 @@
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f562.png.flat",
         "source": "D:\\ANDROID\\Redesign\\emoticonpack-samsung\\build\\intermediates\\packaged_res\\debug\\drawable-nodpi-v4\\emoji_samsung_1f562.png"
+    },
+    {
+        "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_close_window_100.png.flat",
+        "source": "D:\\ANDROID\\Redesign\\app\\src\\main\\res\\drawable\\icons8_close_window_100.png"
     },
     {
         "merged": "D:\\ANDROID\\Redesign\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4_emoji_samsung_1f3cc_1f3fb.png.flat",

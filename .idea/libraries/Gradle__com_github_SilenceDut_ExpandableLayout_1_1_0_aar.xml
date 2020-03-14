@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.SilenceDut:ExpandableLayout:1.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87b047917c84c76365ca65473db21232/jetified-ExpandableLayout-1.1.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87b047917c84c76365ca65473db21232/jetified-ExpandableLayout-1.1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b479cd9f900b5ef471c1c5f6dc1fd7f/jetified-ExpandableLayout-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b479cd9f900b5ef471c1c5f6dc1fd7f/jetified-ExpandableLayout-1.1.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

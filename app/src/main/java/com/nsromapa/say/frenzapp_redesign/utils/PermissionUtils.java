@@ -14,4 +14,10 @@ public class PermissionUtils {
         int result = ContextCompat.checkSelfPermission(context, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         return result == PackageManager.PERMISSION_GRANTED;
     }
+
+    public static boolean checkMicrophonePermission(Context context) {
+        //Getting the permission status
+        int result = ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO);
+        return result == PackageManager.PERMISSION_GRANTED;
+    }
 }
